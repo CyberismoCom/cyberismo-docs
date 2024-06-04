@@ -1,9 +1,7 @@
-== Introduction
 :sectnums:
-
 This tutorial shows how to create a new Cyberismo project with the base module.
 
-Prerequisites: link:/cards/docs_3[Install Cyberismo].
+Prerequisites: link:/cards/docs_4[Install Cyberismo].
 
 == Clone the base module
 

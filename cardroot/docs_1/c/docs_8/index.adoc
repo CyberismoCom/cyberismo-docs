@@ -1,0 +1,49 @@
+This page describes the naming conventions in the Cyberismo solution.
+
+== Basic concepts
+
+The Cyberismo content format uses certain link::/cards/docs_5[basic concepts] that are often referred to in JSON files. The following table defines the conventions for how to write these concepts in English and technically in camelCase.
+
+.Basic concepts and their technical names 
+[%autowidth]
+|===
+|Concept  |Technical name
+
+|Card key
+|cardKey
+|Workflow
+|workflow
+|Workflow state
+|workflowSate
+|card type
+|cardType
+|field type
+|fieldType
+|link type
+|linkType
+|===
+
+
+== Module names
+
+#TODO# Describe module naming
+
+== Names of card types, workflows, field types, link types
+
+When the basic concepts of the Cyberismo content format are declared, there is a need to refer to other basic concepts by name. This includes the names of card types, workflows, field types and link types. 
+
+#TODO# Is this camelCase or kebab-case?
+
+#TODO# Add an example
+
+== File names
+
+The basic concepts are defines as JSON files that are named in so called kebab-case, for example `my-workflow.json` or `my-custom-field.json`.
+
+Similarly, kebab case is used in logic program file names. They have the file extension `.lp`. For example, `risk-level-calculation.lp`. 
+
+#TODO# or should it be camelCase?
+
+== Naming in logic programs
+
+We follow the standard Answer Set Programming naming conventions when naming the atoms, constants and variables. The names of atoms and constants begin with a lowercase character, and variable names begin with an uppercase character.  If a symbol includes multiple words, then an underscore character '_' is used as a separator.

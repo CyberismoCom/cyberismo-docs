@@ -1,3 +1,47 @@
+On this page, we discuss the main concepts of the Cyberismo content format in detail.
 
+== Project
 
-* link:/cards/docs_6[Creating a new project]
+A project is a top-level container for the Cyberismo content format. A project can contain cards, modules, workflows, field types, link types, templates and calculations. A project is typically managed in a version control system. The cards of a project are stored in a directory called `cardroot`.
+
+== Card
+
+A card is the main information unit in the Cyberismo content format. Conceptually, a card is similar to a ticket in an issue tracker or a document in an enterprise wiki, so developers, product owners and DevOps experts should find the concept easy to understand. Technically, a card is a directory that contains an AsciiDoc document `index.adoc`, associated metadata in a JSON file `index.json`, and optional file attachments in a subdirectory named `a`. 
+
+The metadata includes a title, the card type, and the current workflow state. The metadata may also include the values of optional custom fields, labels, which are simple textual tags used to organise cards, and links to other cards. 
+
+Cards are organised in a directory structure, where a card may have one or more child cards in a subdirectory named `c`.
+
+== Card key
+
+Each card is uniquely identified with a card key of the format _example_1_, _example_2_ etc., where example is a prefix defined for the local project. The card key is used as the name of the directory that contains the card.
+
+== Card type
+
+Each card is of a specific card type, which defines the workflow being used and optionally a set of custom fields. Separate card types may be defined, for example, for controlled documents, risks, threats, security requirements, architecture decisions, or tasks. Custom fields may be defined, for example, for various dates such as deadlines or time stamps, enumerations such as the likelihood or the impact of a risk, or a person, such as an assignee of a task. 
+
+== Workflow
+
+A workflow is a state machine that defines a set of states and state transitions for cards, such as Open → In Progress → Done or Draft → Approved → Archived. In the Cyberismo content format, both states and transitions can be referred to by a technical name and displayed for users by a display name.
+
+== Field type
+
+A field type defines a name, a display name, and a data type for a custom field of a card.
+
+== Link and link type
+
+A link is a relationship between cards. Each link is of a specific link type, which defines a name such as _causes_, an outbound display name (_causes_), an inbound display name (_is caused by_) and the allowed card types for the source and destination of a link.
+
+Links may be used, for example, to represent that an asset bears a risk, a control mitigates a risk, a control implements a compliance requirement, a threat is related to another threat, or that a test verifies a requirement. When cards are used to represent the technical building blocks of a software solution, such as the data flow diagram that consists of processes, trust boundaries or data stores, then links can be used to represent data flows between the building blocks. 
+
+== Template
+
+A template contains a card or a set of cards in a directory hierarchy that is used as a template for user content. When the user creates new card(s) from a template, a new copy of the template card(s) is made with new unique card keys. Note that cards in a template may form a deep hierarchy, enabling the definition of complex templates with multiple cards, such as a template for a software project.
+
+== Calculations
+
+The Cyberismo content format may include logic program files in the Answer Set Programming (ASP) form of logic programming. The logic programs may define queries, calculated fields, constraints for workflow transitions, or policy validation rules. 
+
+== Module
+
+A module is a reusable collection of templates, card types, workflows, field types, link types and calculations. When a user installs a module as a dependency to their project, a read-only copy of the module is included in the project directory structure. The module includes version information, which is useful when user content needs to be updated from a previous version of a module to a newer version. The most typical module is the _base_ module, which defines some very commonly used basic card types and their workflows. 

@@ -1,35 +1,8 @@
+The Cyberismo solution architecture is based on the following principles:
 
-== Building and running Cyberismo from source
+* The Cyberismo tool is installed on the user computers
+* The Cyberismo tool may be also run in the CI/CD pipeline. 
 
-=== Prerequisites
+The following diagram illustrates the architecture.
 
-. Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules.
-
-. Install Clingo. The currently supported Clingo version is 5.7.1. We recommend installing a Python-enabled build using Anaconda, as instructed in https://github.com/potassco/clingo/releases/.
-
-. Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0. You can install it using nvm with 
-
-[source,console]
-----
-nvm install --lts
-nvm use --lts
-----
-
-=== Building
-
-Take the following steps:
-
-. Clone the source repository
-. Change to the source directory. If you have already cloned the repository earlier, remember to pull the latest changes.
-. Execute the following commands:
-
-[source,console]
-----
-npm install
-npm run build
-npm install -g
-----
-
-=== Running
-
-After building and installing, run `cyberismo --help` to see the command line help.
+image::cyberismo-architecture.svg[Cyberismo solution architecture]
