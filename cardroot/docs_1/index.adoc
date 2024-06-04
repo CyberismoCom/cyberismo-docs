@@ -1,9 +1,9 @@
 
-Cyberismo is a tool and an open plain text content format for smooth adoption of cybersecurity management in software projects.
+Cyberismo is a tool and an open plain text content format for cybersecurity management in software projects. It puts the ease of adoption of compliant cybersecurity processes in the spotlight.
 
-* link:/cards/docs_2[Overview]
-* link:/cards/docs_3[Solution architecture]
-* link:/cards/docs_4[Installation]
-* link:/cards/docs_5[Basic concepts]
-* link:/cards/docs_6[Getting started tutorial]
+* link:/cards/docs_10[Overview]
+* link:/cards/docs_11[Solution architecture]
+* link:/cards/docs_12[Basic concepts]
+* link:/cards/docs_13[Installation]
+* link:/cards/docs_2[Getting started tutorial]
 

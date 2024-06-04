@@ -1,0 +1,20 @@
+== Why cybersecurity compliance is important
+
+As the cybersecurity threat landscape is getting increasingly serious, customers of digital product manufacturers and digital service providers are increasingly requiring their suppliers to comply with standards, such as ISO 27001 for information security management systems, IEC 62443-4-1 for secure development life cycle requirements in industrial product development, IEC 62304 for life cycle requirements of medical software, or ISO/SAE 21434 for engineering cybersecurity requirements in road vehicle development. Product manufacturers and digital service providers are facing increasing regulation, such as the EU NIS2 directive and the EU Cyber Resilience Act.
+
+Compliance is a complex topic that is hard to articulate simply. By observing the scope of the above-mentioned standards and regulations, we notice that compliance includes accurate execution of multiple procedures that involve different disciplines, such as human resources, premises management, software development, technical writing, and Information Technology (IT) operations. Compliance may also require specific technical or functional capabilities, and correct interpretation of what needs to be done requires understanding of the technical architecture.
+
+In terms of the information model, the complex topic of compliance boils down to the status of the units of information and their relationships. The Cyberismo solution allows us to define compliance as logical rules based on the attributes and relationships of the information units.
+
+== The goals of the Cyberismo security as code solution
+
+The goals of the _Cyberismo_ solution are to facilitate the adoption of compliance and cybersecurity management and to improve collaboration on cybersecurity in company internal software projects, cross-company software projects, and open-source projects. Furthermore, the Cyberismo solution enables automated checks and automated evidence gathering and archival aligned with the DevSecOps approach.
+
+The Cyberismo solution is based on a simple plain text information model representation format that can be managed by automated CI/CD tool chains. This makes the solution an instance of the _Everything as Code_ and _Security as Code_ paradigms.
+
+== The main components of the Cyberismo solution
+
+The main components of the solution are the Cyberismo content format, which is an open information model representation format, and the Cyberismo tool, which is an open-source information model management tool. 
+
+Cyberismo content format:: The Cyberismo content format based on AsciiDoc, JavaScript Object Notation (JSON), and JSON Schema. The AsciiDoc format is a plain text markup language that supports rich semantic elements and that has strong tool support for conversions to other file formats and for publications. While JSON is a common text-based data format for representing structured data, JSON Schema is a vocabulary for annotating and validating JSON documents.
+Cyberismo tool:: The Cyberismo tool provides three user interfaces: a command line interface (CLI), a local web application interface, and a static web site interface. The tool invokes Clingo, a state-of-the-art implementation of the Answer Set Programming (ASP) paradigm, to perform queries and calculations. The same Cyberismo tool can be installed in the CI/CD tool chain, to perform automated checks and validations, to integrate with an issue tracker, and to generate and archive publications. The CI/CD tool chain will invoke the tool using the command line interface.

@@ -1,0 +1,2 @@
+
+This pages under this security considerations section contain security guidance about the Cyberismo solution. The goal is to help the users and administrations in secure usage of the Cyberismo solution.

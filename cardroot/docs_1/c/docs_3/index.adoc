@@ -1,8 +1,36 @@
-The Cyberismo solution architecture is based on the following principles:
+The best way to learn how to use the Cyberismo command line interface is the built-in help. To see the top-level help, execute the following command:  
 
-* The Cyberismo tool is installed on the user computers
-* The Cyberismo tool may be also run in the CI/CD pipeline. 
+[source,console]
+----
+cyberismo help
+----
 
-The following diagram illustrates the architecture.
+The help command will print an overview of the available commands
 
-image::cyberismo-architecture.svg[Cyberismo solution architecture]
+[source,console]
+----
+Usage: cyberismo [options] [command]
+
+CLI tool to handle tasks.
+
+Options:
+  -V, --version                                  output the version number
+  -h, --help                                     display help for command
+
+Commands:
+  add [options] <template> <cardtype> [cardkey]  Add card to a template
+  calc [options] <subcommand> [cardkey]          Either generates or runs a logic program.
+  create
+  edit [options] <cardkey>                       Edit a card
+  export [options] [cardkey]                     Export a project or a card
+  import [options] <source> <name>               Imports another project to this project.
+  move [options] [source] [destination]          Moves a card from root to under another card, from under another card to root,
+                                                 or from under a one card to another.
+  remove [options] <type> <targetName> [detail]  Removes a card, a template or an attachment
+  rename [options] <to>                          Change project prefix and rename all cards with the new prefix
+  show [options] <type> [typeDetail]             Shows resource types in a project
+  transition [options] <cardkey> <transition>    Transition a card to the specified state
+  validate [options]                             Validate project structure
+  app [options]                                  Starts the cards app, accessible with a web browser at http://localhost:3000
+  help [command]                                 display help for command
+----
