@@ -1,0 +1,12 @@
+{
+    "name": "base/controlled-document",
+    "workflow": "base/controlled-document-workflow",
+    "customFields": [
+        {
+            "name": "base/owner"
+        },
+        {
+            "name": "base/informationClassification"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "name": "base/decision-workflow",
+    "states": [
+        {
+            "name": "Draft",
+            "category": "initial"
+        },
+        {
+            "name": "Approved",
+            "category": "closed"
+        },
+        {
+            "name": "Deprecated",
+            "category": "hidden"
+        }
+    ],
+    "transitions": [
+        {
+            "name": "Create",
+            "fromState": [
+                ""
+            ],
+            "toState": "Draft"
+        },
+        {
+            "name": "Approve",
+            "fromState": [
+                "Draft"
+            ],
+            "toState": "Approved"
+        },
+        {
+            "name": "Archive",
+            "fromState": [
+                "*"
+            ],
+            "toState": "Deprecated"
+        },
+        {
+            "name": "Reopen",
+            "fromState": [
+                "*"
+            ],
+            "toState": "Draft"
+        }
+    ]
+}
