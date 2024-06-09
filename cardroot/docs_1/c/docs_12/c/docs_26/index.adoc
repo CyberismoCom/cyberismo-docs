@@ -1,0 +1,45 @@
+== Workflow
+
+A workflow is a state machine that defines the states and state transitions for cards.
+
+.The properties of a workflow
+|===
+|Property|Type|Description|Required
+
+|**name**
+|`string`
+|The name of this workflow
+| &#10003; Yes
+
+|**states**
+|`object` `[]`
+|The states of the workflow
+| &#10003; Yes
+
+|**transitions**
+|`object` `[]`
+|The state transitions of the workflow
+| &#10003; Yes
+
+|===
+
+Additional properties are not allowed.
+
+==== Workslow states
+
+The `states` property of a workflow is an array of objects that have the following properties:
+
+* `name`: A string that identifies the workflow state. Required.
+* `category`: One of the following values: "initial", "active", or "closed". The category of the workflow state is used for visualising the state of the card on broad terms. Required.
+
+==== Workflow transitions
+
+The `transitions` property of a workflow is an array of objects that have the following properties:
+
+* `name`: A name that identifies the workflow transition. Required.
+* `fromState`: An array of state names, where this transition can start from. Each item of the array is a name of the starting state of the transition. The wildcard '*' denotes any state and and empty value denotes the transition to create a new card with this workflow. Required
+* `toState`: A string that is the name of the end state of the transition. Required.
+
+
+
+

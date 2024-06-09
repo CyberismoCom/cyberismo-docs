@@ -24,9 +24,13 @@ Each card is of a specific card type, which defines the workflow being used and 
 
 A workflow is a state machine that defines a set of states and state transitions for cards, such as Open → In Progress → Done or Draft → Approved → Archived. In the Cyberismo content format, both states and transitions can be referred to by a technical name and displayed for users by a display name.
 
+For more information, please see link:/cards/docs_26[Workflows].
+
 == Field type
 
-A field type defines a name, a display name, and a data type for a custom field of a card. For more information, please see link:/cards/docs_25[Fields and field types].
+A field type defines a name, a display name, and a data type for a custom field of a card.
+
+For more information, please see link:/cards/docs_25[Fields and field types].
 
 == Link and link type
 
