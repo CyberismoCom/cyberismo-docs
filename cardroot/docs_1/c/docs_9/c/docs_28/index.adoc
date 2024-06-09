@@ -1,0 +1,8 @@
+== Answer Set Programming resources
+
+For introductory material about Answer Set Programming, see the following links:
+
+* G. Brewka, T. Eiter, and M. Truszczynski. 2011. Answer set programming at a
+glance. Commun. ACM 54, 12 (2011), 92–103.
+* M.Gebser, R.Kaminski, B.Kaufmann, M.Lindauer, M.Ostrowski, J.Romero, T. Schaub, S. Thiele, and P. Wanko. 2019. Potassco User Guide, 2nd edition, version 2.2.0. Technical Report. University of Potsdam. https://github.com/potassco/guide/releases/tag/v2.2.0
+* Tomi Janhunen and Ilkka Niemelä. 2016. The Answer Set Programming Paradigm. AI Magazine 37, 3 (2016), 13–24.

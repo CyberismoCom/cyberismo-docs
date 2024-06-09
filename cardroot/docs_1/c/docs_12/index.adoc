@@ -48,6 +48,8 @@ A template contains a card or a set of cards in a directory hierarchy that is us
 
 The Cyberismo content format may include logic program files in the Answer Set Programming (ASP) form of logic programming. The logic programs may define queries, calculated fields, constraints for workflow transitions, or policy validation rules.
 
+For more information, please see link:/cards/docs_9[Queries and reasoning].
+
 == Module
 
 A module is a reusable collection of templates, card types, workflows, field types, link types and calculations. When a user imports a module as a dependency to their Cyberismo project, a read-only copy of the module is included in the project directory structure. The module includes version information, which is useful when user content needs to be updated from a previous version of a module to a newer version. The most common module is the _base_ module, which defines some commonly used basic card types and their workflows.

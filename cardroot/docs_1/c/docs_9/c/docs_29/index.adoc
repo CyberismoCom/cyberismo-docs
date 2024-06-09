@@ -1,0 +1,87 @@
+== How to generate a logic program
+
+To request the Cyberismo tool to generate a logic program, execute the following command in a Cyberismo project directory:
+
+[source,console]
+----
+cyberismo calc generate
+----
+
+This command will generate a modular logic program in the `.calc` directory.
+
+Once the logic program has been generated, all command line commands and all operations in the Cyberismo app will automatically keep the logic program up to date.
+
+== Representing a card as a logic program
+
+The bulk of the generated logic program consists of card-speficic files that declare the fields, labels and links of the card as facts.
+
+The attributes of cards are declared as logic program facts using a field predicate:
+
+[source]
+----
+field(<card key>, <field name>, <field value>).
+----
+
+Card keys work directly as constants in ASP encodings. Fields names are encoded as strings, and field values either as strings or integers.
+
+If the card is not directly under the card root, a parent predicate is generated to declare the card key of the card in the parent directory:
+
+[source]
+----
+parent(<child card key>, <parent card key>).
+----
+
+Cards may be tagged with a label in the `index.json` file of the card. This results in the following predicate to be generated for each label:
+
+[source]
+----
+label(<card key>, <label>).
+----
+
+Finally, links between cards are declared with the link predicate:
+
+[source]
+----
+link(<source card key>, <destination card key>, <link type name>, <link description>).
+----
+
+For example, the the following logic program could be generated from a card with the card key example_2. This card is a child card of example_1, and it is of the card type internal-control, it has a custom field `controlImplementer`, it has a label, and it is linked to another card:
+
+[source]
+----
+field(example_2, "title", "An example control").
+field(example_2, "cardtype", "internal-control").
+field(example_2, "workflowState", "Not Required").
+field(example_2, "controlImplementer", "Security champion").
+parent(example_2, example_1).
+label(example_2, "adoption-step-1").
+link(example_2, example_3, "relates to", "").
+----
+
+== Common definitions
+
+The logic program includes basic definitions in the file `base.lp`. The most important common definitions define the ancestor relationships present in the directory structure. The following common definitions are added to the logic program to make the ancestor predicate available for user-configured calculations, to refer to cards that are children, grandchildren, parents, or grandparents of a card in any degree.
+
+The term
+
+[source]
+----
+ancestor(<descendant card key>, <ancestor card key>)
+----
+
+means that the first card is a descendant of the second card, the ancestor.
+
+This has been implemented as follows:
+
+[source]
+----
+ancestor(A, C) :- parent(A, C), card(A), card(B).
+ancestor(A, C) :- parent(A, B), ancestor(B, C), card(A), card(B), card(C).
+----
+
+The card predicate is used above to specify that the intended arguments are card keys. It is implemented by extracting keys in use from the type declarations always present for all cards:
+
+[source]
+----
+card(C) :- field(C, "cardtype", _).
+----
