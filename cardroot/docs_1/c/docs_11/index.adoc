@@ -1,7 +1,13 @@
 The Cyberismo solution architecture is based on the following principles:
 
 * The Cyberismo tool is installed on the user computers
-* The Cyberismo tool may be also run in the CI/CD pipeline. 
+* The Cyberismo tool may be also run in the CI/CD pipeline.
+
+The tool supports the following main use cases:
+
+* A command line interface
+* A local web browser interface _Cyberismo App_
+* Generating a static web site out of the Cyberismo project content
 
 The following diagram illustrates the architecture.
 
