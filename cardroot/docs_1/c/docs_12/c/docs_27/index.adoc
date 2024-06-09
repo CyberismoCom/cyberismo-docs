@@ -38,6 +38,23 @@ Additional properties are not allowed.
 
 The `customFields` property of a card type is an array of objects that have the following properties:
 
-* `name`: A name of a field type. Required.
-* `displayName`: A display name for user interfaces. Optional. If given, overrides the display name that may have been defined in the field type.
-* `isEditable`: Defines if field value can be modified. Optional. The field is considered editable if this property is omitted.
+.Properties of the items in the `customFields` array
+|===
+|Property|Type|Description|Required
+
+|**name**
+|`string`
+|A name of a field type.
+| &#10003; Yes
+
+|**displayName**
+|`string`
+|A display name for user interfaces. Optional. If given, overrides the display name that may have been defined in the field type.
+| No
+
+|**isEditable**
+|`boolean`
+|Defines whether the field value can be modified. Optional. Defaults to true: the field is considered editable if this property is omitted.
+| No
+
+|===

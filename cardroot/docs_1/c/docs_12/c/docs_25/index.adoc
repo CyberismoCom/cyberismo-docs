@@ -93,6 +93,24 @@ The data type of a custom field must be one of the following values:
 
 The `enumValues` property of a field type is an array of available values in selection data types. This property is used for the enum and list data types only. The items of the array are objects that have the following properties:
 
-* `enumValue`: A string that represents a possible value for an enum field or for an item in a list array.
-* `enumDisplayValue`: A display name for the enum value for user interfaces.
-* `enumDescription`: A longer description of the enum value.
+.Properties of the items in the enumValues array
+|===
+|Property|Type|Description|Required
+
+|**enumValue**
+|`string`
+|A string that represents a possible value for an enum field or for an item in a list array.
+| &#10003; Yes
+
+|**enumDisplayValue**
+|`string`
+|A display name for the enum value for user interfaces.
+| No
+
+|**enumDescription**
+|`string`
+|A longer description of the enum value.
+| No
+
+|===
+

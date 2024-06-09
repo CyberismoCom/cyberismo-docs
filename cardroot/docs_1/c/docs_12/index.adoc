@@ -20,6 +20,8 @@ Each card is uniquely identified with a card key of the format _example_1_, _exa
 
 Each card is of a specific card type, which defines the workflow being used and optionally a set of custom fields. Separate card types may be defined, for example, for controlled documents, risks, threats, security requirements, architecture decisions, or tasks. Custom fields may be defined, for example, for various dates such as deadlines or time stamps, enumerations such as the likelihood or the impact of a risk, or a person, such as an assignee of a task.
 
+For more information, please see link:/cards/docs_27[Card types].
+
 == Workflow
 
 A workflow is a state machine that defines a set of states and state transitions for cards, such as Open → In Progress → Done or Draft → Approved → Archived. In the Cyberismo content format, both states and transitions can be referred to by a technical name and displayed for users by a display name.

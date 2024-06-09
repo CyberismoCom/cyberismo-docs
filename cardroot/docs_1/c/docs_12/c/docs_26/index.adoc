@@ -1,5 +1,3 @@
-== Workflow
-
 A workflow is a state machine that defines the states and state transitions for cards.
 
 .The properties of a workflow
@@ -25,14 +23,27 @@ A workflow is a state machine that defines the states and state transitions for 
 
 Additional properties are not allowed.
 
-==== Workslow states
+=== Workflow states
 
 The `states` property of a workflow is an array of objects that have the following properties:
 
-* `name`: A string that identifies the workflow state. Required.
-* `category`: One of the following values: "initial", "active", or "closed". The category of the workflow state is used for visualising the state of the card on broad terms. Required.
+.Properties of the items in the states array
+|===
+|Property|Type|Description|Required
 
-==== Workflow transitions
+|**name**
+|`string`
+|A string that identifies the workflow state.
+| &#10003; Yes
+
+|**category**
+|`string`
+|One of the following values: "initial", "active", or "closed". The category of the workflow state is used for visualising the state of the card on broad terms.
+| &#10003; Yes
+
+|===
+
+=== Workflow transitions
 
 The `transitions` property of a workflow is an array of objects that have the following properties:
 
@@ -40,6 +51,24 @@ The `transitions` property of a workflow is an array of objects that have the fo
 * `fromState`: An array of state names, where this transition can start from. Each item of the array is a name of the starting state of the transition. The wildcard '*' denotes any state and and empty value denotes the transition to create a new card with this workflow. Required
 * `toState`: A string that is the name of the end state of the transition. Required.
 
+.Properties of the items in the transitions array
+|===
+|Property|Type|Description|Required
 
+|**name**
+|`string`
+|A string that identifies the workflow transition.
+| &#10003; Yes
 
+|**fromState**
+|`string []`
+|An array of state names, where this transition can start from. Each item of the array is a name of the starting state of the transition. The wildcard '*' denotes any state and and empty string denotes the transition to create a new card with this workflow.
+| &#10003; Yes
+
+|**toState**
+|`string`
+|A string that is the name of the end state of the transition.
+| &#10003; Yes
+
+|===
 
