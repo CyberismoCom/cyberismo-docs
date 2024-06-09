@@ -1,1 +1,4 @@
 
+* link:/cards/docs_17[How to install Cyberismo]
+* link:/cards/docs_19[How to update Cyberismo]
+* link:/cards/docs_24[How to uninstall Cyberismo]

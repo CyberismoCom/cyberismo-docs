@@ -4,6 +4,6 @@ Cyberismo is a tool and an open plain text content format for cybersecurity mana
 * link:/cards/docs_10[Overview]
 * link:/cards/docs_11[Solution architecture]
 * link:/cards/docs_12[Basic concepts]
-* link:/cards/docs_13[Installation]
+* link:/cards/docs_17[Installation]
 * link:/cards/docs_2[Getting started tutorial]
 
