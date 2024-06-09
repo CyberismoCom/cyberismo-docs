@@ -15,4 +15,4 @@ Open file:///tmp/site/index.html in a browser to view your site.
 Done
 ----
 
-Notice that if you host the static documentation site for your users, then it is your responsibility to ensure that access to the documentation site is appropriately controlled.
+CAUTION:  Notice that if you host the static documentation site for your users, then it is your responsibility to ensure that access to the documentation site is appropriately controlled.
