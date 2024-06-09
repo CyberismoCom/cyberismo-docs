@@ -1,0 +1,43 @@
+
+Each card is of a certain card type, which defines the workflow and optional additional custom fields.
+
+.The properties of a card type
+|===
+|Properties|Type|Description|Required
+
+|**name**
+|`string`
+|The name of the card type
+| &#10003; Yes
+
+|**workflow**
+|`string`
+|The name of the workflow
+| &#10003; Yes
+
+|**customFields**
+|`object` `[]`
+|An array of custom fields
+|No
+
+|**alwaysVisibleFields**
+|`string` `[]`
+|An array that lists the names of fields that should be shown whenever metadata fields are being shown. The array is given in the order in which the fields should be shown.
+|No
+
+|**optionallyVisibleFields**
+|`string` `[]`
+|An array that lists the names of fields that may optionally be shown when metadata fields are being shown. The array is given in the order in which the optional fields should be shown.
+|No
+
+|===
+
+Additional properties are not allowed.
+
+=== The custom fields definition of a card type
+
+The `customFields` property of a card type is an array of objects that have the following properties:
+
+* `name`: A name of a field type. Required.
+* `displayName`: A display name for user interfaces. Optional. If given, overrides the display name that may have been defined in the field type.
+* `isEditable`: Defines if field value can be modified. Optional. The field is considered editable if this property is omitted.
