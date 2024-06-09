@@ -1,10 +1,10 @@
 This page describes the fields of the cards in the Cyberismo content format. For custom fields, the format uses a separate concept of a field type.
 
-== Common card fields
+== Common card metadata fields
 
 The following table documents the common metadata that can be included for any card regardless of the card type.
 
-.Common fields of cards
+.Common metadata fields of cards
 |===
 |Property|Type|Description|Required
 
@@ -35,7 +35,7 @@ The following table documents the common metadata that can be included for any c
 
 |===
 
-To enable card type specific custom fields, additional properties are allowed. The custom fields are card properties, whose name is a name of a field type.
+To enable card type specific custom fields, additional properties are allowed. The custom fields are card metadata properties, whose name is a name of a field type.
 
 == Custom fields
 
@@ -76,18 +76,18 @@ Custom fields are defined in separate field type definitions. The properties of 
 
 The data type of a custom field must be one of the following values:
 
-* `shorttext`: A string that contains a single line of text.
-* `longtext`: A string that contains a longer text that may have multiple lines.
-* `number`: A number that may be a floating point number or an integer (a standard JSON type).
-* `integer`: An integral number (a standard JSON type).
-* `boolean`: Either true or false (a standard JSON type). In user interfaces, boolean values may be presented by display names Yes and No.
-* `enum`: An enumeration. A string that has one of the values defined in a separate `enumValues` array. In user interfaces, an enum is represented as a selection component (drop down list).
-* `list`: An array that contains zero or more strings, where the allowed values are defined in a separate `enumValues` array. In user interfaces, a list data type is represented as a multiple selection component, where the user can select zero or more of the available options.
-* `date`: A string that represents a date in the ISO 8601 format. For example "2024-01-01".
-* `datetime`: A string that represents date and time in UTC in the ISO 8601 format. For example "2024-06-09T08:43:25Z".
-* `person`: A string that is an email address of a person.
-* `persons`: an array of strings, where each string is an email address of a person.
-* `strings`: an array of arbitrary strings.
+* **`shorttext`**: A string that contains a single line of text.
+* **`longtext`**: A string that contains a longer text that may have multiple lines.
+* **`number`**: A number that may be a floating point number or an integer (a standard JSON type).
+* **`integer`**: An integral number (a standard JSON type).
+* **`boolean`**: Either true or false (a standard JSON type). In user interfaces, boolean values may be presented by display names Yes and No.
+* **`enum`**: An enumeration. A string that has one of the values defined in a separate `enumValues` array. In user interfaces, an enum is represented as a selection component (drop down list).
+* **`list`**: An array that contains zero or more strings, where the allowed values are defined in a separate `enumValues` array. In user interfaces, a list data type is represented as a multiple selection component, where the user can select zero or more of the available options.
+* **`date`**: A string that represents a date in the ISO 8601 format. For example "2024-01-01".
+* **`datetime`**: A string that represents date and time in UTC in the ISO 8601 format. For example "2024-06-09T08:43:25Z".
+* **`person`**: A string that is an email address of a person.
+* **`persons`**: an array of strings, where each string is an email address of a person.
+* **`strings`**: an array of arbitrary strings.
 
 ===  Enum values of a field type
 
