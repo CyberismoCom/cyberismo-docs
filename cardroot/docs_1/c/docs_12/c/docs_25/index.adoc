@@ -13,7 +13,7 @@ The following table documents the common metadata that can be included for any c
 |The name of the card type
 | &#10003; Yes
 
-|**summary**
+|**title**
 |`string`
 |A short title of the card
 | &#10003; Yes
