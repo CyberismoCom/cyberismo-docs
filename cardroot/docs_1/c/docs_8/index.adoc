@@ -2,7 +2,7 @@ This page describes the naming conventions in the Cyberismo solution.
 
 == Basic concepts
 
-The Cyberismo content format uses certain link::/cards/docs_5[basic concepts] that are often referred to in JSON files. The following table defines the conventions for how to write these concepts in English and technically in camelCase.
+The Cyberismo content format uses certain link:/cards/docs_12[basic concepts] that are often referred to in JSON files. The following table defines the conventions for how to write these concepts in English and technically in camelCase.
 
 .Basic concepts and their technical names 
 [%autowidth]
