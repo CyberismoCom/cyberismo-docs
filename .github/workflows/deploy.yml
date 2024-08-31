@@ -2,8 +2,6 @@ name: Build and Export Cyberismo Site
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   build:
