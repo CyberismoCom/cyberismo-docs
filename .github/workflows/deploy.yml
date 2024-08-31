@@ -25,6 +25,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: CyberismoCom/cyberismo
+        path: cyberismo
 
     - name: Install dependencies
       run: |
