@@ -44,7 +44,15 @@ jobs:
         npm run build
         npm install -g
 
+    - name: Configure Pages
+      uses: actions/configure-pages@v4
+
     - name: Export site
       run: |
-        cd cyberismo-docs
-        cyberismo export site /tmp/site
+        cyberismo export site -p cyberismo-docs build/site
+        touch build/site/.nojekyll
+    
+    - name: Upload Artifacts
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: build/site
