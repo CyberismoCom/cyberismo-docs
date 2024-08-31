@@ -50,5 +50,4 @@ jobs:
 
     - name: Export site
       run: |
-        cd cyberismo-docs
         cyberismo export site /tmp/site
