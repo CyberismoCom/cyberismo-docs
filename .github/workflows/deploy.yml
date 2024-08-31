@@ -24,7 +24,9 @@ jobs:
         repository: CyberismoCom/cyberismo-docs
 
     - name: Clone cyberismo repository
-      run: git clone git@github.com:CyberismoCom/cyberismo.git
+      uses: actions/checkout@v4
+      with:
+        repository: CyberismoCom/cyberismo
 
     - name: Install dependencies
       run: |
