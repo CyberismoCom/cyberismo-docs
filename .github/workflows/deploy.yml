@@ -29,6 +29,11 @@ jobs:
 
     - name: Install dependencies
       run: |
+        ls
+        ls cyberismo-docs
+
+    - name: Install dependencies
+      run: |
         cd cyberismo
         npm install
 
