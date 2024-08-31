@@ -28,26 +28,26 @@ jobs:
         repository: CyberismoCom/cyberismo
         path: cyberismo
 
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@cyberismocom'
+
     - name: Install dependencies
       run: |
-        ls -la
-        ls -la cyberismo-docs
+        find cyberismo-docs
 
     - name: Install dependencies
       run: |
         cd cyberismo
         npm install
-
-    - name: Build project
-      run: |
-        cd cyberismo
         npm run build
-
-    - name: Install globally
-      run: |
-        cd cyberismo
         npm install -g
 
     - name: Export site
       run: |
+        cd cyberismo-docs
         cyberismo export site /tmp/site
