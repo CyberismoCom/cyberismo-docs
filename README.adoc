@@ -1,0 +1,17 @@
+= Shhh... We are letting you in on a secret
+
+Cyberismo is an open security-as-code solution. We are busy making Cyberismo ready for your use.  Right now, the project is running in stealth mode as we're adding some remaining essentials such as certain important features, documentation and examples. So let's keep this between you and us for now. It won't take long, so stay tuned!
+
+== Documentation site
+
+If you insist, we can tell you that this repository holds the source code for Cyberismo documentation. Visit https://docs.cyberismo.com to read it.
+
+== License and contributions
+
+See separate files LICENSE and CONTRIBUTING.
+
+Notice that while Cyberismo Ltd enforces the license of this software, the license does not affect the content produced by Cyberismo tool users. Users can be confident that the resulting documents and resources produced with Cyberismo tools and software are not affected by the licenses that Cyberismo Ltd uses to distribute the software.
+
+== Cyberismo Open Source Trademark Policy
+
+See separate file TRADEMARK.adoc.

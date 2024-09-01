@@ -1,3 +1,9 @@
+[NOTE]
+.We're letting you in on a secret
+====
+Cyberismo is an open security-as-code solution. We are busy making Cyberismo ready for your use.  Right now, the project is running in stealth mode as we're adding some remaining essentials such as certain important features, documentation and examples. So, let's keep this whole thing between you and us for now. It won't take long, so stay tuned!
+====
+
 
 The Cyberismo security as code solution is a tool and an open plain text content format for cybersecurity management in software projects. It puts the ease of adoption of compliant cybersecurity processes in the spotlight.
 
