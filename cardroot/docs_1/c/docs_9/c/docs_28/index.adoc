@@ -1,6 +1,6 @@
 == Answer Set Programming resources
 
-For introductory material about Answer Set Programming, see the following links:
+For introductory material about Answer Set Programming, see the following references:
 
 * G. Brewka, T. Eiter, and M. Truszczynski. 2011. Answer set programming at a
 glance. Commun. ACM 54, 12 (2011), 92–103.

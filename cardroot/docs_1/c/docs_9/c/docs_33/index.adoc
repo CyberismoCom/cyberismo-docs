@@ -1,8 +1,8 @@
-Cyberismo has a powerful query language based on Answer Set Programming.
+This page introduces the power Cyberismo query language.
 
 == Basic example
 
-Let's get started with Cyberismo queries by a simple example that returns the title all cards of the card type `base/page` in alphabetical order:
+Let's get started with Cyberismo queries by a simple example that returns the title of all cards of the card type `base/page` in alphabetical order:
 
 [source]
 ----
@@ -42,7 +42,7 @@ select_all.
 
 == Selecting the results
 
-The `result(X)` predicate denotes that `X` will be included in the results of the query. The following query returns all fields of the card that has the card key `docs_33`:
+The `result(X)` predicate denotes that `X` will be included in the results of the query. The following query returns all fields of entity (most likely a card) that has the key `docs_33`:
 
 [source]
 ----
@@ -137,7 +137,7 @@ The parameters of the `order` predicate are:
 
 == Summary queries
 
-The _key_ of the results does not always have to be a card key. For example, the following summary query works similarly to an SQL query that uses "GROUP BY", as it returns the different workflow states of the cards that are descendants of ´docs_9´, and for each workflow state, it includes a `count` attribute that contains the number of cards in the given state.
+The _key_ of the results does not always have to be a card key. For example, the following summary query works similarly to an SQL query that uses "GROUP BY", as it returns the different workflow states of the cards that are descendants of `docs_9`, and for each workflow state, it includes a `count` attribute that contains the number of cards in the given state.
 
 
 [source]
@@ -150,3 +150,25 @@ result(State) :-
 field(State, "count", Count) :-
     result(State),
     Count = #count{ card(X) : ancestor(X, docs_9), field(X, "workflowState", State)}.
+----
+
+== Hierarchical queries
+
+So far, the results of our queries have formed a flat list. A hierarchical query returns a tree structure: each result may have list of child results, which in turn may have child results.
+
+For example, say we would like to query the children and grandchildren of `docs_9` according to the the card tree hierarchy. We would like the direct children to form the first level of hierarchy, and each child would have their children as child results. This can be done with the following query: 
+
+[source]
+----
+select("title"). <1>
+select(2, "title"). <2>
+result(Card) :- parent(Card, docs_9).
+child_result(Child, Grandchild) :- parent(Grandchild, Child), result(Child). <3>
+order_by("title", "ASC"). <4>
+order_by(2, "title", ASC). <5>
+----
+<1> `select` with just one parameter refers to the first level of hierarchy
+<2> the first parameter indicates the level of hierarchy and the second parameter indicates, which fields to select on the given level.
+<3> Child results are returned with the `child_result` predicate
+<4> When `order_by` has an even number of parameters, it refers to the results on the highest level of hierarchy
+<5> When `order_by` has an odd number of parameters, the first parameter denotes the level of hierarchy.

@@ -38,12 +38,15 @@ Cards may be tagged with a label in the `index.json` file of the card. This resu
 label(<card key>, <label>).
 ----
 
-Finally, links between cards are declared with the link predicate:
+Finally, links between cards are declared with the link predicate. There are two variants of this predicate, one for link types that use link descriptions and another for link types that do not use link descriptions
 
 [source]
 ----
-link(<source card key>, <destination card key>, <link type name>, <link description>).
+link(<source card key>, <destination card key>, <link type name>, <link description>). <1>
+link(<source card key>, <destination card key>, <link type name>). <2>
 ----
+<1> This version is used if the link type uses link descriptions
+<2> This version is used if the link type does not use link descriptions
 
 For example, the the following logic program could be generated from a card with the card key example_2. This card is a child card of example_1, and it is of the card type internal-control, it has a custom field `controlImplementer`, it has a label, and it is linked to another card:
 
@@ -55,7 +58,7 @@ field(example_2, "workflowState", "Not Required").
 field(example_2, "controlImplementer", "Security champion").
 parent(example_2, example_1).
 label(example_2, "adoption-step-1").
-link(example_2, example_3, "relates to", "").
+link(example_2, example_3, "relates to").
 ----
 
 == Common definitions
