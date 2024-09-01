@@ -2,8 +2,6 @@ name: Build and Export Cyberismo Site
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   build:
@@ -12,36 +10,61 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x]
-  
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}        
+
     permissions:
       contents: read
       packages: write
+      pages: write
+      id-token: write
+
+    concurrency:
+      group: "pages"
+      cancel-in-progress: false    
   
     steps:
     - name: Checkout cyberismo-docs repository
       uses: actions/checkout@v4
       with:
         repository: CyberismoCom/cyberismo-docs
+        path: cyberismo-docs
 
     - name: Clone cyberismo repository
-      run: git clone git@github.com:CyberismoCom/cyberismo.git
+      uses: actions/checkout@v4
+      with:
+        repository: CyberismoCom/cyberismo
+        path: cyberismo
+        ref: feature/INTDEV-149-export-ui
 
-    - name: Install dependencies
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install the Cyberismo application
       run: |
         cd cyberismo
         npm install
-
-    - name: Build project
-      run: |
-        cd cyberismo
         npm run build
-
-    - name: Install globally
-      run: |
-        cd cyberismo
         npm install -g
 
-    - name: Export site
+    - name: Configure GitHub Pages
+      uses: actions/configure-pages@v5
+
+    - name: Export the site
       run: |
-        cd cyberismo
-        cyberismo export site /tmp/site
+        cyberismo export site -p cyberismo-docs build/site
+        touch build/site/.nojekyll
+        find build/site
+    
+    - name: Upload artifacts
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: build/site
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4        
