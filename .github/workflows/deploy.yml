@@ -44,27 +44,23 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: |
-        find cyberismo-docs
-
-    - name: Install dependencies
+    - name: Install the Cyberismo application
       run: |
         cd cyberismo
         npm install
         npm run build
         npm install -g
 
-    - name: Configure Pages
+    - name: Configure GitHub Pages
       uses: actions/configure-pages@v5
 
-    - name: Export site
+    - name: Export the site
       run: |
         cyberismo export site -p cyberismo-docs build/site
         touch build/site/.nojekyll
         find build/site
     
-    - name: Upload Artifacts
+    - name: Upload artifacts
       uses: actions/upload-pages-artifact@v3
       with:
         path: build/site
