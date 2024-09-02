@@ -164,14 +164,20 @@ For example, say we would like to query the children and grandchildren of `docs_
 [source]
 ----
 select("title"). <1>
-select(2, "title"). <2>
 result(Card) :- parent(Card, docs_9).
-child_result(Child, Grandchild) :- parent(Grandchild, Child), result(Child). <3>
-order_by("title", "ASC"). <4>
-order_by(2, "title", ASC). <5>
+child_result(Child, Grandchild) :- parent(Grandchild, Child), result(Child). <2>
+order_by("title", "ASC"). <3>
 ----
-<1> `select` with just one parameter refers to the first level of hierarchy
-<2> the first parameter indicates the level of hierarchy and the second parameter indicates, which fields to select on the given level.
-<3> Child results are returned with the `child_result` predicate
-<4> When `order_by` has an even number of parameters, it refers to the results on the highest level of hierarchy
-<5> When `order_by` has an odd number of parameters, the first parameter denotes the level of hierarchy.
+<1> `select` with just one parameter and `select_all` without parameters refer to all levels of hierarchy.
+<2> Child results are returned with the `child_result` predicate
+<3> When `order_by` has an even number of parameters, it refers to the results on all levels of hierarchy
+
+What if you want to select different fields on different levels of hierarchy, or order the results differently on different levels of hierarchy? In these cases, you can include the level of hierarchy (1, 2, etc.) as the first parameter to `select`, `select_all`, or `order_by`:
+
+[source]
+----
+select(2,  "title"). <1>
+order_by(2, "title", "ASC"). <2>
+----
+<1> the first parameter indicates the level of hierarchy and the second parameter indicates, which field to select on the given level.
+<2> When `order_by` has an odd number of parameters, the first parameter denotes the level of hierarchy.
