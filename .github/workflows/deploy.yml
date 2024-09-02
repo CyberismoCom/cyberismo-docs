@@ -37,7 +37,7 @@ jobs:
       with:
         repository: CyberismoCom/cyberismo
         path: cyberismo
-        ref: feature/INTDEV-149-export-ui
+        ref: main
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
