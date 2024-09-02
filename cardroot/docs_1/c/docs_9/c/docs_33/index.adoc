@@ -1,4 +1,4 @@
-This page introduces the power Cyberismo query language.
+This page introduces the Cyberismo query language.
 
 == Basic example
 
