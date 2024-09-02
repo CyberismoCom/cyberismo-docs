@@ -5,7 +5,7 @@ Cyberismo is an open security-as-code solution. We are busy making Cyberismo rea
 ====
 
 
-The Cyberismo security as code solution is a tool and an open plain text content format for cybersecurity management in software projects. It puts the ease of adoption of compliant cybersecurity processes in the spotlight.
+*Cyberismo* is a security-as-code solution for cybersecurity management in software projects. It puts the ease of adoption of compliant cybersecurity processes in the spotlight.
 
 The solution leverages an open information model, making it accessible, manageable, and automatable within existing development processes and DevSecOps toolchains. The solution is modular and tailorable, ensuring it fits perfectly within the organisation of its users, automating secure development implementation, compliance validation and evidence archiving.
 
