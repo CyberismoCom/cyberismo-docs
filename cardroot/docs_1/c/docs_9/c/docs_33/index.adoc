@@ -14,7 +14,7 @@ order_by("title", "ASC"). <3>
 <2> Include `Card` in the results if the card type field equals `base/page`
 <3> Sort the results by the title field in an ascending order.
 
-== Selecting the fields of the results
+== Selecting the fields and other properties of the results
 
 The results of the queries are identified by a _key_, which is typically a card key. To return selected attributes of a key, use the `select` or `select_all` predicate.
 
@@ -39,6 +39,25 @@ To select all fields in the results, use:
 ----
 select_all.
 ----
+
+The following special cases are supported:
+
+[%header]
+|===
+| Select predicate | Meaning
+| `select("labels").`
+| Include labels in the results
+
+| `select("links").`
+| Include links in the results
+
+| `select("policyChecks").`
+| Include information about successful and failed policy checks in the results
+
+| `select("deniedOperations").`
+| Include information about denied operations such as denied workflow transitions, denied moving etc.
+
+|===
 
 == Selecting the results
 

@@ -15,19 +15,19 @@ To deny moving a card, a user-defined logic program can define the following pre
 
 [source]
 ----
-moving_card_denied( <source card key>, <destination card key>, <error message> )
+moving_card_denied( <card key>, <error message> )
 ----
 
-== Constraint to remove a card
+== Constraint to delete a card
 
-To deny removing a card, a user-defined logic program can define the following predicate:
+To deny deleting a card, a user-defined logic program can define the following predicate:
 
 [source]
 ----
-removing_card_denied( <card key>, <error message>)
+deleting_card_denied( <card key>, <error message> )
 ----
 
-== Constraint to edit a card
+== Constraints to edit a card
 
 To deny editing a card field, a user-defined logic program can define the following predicate:
 
@@ -36,7 +36,13 @@ To deny editing a card field, a user-defined logic program can define the follow
 editing_field_denied( <card key>, <field name>, <error message> )
 ----
 
-In this constraint, the field name `description` refers to the AsciiDoc contents of the card description.
+A separate predicate is used for denying the editing of the AsciiDoc content of the card description:
+
+[source]
+----
+editing_content_denied( <card key>, <error message> )
+----
+
 
 == Example
 
