@@ -4,7 +4,7 @@ This page describes the naming conventions in the Cyberismo solution.
 
 The Cyberismo content format uses certain link:/cards/docs_12[basic concepts] that are often referred to in JSON files. The following table defines the conventions for how to write these concepts in English and technically in camelCase.
 
-.Basic concepts and their technical names 
+.Basic concepts and their technical names
 [%autowidth]
 |===
 |Concept  |Technical name
@@ -14,7 +14,7 @@ The Cyberismo content format uses certain link:/cards/docs_12[basic concepts] th
 |Workflow
 |workflow
 |Workflow state
-|workflowSate
+|workflowState
 |card type
 |cardType
 |field type
@@ -30,7 +30,7 @@ The Cyberismo content format uses certain link:/cards/docs_12[basic concepts] th
 
 == Names of card types, workflows, field types, link types
 
-When the basic concepts of the Cyberismo content format are declared, there is a need to refer to other basic concepts by name. This includes the names of card types, workflows, field types and link types. 
+When the basic concepts of the Cyberismo content format are declared, there is a need to refer to other basic concepts by name. This includes the names of card types, workflows, field types and link types.
 
 #TODO# Is this camelCase or kebab-case?
 
@@ -40,7 +40,7 @@ When the basic concepts of the Cyberismo content format are declared, there is a
 
 The basic concepts are defines as JSON files that are named in so called kebab-case, for example `my-workflow.json` or `my-custom-field.json`.
 
-Similarly, kebab case is used in logic program file names. They have the file extension `.lp`. For example, `risk-level-calculation.lp`. 
+Similarly, kebab case is used in logic program file names. They have the file extension `.lp`. For example, `risk-level-calculation.lp`.
 
 #TODO# or should it be camelCase?
 
