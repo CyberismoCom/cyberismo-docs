@@ -48,7 +48,7 @@ User-configured field types and built-in fields of cards are used in `field` pre
 .Cyberismo concepts in `field` predicates
 [%autowidth]
 |===
-|Concept  |Name in `field` predicates
+|Field  |Name in `field` predicates
 
 |Card type
 |`cardType`
