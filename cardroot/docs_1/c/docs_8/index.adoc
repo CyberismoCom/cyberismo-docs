@@ -1,16 +1,18 @@
-This page describes the naming conventions in the Cyberismo solution.
+This page describes the naming conventions in the Cyberismo solution. These naming conventions are relevant when designing new content modules.
 
-== Module names
+== General principle: use camelCase
 
-Modules are named in so called kebab-case. By convention, the source code repository of a module should begin with `module-`, for example `module-example`.
+In general, all the user-configurable names use the so called `camelCase` notation. 
 
-== Names of card types, workflows, field types, link types
+Modules have a separately configurable name, which is defined in the `cardsConfig.json` file by convention in `camelCase`. Similarly by convention, the source code repository of a module is named in kebab-case and it should begin with `module-`, for example `module-my-example`.
 
-Card types, workflows, field types, link types and other basic concepts of the Cyberismo content format are named in kebab-case.
+Other types of Cyberismo configuration do not have separately configurable names, but their name is the file or directory name in which they are declared. Card types, workflows, field types, link types and other basic concepts of the Cyberismo content format are named in `camelCase`. For example, a `securityIssue` card type would be defined in a JSON file `securityIssue.json`
 
-When we refer to these concepts in the configuration, the references always include the module name and the type of the concept, for example `my-module/templates/decision`
+All other types of files in the Cyberismo content format should also be named in `camelCase`. This includes logic program file names that have the file extension `.lp`, such as `riskLevelCalculation.lp`.
 
-Do not include the type of the item in the name. For example, if you need a workflow for decisions, it should be called `decision` rather than `decision-workflow`. It will be referred to as `module-name/workflows/decision`.
+When we refer to these concepts in the configuration, the references always include the module name and the type of the concept, for example `myModule/templates/decision`
+
+Do not include the type of the item in the name. For example, if you need a workflow for decisions, it should be called `decision` rather than `decisionWorkflow`. It will be referred to as `moduleName/workflows/decision`.
 
 The following table shows how the main Cyberismo concepts are referred to in Cyberismo modules.
 
@@ -22,27 +24,22 @@ The following table shows how the main Cyberismo concepts are referred to in Cyb
 |Workflow
 |`module1/workflows/example`
 |Card type
-|`module1/cardtypes/example`
+|`module1/cardTypes/example`
 |Field type
-|`module1/fieldtypes/example`
+|`module1/fieldTypes/example`
 |Link type
-|`module1/linktypes/example`
+|`module1/linkTypes/example`
 |Template
 |`module1/templates/example`
 |===
 
-== File names
-
-Various files in the Cyberismo content format should be named in kebab-case. 
-This includes several JSON files that have the file extension `.json`, and logic program file names that have the file extension `.lp`. For example, `security-issue.json` and `risk-level-calculation.lp`.
-
 == Naming in logic programs
 
-We follow the standard Answer Set Programming naming conventions when naming the atoms, constants and variables. The names of atoms and constants begin with a lowercase character, and variable names begin with an uppercase character.  If a symbol includes multiple words, then an underscore character '_' is used as a separator.
+We follow the standard Answer Set Programming naming conventions when naming the atoms, constants and variables. The names of atoms and constants begin with a lowercase character, and variable names begin with an uppercase character.  If a symbol includes multiple words, then an underscore character '_' is used as a separator, according to the `snake_case` notation.
 
 == Names of Cyberismo concepts in `field` predicates
 
-Some Cyberismo concepts are used in `field` predicates of generated logic programs. In these cases, the names are given in `camelCase`, which is the naming convention in Cyberismo's implementation language TypeScript. These names are listed in the following table.
+Some Cyberismo concepts are used in `field` predicates of generated logic programs. These names are given in `camelCase`, as following.
 
 .Cyberismo concepts in `field` predicates
 [%autowidth]
@@ -50,7 +47,9 @@ Some Cyberismo concepts are used in `field` predicates of generated logic progra
 |Concept  |Name in `field` predicates
 
 |Card type
-|`cardtype`
+|`cardType`
+|Last modified
+|`lastModified`
 |Title
 |`title`
 |Workflow state
