@@ -2,7 +2,7 @@ This page describes the naming conventions when developing new Cyberismo solutio
 
 == General principle: use camelCase
 
-In general, the user-configurable names in Cyberismo content format use the so called `camelCase` notation. 
+In general, the user-configurable names in Cyberismo content format use the so called `camelCase` notation, except labels, which use the so-called `kebab-case`.
 
 Cyberismo _modules_ have a separately configurable name, which is defined in the `cardsConfig.json` file by convention in `camelCase`. Similarly by convention, the source code repository of a module is named in kebab-case and it should begin with `module-`, for example `module-my-example`.
 
@@ -39,7 +39,9 @@ The following table shows how the main Cyberismo concepts are referred to in Cyb
 
 == Naming in logic programs
 
-We follow the standard Answer Set Programming naming conventions when naming the atoms, constants and variables. The names of atoms and constants begin with a lowercase character, and variable names begin with an uppercase character.  If a symbol includes multiple words, then an underscore character '_' is used as a separator, according to the `snake_case` notation.
+Naming of predicates and atoms in logic programs follows the same `camelCase` convention as other naming in the Cyberismo solution. As required by the syntax rules of Answer Set Programming, the names of atoms and constants begin with a lowercase character, and variable names begin with an uppercase character.
+
+NOTE: If a Cyberismo content module needs to define a new global name, such as a new predicate, the name should include the module name as a prefix.
 
 == Names of Cyberismo concepts in `field` predicates
 
@@ -63,3 +65,7 @@ User-configured field types and built-in fields of cards are used in `field` pre
 |User-configured field
 |`moduleName/fieldTypes/example`
 |===
+
+== Labels
+
+Labels should be used sparingly. Consider using a custom field instead of a label, whenever possible. Labels should be named according to the `kebab-case` convention.

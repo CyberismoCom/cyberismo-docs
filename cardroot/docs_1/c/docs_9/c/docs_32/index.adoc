@@ -2,14 +2,14 @@ The automated policy checks enable logic programs to inspect that the fields and
 
 [source]
 ----
-policy_check_failure( <card key>, <test suite>, <test case>, <error message> )
+policyCheckFailure( <card key>, <test suite>, <test case>, <error message> )
 ----
 
 or
 
 [source]
 ----
-policy_check_success( <card key>, <test suite>, <test case> )
+policyCheckSuccess( <card key>, <test suite>, <test case> )
 ----
 
-The `policy_check_success` predicate denotes that a policy check succeeded, and the `policy_check_failure` predicate denotes that a policy check failed. The arguments test suite and test case are string identifiers for organising the validation checks.
+The `policyCheckSuccess` predicate denotes that a policy check succeeded, and the `policyCheckFailure` predicate denotes that a policy check failed. The arguments test suite and test case are string identifiers for organising the validation checks.

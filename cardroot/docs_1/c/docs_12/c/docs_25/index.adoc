@@ -72,21 +72,6 @@ Custom fields are defined in separate field type definitions. The properties of 
 
 |===
 
-=== Reserved words that cannot be used as custom field names
-
-The following names have been reserved and must not be used as custom field names:
-
-* `cardtype`
-* `deniedOperations`
-* `labels`
-* `lastUpdated`
-* `lastTransitioned`
-* `links`
-* `policyChecks`
-* `results`
-* `workflowState`
-
-
 === Data types of custom fields
 
 The data type of a custom field must be one of the following values:

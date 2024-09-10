@@ -53,12 +53,12 @@ For example, the the following logic program could be generated from a card with
 [source]
 ----
 field(example_2, "title", "An example control").
-field(example_2, "cardtype", "internal-control").
+field(example_2, "cardType", "moduleName/cardTypes/internalControl").
 field(example_2, "workflowState", "Not Required").
-field(example_2, "controlImplementer", "Security champion").
+field(example_2, "moduleName/fieldTypes/controlImplementer", "Security champion").
 parent(example_2, example_1).
 label(example_2, "adoption-step-1").
-link(example_2, example_3, "relates to").
+link(example_2, example_3, "base/linkTypes/relatesTo").
 ----
 
 == Common definitions
@@ -86,5 +86,5 @@ The card predicate is used above to specify that the intended arguments are card
 
 [source]
 ----
-card(C) :- field(C, "cardtype", _).
+card(C) :- field(C, "cardType", _).
 ----

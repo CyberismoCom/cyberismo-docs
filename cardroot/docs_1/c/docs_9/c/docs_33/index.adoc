@@ -7,8 +7,8 @@ Let's get started with Cyberismo queries by a simple example that returns the ti
 [source]
 ----
 select("title"). <1>
-result(Card) :- card(Card), field(Card, "cardtype", "base/page"). <2>
-order_by("title", "ASC"). <3>
+result(Card) :- card(Card), field(Card, "cardType", "base/cardTypes/page"). <2>
+orderBy("title", "ASC"). <3>
 ----
 <1> Return the title field. Notice the period at the end of each line.
 <2> Include `Card` in the results if the card type field equals `base/page`
@@ -16,7 +16,7 @@ order_by("title", "ASC"). <3>
 
 == Selecting the fields and other properties of the results
 
-The results of the queries are identified by a _key_, which is typically a card key. To return selected attributes of a key, use the `select` or `select_all` predicate.
+The results of the queries are identified by a _key_, which is typically a card key. To return selected attributes of a key, use the `select` or `selectAll` predicate.
 
 For example, to include the fields `title` and  `workflowState`, you can use:
 
@@ -37,7 +37,7 @@ To select all fields in the results, use:
 
 [source]
 ----
-select_all.
+selectAll.
 ----
 
 The following special cases are supported:
@@ -65,7 +65,7 @@ The `result(X)` predicate denotes that `X` will be included in the results of th
 
 [source]
 ----
-select_all.
+selectAll.
 result(docs_33).
 ----
 
@@ -74,7 +74,7 @@ Logic program rules are used to select results that match a condition. For examp
 
 [source]
 ----
-select_all.
+selectAll.
 result(Card) :- card(Card), field(Card, "workflowState", "Open").
 ----
 
@@ -86,10 +86,10 @@ A logic program rule can include several conditions that are separated by a comm
 
 [source]
 ----
-select_all.
+selectAll.
 result(Card) :- 
     card(Card), 
-    field(Card, "cardtype", "base/page",
+    field(Card, "cardType", "base/cardTypes/page",
     field(Card, "workflowState", "Open").
 ----
 
@@ -99,10 +99,10 @@ To implement a _disjunction_, which returns results for which at least one of th
 
 [source]
 ----
-select_all.
+selectAll.
 result(Card) :- 
     card(Card), 
-    field(Card, "cardtype", "base/page".
+    field(Card, "cardType", "base/cardTypes/page".
 result(Card) :- 
     card(Card), 
     field(Card, "workflowState", "Open").
@@ -114,25 +114,25 @@ The results of the query can be ordered by one or more fields in an ascending or
 
 There is no default order, but the Cyberismo query language requires you to explicitly include either the ascending (`"ASC"`) or descending (`"DESC"`) direction.
 
-To order by one, two or three fields, you can use the `order_by` predicate. For example:
+To order by one, two or three fields, you can use the `orderBy` predicate. For example:
 
 [source]
 ----
-order_by("title", "ASC").
+orderBy("title", "ASC").
 ----
 
 Or:
 
 [source]
 ----
-order_by("workflowState", "ASC", "title", "DESC").
+orderBy("workflowState", "ASC", "title", "DESC").
 ----
 
 Or:
 
 [source]
 ----
-order_by(
+orderBy(
     "workflowState", "DESC", 
     "rank", "ASC", 
     "title", "ASC").
@@ -161,7 +161,7 @@ The _key_ of the results does not always have to be a card key. For example, the
 
 [source]
 ----
-select_all.
+selectAll.
 result(State) :-
     ancestor(Card, docs_9),
     field(Card, "workflowState", State).
@@ -184,19 +184,19 @@ For example, say we would like to query the children and grandchildren of `docs_
 ----
 select("title"). <1>
 result(Card) :- parent(Card, docs_9).
-child_result(Child, Grandchild) :- parent(Grandchild, Child), result(Child). <2>
-order_by("title", "ASC"). <3>
+childResult(Child, Grandchild) :- parent(Grandchild, Child), result(Child). <2>
+orderBy("title", "ASC"). <3>
 ----
-<1> `select` with just one parameter and `select_all` without parameters refer to all levels of hierarchy.
-<2> Child results are returned with the `child_result` predicate
-<3> When `order_by` has an even number of parameters, it refers to the results on all levels of hierarchy
+<1> `select` with just one parameter and `selectAll` without parameters refer to all levels of hierarchy.
+<2> Child results are returned with the `childResult` predicate
+<3> When `orderBy` has an even number of parameters, it refers to the results on all levels of hierarchy
 
-What if you want to select different fields on different levels of hierarchy, or order the results differently on different levels of hierarchy? In these cases, you can include the level of hierarchy (1, 2, etc.) as the first parameter to `select`, `select_all`, or `order_by`:
+What if you want to select different fields on different levels of hierarchy, or order the results differently on different levels of hierarchy? In these cases, you can include the level of hierarchy (1, 2, etc.) as the first parameter to `select`, `selectAll`, or `orderBy`:
 
 [source]
 ----
 select(2,  "title"). <1>
-order_by(2, "title", "ASC"). <2>
+orderBy(2, "title", "ASC"). <2>
 ----
 <1> the first parameter indicates the level of hierarchy and the second parameter indicates, which field to select on the given level.
-<2> When `order_by` has an odd number of parameters, the first parameter denotes the level of hierarchy.
+<2> When `orderBy` has an odd number of parameters, the first parameter denotes the level of hierarchy.

@@ -4,8 +4,8 @@ This is best explained with an example. Let us assume that a card type risk has 
 
 [source]
 ----
-field(X, "riskLevel", Likelihood * Impact / 3) :-
-    field(X, "cardtype", "risk"),
-    field(X, "likelihood", Likelihood),
-    field(X, "impact", Impact).
+field(X, "moduleName/fieldTypes/riskLevel", Likelihood * Impact / 3) :-
+    field(X, "cardType", "moduleName/cardTypes/risk"),
+    field(X, "moduleName/fieldTypes/likelihood", Likelihood),
+    field(X, "moduleName/fieldTypes/impact", Impact).
 ----
