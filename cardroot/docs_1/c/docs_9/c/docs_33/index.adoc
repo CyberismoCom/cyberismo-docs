@@ -95,7 +95,7 @@ result(Card) :-
 
 === Disjunction (logical or)
 
-To implement a _disjunction_, which returns results for which at least one of the conditions is true, use multiple rules. The following query returns all cards that are either of the card type `base/page` _or_ have the workflow state `Open`, corresponisng to the logical _or_ operator.
+To implement a _disjunction_, which returns results for which at least one of the conditions is true, use multiple rules. The following query returns all cards that are either of the card type `base/page` _or_ have the workflow state `Open`, corresponding to the logical _or_ operator.
 
 [source]
 ----
