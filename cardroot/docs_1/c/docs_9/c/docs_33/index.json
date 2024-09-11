@@ -1,6 +1,6 @@
 {
     "title": "Query language",
-    "cardtype": "base/page",
+    "cardtype": "base/cardtypes/page",
     "workflowState": "Draft",
     "rank": "0|a",
     "lastUpdated": "2024-09-11T08:03:46.451Z"

@@ -1,17 +1,14 @@
 {
-    "name": "base/page-workflow",
+    "name": "base/workflows/page-workflow",
     "states": [
         {
-            "name": "Draft",
-            "category": "initial"
+            "name": "Draft", "category": "initial"
         },
         {
-            "name": "Ready",
-            "category": "closed"
+            "name": "Ready", "category": "closed"
         },
         {
-            "name": "Deprecated",
-            "category": "hidden"
+            "name": "Deprecated", "category": "hidden"
         }
     ],
     "transitions": [
@@ -22,23 +19,17 @@
         },
         {
             "name": "Content ready",
-            "fromState": [
-                "Draft"
-            ],
+            "fromState": ["Draft"],
             "toState": "Ready"
         },
         {
             "name": "Archive",
-            "fromState": [
-                "*"
-            ],
+            "fromState": ["*"],
             "toState": "Deprecated"
         },
         {
             "name": "Reopen",
-            "fromState": [
-                "*"
-            ],
+            "fromState": ["*"],
             "toState": "Draft"
         }
     ]

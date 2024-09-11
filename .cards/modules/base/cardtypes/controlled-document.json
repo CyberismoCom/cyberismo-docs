@@ -1,12 +1,12 @@
 {
-    "name": "base/controlled-document",
-    "workflow": "base/controlled-document-workflow",
+    "name": "base/cardtypes/controlled-document",
+    "workflow": "base/workflows/controlled-document-workflow",
     "customFields": [
         {
-            "name": "base/owner"
+            "name": "base/fieldtypes/owner"
         },
         {
-            "name": "base/informationClassification"
+            "name": "base/fieldtypes/informationClassification"
         }
     ]
 }

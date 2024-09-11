@@ -1,7 +1,9 @@
 {
     "title": "Untitled document",
-    "cardtype": "base/controlled-document",
+    "cardtype": "base/cardtypes/controlled-document",
     "workflowState": "",
-    "base/owner": null,
-    "base/informationClassification": "Internal"
+    "base/fieldtypes/owner": null,
+    "base/fieldtypes/informationClassification": "Internal",
+    "rank": "0|a",
+    "lastUpdated": "2024-08-01T14:25:19.226Z"
 }

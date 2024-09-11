@@ -1,0 +1,9 @@
+{
+    "title": "Untitled one-time task",
+    "cardtype":  "base/cardtypes/task",
+    "workflowState": "",
+    "base/fieldtypes/owner": null,
+    "base/fieldtypes/reviewPeriod": null,
+    "rank": "0|a",
+    "lastUpdated": "2024-08-01T14:25:19.238Z"
+}

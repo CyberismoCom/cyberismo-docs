@@ -1,6 +1,6 @@
 {
     "title": "Naming conventions",
-    "cardtype": "base/page",
+    "cardtype": "base/cardtypes/page",
     "workflowState": "Draft",
     "rank": "0|a",
     "lastUpdated": "2024-09-10T19:07:02.191Z"
