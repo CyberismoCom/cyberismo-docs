@@ -1,6 +1,6 @@
 {
     "title": "Queries and reasoning",
-    "cardtype": "base/page",
+    "cardtype": "base/cardtypes/page",
     "workflowState": "Draft",
     "rank": "0|z",
     "lastUpdated": "2024-09-01T18:49:54.370Z"

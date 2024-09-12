@@ -1,6 +1,6 @@
 {
     "title": "Security considerations",
-    "cardtype": "base/page",
+    "cardtype": "base/cardtypes/page",
     "workflowState": "Draft",
     "rank": "0|i",
     "lastUpdated": "2024-08-01T14:26:16.751Z"

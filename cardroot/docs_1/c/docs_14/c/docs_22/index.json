@@ -1,6 +1,6 @@
 {
     "title": "How to report vulnerabilities",
-    "cardtype": "base/page",
+    "cardtype": "base/cardtypes/page",
     "workflowState": "Draft",
     "rank": "0|s",
     "lastUpdated": "2024-08-01T14:26:16.795Z"

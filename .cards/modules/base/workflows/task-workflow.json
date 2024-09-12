@@ -1,5 +1,5 @@
 {
-    "name": "base/task-workflow",
+    "name": "base/workflows/task-workflow",
     "states": [
         {
             "name": "Open",
@@ -21,44 +21,32 @@
     "transitions": [
         {
             "name": "Create",
-            "fromState": [
-                ""
-            ],
+            "fromState": [""],
             "toState": "Open"
         },
         {
             "name": "Reopen",
-            "fromState": [
-                "*"
-            ],
+            "fromState": ["*"],
             "toState": "Open"
         },
         {
             "name": "Start progress",
-            "fromState": [
-                "Open"
-            ],
+            "fromState": ["Open"],
             "toState": "In progress"
         },
         {
             "name": "Done",
-            "fromState": [
-                "In progress"
-            ],
+            "fromState": ["In progress"],
             "toState": "Closed as done"
         },
         {
             "name": "Review as OK",
-            "fromState": [
-                "Closed as done"
-            ],
+            "fromState": ["Closed as done"],
             "toState": "Closed as done"
         },
         {
             "name": "Review as not applicable",
-            "fromState": [
-                "*"
-            ],
+            "fromState": ["*"],
             "toState": "Closed as not applicable"
         }
     ]

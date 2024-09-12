@@ -1,5 +1,7 @@
 {
     "title": "Untitled page",
-    "cardtype": "base/page",
-    "workflowState": ""
+    "cardtype": "base/cardtypes/page",
+    "workflowState": "",
+    "rank": "0|a",
+    "lastUpdated": "2024-08-01T14:25:19.240Z"
 }

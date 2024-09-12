@@ -1,4 +1,4 @@
 {
-    "name": "base/page",
-    "workflow": "base/page-workflow"
+    "name": "base/cardtypes/page",
+    "workflow": "base/workflows/page-workflow"
 }

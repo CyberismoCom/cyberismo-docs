@@ -1,0 +1,8 @@
+{
+    "name": "base/linktypes/blocks",
+    "outboundDisplayName": "blocks",
+    "inboundDisplayName": "is blocked by",
+    "sourceCardTypes": [],
+    "destinationCardTypes": [],
+    "enableLinkDescription": false
+}

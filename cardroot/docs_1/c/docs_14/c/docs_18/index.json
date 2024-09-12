@@ -1,6 +1,6 @@
 {
     "title": "Security recommendations when using Cyberismo",
-    "cardtype": "base/page",
+    "cardtype": "base/cardtypes/page",
     "workflowState": "Draft",
     "rank": "0|a",
     "lastUpdated": "2024-08-01T14:26:16.762Z"

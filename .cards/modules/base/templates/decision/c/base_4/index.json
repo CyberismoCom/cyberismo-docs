@@ -1,6 +1,8 @@
 {
     "title": "Untitled decision",
-    "cardtype": "base/decision",
+    "cardtype": "base/cardtypes/decision",
     "workflowState": "",
-    "base/owner": null
+    "base/fieldtypes/owner": null,
+    "rank": "0|a",
+    "lastUpdated": "2024-08-01T14:25:19.229Z"
 }

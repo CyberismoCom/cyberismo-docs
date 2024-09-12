@@ -1,4 +1,7 @@
 {
     "buttonLabel": "Create a new page",
-    "namePrompt": "Prompt"
+    "namePrompt": "Prompt",
+    "displayName": "Page",
+    "description": "A basic document",
+    "category": "General"
 }
