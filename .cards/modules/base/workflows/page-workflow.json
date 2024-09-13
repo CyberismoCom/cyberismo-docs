@@ -8,7 +8,7 @@
             "name": "Ready", "category": "closed"
         },
         {
-            "name": "Deprecated", "category": "hidden"
+            "name": "Deprecated", "category": "closed"
         }
     ],
     "transitions": [

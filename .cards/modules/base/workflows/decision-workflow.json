@@ -11,7 +11,7 @@
         },
         {
             "name": "Deprecated",
-            "category": "hidden"
+            "category": "closed"
         }
     ],
     "transitions": [

@@ -3,7 +3,7 @@
     "states": [
         { "name": "Draft", "category": "initial" },
         { "name": "Approved", "category": "closed" },
-        { "name": "Archived", "category": "hidden" }
+        { "name": "Archived", "category": "closed" }
     ],
     "transitions": [
         {
