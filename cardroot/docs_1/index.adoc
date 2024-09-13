@@ -1,13 +1,12 @@
+== We're letting you in on a secret
+
 [NOTE]
-.We're letting you in on a secret
 ====
-Cyberismo is an open security-as-code solution. We are busy making Cyberismo ready for your use.  Right now, the project is running in stealth mode as we're adding some remaining essentials such as certain important features, documentation and examples. So, let's keep this whole thing between you and us for now. It won't take long, so stay tuned!
+We are busy making Cyberismo ready for your use.  Right now, the project is running in stealth mode as we're adding some remaining essentials such as certain important features, documentation and examples. So, let's keep this whole thing between you and us for now. It won't take long, so stay tuned!
 ====
 
-
-*Cyberismo* is a security-as-code solution for cybersecurity management in software projects. It puts the ease of adoption of compliant cybersecurity processes in the spotlight.
-
-The solution leverages an open information model, making it accessible, manageable, and automatable within existing development processes and DevSecOps toolchains. The solution is modular and tailorable, ensuring it fits perfectly within the organisation of its users, automating secure development implementation, compliance validation and evidence archiving.
+[.lead]
+*Cyberismo* is an open solution for cybersecurity management in software projects. It puts the ease of adoption of compliant cybersecurity processes in the spotlight. The solution is modular and tailorable, ensuring it fits perfectly within the organisation of its users. With Cyberismo, you can automate secure development implementation, compliance validation and evidence archiving.
 
 * link:/cards/docs_10[Overview]
 * link:/cards/docs_11[Solution architecture]
