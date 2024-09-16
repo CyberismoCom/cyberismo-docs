@@ -1,6 +1,4 @@
 {
-    "buttonLabel": "Create a new one-time task",
-    "namePrompt": "Prompt",
     "displayName": "Task",
     "description": "An one-time task",
     "category": "General"

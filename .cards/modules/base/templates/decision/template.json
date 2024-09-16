@@ -1,6 +1,4 @@
 {
-    "buttonLabel": "Create a new decision",
-    "namePrompt": "Prompt",
     "displayName": "Decision",
     "description": "A document that records a decision and its reasoning",
     "category": "General"
