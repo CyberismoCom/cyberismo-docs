@@ -1,6 +1,4 @@
 {
-    "buttonLabel": "Create a new document",
-    "namePrompt": "Prompt",
     "displayName": "Controlled document",
     "description": "A formal document that can be approved",
     "category": "General"

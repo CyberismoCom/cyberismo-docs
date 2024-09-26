@@ -1,6 +1,4 @@
 {
-    "buttonLabel": "Button",
-    "namePrompt": "Prompt",
     "displayName": "Quarterly task",
     "description": "A task that must be revisited quarterly",
     "category": "General"
