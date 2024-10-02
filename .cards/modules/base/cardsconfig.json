@@ -1,5 +1,4 @@
 {
     "cardkeyPrefix": "base",
-    "name": "Base",
-    "nextAvailableCardNumber": 10
+    "name": "Base"
 }
