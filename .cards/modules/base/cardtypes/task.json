@@ -1,12 +1,12 @@
 {
-    "name": "base/cardtypes/task",
-    "workflow": "base/workflows/task-workflow",
+    "name": "base/cardTypes/task",
+    "workflow": "base/workflows/task",
     "customFields": [
         {
-            "name": "base/fieldtypes/owner"
+            "name": "base/fieldTypes/owner"
         },
         {
-            "name": "base/fieldtypes/reviewPeriod"
+            "name": "base/fieldTypes/reviewPeriod"
         }
     ]
 }

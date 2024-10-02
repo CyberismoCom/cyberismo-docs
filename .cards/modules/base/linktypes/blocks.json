@@ -1,5 +1,5 @@
 {
-    "name": "base/linktypes/blocks",
+    "name": "base/linkTypes/blocks",
     "outboundDisplayName": "blocks",
     "inboundDisplayName": "is blocked by",
     "sourceCardTypes": [],

@@ -1,5 +1,5 @@
 {
-    "name": "base/linktypes/relatesTo",
+    "name": "base/linkTypes/relatesTo",
     "outboundDisplayName": "relates to",
     "inboundDisplayName": "is related to",
     "sourceCardTypes": [],
