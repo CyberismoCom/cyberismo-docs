@@ -1,0 +1,12 @@
+{
+    "name": "base/cardTypes/controlledDocument",
+    "workflow": "base/workflows/controlledDocument",
+    "customFields": [
+        {
+            "name": "base/fieldTypes/owner"
+        },
+        {
+            "name": "base/fieldTypes/informationClassification"
+        }
+    ]
+}

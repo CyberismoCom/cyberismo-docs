@@ -1,9 +1,9 @@
 {
-    "name": "base/cardtypes/decision",
-    "workflow": "base/workflows/decision-workflow",
+    "name": "base/cardTypes/decision",
+    "workflow": "base/workflows/decision",
     "customFields": [
         {
-            "name": "base/fieldtypes/owner"
+            "name": "base/fieldTypes/owner"
         }
     ]
 }

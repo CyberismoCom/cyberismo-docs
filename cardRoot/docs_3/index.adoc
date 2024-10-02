@@ -1,0 +1,38 @@
+The best way to learn how to use the Cyberismo command line interface is the built-in help. To see the top-level help, execute the following command:
+
+[source,console]
+----
+cyberismo help
+----
+
+The help command will print an overview of the available commands
+
+[source,console]
+----
+Usage: cyberismo [options] [command]
+
+CLI tool to handle tasks.
+
+Options:
+  -V, --version                                  output the version number
+  -h, --help                                     display help for command
+
+Commands:
+  add [options] <template> <cardType> [cardKey]  Add card to a template
+  calc                                           Used for running logic programs
+  create
+  edit [options] <cardKey>                       Edit a card
+  export [options] <format> <output> [cardKey]   Export a project or a card
+  import
+  move [options] [source] [destination]          Moves a card from root to under another card, from under another
+                                                 card to root, or from under a one card to another.
+  rank
+  remove
+  rename [options] <to>                          Change project prefix and rename all cards with the new prefix
+  show [options] <type> [typeDetail]             Shows resource types in a project
+  transition [options] <cardKey> <transition>    Transition a card to the specified state
+  validate [options]                             Validate project structure
+  app [options]                                  Starts the cards app, accessible with a web browser at
+                                                 http://localhost:3000
+  help [command]                                 display help for command
+----
