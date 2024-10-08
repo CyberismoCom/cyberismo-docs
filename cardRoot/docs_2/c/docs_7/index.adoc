@@ -48,7 +48,7 @@ Import the base module to your new project with the following command:
 [source,console]
 ----
 cd cyberismo-tutorial
-cyberismo import ../module-base
+cyberismo import module ../module-base
 ----
 
 == Create a page
