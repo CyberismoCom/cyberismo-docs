@@ -6,28 +6,28 @@
 
 . Install Clingo. The currently supported Clingo version is 5.7.1. We recommend installing a Python-enabled build using Anaconda, as instructed in https://github.com/potassco/clingo/releases/.
 
-. Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0. You can install it using nvm with
+. Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0. Node.js is downloadable from https://nodejs.org/.
 
-[source,console]
-----
-nvm install --lts
-nvm use --lts
-----
 
 === Building
 
 Take the following steps:
 
-. Clone the source repository
-. Change to the source directory. If you have already cloned the repository earlier, remember to pull the latest changes.
+. Clone the source repository using one of the following methods:
+
+  $ git clone git@github.com:CyberismoCom/cyberismo.git # SSH
+  $ git clone https://github.com/CyberismoCom/cyberismo.git # HTTPS
+  
+. Change to the source directory. If you have already cloned the repository earlier, remember to pull the latest changes:
+
+  $ cd cyberismo
+  $ git pull origin main # Optional
+  
 . Execute the following commands:
 
-[source,console]
-----
-npm install
-npm run build
-npm install -g
-----
+  $ npm install
+  $ npm run build
+  $ npm install -g
 
 === Running
 
