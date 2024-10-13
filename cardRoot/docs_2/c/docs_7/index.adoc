@@ -9,7 +9,7 @@ Execute the following command to clone the base module:
 
 [source,console]
 ----
-git clone git@github.com:CyberismoCom/module-base.git
+$ git clone git@github.com:CyberismoCom/module-base.git
 ----
 
 == Create a project
@@ -18,7 +18,7 @@ First, let's check the command line help for creating a project by executing the
 
 [source,console]
 ----
-% cyberismo create project --help
+$ cyberismo create project --help
 Usage: cards create project [options] <name> <prefix> <path>
 
 Create a project
@@ -38,7 +38,7 @@ Create a new project called "Cyberismo tutorial" that has the card key prefix tu
 
 [source,console]
 ----
-cyberismo create project "Cyberismo tutorial" tutorial cyberismo-tutorial
+$ cyberismo create project "Cyberismo tutorial" tutorial $ cyberismo-tutorial
 ----
 
 == Import the base module to your new project
@@ -47,8 +47,8 @@ Import the base module to your new project with the following command:
 
 [source,console]
 ----
-cd cyberismo-tutorial
-cyberismo import module ../module-base
+$ cd cyberismo-tutorial
+$ cyberismo import module ../module-base
 ----
 
 == Create a page
@@ -57,7 +57,7 @@ The base module includes a page template. To create the first card in the new pr
 
 [source,console]
 ----
-cyberismo create card base/templates/page
+$ cyberismo create card base/templates/page
 ----
 
 == Start the Cyberismo app
@@ -66,7 +66,7 @@ You can view and edit the new project and its first card with the Cyberismo app.
 
 [source,console]
 ----
-cyberismo app
+$ cyberismo app
 ----
 
-Then open a browser and navigate to http://localhost:3000/.
+Then open a browser and navigate to http://localhost:3000/. If you have multiple instances of the app running, the application will select the next available port, e.g. 3001.

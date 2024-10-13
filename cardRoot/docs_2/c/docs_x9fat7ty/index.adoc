@@ -1,0 +1,51 @@
+Whether you are viewing a card or editing a card, you can change the status of the card using the *Status* menu on the app toolbar:
+
+image::cyberismo-change-card-status.png[]
+
+NOTE: The workflows states for Cyberismo data types are entirely configurable. You can view a list of the available workflows using the Cyberismo command-line interface (CLI):
+
+[source,console]
+----
+$ cyberismo show workflows
+[
+  "base/workflows/controlledDocument.json",
+  "base/workflows/decision.json",
+  "base/workflows/page.json",
+  "base/workflows/task.json"
+]
+----
+
+To view details for a particular workflow, again use the Cyberismo CLI:
+
+[source,console]
+----
+$ cyberismo show workflow base/workflows/page
+{
+  "name": "base/workflows/page",
+  "states": [
+    {
+      "name": "Draft",
+      "category": "initial"
+    },
+    {
+      "name": "Ready",
+      "category": "closed"
+    },
+    ...
+  ],
+  "transitions": [
+    {
+      "name": "Create",
+      "fromState": [],
+      "toState": "Draft"
+    },
+    {
+      "name": "Content ready",
+      "fromState": [
+        "Draft"
+      ],
+      "toState": "Ready"
+    },
+    ...
+  ]
+}
