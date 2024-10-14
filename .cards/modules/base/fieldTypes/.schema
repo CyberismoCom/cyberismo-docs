@@ -1,4 +1,6 @@
-{
-    "id": "fieldTypeSchema",
-    "version": 1
-}
+[
+    {
+        "id": "fieldTypeSchema",
+        "version": 1
+    }
+]

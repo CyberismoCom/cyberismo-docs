@@ -1,4 +1,6 @@
-{
-    "id": "cardTypeSchema",
-    "version": 1
-}
+[
+    {
+        "id": "cardTypeSchema",
+        "version": 1
+    }
+]

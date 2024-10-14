@@ -1,4 +1,6 @@
-{
-    "id": "workflowSchema",
-    "version": 1
-}
+[
+    {
+        "id": "workflowSchema",
+        "version": 1
+    }
+]
