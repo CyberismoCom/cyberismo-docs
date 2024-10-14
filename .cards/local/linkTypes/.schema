@@ -1,4 +1,6 @@
-{
-    "id": "linkTypeSchema",
-    "version": 1
-}
+[
+    {
+        "id": "linkTypeSchema",
+        "version": 1
+    }
+]

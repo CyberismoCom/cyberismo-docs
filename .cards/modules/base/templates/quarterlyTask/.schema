@@ -1,4 +1,6 @@
-{
-    "id": "templateSchema",
-    "version": 1
-}
+[
+    {
+        "id": "templateSchema",
+        "version": 1
+    }
+]
