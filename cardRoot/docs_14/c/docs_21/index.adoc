@@ -1,2 +1,0 @@
-
-The Software Bill of Materials (SBOM) for the Cyberismo tool is available in GitHub at link:https://github.com/CyberismoCom/cyberismo/network/dependencies[Cyberismo dependency graph].
