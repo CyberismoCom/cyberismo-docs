@@ -15,7 +15,7 @@ Once the logic program has been generated, all command line commands and all ope
 
 The bulk of the generated logic program consists of card-speficic files that declare the fields, labels and links of the card as facts.
 
-The attributes of cards are declared as logic program facts using a field predicate:
+The attributes of cards are declared as logic program facts using a field term:
 
 [source]
 ----
@@ -24,21 +24,21 @@ field(<card key>, <field name>, <field value>).
 
 Card keys work directly as constants in ASP encodings. Fields names are encoded as strings, and field values either as strings or integers.
 
-If the card is not directly under the card root, a parent predicate is generated to declare the card key of the card in the parent directory:
+If the card is not directly under the card root, a parent term is generated to declare the card key of the card in the parent directory:
 
 [source]
 ----
 parent(<child card key>, <parent card key>).
 ----
 
-Cards may be tagged with a label in the `index.json` file of the card. This results in the following predicate to be generated for each label:
+Cards may be tagged with a label in the `index.json` file of the card. This results in the following term to be generated for each label:
 
 [source]
 ----
 label(<card key>, <label>).
 ----
 
-Finally, links between cards are declared with the link predicate. There are two variants of this predicate, one for link types that use link descriptions and another for link types that do not use link descriptions
+Finally, links between cards are declared with the link term. There are two variants of this term, one for link types that use link descriptions and another for link types that do not use link descriptions
 
 [source]
 ----
@@ -63,7 +63,7 @@ link(example_2, example_3, "base/linkTypes/relatesTo").
 
 == Common definitions
 
-The logic program includes basic definitions in the file `base.lp`. The most important common definitions define the ancestor relationships present in the directory structure. The following common definitions are added to the logic program to make the ancestor predicate available for user-configured calculations, to refer to cards that are children, grandchildren, parents, or grandparents of a card in any degree.
+The logic program includes basic definitions in the file `base.lp`. The most important common definitions define the ancestor relationships present in the directory structure. The following common definitions are added to the logic program to make the ancestor term available for user-configured calculations, to refer to cards that are children, grandchildren, parents, or grandparents of a card in any degree.
 
 The term
 
@@ -82,7 +82,7 @@ ancestor(A, C) :- parent(A, C), card(A), card(B).
 ancestor(A, C) :- parent(A, B), ancestor(B, C), card(A), card(B), card(C).
 ----
 
-The card predicate is used above to specify that the intended arguments are card keys. It is implemented by extracting keys in use from the type declarations always present for all cards:
+The card term is used above to specify that the intended arguments are card keys. It is implemented by extracting keys in use from the type declarations always present for all cards:
 
 [source]
 ----

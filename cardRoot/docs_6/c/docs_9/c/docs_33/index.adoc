@@ -16,7 +16,7 @@ orderBy("title", "ASC"). <3>
 
 == Selecting the fields and other properties of the results
 
-The results of the queries are identified by a _key_, which is typically a card key. To return selected attributes of a key, use the `select` or `selectAll` predicate.
+The results of the queries are identified by a _key_, which is typically a card key. To return selected attributes of a key, use the `select` or `selectAll` term.
 
 For example, to include the fields `title` and  `workflowState`, you can use:
 
@@ -44,7 +44,7 @@ The following special cases are supported:
 
 [%header]
 |===
-| Select predicate | Meaning
+| Select term | Meaning
 | `select("labels").`
 | Include labels in the results
 
@@ -61,7 +61,7 @@ The following special cases are supported:
 
 == Selecting the results
 
-The `result(X)` predicate denotes that `X` will be included in the results of the query. The following query returns all fields of entity (most likely a card) that has the key `docs_33`:
+The `result(X)` term denotes that `X` will be included in the results of the query. The following query returns all fields of entity (most likely a card) that has the key `docs_33`:
 
 [source]
 ----
@@ -78,17 +78,17 @@ selectAll.
 result(Card) :- card(Card), field(Card, "workflowState", "Open").
 ----
 
-The `card(Card)` predicate is included to make sure that all returned entities are cards.
+The `card(Card)` term is included to make sure that all returned entities are cards.
 
 === Conjunction (logical and)
 
-A logic program rule can include several conditions that are separated by a comma. Such a rule is a _conjunction_, as it requires all conditions to be true, so it corresponds to the logical _and_ operator. For example, the following query returns all cards that are of the card type `base/page` _and_ have the workflow state `Open`. 
+A logic program rule can include several conditions that are separated by a comma. Such a rule is a _conjunction_, as it requires all conditions to be true, so it corresponds to the logical _and_ operator. For example, the following query returns all cards that are of the card type `base/page` _and_ have the workflow state `Open`.
 
 [source]
 ----
 selectAll.
-result(Card) :- 
-    card(Card), 
+result(Card) :-
+    card(Card),
     field(Card, "cardType", "base/cardTypes/page",
     field(Card, "workflowState", "Open").
 ----
@@ -100,21 +100,21 @@ To implement a _disjunction_, which returns results for which at least one of th
 [source]
 ----
 selectAll.
-result(Card) :- 
-    card(Card), 
+result(Card) :-
+    card(Card),
     field(Card, "cardType", "base/cardTypes/page".
-result(Card) :- 
-    card(Card), 
+result(Card) :-
+    card(Card),
     field(Card, "workflowState", "Open").
 ----
 
 == Ordering the results
 
-The results of the query can be ordered by one or more fields in an ascending or descending order. 
+The results of the query can be ordered by one or more fields in an ascending or descending order.
 
 There is no default order, but the Cyberismo query language requires you to explicitly include either the ascending (`"ASC"`) or descending (`"DESC"`) direction.
 
-To order by one, two or three fields, you can use the `orderBy` predicate. For example:
+To order by one, two or three fields, you can use the `orderBy` term. For example:
 
 [source]
 ----
@@ -133,12 +133,12 @@ Or:
 [source]
 ----
 orderBy(
-    "workflowState", "DESC", 
-    "rank", "ASC", 
+    "workflowState", "DESC",
+    "rank", "ASC",
     "title", "ASC").
 ----
 
-If you need to order by more than three fields, then use the `order` predicate. The previous example can be written equivalently with three order predicates as follows:
+If you need to order by more than three fields, then use the `order` term. The previous example can be written equivalently with three order terms as follows:
 
 [source]
 ----
@@ -147,10 +147,10 @@ order(1, 2, "rank", "ASC").
 order(1, 3, "title", "ASC").
 ----
 
-The parameters of the `order` predicate are:
+The parameters of the `order` term are:
 
 1. The level of hierarchy of the results that will be sorted. When the query is not hierarchical, this is 1.
-1. The index of the field by which to sort. For example, the index 1 means that you should first order by the field given in this occurrence of the `order` predicate.
+1. The index of the field by which to sort. For example, the index 1 means that you should first order by the field given in this occurrence of the `order` term.
 1. The field by which the results should be ordered
 1. Either `"ASC"` or `"DESC"`.
 
@@ -178,7 +178,7 @@ field(State, "count", Count) :-
 
 So far, the results of our queries have formed a flat list. A hierarchical query returns a tree structure: each result may have list of child results, which in turn may have child results.
 
-For example, say we would like to query the children and grandchildren of `docs_9` according to the the card tree hierarchy. We would like the direct children to form the first level of hierarchy, and each child would have their children as child results. This can be done with the following query: 
+For example, say we would like to query the children and grandchildren of `docs_9` according to the the card tree hierarchy. We would like the direct children to form the first level of hierarchy, and each child would have their children as child results. This can be done with the following query:
 
 [source]
 ----
@@ -188,7 +188,7 @@ childResult(Child, Grandchild) :- parent(Grandchild, Child), result(Child). <2>
 orderBy("title", "ASC"). <3>
 ----
 <1> `select` with just one parameter and `selectAll` without parameters refer to all levels of hierarchy.
-<2> Child results are returned with the `childResult` predicate
+<2> Child results are returned with the `childResult` term
 <3> When `orderBy` has an even number of parameters, it refers to the results on all levels of hierarchy
 
 What if you want to select different fields on different levels of hierarchy, or order the results differently on different levels of hierarchy? In these cases, you can include the level of hierarchy (1, 2, etc.) as the first parameter to `select`, `selectAll`, or `orderBy`:

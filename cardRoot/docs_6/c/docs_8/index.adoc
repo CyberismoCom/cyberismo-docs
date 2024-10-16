@@ -1,4 +1,4 @@
-This page describes the naming conventions when developing new Cyberismo solution modules. While you are free to use 
+This page describes the naming conventions when developing new Cyberismo solution modules. While you are free to use
 
 == General principle: use camelCase
 
@@ -39,18 +39,18 @@ The following table shows how the main Cyberismo concepts are referred to in Cyb
 
 == Naming in logic programs
 
-Naming of predicates and atoms in logic programs follows the same `camelCase` convention as other naming in the Cyberismo solution. As required by the syntax rules of Answer Set Programming, the names of atoms and constants begin with a lowercase character, and variable names begin with an uppercase character.
+Naming of terms in logic programs follows the same `camelCase` convention as other naming in the Cyberismo solution. As required by the syntax rules of Answer Set Programming, the names of atoms and constants begin with a lowercase character, and variable names begin with an uppercase character.
 
-NOTE: If a Cyberismo content module needs to define a new global name, such as a new predicate, the name should include the module name as a prefix.
+NOTE: If a Cyberismo content module needs to define a new global name, such as a new constant or a new complex term, the name should include the module name as a prefix.
 
-== Names of Cyberismo concepts in `field` predicates
+== Names of Cyberismo concepts in `field` terms
 
-User-configured field types and built-in fields of cards are used in `field` predicates of logic programs. Consistently with other cases where configuration is referred to, these names are in `camelCase`.
+User-configured field types and built-in fields of cards are used in `field` terms of logic programs. Consistently with other cases where configuration is referred to, these names are in `camelCase`.
 
-.Cyberismo concepts in `field` predicates
+.Cyberismo concepts in `field` terms
 [%autowidth]
 |===
-|Field  |Name in `field` predicates
+|Field  |Name in `field` terms
 
 |Card type
 |`cardType`

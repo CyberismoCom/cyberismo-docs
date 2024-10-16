@@ -1,8 +1,8 @@
-One way to enforce cybersecurity processes automatically is to define constraints to be met before a specific operation such as a workflow state transition is allowed. Cyberismo logic programs can define the following predicates to deny workflow transitions, moving cards, removing cards, or editing a field of a card.
+One way to enforce cybersecurity processes automatically is to define constraints to be met before a specific operation such as a workflow state transition is allowed. Cyberismo logic programs can define the following terms to deny workflow transitions, moving cards, removing cards, or editing a field of a card.
 
 == Workflow transition constraint
 
-To deny a workflow transition, a user-defined logic program can define the following predicate:
+To deny a workflow transition, a user-defined logic program can define the following term:
 
 [source]
 ----
@@ -11,7 +11,7 @@ transitionDenied( <card key>, <transition name>, <error message> )
 
 == Constraint to move a card
 
-To deny moving a card, a user-defined logic program can define the following predicate:
+To deny moving a card, a user-defined logic program can define the following term:
 
 [source]
 ----
@@ -20,7 +20,7 @@ movingCardDenied( <card key>, <error message> )
 
 == Constraint to delete a card
 
-To deny deleting a card, a user-defined logic program can define the following predicate:
+To deny deleting a card, a user-defined logic program can define the following term:
 
 [source]
 ----
@@ -29,14 +29,14 @@ deletingCardDenied( <card key>, <error message> )
 
 == Constraints to edit a card
 
-To deny editing a card field, a user-defined logic program can define the following predicate:
+To deny editing a card field, a user-defined logic program can define the following term:
 
 [source]
 ----
 editingFieldDenied( <card key>, <field name>, <error message> )
 ----
 
-A separate predicate is used for denying the editing of the AsciiDoc content of the card description:
+A separate term is used for denying the editing of the AsciiDoc content of the card description:
 
 [source]
 ----

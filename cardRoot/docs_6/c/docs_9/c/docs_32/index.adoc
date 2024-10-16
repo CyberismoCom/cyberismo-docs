@@ -1,4 +1,4 @@
-The automated policy checks enable logic programs to inspect that the fields and the relationships of the cards meet certain logical conditions. Automated policy checks can be incorporated by user-configured logic programs with the predicates
+The automated policy checks enable logic programs to inspect that the fields and the relationships of the cards meet certain logical conditions. Automated policy checks can be incorporated by user-configured logic programs with the terms
 
 [source]
 ----
@@ -12,4 +12,4 @@ or
 policyCheckSuccess( <card key>, <test suite>, <test case> )
 ----
 
-The `policyCheckSuccess` predicate denotes that a policy check succeeded, and the `policyCheckFailure` predicate denotes that a policy check failed. The arguments test suite and test case are string identifiers for organising the validation checks.
+The `policyCheckSuccess` term denotes that a policy check succeeded, and the `policyCheckFailure` term denotes that a policy check failed. The arguments test suite and test case are string identifiers for organising the validation checks.
