@@ -38,7 +38,7 @@ Create a new project called "Cyberismo tutorial" that has the card key prefix tu
 
 [source,console]
 ----
-$ cyberismo create project "Cyberismo tutorial" tutorial $ cyberismo-tutorial
+$ cyberismo create project "Cyberismo tutorial" tutorial cyberismo-tutorial
 ----
 
 == Import the base module to your new project
