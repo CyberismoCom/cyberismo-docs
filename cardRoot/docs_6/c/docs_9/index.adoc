@@ -2,14 +2,14 @@ The Cyberismo solution is based on maintaining a plain text representation of an
 
 The query and reasoning capabilities of the Cyberismo solution are based on logic programming. The Cyberismo tool has a capability to generate a logic program based on a Cyberismo project, conforming to the Answer Set Programming (ASP) paradigm for knowledge representation. The logic program is modular: a separate logic program file is generated for each card. Thanks to the modular structure, the Cyberismo tool does not need to regenerate the entire program, when just some of the cards change, but it can continuously maintain an up-to-date logic program as the user manages the information model.
 
-For an introduction to the Cyberismo query language, see link:/cards/docs_33[Query language].
+For an introduction to the Cyberismo query language, see xref:docs_33.adoc[Query language].
 
-To learn the basics of Answer Set Programming, see link:/cards/docs_28[Introduction to Answer Set Programming].
+To learn the basics of Answer Set Programming, see xref:docs_28.adoc[Introduction to Answer Set Programming].
 
-To understand the logic program that Cyberismo generates from cards, see link:/cards/docs_29[Mapping the Cyberismo content to a logic program].
+To understand the logic program that Cyberismo generates from cards, see xref:docs_29.adoc[Mapping the Cyberismo content to a logic program].
 
 Cyberismo content modules and projects may define their own logic programs by simply including a file with the extension `.lp` in the `calculations` folder. The use cases for user-defined logic programs include the following:
 
-* link:/cards/docs_30[Calculated fields]
-* link:/cards/docs_31[Operation constraints]
-* link:/cards/docs_32[Automatic policy checks]
+* xref:docs_30.adoc[Calculated fields]
+* xref:docs_31.adoc[Operation constraints]
+* xref:docs_32.adoc[Automatic policy checks]

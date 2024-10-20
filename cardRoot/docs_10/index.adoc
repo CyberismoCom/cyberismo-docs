@@ -8,9 +8,9 @@ We are busy making Cyberismo ready for your use.  Right now, the project is runn
 [.lead]
 *Cyberismo* is an open solution for cybersecurity management in software projects. It puts the ease of adoption of compliant cybersecurity processes in the spotlight. The solution is modular and tailorable, ensuring it fits perfectly within the organisation of its users. With Cyberismo, you can automate secure development implementation, compliance validation and evidence archiving.
 
-* link:/cards/docs_11[Solution architecture]
-* link:/cards/docs_17[Installation]
-* link:/cards/docs_2[Getting started tutorial]
+* xref:docs_11.adoc[Solution architecture]
+* xref:docs_17.adoc[Installation]
+* xref:docs_2.adoc[Getting started tutorial]
 
 == Why cybersecurity compliance is important
 
@@ -56,7 +56,7 @@ Services and support:: The Cyberismo company provides commercial services to sup
 
 == Terms
 
-Let us go over the most important terms and concepts in the Cyberismo solution. For a more detailed introduction for module developers, please see http://localhost:3000/cards/docs_12[Cyberismo concepts].  
+Let us go over the most important terms and concepts in the Cyberismo solution. For a more detailed introduction for module developers, please see xref:docs_12[Cyberismo concepts].  
 
 Cyberismo project:: A project is a top-level container for the Cyberismo content format. A project can contain cards, copies of imported modules, and various kinds of configuration such as custom workflows, field types, link types, templates and calculations. A project is typically managed in a version control system. 
 

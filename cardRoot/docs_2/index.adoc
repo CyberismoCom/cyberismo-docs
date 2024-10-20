@@ -1,3 +1,5 @@
 
 
-* link:/cards/docs_7[Creating a new project]
+* xref:docs_7.adoc[Creating a new project]
+* xref:docs_iv4h2usw.adoc[Editing a card]
+* xref:docs_x9fat7ty.adoc[Change the card status]

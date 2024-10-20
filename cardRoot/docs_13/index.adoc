@@ -1,4 +1,4 @@
 
-* link:/cards/docs_17[How to install Cyberismo]
-* link:/cards/docs_19[How to update Cyberismo]
-* link:/cards/docs_24[How to uninstall Cyberismo]
+* xref:docs_17.adoc[How to install Cyberismo]
+* xref:docs_19.adoc[How to update Cyberismo]
+* xref:docs_24.adoc[How to uninstall Cyberismo]
