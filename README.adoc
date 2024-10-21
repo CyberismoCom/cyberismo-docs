@@ -20,4 +20,4 @@ Notice that while Cyberismo Ltd enforces the license of this content, the licens
 
 == Contributing
 
-See separate files CONTRIBUTING.
+See separate file CONTRIBUTING.
