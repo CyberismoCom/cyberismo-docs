@@ -1,6 +1,8 @@
 [.lead]
 *Cyberismo* is an open solution for cybersecurity management in software projects. It puts the ease of adoption of compliant cybersecurity processes in the spotlight. The solution is modular and tailorable, ensuring it fits perfectly within the organisation of its users. With Cyberismo, you can automate secure development implementation, compliance validation and evidence archiving.
 
+NOTE: Cyberismo is currently available as a technology preview.
+
 * link:https://cyberismo.com/solution[Solution introduction]
 * xref:docs_11.adoc[Solution architecture]
 * xref:docs_17.adoc[Installation]
