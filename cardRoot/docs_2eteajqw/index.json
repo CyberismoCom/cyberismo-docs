@@ -1,7 +1,8 @@
 {
     "title": "Copyright",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|l",
-    "lastUpdated": "2024-10-20T12:17:06.252Z"
+    "lastUpdated": "2024-10-21T10:44:31.541Z",
+    "lastTransitioned": "2024-10-21T10:44:31.517Z"
 }

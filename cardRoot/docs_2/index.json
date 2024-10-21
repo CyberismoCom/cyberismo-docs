@@ -1,7 +1,8 @@
 {
     "title": "Getting started",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|g",
-    "lastUpdated": "2024-10-20T12:34:51.093Z"
+    "lastUpdated": "2024-10-21T10:44:09.483Z",
+    "lastTransitioned": "2024-10-21T10:44:09.464Z"
 }

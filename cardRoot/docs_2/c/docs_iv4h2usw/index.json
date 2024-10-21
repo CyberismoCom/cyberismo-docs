@@ -1,7 +1,8 @@
 {
     "title": "Editing a card",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|b",
-    "lastUpdated": "2024-10-13T09:55:14.665Z"
+    "lastUpdated": "2024-10-21T10:44:15.813Z",
+    "lastTransitioned": "2024-10-21T10:44:15.793Z"
 }

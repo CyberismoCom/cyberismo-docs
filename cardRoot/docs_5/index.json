@@ -1,7 +1,8 @@
 {
     "title": "Exporting a static documentation site",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|j",
-    "lastUpdated": "2024-09-14T07:34:16.534Z"
+    "lastUpdated": "2024-10-21T10:44:28.036Z",
+    "lastTransitioned": "2024-10-21T10:44:28.014Z"
 }

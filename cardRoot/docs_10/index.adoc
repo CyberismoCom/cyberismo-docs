@@ -1,13 +1,7 @@
-== We're letting you in on a secret
-
-[NOTE]
-====
-We are busy making Cyberismo ready for your use.  Right now, the project is running in stealth mode as we're adding some remaining essentials such as certain important features, documentation and examples. So, let's keep this whole thing between you and us for now. It won't take long, so stay tuned!
-====
-
 [.lead]
 *Cyberismo* is an open solution for cybersecurity management in software projects. It puts the ease of adoption of compliant cybersecurity processes in the spotlight. The solution is modular and tailorable, ensuring it fits perfectly within the organisation of its users. With Cyberismo, you can automate secure development implementation, compliance validation and evidence archiving.
 
+* link:https://cyberismo.com/solution[Solution introduction]
 * xref:docs_11.adoc[Solution architecture]
 * xref:docs_17.adoc[Installation]
 * xref:docs_2.adoc[Getting started tutorial]
@@ -23,6 +17,8 @@ The Cyberismo solution emphasises the imporance of managing the information mode
 == The goals of the Cyberismo solution
 
 The goals of the _Cyberismo_ solution are facilitating the adoption of compliance and cybersecurity management, automating many aspects of cybersecurity management and compliance, and improving collaboration on the cybersecurity and compliance content.
+
+With Cyberismo, you can get cyber risks under control faster, and save time and money in your cybersecurity management and compliance efforts. 
 
 === Make it easier to adopt cybersecurity and compliance
 

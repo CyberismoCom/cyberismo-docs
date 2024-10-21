@@ -1,7 +1,8 @@
 {
     "title": "Installing, updating and uninstalling",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|e",
-    "lastUpdated": "2024-10-20T12:35:15.434Z"
+    "lastUpdated": "2024-10-21T10:43:58.449Z",
+    "lastTransitioned": "2024-10-21T10:43:58.415Z"
 }

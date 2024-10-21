@@ -1,7 +1,8 @@
 {
     "title": "Creating a new project",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|a",
-    "lastUpdated": "2024-10-20T12:36:37.565Z"
+    "lastUpdated": "2024-10-21T10:44:12.579Z",
+    "lastTransitioned": "2024-10-21T10:44:12.554Z"
 }
