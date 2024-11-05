@@ -3,5 +3,11 @@
     "cardType": "base/cardTypes/page",
     "workflowState": "Draft",
     "rank": "0|z",
-    "lastUpdated": "2024-09-10T19:02:38.850Z"
+    "lastUpdated": "2024-11-05T14:56:12.411Z",
+    "links": [
+        {
+            "linkType": "base/linkTypes/relatesTo",
+            "cardKey": "docs_4nd9wctm"
+        }
+    ]
 }
