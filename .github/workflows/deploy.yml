@@ -2,6 +2,8 @@ name: Build and Export Cyberismo Site
 
 on:
   push:
+    branches:
+      - feature/add-clingo-to-ci
 
 jobs:
   build:
@@ -13,7 +15,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}        
+      url: ${{ steps.deployment.outputs.page_url }}
 
     permissions:
       contents: read
@@ -23,8 +25,8 @@ jobs:
 
     concurrency:
       group: "pages"
-      cancel-in-progress: false    
-  
+      cancel-in-progress: false
+
     steps:
     - name: Checkout cyberismo-docs repository
       uses: actions/checkout@v4
@@ -38,6 +40,9 @@ jobs:
         repository: CyberismoCom/cyberismo
         path: cyberismo
         ref: main
+
+    - name: Install Clingo
+      run: sudo apt-get update && sudo apt-get install -y gringo
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
@@ -59,12 +64,12 @@ jobs:
         cyberismo export site -p cyberismo-docs build/site
         touch build/site/.nojekyll
         find build/site
-    
-    - name: Upload artifacts
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: build/site
 
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4        
+    # - name: Upload artifacts
+    #   uses: actions/upload-pages-artifact@v3
+    #   with:
+    #     path: build/site
+
+    # - name: Deploy to GitHub Pages
+    #   id: deployment
+    #   uses: actions/deploy-pages@v4
