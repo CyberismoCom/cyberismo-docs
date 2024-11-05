@@ -13,9 +13,9 @@ jobs:
       matrix:
         node-version: [20.x]
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    # environment:
+    #   name: github-pages
+    #   url: ${{ steps.deployment.outputs.page_url }}
 
     permissions:
       contents: read
@@ -56,8 +56,8 @@ jobs:
         npm run build
         npm install -g
 
-    - name: Configure GitHub Pages
-      uses: actions/configure-pages@v5
+    # - name: Configure GitHub Pages
+    #   uses: actions/configure-pages@v5
 
     - name: Export the site
       run: |
