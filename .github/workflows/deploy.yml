@@ -3,7 +3,7 @@ name: Build and Export Cyberismo Site
 on:
   push:
     branches:
-      - feature/add-clingo-to-ci
+      - main
 
 jobs:
   build:
@@ -13,9 +13,9 @@ jobs:
       matrix:
         node-version: [20.x]
 
-    # environment:
-    #   name: github-pages
-    #   url: ${{ steps.deployment.outputs.page_url }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     permissions:
       contents: read
@@ -56,8 +56,8 @@ jobs:
         npm run build
         npm install -g
 
-    # - name: Configure GitHub Pages
-    #   uses: actions/configure-pages@v5
+    - name: Configure GitHub Pages
+      uses: actions/configure-pages@v5
 
     - name: Export the site
       run: |
@@ -65,11 +65,11 @@ jobs:
         touch build/site/.nojekyll
         find build/site
 
-    # - name: Upload artifacts
-    #   uses: actions/upload-pages-artifact@v3
-    #   with:
-    #     path: build/site
+    - name: Upload artifacts
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: build/site
 
-    # - name: Deploy to GitHub Pages
-    #   id: deployment
-    #   uses: actions/deploy-pages@v4
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
