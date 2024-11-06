@@ -1,3 +1,19 @@
+A Cyberismo module is a reusable collection of templates, card types, workflows, field types, link types, reports and logic program calculations. When a user imports a module as a dependency to their Cyberismo project, a read-only copy of the module is included in the project directory structure.
+
+The most common module is the base module, which defines some commonly used basic card types and their workflows.
+
+Technically, a module is a Cyberismo project just like any other project, but it is just intended to be reused in other projects.
+
+To develop a new Cyberismo module, follow these steps:
+
+. Create a new Cyberismo project. See xref:docs_7.adoc[Creating a new project] tutorial for more information
+. Import the base module. Avoid defining redudant configurations to the base module in your new module, unless necessary. This is also explained in the xref:docs_7.adoc[Creating a new project] tutorial.
+. If you need new workflows, then create them first. Notice that you can use the workflows from the base module, if they apply to your use case.
+. If you need new types of custom fields, then create and design field types.
+. If you need new card types, then create and design card types. A card type selects one of the available workflows and a set of custom fields.
+. Design any new templates.
+. Develop any new module-specific logic programs
+. Design any new reports
 
 {{{report '{
     "name": "base/reports/childrenList"
