@@ -15,6 +15,3 @@ To develop a new Cyberismo module, follow these steps:
 . Develop any new module-specific logic programs
 . Design any new reports
 
-{{{report '{
-    "name": "base/reports/childrenList"
-}'}}}
