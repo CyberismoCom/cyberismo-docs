@@ -4,14 +4,14 @@ Automated policy checks can be incorporated by user-configured logic programs wi
 
 [source]
 ----
-policyCheckFailure( <card key>, <test suite>, <test case>, <error message> )
+policyCheckFailure( <card key>, <category>, <title>, <error message> )
 ----
 
 or
 
 [source]
 ----
-policyCheckSuccess( <card key>, <test suite>, <test case> )
+policyCheckSuccess( <card key>, <category>, <title> )
 ----
 
-The `policyCheckSuccess` term denotes that a policy check succeeded, and the `policyCheckFailure` term denotes that a policy check failed. The arguments test suite and test case are string identifiers for organising the validation checks.
+The `policyCheckSuccess` term denotes that a policy check succeeded, and the `policyCheckFailure` term denotes that a policy check failed. The arguments category and title are string identifiers for organising the validation checks.

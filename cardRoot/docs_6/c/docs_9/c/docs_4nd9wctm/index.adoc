@@ -4,7 +4,7 @@ Notifications can be defined in user-configured logic programs with the term
 
 [source]
 ----
-notification( <card key>, <test suite>, <test case>, <message> )
+notification( <card key>, <category>, <title>, <message> )
 ----
 
-The arguments test suite and test case are string identifiers for organising the checks that yield notifications.
+The arguments category and title are string identifiers for organising the checks that yield notifications.
