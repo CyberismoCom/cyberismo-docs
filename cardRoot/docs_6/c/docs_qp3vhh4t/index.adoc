@@ -1,0 +1,67 @@
+== Introduction
+
+A link is a relationship between cards. Each link is of a specific _link type_, which defines a name such as _causes_, an outbound display name (_Causes_), an inbound display name (_Caused by_) and the allowed card types for the source and destination of a link.
+
+Links may be used, for example, to represent that an asset presents a risk, a control mitigates a risk, a control implements a compliance requirement, a threat is related to another threat, or that a test verifies a requirement.
+
+== Managing link types using the Cyberismo command line tool
+
+To see a list of the available link types, use the following command:
+
+  $ cyberismo show linkTypes
+
+The names of link types are of the format `_module_/linkTypes/_linkType_`, for example `base/linkTypes/causes`.
+
+To see the help for how to create a link type, use the following command:
+
+  $ cyberismo create linkType --help
+
+To create a new link type, for example `myLinkType`, use the following command:
+
+  $ cyberismo create linkType myLinkType
+
+Cyberismo will create a new file called `myLinkType.json` in `.cards/local/linkTypes/myLinkType.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new link type will be `example/linkTypes/myLinkType`.
+
+When choosing a name for your link type, see xref:docs_8.adoc[Naming conventions].
+
+To finalise the link type definition, you need to edit the `myLinkType.json` file with a text editor.
+
+== Link type file format
+
+Link types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/schema/linkTypeSchema.json[link type schema], as described in the table below.
+
+.The properties of a link type
+|===
+|Properties|Type|Description|Required
+
+|**name**
+|`string`
+|The name of the link type
+| &#10003; Yes
+
+|**outboundDisplayName**
+|`string`
+|A name by which the link is referred to in the user interface (from-to).
+| &#10003; Yes
+
+|**inboundDisplayName**
+|`string`
+|A name by which the link is referred to in the user interface (to-from).
+| &#10003; Yes
+
+|**sourceCardTypes**
+|`string` `[]`
+|The names of the card types that can be the source of this link type. If empty, all card types are allowed.
+|&#10003; Yes
+
+|**destinationCardTypes**
+|`string` `[]`
+|The names of the card types that can be the target of this link type. If empty, all card types are allowed.
+|&#10003; Yes
+
+|**enableLinkDescription**
+|`boolean`
+|If true, the user can add a description to the link.
+|&#10003; Yes
+
+|===

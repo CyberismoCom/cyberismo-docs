@@ -1,0 +1,87 @@
+== Introduction
+
+In Cyberismo, each card is of a specific card type, which defines the workflow being used and optionally a set of custom fields. Separate card types may be defined, for example, for controlled documents, risks, threats, security requirements, architecture decisions, or tasks. 
+
+Custom fields may be defined, for example, for various dates such as deadlines or time stamps, enumerations such as the likelihood or the impact of a risk, or a person, such as an assignee of a task.
+
+== Managing card types using the Cyberismo command line tool
+
+To see a list of the available card types, use the following command:
+
+  $ cyberismo show cardTypes
+
+To see the help for how to create a card type, use the following command:
+
+  $ cyberismo create cardType --help
+
+To create a new card type, for example `myCardType`, using the workflow `example/workflows/myWorkflow`, use the following command:
+
+  $ cyberismo create cardType myCardType example/workflows/myWorkflows
+
+Cyberismo will create a new file called `myCardType.json` in `.cards/local/cardTypes/myCardType.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new card type will be `example/cardTypes/myCardType`.
+
+When choosing a name for your card type, see xref:docs_8.adoc[Naming conventions].
+
+To finalise the card type definition, you need to edit the `myCardType.json` file with a text editor.
+
+== Card type file format
+
+Card types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/schema/cardTypeSchema.json[card type schema], as described in the following tables.
+
+.The properties of a card type
+|===
+|Properties|Type|Description|Required
+
+|**name**
+|`string`
+|The name of the card type
+| &#10003; Yes
+
+|**workflow**
+|`string`
+|The name of the workflow
+| &#10003; Yes
+
+|**customFields**
+|`object` `[]`
+|An array of custom fields
+|No
+
+|**alwaysVisibleFields**
+|`string` `[]`
+|An array that lists the names of fields that should be shown whenever metadata fields are being shown. The array is given in the order in which the fields should be shown.
+|No
+
+|**optionallyVisibleFields**
+|`string` `[]`
+|An array that lists the names of fields that may optionally be shown when metadata fields are being shown. The array is given in the order in which the optional fields should be shown.
+|No
+
+|===
+
+Additional properties are not allowed.
+
+=== The custom fields definition of a card type
+
+The `customFields` property of a card type is an array of objects that have the following properties:
+
+.Properties of the items in the `customFields` array
+|===
+|Property|Type|Description|Required
+
+|**name**
+|`string`
+|A name of a field type.
+| &#10003; Yes
+
+|**displayName**
+|`string`
+|A display name for user interfaces. Optional. If given, overrides the display name that may have been defined in the field type.
+| No
+
+|**isEditable**
+|`boolean`
+|Defines whether the field value can be modified. Optional. Defaults to true: the field is considered editable if this property is omitted.
+| No
+
+|===

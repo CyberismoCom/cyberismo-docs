@@ -1,0 +1,87 @@
+== Introduction
+
+A template contains a card or a set of cards in a directory hierarchy that is used as a template for new user content. When the user creates new card(s) from a template, a new copy of the template card(s) is made with new unique card keys. Notice that cards in a template may form a deep hierarchy, enabling the definition of complex templates with multiple cards, such as a template for a software project.
+
+== Showing available templates
+
+To see a list of the available templates, use the following command:
+
+  $ cyberismo show templates
+
+The names of templates are of the format `_module_/templates/_template_`, for example `base/templates/decision`.
+
+== Creating a new template
+
+To see the help for how to create a template, use the following command:
+
+  $ cyberismo create template --help
+
+To create a new template, for example `myTemplate`, use the following command:
+
+  $ cyberismo create template myTemplate
+
+Cyberismo will create a new directory called `myWorkflow` in `.cards/local/templates/myTemplate/`. The directory will contain a file called `template.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new template will be `example/templates/myTemplate`. 
+
+When choosing a name for your template, see xref:docs_8.adoc[Naming conventions].
+
+To finalise the template definition, you need to edit the `template.json` file with a text editor, and add new cards to the template.
+
+== Editing the `template.json` file
+
+The `template.json` file contains basic information about the template, which will be shown to the user when the user is creating new cards. The file follows the https://github.com/CyberismoCom/cyberismo/blob/main/tools/schema/templateSchema.json[template schema].
+
+.The properties of a `template.json` file
+|===
+|Properties|Type|Description|Required
+
+|**name**
+|`string`
+|The technical name of the template
+| No
+
+|**displayName**
+|`string`
+|The name of the template as it should be displayed in the user interface. For example, 'Decision'.
+| No
+
+|**description**
+|`string`
+|A description of the template. For example, 'A decision is a choice between two or more options.'.
+| No
+
+|**category**
+|`string`
+| The category of the template. For example, 'Decision'.
+| No
+
+|===
+
+== Adding cards to a template
+
+To see the help for how to add a card to a template, use the following command:
+
+  $ cyberismo add --help
+
+A template may contain several cards, which can be arranged in a hierarchy. It is also possible to add several cards on the top level of the template.
+
+To add a new card of the card type `example/cardTypes/myCardType` on the top level of the template `example/templates/myTemplate`, use the following command:
+
+  $ cyberismo add example/templates/myTemplate example/cardTypes/myCardType
+
+If the template `example/templates/myTemplate` contains a card with the card key `example_d9rj4nab`, then you can add a new card of the type `base/cardTypes/decision` as a child of `example_d9rj4nab` with the following command:
+
+  $ cyberismo add example/templates/myTemplate base/cardTypes/decision example_d9rj4nab 
+
+== Editing template cards
+
+As the Cyberismo app does not currently support editing the cards of a template, you need to edit the template cards with a text editor. To find out the path to a template, such as `example/templates/myTemplate`,you can use the following command:
+
+  $ cyberismo show template example/templates/myTemplate
+
+== Changing the rank of template cards
+
+The rank of cards determines the order in which the cards at the same level of hierarchy will be shown in the Cyberismo app and in exported documentation sites. When users make instances of a template, the instantiated cards will have the same order as the cards in the original template.
+
+To change the rank of a card in a template, use the `cyberismo rank` command. You can see the help for this command by typing:
+
+  $ cyberismo rank --help

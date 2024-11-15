@@ -1,4 +1,36 @@
-A workflow is a state machine that defines the states and state transitions for cards.
+== Introduction
+
+A workflow defines the states and state transitions that cards move through during their lifecycle. 
+
+For example, a task workflow could consists of the states and transitions *Open* → *In Progress* → *Done*, and a document workflow could be defined as *Draft* → *Approved* → *Archived*.
+
+== Managing workflows using the Cyberismo command line tool
+
+To see a list of the available workflows, use the following command:
+
+  $ cyberismo show workflows
+
+The names of workflows are of the format `_module_/workflows/_workflow_`, for example `base/workflows/decision`.
+
+To see the help for how to create a workflow, use the following command:
+
+  $ cyberismo create workflow --help
+
+To create a new workflow, for example `myWorkflow`, use the following command:
+
+  $ cyberismo create workflow myWorkflow
+
+Cyberismo will create a new file called `myWorkflow.json` in `.cards/local/workflows/myWorkflow.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new workflow will be `example/workflows/myWorkflow`.
+
+When choosing a name for your workflow, see xref:docs_8.adoc[Naming conventions].
+
+To finalise the workflow definition, you need to edit the `myWorkflow.json` file with a text editor.
+
+== Workflow file format
+
+Workflows are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/schema/workflowSchema.json[workflow schema], as described in the following tables.
+
+=== Basic structure of a workflow definition
 
 .The properties of a workflow
 |===
@@ -11,12 +43,12 @@ A workflow is a state machine that defines the states and state transitions for 
 
 |**states**
 |`object` `[]`
-|The states of the workflow
+|The states of the workflow, see below.
 | &#10003; Yes
 
 |**transitions**
 |`object` `[]`
-|The state transitions of the workflow
+|The state transitions of the workflow, see below
 | &#10003; Yes
 
 |===

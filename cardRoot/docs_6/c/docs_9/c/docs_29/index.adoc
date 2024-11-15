@@ -4,7 +4,7 @@ To request the Cyberismo tool to generate a logic program, execute the following
 
 [source,console]
 ----
-cyberismo calc generate
+$ cyberismo calc generate
 ----
 
 This command will generate a modular logic program in the `.calc` directory.
