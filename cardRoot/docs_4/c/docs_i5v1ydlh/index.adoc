@@ -1,0 +1,32 @@
+You can create new cards in your Cyberismo project by clicking **CREATE NEW CARD** at the top right of the app. The app will show a dialog for selecting a template from which the new card or cards will be created.
+
+The `createCards` macro provides another way to create content: the macro produces a button for creating new cards from a certain template.
+
+To see a list of the available templates, use the following command:
+
+  $ cyberismo show templates
+
+You can see some details of a template, such as `base/templates/page`, with the following command:
+
+  $ cyberismo show template base/templates/page
+
+For example, to produce a button that creates a new card from the template `base/templates/page', the ``createCards`` macro has the following syntax:
+
+``{&#847;{&#847;{ createCards '{`` +
+``&#12288;&#12288;&#12288;&#12288;"template": "base/templates/page",`` +
+``&#12288;&#12288;&#12288;&#12288;"buttonLabel": "Create a new page"`` +
+``}' }&#847;}&#847;}``
+
+In the app, this macro will produce a button to create a new page as a child card of the page where the macro was used.
+
+{{ createCards '{
+    "template": "base/templates/page",
+    "buttonLabel": "Create a new page"
+}' }}
+
+NOTE: When you export content as a documentation site or in some other format, the ``createCards`` macro will not produce anything. Take this into account when writing any instructions along with this macro.
+
+To learn how to create new templates, please see xref:docs_7n7gqu93.adoc[Templates].
+
+
+

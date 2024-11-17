@@ -1,0 +1,11 @@
+The `report` macro shows the a report based on the results of a query. 
+
+To see a list of the available reports, use the following command:
+
+  $ cyberismo show reports
+
+For example, the report `base/reports/childrenList` shows a list of child cards. To use this report, use the following syntax:
+
+``{&#847;{&#847;{ report '{`` +
+``&#12288;&#12288;&#12288;&#12288;"name": "base/reports/childrenList"`` +
+``}' }&#847;}&#847;}``

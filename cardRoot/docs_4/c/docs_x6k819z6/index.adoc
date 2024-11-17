@@ -1,0 +1,20 @@
+The content of the cards uses the AsciiDoc syntax. 
+
+== AsciiDoc syntax
+
+AsciiDoc is a lightweight markup language primarily designed for writing technical documentation. It has a rich syntax that supports, for example headings, tables, lists, admonitions, footnotes, and links. 
+
+For a reference guide to the AsciiDoc syntax, see https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[AsciiDoc Quick Reference].
+
+== Attachments
+
+Cyberismo cards may include images and other file attachments. To show an attachment image, for example ``filename.png``, inline with the content, use the following syntax:
+
+  image::filename.png[]
+
+== Macros
+
+Cyberismo extends the AsciiDox syntax with macros:
+
+* The xref:docs_i5v1ydlh.adoc[Create cards macro] produces a button for creating new cards.
+* The xref:docs_r0brt7n1.adoc[Report macro] procudes a report from the results of a query.

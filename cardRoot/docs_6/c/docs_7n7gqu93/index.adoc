@@ -1,6 +1,6 @@
 == Introduction
 
-A template contains a card or a set of cards in a directory hierarchy that is used as a template for new user content. When the user creates new card(s) from a template, a new copy of the template card(s) is made with new unique card keys. Notice that cards in a template may form a deep hierarchy, enabling the definition of complex templates with multiple cards, such as a template for a software project.
+A template contains a card or a set of cards in a directory hierarchy that is used as a template for new user content. When the user creates a new card or a set of cards from a template, a new copy of the template card(s) is made with new unique card key(s). Notice that cards in a template may form a deep hierarchy, enabling the definition of complex templates with multiple cards, such as a template for a software project.
 
 == Showing available templates
 
