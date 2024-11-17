@@ -2,7 +2,7 @@ The best way to learn how to use the Cyberismo command line interface is the bui
 
 [source,console]
 ----
-cyberismo help
+$ cyberismo help
 ----
 
 The help command will print an overview of the available commands

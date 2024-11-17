@@ -4,7 +4,7 @@ You can export a Cyberismo project as a static documentation site by entering th
 
 [source,console]
 ----
-cyberismo export site /path/to/target/directory
+$ cyberismo export site /path/to/target/directory
 ----
 
 When complete, the script will output:

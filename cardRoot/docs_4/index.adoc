@@ -4,7 +4,7 @@ To start the app, execute the following command in the Cyberismo project directo
 
 [source,console]
 ----
-cyberismo app
+$ cyberismo app
 ----
 
 Then open a browser and navigate to http://localhost:3000/.
