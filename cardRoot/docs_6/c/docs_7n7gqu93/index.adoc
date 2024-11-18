@@ -20,7 +20,7 @@ To create a new template, for example `myTemplate`, use the following command:
 
   $ cyberismo create template myTemplate
 
-Cyberismo will create a new directory called `myWorkflow` in `.cards/local/templates/myTemplate/`. The directory will contain a file called `template.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new template will be `example/templates/myTemplate`. 
+Cyberismo will create a new directory called `.cards/local/templates/myTemplate/`. The directory will contain a file called `template.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new template will be `example/templates/myTemplate`. 
 
 When choosing a name for your template, see xref:docs_8.adoc[Naming conventions].
 
