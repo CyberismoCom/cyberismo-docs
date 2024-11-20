@@ -2,7 +2,7 @@ To update an existing installation of Cyberismo, pull the latest changes from th
 
   $ cd cyberismo
   $ git pull
-  $ npm install
-  $ npm run build
+  $ pnpm install
+  $ pnpm build
 
 You now have the latest version of Cyberismo from the upstream repository.
