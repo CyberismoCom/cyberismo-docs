@@ -28,48 +28,48 @@ jobs:
       cancel-in-progress: false
 
     steps:
-    - name: Checkout cyberismo-docs repository
-      uses: actions/checkout@v4
-      with:
-        repository: CyberismoCom/cyberismo-docs
-        path: cyberismo-docs
+      - name: Checkout cyberismo-docs repository
+        uses: actions/checkout@v4
+        with:
+          repository: CyberismoCom/cyberismo-docs
+          path: cyberismo-docs
 
-    - name: Clone cyberismo repository
-      uses: actions/checkout@v4
-      with:
-        repository: CyberismoCom/cyberismo
-        path: cyberismo
-        ref: main
+      - name: Clone cyberismo repository
+        uses: actions/checkout@v4
+        with:
+          repository: CyberismoCom/cyberismo
+          path: cyberismo
+          ref: main
 
-    - name: Install Clingo
-      run: sudo apt-get update && sudo apt-get install -y gringo
+      - name: Install Clingo
+        run: sudo apt-get update && sudo apt-get install -y gringo
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install the Cyberismo application
-      run: |
-        cd cyberismo
-        npm install
-        npm run build
-        npm install -g
+      - name: Install the Cyberismo application
+        run: |
+          cd cyberismo
+          pnpm install
+          pnpm build
+          pnpm link -g
 
-    - name: Configure GitHub Pages
-      uses: actions/configure-pages@v5
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
 
-    - name: Export the site
-      run: |
-        cyberismo export site -p cyberismo-docs build/site
-        touch build/site/.nojekyll
-        find build/site
+      - name: Export the site
+        run: |
+          cyberismo export site -p cyberismo-docs build/site
+          touch build/site/.nojekyll
+          find build/site
 
-    - name: Upload artifacts
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: build/site
+      - name: Upload artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/site
 
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -25,9 +25,10 @@ Take the following steps:
   
 . Execute the following commands:
 
-  $ npm install
-  $ npm run build
-  $ npm install -g
+  $ pnpm setup
+  $ pnpm install
+  $ pnpm build
+  $ pnpm link -g
 
 === Running
 
