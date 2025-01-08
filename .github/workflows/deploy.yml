@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature/*
 
 jobs:
   build:
@@ -27,6 +28,10 @@ jobs:
       group: "pages"
       cancel-in-progress: false
 
+    defaults:
+      run:
+        shell: bash -el {0}
+
     steps:
       - name: Checkout cyberismo-docs repository
         uses: actions/checkout@v4
@@ -41,8 +46,19 @@ jobs:
           path: cyberismo
           ref: main
 
-      - name: Install Clingo
-        run: sudo apt-get update && sudo apt-get install -y gringo
+      - name: Debug
+        run: pwd ; ls -la
+
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          python-version: 3.12
+          auto-update-conda: true
+          activate-environment: docs-env
+          environment-file: cyberismo-docs/environment.yml
+
+      - name: Check Clingo Availability
+        run: which clingo
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
