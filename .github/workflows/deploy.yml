@@ -46,9 +46,6 @@ jobs:
           path: cyberismo
           ref: main
 
-      - name: Debug
-        run: pwd ; ls -la
-
       - name: Setup Miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
