@@ -1,3 +1,12 @@
+== Docker image from Docker Hub
+The latest image version can be pulled with the following command:
+
+  $ docker pull cyberismo/cyberismo:latest
+
+== Docker image with local build
+Just repeat xref:docs_17.adoc[Installing Cyberismo] "Building and running Cyberismo with Docker" steps 
+
+== Local install
 To update an existing installation of Cyberismo, pull the latest changes from the upstream repository and rebuild the software:
 
   $ cd cyberismo
