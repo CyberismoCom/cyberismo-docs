@@ -13,7 +13,10 @@ jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
+    name: Build docs and deploy to Azure
+    defaults:
+      run:
+        shell: bash -el {0}
     steps:
       - name: Checkout cyberismo-docs repository
         uses: actions/checkout@v4
