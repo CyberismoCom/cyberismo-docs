@@ -1,11 +1,14 @@
-== Cyberismo with Docker
+== Method 1: Docker image from Docker Hub
+
+This method is likely to be the simplest way to get started with Cyberismo.
 
 === Prerequisites
-. The system must have Docker or a similar container environment installed, capable of running Linux-based images.
-. Podman or other rootless container engines might have problems with web server port releases, and if you encounter a 'port is already allocated' error after the first run, you might want to switch to a rootful container engine.
+. Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules.
+
+. The system must have Docker or a similar container environment installed, capable of running Linux-based images. The simplest way to install a container environment is to install https://www.docker.com[Docker Desktop].
 
 === Downloading image from Docker Hub
-Latest image can be downloaded with the following command:
+The latest image can be downloaded with the following command:
 
   $ docker pull cyberismo/cyberismo
 
@@ -13,7 +16,36 @@ Specific versions can be downloaded with the following command:
 
   $ docker pull cyberismo/cyberismo:0.1
 
-=== Building (If the image is not downloaded from Docker Hub)
+=== Running
+* It is recommended to execute the following commands only within the Cyberismo root directory or within project directories.
+
+* To simplify running the image, you can use the following command (works only on Unix-based systems, not in CMD or PowerShell):
+
+  $ alias cyberismod="docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo/cyberismo cyberismo"
+
+The alias command allows you to execute the configured Docker environment with a single, simple command.
+
+* Flags in command:
+** -rm: Removes the container automatically after it exits.
+** -it: Runs the container in interactive mode.
+** --user: Container user will use the same user id as the user executing the command. This will prevent file ownership problems.
+** -v: Maps the current execution directory to the /project directory inside the container, sharing files between host and container.
+** -p: Forwards the port from the container to the host machine, enabling access to the hosted web service.
+
+* Run the following command to view the command-line help:
+
+  $ cyberismod --help
+
+NOTE: The rest of the Cyberismo documentation uses the name `cyberismo` for the Cyberismo command. If you have installed Cyberismo using Docker as instructed here, then you need to use the alias command `cyberismod` instead of `cyberismo`.
+
+== Method 2: Locally built Docker image
+
+=== Prerequisites
+. Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules.
+
+. The system must have Docker or a similar container environment installed, capable of running Linux-based images. The simplest way to install a container environment is to install https://www.docker.com[Docker Desktop].
+
+=== Building the container image
 Take the following steps:
 
 . Clone the source repository using one of the following methods:
@@ -39,15 +71,7 @@ Take the following steps:
 
 * To simplify running the image, you can use the following command (works only on Unix-based systems, not in CMD or PowerShell):
 
-*Locally built image*
-
-  $ alias cyberismodocker="docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 300
-0:3000 cyberismo"
-
-*Image downloaded from Docker Hub*
-
-  $ alias cyberismodocker="docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 300
-0:3000 cyberismo/cyberismo"
+  $ alias cyberismod="docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo cyberismo"
 
 The alias command allows you to execute the configured Docker environment with a single, simple command.
 
@@ -60,14 +84,11 @@ The alias command allows you to execute the configured Docker environment with a
 
 * Run the following command to view the command-line help:
 
-  $ cyberismodocker cyberismo --help
+  $ cyberismod --help
 
-* If you prefer not to use the alias, you can run the command directly:
+NOTE: The rest of the Cyberismo documentation uses the name `cyberismo` for the Cyberismo command. If you have installed Cyberismo using Docker as instructed here, then you need to use the alias command `cyberismod` instead of `cyberismo`.
 
-  $ docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo cyberismo --help
-
-
-== Building and running Cyberismo from source
+== Method 3: Building and running Cyberismo locally from source
 
 === Prerequisites
 
@@ -76,6 +97,10 @@ The alias command allows you to execute the configured Docker environment with a
 . Install Clingo. The currently supported Clingo version is 5.7.1. We recommend installing a Python-enabled build using Anaconda, as instructed in https://github.com/potassco/clingo/releases/.
 
 . Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0. Node.js is downloadable from https://nodejs.org/.
+
+. Install the latest version of https://antora.org/[Antora].
+
+. Install the latest version of https://clingraph.readthedocs.io/en/latest/clingraph/installation.html[Clingraph].
 
 
 === Building
