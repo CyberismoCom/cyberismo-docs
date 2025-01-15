@@ -14,9 +14,9 @@ CAUTION: Do not choose names that differ in their case only, such as `example.js
 
 == References to configuration
 
-When we refer to these concepts in the configuration, the references always include the module name and the type of the concept, for example `myModule/templates/decision`
+When we refer to these concepts in the configuration, the references always include the module prefix and the type of the concept, for example `modulea/templates/decision`
 
-Do not include the type of the item in the name. For example, if you need a workflow for decisions, it should be called `decision` rather than `decisionWorkflow`. It will be referred to as `moduleName/workflows/decision`.
+Do not include the type of the item in the name. For example, if you need a workflow for decisions, it should be called `decision` rather than `decisionWorkflow`. It will be referred to as `modulea/workflows/decision`.
 
 The following table shows how the main Cyberismo concepts are referred to in Cyberismo modules.
 
@@ -26,22 +26,24 @@ The following table shows how the main Cyberismo concepts are referred to in Cyb
 |Concept  |Example Name
 
 |Workflow
-|`module1/workflows/example`
+|`modulea/workflows/example`
 |Card type
-|`module1/cardTypes/example`
+|`modulea/cardTypes/example`
 |Field type
-|`module1/fieldTypes/example`
+|`modulea/fieldTypes/example`
 |Link type
 |`module1/linkTypes/example`
 |Template
-|`module1/templates/example`
+|`modulea/templates/example`
 |===
 
 == Naming in logic programs
 
 Naming of terms in logic programs follows the same `camelCase` convention as other naming in the Cyberismo solution. As required by the syntax rules of Answer Set Programming, the names of atoms and constants begin with a lowercase character, and variable names begin with an uppercase character.
 
-NOTE: If a Cyberismo content module needs to define a new global name, such as a new constant or a new complex term, the name should include the module name as a prefix.
+NOTE: If a Cyberismo content module needs to define a new global name, such as a new constant or a new complex term, the name should begin with the module prefix and an underscore.
+
+For example, if a module with the prefix `example` needs to use a new global logic program term, say `mySpecialTerm`, then the term should be called `example_mySpecialTerm`.
 
 == Names of Cyberismo concepts in `field` terms
 
@@ -63,7 +65,7 @@ User-configured field types and built-in fields of cards are used in `field` ter
 |Workflow state
 |`workflowState`
 |User-configured field
-|`moduleName/fieldTypes/example`
+|`prefix/fieldTypes/example`
 |===
 
 == Labels
