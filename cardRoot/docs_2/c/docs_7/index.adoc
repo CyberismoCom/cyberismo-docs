@@ -3,6 +3,8 @@ This tutorial shows how to create a new Cyberismo project with the base module.
 
 Prerequisites: xref:docs_13.adoc[Install Cyberismo].
 
+NOTE: If you have installed Cyberismo using Docker, then use the alias command `cyberismod` instead of `cyberismo` with this tutorial. 
+
 == Clone the base module
 
 Execute the following command to clone the base module:
@@ -47,8 +49,7 @@ Import the base module to your new project with the following command:
 
 [source,console]
 ----
-$ cd cyberismo-tutorial
-$ cyberismo import module ../module-base
+$ cyberismo import module module-base -p cyberismo-tutorial
 ----
 
 == Create a page
@@ -57,6 +58,7 @@ The base module includes a page template. To create the first card in the new pr
 
 [source,console]
 ----
+$ cd cyberismo-tutorial
 $ cyberismo create card base/templates/page
 ----
 
@@ -69,4 +71,4 @@ You can view and edit the new project and its first card with the Cyberismo app.
 $ cyberismo app
 ----
 
-Then open a browser and navigate to http://localhost:3000/. If you have multiple instances of the app running, the application will select the next available port, e.g. 3001.
+Then open a browser and navigate to http://localhost:3000/.
