@@ -1,7 +1,7 @@
 [
-  {
-    "version": 1,
-    "id": "reportSchema",
-    "file": "report.json"
-  }
+    {
+        "version": 1,
+        "id": "reportSchema",
+        "file": "../childrenList.json"
+    }
 ]

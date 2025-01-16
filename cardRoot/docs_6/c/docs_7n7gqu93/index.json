@@ -4,5 +4,7 @@
     "workflowState": "Draft",
     "rank": "0|aaaaag",
     "lastUpdated": "2024-11-18T07:47:32.894Z",
-    "links": []
+    "links": [],
+    "base/fieldTypes/owner": null,
+    "base/fieldTypes/informationClassification": null
 }

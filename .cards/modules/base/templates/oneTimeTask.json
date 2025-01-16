@@ -1,5 +1,6 @@
 {
     "displayName": "Task",
     "description": "An one-time task",
-    "category": "General"
+    "category": "General",
+    "name": "base/templates/oneTimeTask"
 }

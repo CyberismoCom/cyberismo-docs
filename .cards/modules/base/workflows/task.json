@@ -40,13 +40,8 @@
             "toState": "Closed as done"
         },
         {
-            "name": "Review as OK",
-            "fromState": ["Closed as done"],
-            "toState": "Closed as done"
-        },
-        {
             "name": "Review as not applicable",
-            "fromState": ["*"],
+            "fromState": ["Open", "In progress"],
             "toState": "Closed as not applicable"
         }
     ]

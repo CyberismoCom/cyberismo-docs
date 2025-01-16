@@ -1,0 +1,24 @@
+{
+    "name": "base/cardTypes/recurringTask",
+    "workflow": "base/workflows/recurringTask",
+    "customFields": [
+        {
+            "name": "base/fieldTypes/owner"
+        },
+        {
+            "name": "base/fieldTypes/informationClassification"
+        },
+        {
+            "name": "base/fieldTypes/reviewPeriod",
+            "isEditable": false
+        }
+    ],
+    "alwaysVisibleFields": [
+        "base/fieldTypes/owner",
+        "base/fieldTypes/informationClassification"
+    ],
+    "optionallyVisibleFields": [
+            "base/fieldTypes/reviewPeriod"
+    ]
+
+}

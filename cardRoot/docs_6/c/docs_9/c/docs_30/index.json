@@ -3,5 +3,7 @@
     "cardType": "base/cardTypes/page",
     "workflowState": "Draft",
     "rank": "0|m",
-    "lastUpdated": "2024-09-13T14:30:40.561Z"
+    "lastUpdated": "2024-09-13T14:30:40.561Z",
+    "base/fieldTypes/owner": null,
+    "base/fieldTypes/informationClassification": null
 }

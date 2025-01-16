@@ -2,6 +2,7 @@
     "name": "base/workflows/controlledDocument",
     "states": [
         { "name": "Draft", "category": "initial" },
+        { "name": "Reviewed", "category": "initial" },
         { "name": "Approved", "category": "closed" },
         { "name": "Archived", "category": "closed" }
     ],
@@ -12,8 +13,13 @@
             "toState": "Draft"
         },
         {
+            "name": "Review as OK",
+            "fromState": ["Draft","Approved"],
+            "toState": "Reviewed"
+        },
+        {
             "name": "Approve",
-            "fromState": ["Draft"],
+            "fromState": ["Reviewed"],
             "toState": "Approved"
         },
         {

@@ -4,6 +4,17 @@
     "customFields": [
         {
             "name": "base/fieldTypes/owner"
+        },
+        {
+            "name": "base/fieldTypes/informationClassification"
+        },
+        {
+            "name": "base/fieldTypes/decisionDate"
         }
+    ],
+    "alwaysVisibleFields": [
+        "base/fieldTypes/owner",
+        "base/fieldTypes/informationClassification",
+        "base/fieldTypes/decisionDate"
     ]
 }

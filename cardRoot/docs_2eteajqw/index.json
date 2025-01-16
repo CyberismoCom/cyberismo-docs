@@ -4,5 +4,7 @@
     "workflowState": "Ready",
     "rank": "0|l",
     "lastUpdated": "2024-10-21T10:44:31.541Z",
-    "lastTransitioned": "2024-10-21T10:44:31.517Z"
+    "lastTransitioned": "2024-10-21T10:44:31.517Z",
+    "base/fieldTypes/owner": null,
+    "base/fieldTypes/informationClassification": null
 }
