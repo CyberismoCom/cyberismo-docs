@@ -1,4 +1,4 @@
 
-{{{report '{
-    "name": "base/reports/childrenList"
-}'}}}
+{{#report}}
+  "name": "base/reports/childrenList"
+{{/report}}
