@@ -1,8 +1,9 @@
 {
     "title": "Untitled monthly task",
-    "cardType":  "base/cardTypes/task",
+    "cardType":  "base/cardTypes/recurringTask",
     "workflowState": "",
     "base/fieldTypes/owner": null,
+    "base/fieldTypes/informationClassification": "internal",
     "base/fieldTypes/reviewPeriod": 30,
     "rank": "0|a",
     "lastUpdated": "2024-08-01T14:25:19.235Z"

@@ -1,8 +1,21 @@
-== Participants
+== Meeting details
 
-* Participant 1
-* Participant 2
+* **Date**: 
+* **Time**: 
+* **Location**:
+* **Participants**: 
 
 == Goals
 
 == Notes
+
+== Action points
+
+{{{createCards '{
+    "template": "base/templates/oneTimeTask",
+    "buttonLabel": "Add new task"
+}'}}}
+
+{{{report '{
+    "name": "base/reports/childrenTable"
+}'}}}

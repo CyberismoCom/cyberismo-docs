@@ -5,5 +5,7 @@
     "rank": "0|j",
     "lastUpdated": "2024-11-17T15:05:39.209Z",
     "lastTransitioned": "2024-10-21T10:44:28.014Z",
-    "links": []
+    "links": [],
+    "base/fieldTypes/owner": null,
+    "base/fieldTypes/informationClassification": null
 }

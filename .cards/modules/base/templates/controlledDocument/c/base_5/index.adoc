@@ -1,0 +1,14 @@
+== Document content
+
+#TODO# Add content
+
+== Reviews and approvals
+
+{{{createCards '{
+    "template": "base/templates/oneTimeTask",
+    "buttonLabel": "Add new task"
+}'}}}
+
+{{{report '{
+    "name": "base/reports/childrenTable"
+}'}}}

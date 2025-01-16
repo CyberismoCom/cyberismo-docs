@@ -9,5 +9,7 @@
             "linkType": "base/linkTypes/relatesTo",
             "cardKey": "docs_4nd9wctm"
         }
-    ]
+    ],
+    "base/fieldTypes/owner": null,
+    "base/fieldTypes/informationClassification": null
 }
