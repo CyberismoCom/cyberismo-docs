@@ -47,7 +47,15 @@ $ cyberismo import module module-dataflow -p dataflow-tutorial
 
 == Start the Cyberismo app
 
-To start using the dataflow module, we need to start the Cyberismo app. To start the app, execute the following command:
+To start using the dataflow module, we need to start the Cyberismo app. First, change to the `dataflow-tutorial` directory:
+
+[source,console]
+----
+$ cd dataflow-tutorial
+----
+
+
+To start the app, execute the following command:
 
 [source,console]
 ----
