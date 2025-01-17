@@ -1,6 +1,6 @@
 {
-    "name": "base/cardTypes/task",
-    "workflow": "base/workflows/task",
+    "name": "base/cardTypes/annualTask",
+    "workflow": "base/workflows/recurringTask",
     "customFields": [
         {
             "name": "base/fieldTypes/owner"
@@ -9,10 +9,13 @@
             "name": "base/fieldTypes/informationClassification"
         },
         {
+            "name": "base/fieldTypes/reviewPeriod"
+        },
+        {
             "name": "base/fieldTypes/justification"
         },
         {
-            "name": "base/fieldTypes/dueDate"
+            "name": "base/fieldTypes/reviewMonth"
         },
         {
             "name": "base/fieldTypes/adoptionStep"
@@ -23,10 +26,10 @@
     ],
     "alwaysVisibleFields": [
         "base/fieldTypes/owner",
-        "base/fieldTypes/informationClassification",
-        "base/fieldTypes/dueDate"
+        "base/fieldTypes/informationClassification"
     ],
     "optionallyVisibleFields": [
-        "base/fieldTypes/justification"
+        "base/fieldTypes/justification",
+        "base/fieldTypes/reviewMonth"
     ]
 }
