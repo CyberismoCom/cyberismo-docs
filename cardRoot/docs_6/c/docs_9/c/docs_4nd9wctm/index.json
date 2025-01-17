@@ -1,9 +1,11 @@
 {
     "title": "Notifications",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|zn",
-    "lastUpdated": "2024-11-05T14:56:39.513Z",
+    "lastUpdated": "2025-01-17T14:32:46.639Z",
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public",
+    "links": [],
+    "lastTransitioned": "2025-01-17T14:31:51.340Z"
 }

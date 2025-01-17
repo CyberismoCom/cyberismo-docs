@@ -3,8 +3,8 @@
     "cardType": "base/cardTypes/page",
     "workflowState": "Draft",
     "rank": "0|z",
-    "lastUpdated": "2025-01-14T13:04:00.776Z",
+    "lastUpdated": "2025-01-17T14:27:11.034Z",
     "links": [],
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public"
 }

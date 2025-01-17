@@ -3,9 +3,9 @@
     "cardType": "base/cardTypes/page",
     "workflowState": "Ready",
     "rank": "0|h",
-    "lastUpdated": "2024-11-17T15:06:16.400Z",
+    "lastUpdated": "2025-01-17T14:27:48.645Z",
     "lastTransitioned": "2024-10-21T10:44:22.009Z",
     "links": [],
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public"
 }

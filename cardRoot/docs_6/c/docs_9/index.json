@@ -1,9 +1,11 @@
 {
     "title": "Queries and reasoning",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|ag",
-    "lastUpdated": "2024-11-05T19:31:53.910Z",
+    "lastUpdated": "2025-01-17T14:33:23.357Z",
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public",
+    "links": [],
+    "lastTransitioned": "2025-01-17T14:31:12.206Z"
 }

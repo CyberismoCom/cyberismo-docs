@@ -1,10 +1,11 @@
 {
     "title": "Definition of Done",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|b",
-    "lastUpdated": "2024-08-01T14:25:19.240Z",
+    "lastUpdated": "2025-01-17T14:32:27.868Z",
     "links": [],
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public",
+    "lastTransitioned": "2025-01-17T14:32:27.791Z"
 }

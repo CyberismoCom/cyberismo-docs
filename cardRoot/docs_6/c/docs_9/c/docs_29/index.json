@@ -1,10 +1,11 @@
 {
     "title": "Mapping the Cyberismo content to a logic program",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|g",
-    "lastUpdated": "2024-11-15T16:29:53.069Z",
+    "lastUpdated": "2025-01-17T14:33:07.016Z",
     "links": [],
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public",
+    "lastTransitioned": "2025-01-17T14:31:25.930Z"
 }

@@ -1,9 +1,9 @@
 {
     "title": "Automated policy checks",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|z",
-    "lastUpdated": "2024-11-05T14:56:12.411Z",
+    "lastUpdated": "2025-01-17T14:32:51.761Z",
     "links": [
         {
             "linkType": "base/linkTypes/relatesTo",
@@ -11,5 +11,6 @@
         }
     ],
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public",
+    "lastTransitioned": "2025-01-17T14:31:48.038Z"
 }

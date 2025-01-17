@@ -1,10 +1,11 @@
 {
     "title": "Templates",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|aaaaag",
-    "lastUpdated": "2024-11-18T07:47:32.894Z",
+    "lastUpdated": "2025-01-17T14:33:28.276Z",
     "links": [],
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public",
+    "lastTransitioned": "2025-01-17T14:31:05.589Z"
 }

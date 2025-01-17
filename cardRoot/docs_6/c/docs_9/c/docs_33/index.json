@@ -1,9 +1,11 @@
 {
     "title": "Query language",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|a",
-    "lastUpdated": "2024-09-11T08:03:46.451Z",
+    "lastUpdated": "2025-01-17T14:33:18.123Z",
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public",
+    "links": [],
+    "lastTransitioned": "2025-01-17T14:31:18.628Z"
 }

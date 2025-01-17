@@ -1,10 +1,11 @@
 {
     "title": "Naming conventions",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|an",
-    "lastUpdated": "2025-01-15T15:25:29.111Z",
+    "lastUpdated": "2025-01-17T14:32:37.559Z",
     "links": [],
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public",
+    "lastTransitioned": "2025-01-17T14:31:56.418Z"
 }

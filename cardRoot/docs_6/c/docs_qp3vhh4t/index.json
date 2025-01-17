@@ -1,10 +1,11 @@
 {
     "title": "Link types",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|aaaaad",
-    "lastUpdated": "2024-11-15T17:05:06.148Z",
+    "lastUpdated": "2025-01-17T14:33:33.247Z",
     "links": [],
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": null
+    "base/fieldTypes/informationClassification": "public",
+    "lastTransitioned": "2025-01-17T14:30:56.695Z"
 }
