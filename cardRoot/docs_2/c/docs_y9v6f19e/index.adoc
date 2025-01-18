@@ -1,0 +1,90 @@
+:sectnums:
+
+== Introduction
+
+This tutorial shows how to get started with the Cyberismo Information Security Management System (ISMS) essentials module. The module contains the basic building blocks for establishing an information security management system. This includes example processes for
+
+* Asset management
+* Risk management
+* Incident management
+
+along with the needed field types, link types, templates, workflows, registers, policy checks and progress metrics.
+
+== Prerequisites
+
+xref:docs_13.adoc[Install Cyberismo].
+
+== Clone the required Cyberismo modules
+
+Execute the following command to clone the Cyberismo base module and the Cyberismo ISMS essentials module:
+
+[source,console]
+----
+$ git clone git@github.com:CyberismoCom/module-base.git
+----
+
+[source,console]
+----
+$ git clone git@github.com:CyberismoCom/module-isms-essentials.git
+----
+
+== Create a project
+
+Create a new project called, for example, "ISMS tutorial" that has the card key prefix `myisms` in the directory `isms-tutorial` with the following command:
+
+[source,console]
+----
+$ cyberismo create project "ISMS tutorial" myisms isms-tutorial
+----
+
+== Import the modules to your new project
+
+Import the Cyberismo base module and the Cyberismo ISMS essentials module to your new project with the following commands:
+
+[source,console]
+----
+$ cyberismo import module module-base -p isms-tutorial
+----
+
+[source,console]
+----
+$ cyberismo import module module-isms-essentials -p isms-tutorial
+----
+
+== Create a home page for your project
+
+Change to the `isms-tutorial` directory:
+
+[source,console]
+----
+$ cd isms-tutorial
+----
+
+Execute the following command to create a home page for your ISMS project:
+
+[source,console]
+----
+$ cyberismo create card ismsa/templates/moduleHome
+----
+
+== Start the Cyberismo app
+
+Let us continue using the Cyberismo ISMS essentials module wth the Cyberismo app. To start the app, execute the following command:
+
+[source,console]
+----
+$ cyberismo app
+----
+
+Then open a browser and navigate to http://localhost:3000/.
+
+== Explore your new ISMS workspace
+
+Now you are ready to explore your new ISMS workspace. 
+
+* Expand the navigation tree on the left to see the structure of the documentation
+* See progress key performance indicators both in the navigation tree and on the home page
+* You can find an example asset that has three example risks under *Asset register* / *Supporting assets* / *Devices* / *Employee devices*
+* Try if you are able to create a new incident under Incident register
+
+image::ISMS-home.png[]
