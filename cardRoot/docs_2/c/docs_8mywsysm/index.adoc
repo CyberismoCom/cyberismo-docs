@@ -2,9 +2,9 @@
 
 == Introduction
 
-This tutorial shows how to get started with the dataflow module. The dataflow module defines card types and link types for creating dataflow models with processes, external entities, data storages, trust boundaries and data flows. This enables you to model your software systems using cards and links in Cyberismo. 
+This tutorial shows how to get started with the Cyberismo dataflow module. The Cyberismo dataflow module defines card types and link types for creating dataflow models with processes, external entities, data storages, trust boundaries and data flows. This enables you to model your software systems using cards and links in Cyberismo. 
 
-The dataflow module uses Cyberismo's graph macros that translate the model into graphical views. You can generate different views from the same data. For example, a high-level context diagram for an internet banking systemfootnote:[This example is based on an example from https://c4model.com[C4 model].] could look like this:
+The Cyberismo dataflow module uses graph macros that translate the model into graphical views. You can generate different views from the same data. For example, a high-level context diagram for an internet banking systemfootnote:[This example is based on an example from https://c4model.com[C4 model].] could look like this:
 
 image::context-diagram.png[]
 
@@ -16,9 +16,9 @@ image::diagram-example.png[]
 
 xref:docs_13.adoc[Install Cyberismo].
 
-== Clone the dataflow module
+== Clone the Cyberismo dataflow module
 
-Execute the following command to clone the dataflow module:
+Execute the following command to clone the Cyberismo dataflow module:
 
 [source,console]
 ----
@@ -34,11 +34,11 @@ Create a new project called, for example, "Dataflow tutorial" that has the card 
 $ cyberismo create project "Dataflow tutorial" dftutorial dataflow-tutorial
 ----
 
-NOTE: Do not use the module prefix `dataflow` for the new project, because `dataflow` is already in use by the dataflow module.
+NOTE: Do not use the module prefix `dataflow` for the new project, because `dataflow` is already in use by the Cyberismo dataflow module.
 
 == Import the dataflow module to your new project
 
-Import the dataflow module to your new project with the following command:
+Import the Cyberismo dataflow module to your new project with the following command:
 
 [source,console]
 ----
@@ -47,7 +47,7 @@ $ cyberismo import module module-dataflow -p dataflow-tutorial
 
 == Start the Cyberismo app
 
-To start using the dataflow module, we need to start the Cyberismo app. First, change to the `dataflow-tutorial` directory:
+To start using the Cyberismo dataflow module, we need to start the Cyberismo app. First, change to the `dataflow-tutorial` directory:
 
 [source,console]
 ----
