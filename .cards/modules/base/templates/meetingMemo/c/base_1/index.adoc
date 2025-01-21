@@ -11,11 +11,11 @@
 
 == Action points
 
-{{{createCards '{
-    "template": "base/templates/oneTimeTask",
-    "buttonLabel": "Add new task"
-}'}}}
+{{#createCards}}
+  "template": "base/templates/oneTimeTask",
+  "buttonLabel": "Add new task"
+{{/createCards}}
 
-{{{report '{
-    "name": "base/reports/childrenTable"
-}'}}}
+{{#report}}
+  "name": "base/reports/childrenTable"
+{{/report}}

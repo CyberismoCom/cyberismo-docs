@@ -10,6 +10,6 @@ To understand the logic program that Cyberismo generates from cards, see xref:do
 
 Cyberismo content modules and projects may define their own logic programs by simply including a file with the extension `.lp` in the `calculations` folder. The use cases for user-defined logic programs include the following:
 
-{{{report '{
-    "name": "base/reports/childrenList"
-}'}}}
+{{#report}}
+  "name": "base/reports/childrenList"
+{{/report}}

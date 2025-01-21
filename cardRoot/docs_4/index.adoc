@@ -13,6 +13,6 @@ CAUTION:  The Cyberismo app has been designed for local use by a single user onl
 
 See also:
 
-{{{report '{
-    "name": "base/reports/childrenList"
-}'}}}
+{{#report}}
+  "name": "base/reports/childrenList"
+{{/report}}
