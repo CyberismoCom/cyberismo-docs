@@ -11,20 +11,17 @@ You can see some details of a template, such as `base/templates/page`, with the 
   $ cyberismo show template base/templates/page
 
 For example, to produce a button that creates a new card from the template `base/templates/page', the ``createCards`` macro has the following syntax:
-
-++++
-
+```
 {{#raw}}
-<pre><code>
+
 {{#createCards}}
 
     "template": "base/templates/page",
     "buttonLabel": "Create a new page"
 {{/createCards}}
-</code></pre>
-{{/raw}}
 
-++++
+{{/raw}}
+```
 
 In the app, this macro will produce a button to create a new page as a child card of the page where the macro was used.
 

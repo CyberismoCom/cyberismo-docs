@@ -6,13 +6,14 @@ To see a list of the available reports, use the following command:
 
 For example, the report `base/reports/childrenList` shows a list of child cards. To use this report, use the following syntax:
 
-++++
+```
 {{#raw}}
-<pre><code>
+
 {{#report}}
 
     "name": "base/reports/childrenList"
 {{/report}}
-</code></pre>
+
 {{/raw}}
-++++
+
+```
