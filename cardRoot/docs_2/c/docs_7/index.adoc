@@ -3,8 +3,6 @@ This tutorial shows how to create a new Cyberismo project with the base module.
 
 Prerequisites: xref:docs_13.adoc[Install Cyberismo].
 
-NOTE: If you have installed Cyberismo using Docker, then use the alias command `cyberismod` instead of `cyberismo` with this tutorial. 
-
 == Clone the base module
 
 Execute the following command to clone the base module:
