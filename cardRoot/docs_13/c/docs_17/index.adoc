@@ -17,10 +17,6 @@ The latest image can be downloaded with the following command:
 
   $ docker pull cyberismo/cyberismo
 
-Specific versions can be downloaded with the following command:
-
-  $ docker pull cyberismo/cyberismo:0.1
-
 === Running
 * It is recommended to execute the following commands only within the Cyberismo root directory or within project directories.
 
@@ -39,7 +35,7 @@ The alias command allows you to execute the configured Docker environment with a
 
 * Run the following command to view the command-line help:
 
-  $ cyberismod --help
+  $ cyberismo --help
 
 == Method 2: Locally built Docker image
 
