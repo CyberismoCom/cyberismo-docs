@@ -1,11 +1,16 @@
+There are a number of methods for installing Cyberismo locally, depending on the operating system and platform.
+
+== Prerequisite for all installation types
+
+Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules.
+
 == Method 1: Docker image from Docker Hub
 
 This method is likely to be the simplest way to get started with Cyberismo.
 
 === Prerequisites
-. Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules.
 
-. The system must have Docker or a similar container environment installed, capable of running Linux-based images. The simplest way to install a container environment is to install https://www.docker.com[Docker Desktop].
+The system must have Docker or a similar container environment installed, capable of running Linux-based images. The simplest way to install a container environment is to install https://www.docker.com[Docker Desktop].
 
 === Downloading image from Docker Hub
 The latest image can be downloaded with the following command:
@@ -19,16 +24,16 @@ Specific versions can be downloaded with the following command:
 === Running
 * It is recommended to execute the following commands only within the Cyberismo root directory or within project directories.
 
-* To simplify running the image, you can use the following command (works only on Unix-based systems, not in CMD or PowerShell):
+* To simplify running the image, you can use the following command (works only on Unix-based systems, not in Windows CMD or PowerShell):
 
-  $ alias cyberismod="docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo/cyberismo cyberismo"
+  $ alias cyberismo="docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo/cyberismo cyberismo"
 
 The alias command allows you to execute the configured Docker environment with a single, simple command.
 
 * Flags in command:
 ** -rm: Removes the container automatically after it exits.
 ** -it: Runs the container in interactive mode.
-** --user: Container user will use the same user id as the user executing the command. This will prevent file ownership problems.
+** --user: Container user will use the same user ID as the user executing the command. This will prevent file ownership problems.
 ** -v: Maps the current execution directory to the /project directory inside the container, sharing files between host and container.
 ** -p: Forwards the port from the container to the host machine, enabling access to the hosted web service.
 
@@ -36,14 +41,11 @@ The alias command allows you to execute the configured Docker environment with a
 
   $ cyberismod --help
 
-NOTE: The rest of the Cyberismo documentation uses the name `cyberismo` for the Cyberismo command. If you have installed Cyberismo using Docker as instructed here, then you need to use the alias command `cyberismod` instead of `cyberismo`.
-
 == Method 2: Locally built Docker image
 
 === Prerequisites
-. Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules.
 
-. The system must have Docker or a similar container environment installed, capable of running Linux-based images. The simplest way to install a container environment is to install https://www.docker.com[Docker Desktop].
+The system must have Docker or a similar container environment installed, capable of running Linux-based images. The simplest way to install a container environment is to install https://www.docker.com[Docker Desktop].
 
 === Building the container image
 Take the following steps:
@@ -71,7 +73,7 @@ Take the following steps:
 
 * To simplify running the image, you can use the following command (works only on Unix-based systems, not in CMD or PowerShell):
 
-  $ alias cyberismod="docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo cyberismo"
+  $ alias cyberismo="docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo cyberismo"
 
 The alias command allows you to execute the configured Docker environment with a single, simple command.
 
@@ -84,24 +86,29 @@ The alias command allows you to execute the configured Docker environment with a
 
 * Run the following command to view the command-line help:
 
-  $ cyberismod --help
-
-NOTE: The rest of the Cyberismo documentation uses the name `cyberismo` for the Cyberismo command. If you have installed Cyberismo using Docker as instructed here, then you need to use the alias command `cyberismod` instead of `cyberismo`.
+  $ cyberismo --help
 
 == Method 3: Building and running Cyberismo locally from source
 
 === Prerequisites
 
-. Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules.
+==== Common prerequisites
+
+Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0. Node.js is downloadable from https://nodejs.org/.
+
+==== Windows and macOS
+
+When building Cyberismo on Windows, the system automatically installs the required dependencies (Clingo and libraries) using a prebuilt package by Cyberismo.
+
+When building Cyberismo on macOS, there is a utility script which you can use to install a minimal Python distribution Miniconda and the required dependencies under the `vendor` directory in the Cyberismo main directory. Instructions are provided below.
+
+==== Linux
+
+Installing the required dependencies automatically on Linux is a work in progress. Take the following steps:
 
 . Install Clingo. The currently supported Clingo version is 5.7.1. We recommend installing a Python-enabled build using Anaconda, as instructed in https://github.com/potassco/clingo/releases/.
 
-. Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0. Node.js is downloadable from https://nodejs.org/.
-
-. Install the latest version of https://antora.org/[Antora].
-
 . Install the latest version of https://clingraph.readthedocs.io/en/latest/clingraph/installation.html[Clingraph].
-
 
 === Building
 
@@ -123,6 +130,10 @@ Take the following steps:
   $ pnpm install
   $ pnpm build
   $ pnpm link -g
+
+NOTE: On Windows, the required dependencies are installed automatically. On macOS, you can install the dependencies with
+
+  $ pnpm install-dev-packages  
 
 === Running
 
