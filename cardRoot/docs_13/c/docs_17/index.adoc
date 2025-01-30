@@ -6,7 +6,7 @@ Install Git. While Cyberismo does not directly depend on Git, you will need it t
 
 == Method 1: Docker image from Docker Hub
 
-This method is likely to be the simplest way to get started with Cyberismo.
+For macOS and Linux, this is probably the easiest way to try out Cyberismo. For Windows, building the application locally from source is the recommended way, and it is not half as frightening as it sounds.
 
 === Prerequisites
 
