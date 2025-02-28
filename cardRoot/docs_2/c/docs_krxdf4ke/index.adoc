@@ -1,0 +1,91 @@
+:sectnums:
+
+== Introduction
+
+This tutorial shows how to install the Cyberismo secure development essentials module. The module contains configuration for getting started with secure development in a development project. 
+
+This module includes a powerful threat modeling tool that enables the modeling of processes, data stores, trust boundaries, external entities, users, and dataflows. 
+
+
+== Prerequisites
+
+xref:docs_13.adoc[Install Cyberismo].
+
+== Clone the required Cyberismo modules
+
+The Cyberismo secure development essentials module builds on the base module and the ISMS essentials module as its prerequisites.
+
+Execute the following command to clone the required modules:
+
+[source,console]
+----
+$ git clone git@github.com:CyberismoCom/module-base.git
+----
+
+[source,console]
+----
+$ git clone git@github.com:CyberismoCom/module-isms-essentials.git
+----
+
+[source,console]
+----
+$ git clone git@github.com:CyberismoCom/module-secure-development-essentials.git
+----
+
+
+== Create a project
+
+Create a new project called, for example, "Secure development tutorial" that has the card key prefix `mysecdev` in the directory `secdev-tutorial` with the following command:
+
+[source,console]
+----
+$ cyberismo create project "Secure development tutorial" mysecdev secdev-tutorial
+----
+
+== Import the modules to your new project
+
+Import the required modules to your new project with the following commands:
+
+[source,console]
+----
+$ cyberismo import module module-base -p secdev-tutorial
+----
+
+[source,console]
+----
+$ cyberismo import module module-isms-essentials -p secdev-tutorial
+----
+
+[source,console]
+----
+$ cyberismo import module module-secure-development-essentials -p secdev-tutorial
+----
+
+== Start the Cyberismo app
+
+Change to the `secdev-tutorial` directory:
+
+[source,console]
+----
+$ cd secdev-tutorial
+----
+
+Now we can continue using the Cyberismo secure development essentials module wth the Cyberismo app. To start the app, execute the following command:
+
+[source,console]
+----
+$ cyberismo app
+----
+
+Then open a browser and navigate to http://localhost:3000/.
+
+== Create and explore yoursecure development workspace
+
+Using the Cyberismo app, click *CREATE NEW CARD* at the top right. You'll see a long list of available content templates. Type "Start" in the search box, select *Development project*, and click *Create*.
+
+Now you are ready to explore your new secure development workspace. Here are some things you could try. 
+
+* Expand the navigation tree on the left to see the structure of the documentation
+* See progress key performance indicators both in the navigation tree and on the home page
+* You can find a more detailed report of the current status in *Periodic reviews*.
+* Select *Design* / *Model threats* and follow the instructions to get started with threat modeling
