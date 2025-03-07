@@ -81,7 +81,7 @@ Then open a browser and navigate to http://localhost:3000/.
 
 == Create and explore yoursecure development workspace
 
-Using the Cyberismo app, click *CREATE NEW CARD* at the top right. You'll see a long list of available content templates. Type "Start" in the search box, select *Development project*, and click *Create*.
+Using the Cyberismo app, click *Create* at the top right. You'll see a long list of available content templates. Type "Start" in the search box, select *Development project*, and click *Create*.
 
 Now you are ready to explore your new secure development workspace. Here are some things you could try. 
 

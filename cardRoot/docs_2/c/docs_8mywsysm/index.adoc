@@ -66,7 +66,7 @@ Then open a browser and navigate to http://localhost:3000/.
 
 == Create a dataflow model
 
-Click *CREATE NEW CARD* at the top right:
+Click *Create* at the top right:
 
 image::create-new.card.png[]
 

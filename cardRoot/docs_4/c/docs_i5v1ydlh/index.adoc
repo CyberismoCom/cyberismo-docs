@@ -1,4 +1,4 @@
-You can create new cards in your Cyberismo project by clicking **CREATE NEW CARD** at the top right of the app. The app will show a dialog for selecting a template from which the new card or cards will be created.
+You can create new cards in your Cyberismo project by clicking **Create** at the top right of the app. The app will show a dialog for selecting a template from which the new card or cards will be created.
 
 The `createCards` macro provides another way to create content: the macro produces a button for creating new cards from a certain template.
 
