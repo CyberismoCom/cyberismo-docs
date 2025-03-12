@@ -46,10 +46,9 @@ The system must have Docker or a similar container environment installed, capabl
 === Building the container image
 Take the following steps:
 
-. Clone the source repository using one of the following methods:
+. Clone the source repository:
 
-  $ git clone git@github.com:CyberismoCom/cyberismo.git # SSH
-  $ git clone https://github.com/CyberismoCom/cyberismo.git # HTTPS
+  $ git clone https://github.com/CyberismoCom/cyberismo.git
   
 . Change to the source directory. If you have already cloned the repository earlier, remember to pull the latest changes:
 
@@ -110,10 +109,9 @@ Installing the required dependencies automatically on Linux is a work in progres
 
 Take the following steps:
 
-. Clone the source repository using one of the following methods:
+. Clone the source repository:
 
-  $ git clone git@github.com:CyberismoCom/cyberismo.git # SSH
-  $ git clone https://github.com/CyberismoCom/cyberismo.git # HTTPS
+  $ git clone https://github.com/CyberismoCom/cyberismo.git
   
 . Change to the source directory. If you have already cloned the repository earlier, remember to pull the latest changes:
 

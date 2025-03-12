@@ -20,12 +20,12 @@ Execute the following command to clone the Cyberismo base module and the Cyberis
 
 [source,console]
 ----
-$ git clone git@github.com:CyberismoCom/module-base.git
+$ git clone https://github.com/CyberismoCom/module-base.git
 ----
 
 [source,console]
 ----
-$ git clone git@github.com:CyberismoCom/module-isms-essentials.git
+$ git clone https://github.com/CyberismoCom/module-isms-essentials.git
 ----
 
 == Create a project

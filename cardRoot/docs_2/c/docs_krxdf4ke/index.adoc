@@ -19,17 +19,17 @@ Execute the following command to clone the required modules:
 
 [source,console]
 ----
-$ git clone git@github.com:CyberismoCom/module-base.git
+$ git clone https://github.com/CyberismoCom/module-base.git
 ----
 
 [source,console]
 ----
-$ git clone git@github.com:CyberismoCom/module-isms-essentials.git
+$ git clone https://github.com/CyberismoCom/module-isms-essentials.git
 ----
 
 [source,console]
 ----
-$ git clone git@github.com:CyberismoCom/module-secure-development-essentials.git
+$ git clone https://github.com/CyberismoCom/module-secure-development-essentials.git
 ----
 
 
