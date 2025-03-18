@@ -13,11 +13,9 @@ The latest image can be downloaded with the following command:
 
 === Running
 
-For *Security-Enhanced Linux (SELinux)* the volume mount needs :Z or :z option, like "-v .:/project:z" to allow working mounting
+*Linux & macOS*
 
-It is recommended to execute the following commands only within the Cyberismo root directory or within project directories.
-
-To simplify running the image, you can use the following command (works only on Unix-based systems, not in Windows CMD or PowerShell):
+To simplify running the image, you can use the following alias:
 
   $ alias cyberismo="docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo/cyberismo cyberismo"
 
@@ -35,6 +33,17 @@ Flags in command:
 * -p: Forwards the port from the container to the host machine, enabling access to the hosted web service.
 ====
 
-The alias command allows you to execute the configured Docker environment with a single, simple command. Run the following command to view the command-line help:
+NOTE: For *Security-Enhanced Linux (SELinux)* the volume mount needs :Z or :z option, like "-v .:/project:z" to allow working mounting
+
+Afterward, you can run the application using the following command:
 
   $ cyberismo --help
+
+*Windows*
+
+The Windows environment does not support aliases like Linux and macOS do, so the command to use Docker is:
+
+  $ docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo/cyberismo cyberismo --help
+
+
+
