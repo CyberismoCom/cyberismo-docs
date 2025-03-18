@@ -1,0 +1,41 @@
+== Building and running Cyberismo locally from source
+
+=== Prerequisites
+
+Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules. Git installation guide: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0. Node.js is downloadable from https://nodejs.org/.
+
+When building Cyberismo on macOS, there is a utility script which you can use to install a minimal Python distribution Miniconda and the required dependencies under the `vendor` directory in the Cyberismo main directory. Instructions are provided below.
+
+=== Building
+
+Take the following steps:
+
+. Clone the source repository:
+
+  $ git clone https://github.com/CyberismoCom/cyberismo.git
+  
+. Change to the source directory. If you have already cloned the repository earlier, remember to pull the latest changes:
+
+  $ cd cyberismo
+  $ git pull origin main # Optional
+
+. Install pnpm with npm command:
+
+  $ npm install -g pnpm
+  
+. Execute the following commands:
+
+  $ pnpm setup
+  $ pnpm install
+  $ pnpm build
+  $ pnpm link -g
+
+. On macOS, you can install the dependencies with
+
+  $ pnpm install-dev-packages  
+
+=== Running
+
+After building and installing, run `cyberismo --help` to see the command line help.

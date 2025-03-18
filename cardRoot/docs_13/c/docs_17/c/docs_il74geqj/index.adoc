@@ -1,0 +1,44 @@
+== Podman image from Docker Hub
+
+For macOS and Linux, this is probably the easiest way to try out Cyberismo. For Windows, building the application locally from source is the recommended way, and it is not half as frightening as it sounds.
+
+=== Disclaimer
+
+The Podman environment has been verified to work with Cyberismo Docker Hub images; however, it is not actively tested or maintained. Therefore, we cannot guarantee full compatibility or functionality.
+
+=== Prerequisites
+
+The system must have Podman or a similar container environment installed, capable of running Linux-based images. The simplest way to install a container environment is to install https://podman.io/docs/installation[Podman installation]
+
+=== Downloading image from Docker Hub
+The latest image can be downloaded with the following command:
+
+  $ podman pull docker.io/cyberismo/cyberismo
+
+=== Running
+
+For *Security-Enhanced Linux (SELinux)* the volume mount needs :Z or :z option, like "-v .:/project:z" to allow working mounting
+
+It is recommended to execute the following commands only within the Cyberismo root directory or within project directories.
+
+To simplify running the image, you can use the following command (works only on Unix-based systems, not in Windows CMD or PowerShell):
+
+  $ alias cyberismo="podman run --rm -it --userns=keep-id -v .:/project -p 3000:3000 docker.io/cyberismo/cyberismo cyberismo"
+
+.Explanation of alias
+[%collapsible]
+====
+The alias command allows you to execute the configured Docker environment with a single, simple command.
+
+Flags in command:
+
+* -rm: Removes the container automatically after it exits.
+* -it: Runs the container in interactive mode.
+* --userns: Container user will use the same user id as the user executing the command. This will prevent file ownership problems.
+* -v: Maps the current execution directory to the /project directory inside the container, sharing files between host and container.
+* -p: Forwards the port from the container to the host machine, enabling access to the hosted web service.
+====
+
+The alias command allows you to execute the configured Docker environment with a single, simple command. Run the following command to view the command-line help:
+
+  $ cyberismo --help
