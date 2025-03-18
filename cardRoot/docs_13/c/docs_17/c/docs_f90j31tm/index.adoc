@@ -1,3 +1,7 @@
+== Recommended method for macOS
+
+On macOS, the easiest way to try Cyberismo is likely by using a container platform such as xref:docs_w0puey08.adoc[Docker] or xref:docs_il74geqj.adoc[Podman].
+
 == Building and running Cyberismo locally from source
 
 === Prerequisites
