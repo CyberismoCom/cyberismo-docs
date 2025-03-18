@@ -1,0 +1,51 @@
+== Docker image from Docker Hub
+
+For macOS and Linux, this is probably the easiest way to try out Cyberismo. For Windows, building the application locally from source is the recommended way, and it is not half as frightening as it sounds.
+
+=== Prerequisites
+
+Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules. Git installation guide: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+The system must have Docker or a similar container environment installed, capable of running Linux-based images. The simplest way to install a container environment is to install https://www.docker.com[Docker Desktop].
+
+=== Downloading image from Docker Hub
+The latest image can be downloaded with the following command:
+
+  $ docker pull cyberismo/cyberismo
+
+=== Running
+
+*Linux & macOS*
+
+To simplify running the image, you can use the following alias:
+
+  $ alias cyberismo="docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo/cyberismo cyberismo"
+
+.Explanation of alias
+[%collapsible]
+====
+The alias command allows you to execute the configured Docker environment with a single, simple command.
+
+Flags in command:
+
+* -rm: Removes the container automatically after it exits.
+* -it: Runs the container in interactive mode.
+* --user: Container user will use the same user id as the user executing the command. This will prevent file ownership problems.
+* -v: Maps the current execution directory to the /project directory inside the container, sharing files between host and container.
+* -p: Forwards the port from the container to the host machine, enabling access to the hosted web service.
+====
+
+NOTE: For *Security-Enhanced Linux (SELinux)* the volume mount needs :Z or :z option, like "-v .:/project:z" to allow working mounting
+
+Afterward, you can run the application using the following command:
+
+  $ cyberismo --help
+
+*Windows*
+
+The Windows environment does not support aliases like Linux and macOS do, so the command to use Docker is:
+
+  $ docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo/cyberismo cyberismo --help
+
+
+
