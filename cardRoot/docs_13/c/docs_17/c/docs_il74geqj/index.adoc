@@ -8,6 +8,8 @@ The Podman environment has been verified to work with Cyberismo Docker Hub image
 
 === Prerequisites
 
+Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules. Git installation guide: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
 The system must have Podman or a similar container environment installed, capable of running Linux-based images. The simplest way to install a container environment is to install https://podman.io/docs/installation[Podman installation]
 
 === Downloading image from Docker Hub

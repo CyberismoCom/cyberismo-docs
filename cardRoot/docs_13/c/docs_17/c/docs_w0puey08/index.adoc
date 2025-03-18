@@ -4,6 +4,8 @@ For macOS and Linux, this is probably the easiest way to try out Cyberismo. For 
 
 === Prerequisites
 
+Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules. Git installation guide: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
 The system must have Docker or a similar container environment installed, capable of running Linux-based images. The simplest way to install a container environment is to install https://www.docker.com[Docker Desktop].
 
 === Downloading image from Docker Hub
