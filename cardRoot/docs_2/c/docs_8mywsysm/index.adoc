@@ -2,9 +2,13 @@
 
 == Introduction
 
-This tutorial shows how to get started with the Cyberismo dataflow module. The Cyberismo dataflow module defines card types and link types for creating dataflow models with processes, external entities, data storages, trust boundaries and data flows. This enables you to model your software systems using cards and links in Cyberismo. 
+This tutorial shows how to get started with threat modeling and data flow diagrams using the Cyberismo secure development essentials module.
 
-The Cyberismo dataflow module uses graph macros that translate the model into graphical views. You can generate different views from the same data. For example, a high-level context diagram for an internet banking systemfootnote:[This example is based on an example from https://c4model.com[C4 model].] could look like this:
+The secure development essentials module includes a lot of resources for secure development. If you only need it for threat modelling, you can set it in a mode that hides all the unnecessary details and lets you focus on threat modelling. 
+
+The Cyberismo secure development essentials module defines card types and link types for creating dataflow models with processes, external entities, data storages, trust boundaries and data flows. This enables you to model your software systems using cards and links in Cyberismo. 
+
+The module uses graph macros that translate the model into graphical views. You can generate different views from the same data. For example, a high-level context diagram for an internet banking systemfootnote:[This example is based on an example from https://c4model.com[C4 model].] could look like this:
 
 image::context-diagram.png[]
 
@@ -16,46 +20,11 @@ image::diagram-example.png[]
 
 xref:docs_13.adoc[Install Cyberismo].
 
-== Clone the Cyberismo dataflow module
-
-Execute the following command to clone the Cyberismo dataflow module:
-
-[source,console]
-----
-$ git clone https://github.com/CyberismoCom/module-dataflow.git
-----
-
-== Create a project
-
-Create a new project called, for example, "Dataflow tutorial" that has the card key prefix `dftutorial` in the directory `dataflow-tutorial` with the following command:
-
-[source,console]
-----
-$ cyberismo create project "Dataflow tutorial" dftutorial dataflow-tutorial
-----
-
-NOTE: Do not use the module prefix `dataflow` for the new project, because `dataflow` is already in use by the Cyberismo dataflow module.
-
-== Import the dataflow module to your new project
-
-Import the Cyberismo dataflow module to your new project with the following command:
-
-[source,console]
-----
-$ cyberismo import module module-dataflow -p dataflow-tutorial
-----
+xref:docs_krxdf4ke.adoc[Set up a project with the Secure development essentials module].
 
 == Start the Cyberismo app
 
-To start using the Cyberismo dataflow module, we need to start the Cyberismo app. First, change to the `dataflow-tutorial` directory:
-
-[source,console]
-----
-$ cd dataflow-tutorial
-----
-
-
-To start the app, execute the following command:
+Change to the the directory of your Cyberismo project and start the Cyberismo app:
 
 [source,console]
 ----
@@ -64,25 +33,34 @@ $ cyberismo app
 
 Then open a browser and navigate to http://localhost:3000/.
 
-== Create a dataflow model
+== Set the Target adoption step as None
 
-Click *Create* at the top right:
+To configure your project so that you can focus on threat modelling:
 
-image::create-new.card.png[]
+. Navigate to the development project that you created in the previous tutorial.
+. Click *Edit* and change the *Target adoption step* metadata field as *None*.
 
-Select the dataflow model template and click *Create*:
+The Cyberismo app will now hide all content that has been marked for Adoption step 1, step 2, or step 3, so you can focus on threat modeling and on a high-level risk assessment. 
 
-image::create-dataflow-model.png[]
+== Create a threat model
 
-You will get a new card titled *Untitled dataflow model*:
+To create a threat model:
 
-image::untitled-dataflow.model.png[]
-
-Click *Edit* and rename the dataflow model as *My web application*
+. Navigate to *Design* / *Manage threat models* 
+. Click *Create a threat model*
 
 == Add entities and trust boundaries
 
-Create a person called *User*, a trust boundary called *Backend trust boundary* and a process called *Web front end* at the top level. Under the trust boundary, create a process *Web backend* and a Datastore *Database*. You can enter descriptions and technologies, which will be used in the diagrams. Each card will show a graph that illustrates the entity, and the top level dataflow model shows a context view and a detailed view:
+The threat model includes a starting point for a dataflow model, with a *User* and a *Solution trust boundary* components.
+
+Here are some steps you can try out:
+
+. Edit the *Solution trust boundary* and rename it as *Backend trust boundary*
+. Create a process called *Web front end* at the top level
+. Under the trust boundary, create a process *Web backend* and a datastore called *Database*. 
+. You can enter descriptions and technologies, which will be used in the diagrams. 
+
+Each card will show a graph that illustrates the entity, and the top level dataflow model shows a context view and a detailed view:
 
 image::components.png[]
 
