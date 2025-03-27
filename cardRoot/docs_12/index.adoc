@@ -68,7 +68,7 @@ http://localhost:3000
    
 * Download the demo project using the following command:
 
-  $ git pull https://github.com/CyberismoCom/cyberismo-demo.git
+  $ git clone https://github.com/CyberismoCom/cyberismo-demo.git
 
 * Navigate to the downloaded directory and run:
 
