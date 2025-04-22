@@ -19,7 +19,7 @@ The latest image can be downloaded with the following command:
 
 To simplify running the image, you can use the following alias:
 
-  $ alias cyberismo='docker run --rm -it --user $(id -u):$(id -g) -v $(pwd):/project:Z -p 3000:3000 cyberismo/cyberismo cyberismo'
+  $ alias cyberismo='docker run --init --rm -it --user $(id -u):$(id -g) -e HOME=/tmp -v $(pwd):/project:Z -p 3000:3000 cyberismo/cyberismo:latest cyberismo'
 
 .Explanation of alias
 [%collapsible]
@@ -28,9 +28,11 @@ The alias command allows you to execute the configured Docker environment with a
 
 Flags in command:
 
+* --init flag ensures proper signal handling and zombie process reaping in the container.
 * -rm: Removes the container automatically after it exits.
 * -it: Runs the container in interactive mode.
 * --user: Container user will use the same user id as the user executing the command. This will prevent file ownership problems.
+* -e HOME=/some/path sets the HOME environment variable so tools like Antora can write to user-specific directories without permission errors.
 * -v: Maps the current execution directory to the /project directory inside the container, sharing files between host and container.
 * to support *Security-Enhanced Linux (SELinux)*, the volume mount includes the :Z option and uses an absolute path to the present working directory (`-v $(pwd):/project:Z`) 
 * -p: Forwards the port from the container to the host machine, enabling access to the hosted web service.
