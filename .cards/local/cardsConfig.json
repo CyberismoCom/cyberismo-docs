@@ -1,4 +1,10 @@
 {
     "cardKeyPrefix": "docs",
-    "name": "Cyberismo documentation"
+    "name": "Cyberismo documentation",
+    "modules": [
+	{
+                "name": "base",
+                "location": "https://github.com/CyberismoCom/module-base.git"
+        }
+    ]
 }
