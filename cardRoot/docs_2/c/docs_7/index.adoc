@@ -3,15 +3,6 @@ This tutorial shows how to create a new Cyberismo project with the base module.
 
 Prerequisites: xref:docs_13.adoc[Install Cyberismo].
 
-== Clone the base module
-
-Execute the following command to clone the base module:
-
-[source,console]
-----
-$ git clone https://github.com/CyberismoCom/module-base.git
-----
-
 == Create a project
 
 First, let's check the command line help for creating a project by executing the following command:
@@ -47,7 +38,7 @@ Import the base module to your new project with the following command:
 
 [source,console]
 ----
-$ cyberismo import module module-base -p cyberismo-tutorial
+$ cyberismo import module https://github.com/CyberismoCom/module-base.git -p cyberismo-tutorial
 ----
 
 == Create a page
