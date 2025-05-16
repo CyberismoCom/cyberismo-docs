@@ -1,0 +1,82 @@
+== Importing a module
+
+Cyberismo modules can be imported either from a https git URL (recommended), or from the local file system. 
+
+=== Importing a public module from git
+
+To import a module from a public git repository, use the following command:
+
+[source,console]
+----
+$ cyberismo import module <https git URL>
+----
+
+By default, the `main` branch will be used. To use another branch, you must add an additional parameter in the command:
+
+[source,console]
+----
+$ cyberismo import module <https git URL> [branch name]
+----
+
+=== Importing a private module from git
+
+If the git service requires authentication, you must provide access token credentials in environment variables `CYBERISMO_GIT_USER` and `CYBERISMO_GIT_TOKEN` or using a `.env` file that defines these variables.
+
+In this case, the module is imported using the following command:
+
+[source,console]
+----
+$ cyberismo import module <https git URL> [branch name] --useCredentials
+----
+
+NOTE: At the moment, Cyberismo supports only one set of access credentials, so you can only import private modules using a single access token.
+
+=== Importing a module from the local file system
+
+To import a module that you have available in the local file system, execute the following command:
+
+[source,console]
+----
+$ cyberismo import module <local file path to the module>
+----
+
+The path can be either an absolute or a relative path.
+
+NOTE: The path is relative to the present working directory. 
+
+== Removing a module
+
+To see the currently imported modules, execute the following command. Cyberismo will print the module prefixes of all direct dependencies, for example `base` or `ismsa`.
+
+[source,console]
+----
+$ cyberismo show modules
+----
+
+To remove a module, execute the following command:
+
+[source,console]
+----
+$ cyberismo remove module <prefix>
+----
+
+To remove all imported modules, you need to go over the modules that `cyberismo show modules` prints and run `cyberismo remove module` for all of them.
+
+== Updating modules
+
+Cyberismo can update the modules to their latest versions. When you execute the `update-modules` command, Cyberismo will fetch the latest versions of all modules from the origin that you specified when you imported the module. Notice that the modules that were imported from the local file system must reside in the same directory where they were imported from.
+
+NOTE: To update modules that were imported from the local file system, you must run the update command in the same working directory as you used when you imported the module.
+
+To update all modules, including their dependencies where applicable, execute the following command:
+
+[source,console]
+----
+$ cyberismo update-modules
+----
+
+== Handling dependencies of modules
+
+If you import a module that has dependencies, then Cyberismo will automatically import the dependencies. This works recursively, so that the dependencies of dependencies will also be included.
+
+If the dependencies of modules include the same module multiple times, identified by the module prefix, then the module will be imported only once. Notice that such a module must be imported using an identifical git URL and branch or an identical local file system path, or otherwise the import or update operation will fail.
