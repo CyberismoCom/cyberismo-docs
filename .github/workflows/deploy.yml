@@ -46,13 +46,10 @@ jobs:
           path: cyberismo
           ref: main
 
-      - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          python-version: 3.12
-          auto-update-conda: true
-          activate-environment: docs-env
-          environment-file: cyberismo-docs/environment.yml
+      - name: Install clingo
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gringo
 
       - name: Check Clingo Availability
         run: which clingo
