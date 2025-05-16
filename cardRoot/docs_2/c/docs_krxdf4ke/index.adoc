@@ -11,28 +11,6 @@ This module includes a powerful threat modeling tool that enables the modeling o
 
 xref:docs_13.adoc[Install Cyberismo].
 
-== Clone the required Cyberismo modules
-
-The Cyberismo secure development essentials module builds on the base module and the ISMS essentials module as its prerequisites.
-
-Execute the following command to clone the required modules:
-
-[source,console]
-----
-$ git clone https://github.com/CyberismoCom/module-base.git
-----
-
-[source,console]
-----
-$ git clone https://github.com/CyberismoCom/module-isms-essentials.git
-----
-
-[source,console]
-----
-$ git clone https://github.com/CyberismoCom/module-secure-development-essentials.git
-----
-
-
 == Create a project
 
 Create a new project called, for example, "Secure development tutorial" that has the card key prefix `mysecdev` in the directory `secdev-tutorial` with the following command:
@@ -44,21 +22,23 @@ $ cyberismo create project "Secure development tutorial" mysecdev secdev-tutoria
 
 == Import the modules to your new project
 
+The Cyberismo secure development essentials module builds on the base module and the ISMS essentials module as its prerequisites.
+
 Import the required modules to your new project with the following commands:
 
 [source,console]
 ----
-$ cyberismo import module module-base -p secdev-tutorial
+$ cyberismo import module https://github.com/CyberismoCom/module-base.git -p secdev-tutorial
 ----
 
 [source,console]
 ----
-$ cyberismo import module module-isms-essentials -p secdev-tutorial
+$ cyberismo import module https://github.com/CyberismoCom/module-isms-essentials.git -p secdev-tutorial
 ----
 
 [source,console]
 ----
-$ cyberismo import module module-secure-development-essentials -p secdev-tutorial
+$ cyberismo import module https://github.com/CyberismoCom/module-secure-development-essentials.git -p secdev-tutorial
 ----
 
 == Start the Cyberismo app
