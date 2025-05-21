@@ -4,7 +4,8 @@
     "modules": [
 	{
                 "name": "base",
-                "location": "https://github.com/CyberismoCom/module-base.git"
+                "location": "https://github.com/CyberismoCom/module-base.git",
+                "branch": "feature/samimerila/consistent-resources"
         }
     ]
 }
