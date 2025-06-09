@@ -6,6 +6,7 @@
     "base/fieldTypes/informationClassification": "internal",
     "base/fieldTypes/justification": null,
     "base/fieldTypes/reviewPeriod": 30,
+    "base/fieldTypes/lastReviewed": null,
     "base/fieldTypes/justification": null,
     "base/fieldTypes/identifier": null,
     "base/fieldTypes/adoptionStep": null,

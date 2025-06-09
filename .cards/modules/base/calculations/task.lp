@@ -1,13 +1,15 @@
 base_task(Task) :-
     field(Task, "cardType", "base/cardTypes/task").
 
-base_task(Task) :-
+base_task(Task) :- base_recurringTask(Task).
+
+base_recurringTask(Task) :-
     field(Task, "cardType", "base/cardTypes/monthlyTask").
 
-base_task(Task) :-
+base_recurringTask(Task) :-
     field(Task, "cardType", "base/cardTypes/quarterlyTask").
 
-base_task(Task) :-
+base_recurringTask(Task) :-
     field(Task, "cardType", "base/cardTypes/annualTask").
 
 transitionDenied(
@@ -21,17 +23,27 @@ transitionDenied(
 policyCheckFailure(
     Task,
     "Task",
+    "Date of latest review missing",
+    "The Last reviewed field is mandatory for closed recurring review tasks. Set this field"
+    ) :-
+        base_recurringTask(Task),
+        not field(Task, "base/fieldTypes/lastReviewed", _),
+        field(Task, "workflowStateCategory", "closed").
+
+policyCheckFailure(
+    Task,
+    "Task",
     "Review expired",
     @concatenate(
         "The review of this task has expired ",
-        @daysSince(LastTransitioned) - ReviewPeriod,
-        " day(s) ago. Choose a suitable workflow transition to update the date.")
+        @daysSince(LastReviewed) - ReviewPeriod,
+        " day(s) ago. Set the Last reviewed date.")
     ) :-
         base_task(Task),
-        field(Task, "lastTransitioned", LastTransitioned),
+        field(Task, "base/fieldTypes/lastReviewed", LastReviewed),
         field(Task, "base/fieldTypes/reviewPeriod", ReviewPeriod),
         field(Task, "workflowStateCategory", "closed"),
-        @daysSince(LastTransitioned) > ReviewPeriod.
+        @daysSince(LastReviewed) > ReviewPeriod.
 
 policyCheckFailure(
     Task,

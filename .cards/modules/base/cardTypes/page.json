@@ -10,7 +10,10 @@
         }
     ],
     "alwaysVisibleFields": [
-        "base/fieldTypes/owner",
+        "base/fieldTypes/owner"
+    ],
+    "optionallyVisibleFields": [
         "base/fieldTypes/informationClassification"
-    ]
+    ],
+    "displayName": ""
 }

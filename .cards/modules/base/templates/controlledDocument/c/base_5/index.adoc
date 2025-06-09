@@ -2,11 +2,11 @@
 
 #TODO# Add content
 
-== Reviews and approvals
+== Reviews
 
 {{#createCards}}
-  "template": "base/templates/oneTimeTask",
-  "buttonLabel": "Add new task"
+    "template": "base/templates/reviewTask",
+    "buttonLabel": "Add a new review task"
 {{/createCards}}
 
 {{#report}}

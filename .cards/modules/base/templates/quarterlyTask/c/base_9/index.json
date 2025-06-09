@@ -6,6 +6,7 @@
     "base/fieldTypes/informationClassification": "internal",
     "base/fieldTypes/justification": null,
     "base/fieldTypes/reviewPeriod": 90,
+    "base/fieldTypes/lastReviewed": null,
     "base/fieldTypes/quarterlyReviewMonth": "month1",
     "base/fieldTypes/justification": null,
     "base/fieldTypes/identifier": null,

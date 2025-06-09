@@ -23,10 +23,11 @@
     ],
     "alwaysVisibleFields": [
         "base/fieldTypes/owner",
-        "base/fieldTypes/informationClassification",
         "base/fieldTypes/dueDate"
     ],
     "optionallyVisibleFields": [
-        "base/fieldTypes/justification"
-    ]
+        "base/fieldTypes/justification",
+        "base/fieldTypes/informationClassification"
+    ],
+    "displayName": ""
 }
