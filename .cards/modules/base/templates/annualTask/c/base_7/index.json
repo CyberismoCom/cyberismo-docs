@@ -7,6 +7,7 @@
     "base/fieldTypes/justification": null,
     "base/fieldTypes/reviewPeriod": 365,
     "base/fieldTypes/reviewMonth": null,
+    "base/fieldTypes/lastReviewed": null,
     "base/fieldTypes/justification": null,
     "base/fieldTypes/identifier": null,
     "base/fieldTypes/adoptionStep": null,

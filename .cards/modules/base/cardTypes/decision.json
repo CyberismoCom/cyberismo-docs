@@ -14,7 +14,10 @@
     ],
     "alwaysVisibleFields": [
         "base/fieldTypes/owner",
-        "base/fieldTypes/informationClassification",
         "base/fieldTypes/decisionDate"
-    ]
+    ],
+    "optionallyVisibleFields": [
+        "base/fieldTypes/informationClassification"
+    ],
+    "displayName": ""
 }
