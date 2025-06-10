@@ -79,7 +79,7 @@ jobs:
           cyberismo export site -p cyberismo-docs build/site
           touch build/site/.nojekyll
           find build/site
-          cp .github/404.html build/site/404.html
+          cp cyberismo-docs/.github/404.html build/site/404.html
 
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
