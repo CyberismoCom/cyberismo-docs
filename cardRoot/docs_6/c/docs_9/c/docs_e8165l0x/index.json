@@ -1,12 +1,12 @@
 {
-    "title": "Calculated links",
+    "title": "Hiding cards in the navigation tree",
     "cardType": "base/cardTypes/page",
     "workflowState": "Ready",
     "base/fieldTypes/owner": null,
     "base/fieldTypes/informationClassification": "internal",
-    "rank": "0|p",
-    "lastUpdated": "2025-07-01T14:20:11.519Z",
+    "rank": "0|znt",
+    "lastUpdated": "2025-07-01T14:29:15.382Z",
     "links": [],
     "templateCardKey": "base_2",
-    "lastTransitioned": "2025-07-01T12:03:19.258Z"
+    "lastTransitioned": "2025-07-01T14:29:15.382Z"
 }

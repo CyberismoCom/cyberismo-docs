@@ -1,6 +1,6 @@
 User programs can define _calculated links_. A calculated link is implemented using the same `link` predicate that is used when generating the logic program from the Cyberismo content.
 
-== Example 1: A simple calculated link.
+== Example 1: A simple calculated link
 
 The logic program of this documentation project includes the following fact, which produces an automatic link to another card that you can see on this page. In real use, you  would typically not use `link` facts in user-defined code, but the `link` predicate would be used in the heads of rules to produce automatic links, if certain conditions are met.
 

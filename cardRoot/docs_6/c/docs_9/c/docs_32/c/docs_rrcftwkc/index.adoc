@@ -11,7 +11,7 @@ A policy check has failed on a card. Use this version of `policyCheckFailure`, i
 
 == Example
 
-The logic program of this documentation project includes the following fact, which produces the failed policy check that you can see on this page on the right. In real use, `policyCheckFailure` would not be used in a fact, but they would be used in the heads of rules to produce a successful policy check, if certain conditions are met.
+The logic program of this documentation project includes the following fact, which produces the failed policy check that you can see on this page on the right. In real use, `policyCheckFailure` would not be used in a fact, but they would be used in the heads of rules to produce a policy check failure, if certain conditions are met.
 
 ----
 policyCheckFailure(docs_rrcftwkc, "Example", "A check failed", "This is a failed check.").
