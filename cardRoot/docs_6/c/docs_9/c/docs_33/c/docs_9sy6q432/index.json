@@ -1,9 +1,9 @@
 {
-    "title": "orderBy(FieldName1, Direction1, FieldName2, Direction2)",
+    "title": "orderBy(Field1, Direction1, Field2, Direction2)",
     "cardType": "base/cardTypes/predicate",
     "workflowState": "Ready",
     "rank": "0|dg",
-    "lastUpdated": "2025-07-01T07:13:37.041Z",
+    "lastUpdated": "2025-07-01T09:28:46.324Z",
     "base/fieldTypes/briefDescription": "Order the query results by two fields",
     "base/fieldTypes/category": "Query language",
     "links": [],

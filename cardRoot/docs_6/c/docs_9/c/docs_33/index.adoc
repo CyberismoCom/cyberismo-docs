@@ -1,4 +1,10 @@
-This page introduces the Cyberismo query language.
+This page introduces the Cyberismo query language. A Cyberismo query uses logic programming facts and rules to "sculpt" its result as a JavaScript Object Notation (JSON) object.
+
+If you only need a simple list of result, the queries are short and straightforward. The query language is flexible and you can use it to describe complex results easily. On the top level, the result of a Cyberismo query is an array of objects, each declared with the `result` predicate. The result objects on any level of hierarchy can have the following kinds of properties:
+
+* Scalar properties, described with the `field` predicate. Fields can come from the global logic program, or they can be fields that are introduced in the query
+* Properties that are objects, described with the `childObject` predicate
+* Properties that are arrays or objects, described with the `childResult` predicate
 
 == Basic example
 
@@ -11,7 +17,7 @@ result(Card) :- card(Card), field(Card, "cardType", "base/cardTypes/page"). <2>
 orderBy("title", "ASC"). <3>
 ----
 <1> Return the title field. Notice the period at the end of each line.
-<2> Include `Card` in the results if the card type field equals `base/page`
+<2> Include `Card` in the results if the card type field equals `base/cardTypes/page`
 <3> Sort the results by the title field in an ascending order.
 
 == Selecting the fields and other properties of the results
@@ -40,6 +46,8 @@ To select all fields in the results, use:
 selectAll.
 ----
 
+NOTE: While `selectAll` is handy especially as you are developing a new query, it is better to use more specific `select` facts in your final query for performance reasons.
+
 The following special cases are supported:
 
 [%header]
@@ -59,9 +67,9 @@ The following special cases are supported:
 
 |===
 
-== Selecting the results
+== Deterining the results
 
-The `result(X)` term denotes that `X` will be included in the results of the query. The following query returns all fields of the entity (most likely a card) that has the key `docs_33`:
+The `result(Key)` term denotes that `Key` will be included in the results of the query. The following query returns all fields of the entity (most likely a card) that has the key `docs_33`:
 
 [source]
 ----
@@ -147,7 +155,7 @@ order(1, 2, "rank", "ASC").
 order(1, 3, "title", "ASC").
 ----
 
-The parameters of the `order` term are:
+The parameters of the xref:docs_1he7fa9g.adoc[`order`] predicate are:
 
 1. The level of hierarchy of the results that will be sorted. When the query is not hierarchical, this is 1.
 1. The index of the field by which to sort. For example, the index 1 means that you should first order by the field given in this occurrence of the `order` term.

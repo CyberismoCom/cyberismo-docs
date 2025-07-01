@@ -1,9 +1,9 @@
 {
-    "title": "childResult(Result, ChildResult, Collection)",
+    "title": "childResult(Key, Child, Collection)",
     "cardType": "base/cardTypes/predicate",
     "workflowState": "Ready",
     "rank": "0|an",
-    "lastUpdated": "2025-07-01T06:53:20.295Z",
+    "lastUpdated": "2025-07-01T09:20:11.315Z",
     "base/fieldTypes/briefDescription": "A query result has a child result that belongs to a named collection",
     "base/fieldTypes/category": "Query language",
     "links": [],

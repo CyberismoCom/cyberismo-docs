@@ -1,0 +1,12 @@
+{
+    "title": "field(Key, Field, Value, DataType)",
+    "cardType": "base/cardTypes/predicate",
+    "workflowState": "Ready",
+    "rank": "0|ap",
+    "lastUpdated": "2025-07-01T09:34:20.729Z",
+    "base/fieldTypes/briefDescription": "A field of an object has a specific value and data type",
+    "base/fieldTypes/category": "Query language",
+    "links": [],
+    "templateCardKey": "base_weu9g7lz",
+    "lastTransitioned": "2025-07-01T09:34:20.729Z"
+}

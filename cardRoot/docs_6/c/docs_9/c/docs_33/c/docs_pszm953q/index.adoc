@@ -1,8 +1,8 @@
 == Parameters
 
-* `FieldName`: The field by which the results should be ordered
+* `Field`: The field by which the results should be ordered
 * `Direction`: The direction of the ordering. Either `"ASC"` for ascending or `"DESC"` for descending
 
 == Description
 
-The query results should be ordered by a field. This predicate concerns all hierarchy levels and all collections
+The query results should be ordered by a field. This predicate concerns the default collection `results` on all levels of hierarchy.

@@ -1,9 +1,9 @@
 {
-    "title": "field(Key, FieldName, Value)",
+    "title": "field(Key, Field, Value)",
     "cardType": "base/cardTypes/predicate",
     "workflowState": "Ready",
     "rank": "0|c",
-    "lastUpdated": "2025-07-01T06:49:55.003Z",
+    "lastUpdated": "2025-07-01T08:53:33.609Z",
     "base/fieldTypes/briefDescription": "A field of an object has a specific value",
     "base/fieldTypes/category": "Cards",
     "links": [],

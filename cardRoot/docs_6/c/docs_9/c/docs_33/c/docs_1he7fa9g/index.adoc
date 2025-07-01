@@ -2,7 +2,7 @@
 
 * `HierarchyLevel`: The level of hierarchy of the results that will be sorted. When the query is not hierarchical, this is 1.
 * `Index`: The index of the field by which to sort. For example, the index 1 means that you should first order by the field given in this occurrence of the order term
-* `FieldName`: The field by which the results should be ordered
+* `Field`: The field by which the results should be ordered
 * `Direction`: The direction of the ordering. Either `"ASC"` for ascending or `"DESC"` for descending
 
 == Description
