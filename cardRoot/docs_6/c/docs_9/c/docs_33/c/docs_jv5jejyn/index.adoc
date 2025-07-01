@@ -1,0 +1,9 @@
+== Parameters
+
+* `Result`: A result of a query
+* `ChildResult`: A child result of `Result`
+* `Collection`: The name of the array property of `Result` where `ChildResult` belongs to
+
+== Description
+
+This predicate is used to declare a hierarchical query result. When `childResult(Result, ChildResult, Collection)` is used with three parameters, it declares that `ChildResult` is a member of the result array called `Collection`, which is a property of `Result`. 

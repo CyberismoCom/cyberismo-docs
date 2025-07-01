@@ -1,0 +1,9 @@
+== Parameters
+
+* `CardKey`: The card key of the card that is associated with a successful policy check
+* `Category`: The category of the policy check, a string identifier for organising policy checks
+* `Title`: The title of the policy check, a string identifier for organising policy checks
+
+== Description
+
+A policy check has succeeded on a card.

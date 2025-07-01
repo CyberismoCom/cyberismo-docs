@@ -1,17 +1,8 @@
 Automated policy checks enable logic programs to inspect that the fields and the relationships of the cards meet certain logical conditions. If you need to communicate advice or tips, then use a xref:docs_4nd9wctm.adoc[notification] instead of an automated policy check.
 
-Automated policy checks can be incorporated by user-configured logic programs with the terms
+Automated policy checks can be incorporated by user-configured logic programs with the following terms:
 
-[source]
-----
-policyCheckFailure( <card key>, <category>, <title>, <error message> )
-----
-
-or
-
-[source]
-----
-policyCheckSuccess( <card key>, <category>, <title> )
-----
-
-The `policyCheckSuccess` term denotes that a policy check succeeded, and the `policyCheckFailure` term denotes that a policy check failed. The arguments category and title are string identifiers for organising the validation checks.
+{{#report}}
+    "name": "base/reports/predicates",
+    "category": "Automated checks"
+{{/report}}

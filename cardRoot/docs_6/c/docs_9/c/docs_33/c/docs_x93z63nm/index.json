@@ -1,0 +1,12 @@
+{
+    "title": "childResult(Result, ChildResult)",
+    "cardType": "base/cardTypes/predicate",
+    "workflowState": "Ready",
+    "rank": "0|a",
+    "lastUpdated": "2025-07-01T06:53:08.609Z",
+    "base/fieldTypes/briefDescription": "A query result has a child result",
+    "base/fieldTypes/category": "Query language",
+    "links": [],
+    "templateCardKey": "base_weu9g7lz",
+    "lastTransitioned": "2025-07-01T06:02:09.542Z"
+}

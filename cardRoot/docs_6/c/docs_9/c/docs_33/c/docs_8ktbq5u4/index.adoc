@@ -1,0 +1,12 @@
+== Parameters
+
+* `FieldName1`: The field by which the results should be ordered first
+* `Direction1`: The direction of the first ordering. Either `"ASC"` for ascending or `"DESC"` for descending
+* `FieldName2`: The field by which the results should be ordered second
+* `Direction2`: The direction of the second ordering. Either `"ASC"` for ascending or `"DESC"` for descending
+* `FieldName3`: The field by which the results should be ordered thirdly
+* `Direction3`: The direction of the third ordering. Either `"ASC"` for ascending or `"DESC"` for descending
+
+== Description
+
+The query results should be ordered by three fields. This predicate concerns all hierarchy levels and all collections.

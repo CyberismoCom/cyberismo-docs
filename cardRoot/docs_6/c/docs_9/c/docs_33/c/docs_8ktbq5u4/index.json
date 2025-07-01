@@ -1,0 +1,12 @@
+{
+    "title": "orderBy(FieldName1, Direction1, FieldName2, Direction2, FieldName3, Direction3)",
+    "cardType": "base/cardTypes/predicate",
+    "workflowState": "Ready",
+    "rank": "0|dn",
+    "lastUpdated": "2025-07-01T07:13:51.343Z",
+    "base/fieldTypes/briefDescription": "Order the query results by three fields",
+    "base/fieldTypes/category": "Query language",
+    "links": [],
+    "templateCardKey": "base_weu9g7lz",
+    "lastTransitioned": "2025-07-01T07:13:51.343Z"
+}

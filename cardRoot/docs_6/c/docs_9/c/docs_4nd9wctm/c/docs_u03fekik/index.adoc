@@ -1,0 +1,10 @@
+== Parameters
+
+* `CardKey`: The card key of the card that is associated with a notification
+* `Category`: The category of the notification, a string identifier for organising notifications
+* `Title`: The title of the notification, a string identifier for organising notifications
+* `Message`: A notification message
+
+== Description
+
+There is a notification message, typically advice or helpful tips, is associated with a card. 

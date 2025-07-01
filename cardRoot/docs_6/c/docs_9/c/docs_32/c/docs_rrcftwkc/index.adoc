@@ -1,0 +1,10 @@
+== Parameters
+
+* `CardKey`: The card key of the card that is associated with a failing policy check
+* `Category`: The category of the policy check, a string identifier for organising policy checks
+* `Title`: The title of the policy check, a string identifier for organising policy checks
+* `Message`: A message that explains the failed policy check
+
+== Description
+
+A policy check has failed on a card.

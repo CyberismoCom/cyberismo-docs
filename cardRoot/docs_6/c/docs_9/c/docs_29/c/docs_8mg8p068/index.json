@@ -1,0 +1,12 @@
+{
+    "title": "field(Key, FieldName, Value)",
+    "cardType": "base/cardTypes/predicate",
+    "workflowState": "Ready",
+    "rank": "0|c",
+    "lastUpdated": "2025-07-01T06:49:55.003Z",
+    "base/fieldTypes/briefDescription": "A field of an object has a specific value",
+    "base/fieldTypes/category": "Cards",
+    "links": [],
+    "templateCardKey": "base_weu9g7lz",
+    "lastTransitioned": "2025-07-01T06:46:33.778Z"
+}

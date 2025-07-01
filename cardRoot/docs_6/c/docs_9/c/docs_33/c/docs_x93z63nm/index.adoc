@@ -1,0 +1,8 @@
+== Parameters
+
+* `Result`: A result of a query
+* `ChildResult`: A child result of `Result`
+
+== Description
+
+This predicate is used to declare a hierarchical query result. When `childResult(Result, ChildResult)` is used with two parameters, it declares that `ChildResult` is a member of the default child result array called `results`, which is a property of `Result`. 

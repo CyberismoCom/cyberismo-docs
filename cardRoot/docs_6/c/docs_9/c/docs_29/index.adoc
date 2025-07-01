@@ -1,19 +1,6 @@
-== How to generate a logic program
-
-To request the Cyberismo tool to generate a logic program, execute the following command in a Cyberismo project directory:
-
-[source,console]
-----
-$ cyberismo calc generate
-----
-
-This command will generate a modular logic program in the `.calc` directory.
-
-Once the logic program has been generated, all command line commands and all operations in the Cyberismo app will automatically keep the logic program up to date.
-
 == Representing a card as a logic program
 
-The bulk of the generated logic program consists of card-speficic files that declare the fields, labels and links of the card as facts.
+The bulk of the generated logic program consists of card-speficic facts that declare the fields, labels and links of the card.
 
 The attributes of cards are declared as logic program facts using a field term:
 
@@ -63,7 +50,7 @@ link(example_2, example_3, "base/linkTypes/relatesTo").
 
 == Common definitions
 
-The logic program includes basic definitions in the file `base.lp`. The most important common definitions define the ancestor relationships present in the directory structure. The following common definitions are added to the logic program to make the ancestor term available for user-configured calculations, to refer to cards that are children, grandchildren, parents, or grandparents of a card in any degree.
+The logic program includes some basic definitions. The most important common definitions define the ancestor relationships present in the directory structure. The following common definitions are added to the logic program to make the ancestor term available for user-configured calculations, to refer to cards that are children, grandchildren, parents, or grandparents of a card in any degree.
 
 The term
 

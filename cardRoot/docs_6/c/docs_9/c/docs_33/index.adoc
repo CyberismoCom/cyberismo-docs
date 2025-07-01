@@ -2,7 +2,7 @@ This page introduces the Cyberismo query language.
 
 == Basic example
 
-Let's get started with Cyberismo queries by a simple example that returns the title of all cards of the card type `base/page` in alphabetical order:
+Let's get started with Cyberismo queries by a simple example that returns the title of all cards of the card type `base/cardTypes/page` in alphabetical order:
 
 [source]
 ----
@@ -22,7 +22,7 @@ For example, to include the fields `title` and  `workflowState`, you can use:
 
 [source]
 ----
-select("title";"workflowState").
+select("title"; "workflowState").
 ----
 
 Which is equivalent to:
@@ -61,7 +61,7 @@ The following special cases are supported:
 
 == Selecting the results
 
-The `result(X)` term denotes that `X` will be included in the results of the query. The following query returns all fields of entity (most likely a card) that has the key `docs_33`:
+The `result(X)` term denotes that `X` will be included in the results of the query. The following query returns all fields of the entity (most likely a card) that has the key `docs_33`:
 
 [source]
 ----
@@ -200,3 +200,10 @@ orderBy(2, "title", "ASC"). <2>
 ----
 <1> the first parameter indicates the level of hierarchy and the second parameter indicates, which field to select on the given level.
 <2> When `orderBy` has an odd number of parameters, the first parameter denotes the level of hierarchy.
+
+== Summary of query language predicates
+
+{{#report}}
+    "name": "base/reports/predicates",
+    "category": "Query language"
+{{/report}}

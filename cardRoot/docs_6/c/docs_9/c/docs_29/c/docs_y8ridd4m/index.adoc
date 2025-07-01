@@ -1,0 +1,7 @@
+== Parameters
+
+* `CardKey`: A card key
+
+== Description
+
+The parameter of the predicate is a card. This predicate is useful for limiting the search space in rules.
