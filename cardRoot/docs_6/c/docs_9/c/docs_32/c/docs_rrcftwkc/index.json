@@ -3,7 +3,7 @@
     "cardType": "base/cardTypes/predicate",
     "workflowState": "Ready",
     "rank": "0|b",
-    "lastUpdated": "2025-07-01T06:21:18.558Z",
+    "lastUpdated": "2025-07-01T13:02:46.093Z",
     "base/fieldTypes/briefDescription": "A policy check has failed",
     "base/fieldTypes/category": "Automated checks",
     "links": [],

@@ -7,3 +7,11 @@
 == Description
 
 A policy check has succeeded on a card.
+
+== Example
+
+The logic program of this documentation project includes the following fact, which produces the successful policy check that you can see on this page on the right. In real use, policy checks would not be used in a fact, but it woudl be used in the head of a rule to produce a successful policy check, if certain conditions are met.
+
+----
+policyCheckSuccess(docs_wsbs1z1m, "Example", "A check succeeded").
+----
