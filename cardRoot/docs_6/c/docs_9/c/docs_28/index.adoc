@@ -107,7 +107,7 @@ The following function term fact states that the parent of the card `base_3fdf9f
 parent(base_3fdf9fg, base_fku9enkd).
 ----
 
-Cyberismo generates a `field` fact for all fields of cards that have values. For example, the following fact states that the workflow state of the card `docs_ffq169k4` is `"Ready"`.
+Cyberismo generates a `field` fact for all such fields of cards that have values. For example, the following fact states that the workflow state of the card `docs_ffq169k4` is `"Ready"`.
 
 ----
 field(docs_ffq169k4, "workflowState", "Ready").
@@ -115,7 +115,7 @@ field(docs_ffq169k4, "workflowState", "Ready").
 
 == Rules
 
-A rule is an expression that uses logical implication (`:-`) to describe a relationship among facts. A rule has the following format 
+A rule is an expression that uses logical implication (`:-`) to describe a relationship among facts. A rule has the following format:
 
 _head_ `:-` _body_ `.`
 
@@ -158,6 +158,8 @@ myModule_rootCard(Card) :- card(Card), not parent(Card, _).
 ----
 
 This rule reads intuitively as follows: if variable `Card` is a card and if there is no such term in the logic program that would be a parent of `Card`, then Card is on the root level of the card tree.
+
+This example also illustrates the use of the anonymous variable `_`. In this case, we don't need to give this variable a name, as we're only interested in whether such a term exists or not.
 
 Notice that we’re using the module name `myModule` as a prefix in the name of our module-specific function, to avoid naming clashes.
 
@@ -215,6 +217,57 @@ field(Card, “myModule/fieldTypes/childrenCount”, Count) :-
 ----
 
 There is a similar `#sum` aggregate that you can use to calculate a sum of integers.
+
+== Conditional literals or nested rules
+
+Sometimes you need to express a condition that must hold for all occurrences of a certain set, or none of the occurrences of a certain set. This can be done with a so called conditional litteral, where a body condition of a rule consists of a nested rule of the form 
+
+_nested head_ `:` __condition 1__``,`` __condition 2__``,`` ...``,`` _condition n_
+
+Such nested rule can be understood so that it holds, if its head holds whenever all its conditions hold. If the main rule has more conditions after a nested rule, the nested rule must be terminated with a `;` character.
+
+Let us consider the following rule:
+
+----
+a :- b, c : d ; e.
+----
+
+In this rule, `b` and `e` are normal positive body conditions and `c : d` is a nested rule, or a conditional literal. If `b` and `e` are true, then this rule will yield `a` if also the nested rule `c : d` holds. The nested rule holds, if `c` holds whenever `d` holds, in other words when either both `c` and `d` are true, or whenever `d` is false. 
+
+In the following example, `myModule_allDescendantsClosed(Card)` is true for all such cards, whose all descendants are in a closed workflow state. The `workflowStateCategory` field is a built-in calculated field that is either `"open"`, `"active"`, or `"closed"`.
+
+----
+myModule_allDescendantsClosed(Card) :-
+    card(Card),
+    field(Descendant, "workflowStateCategory", "closed") :
+    ancestor(Card, Descendant).
+----
+
+You can also use `not` in the head of a nested rule. In the following rule, `myModule_allDescendantsNotOpen(Card)` is true for all such cards, where none of the descendants are in an open workflow state.
+
+----
+myModule_allDescendantsNotOpen(Card) :-
+    card(Card),
+    not field(Descendant, "workflowStateCategory", "open") :
+    ancestor(Card, Descendant).
+----
+
+== Abreviation for alternative terms using `;`
+
+You can use the character `;` in the arguments of a function to represent alternative terms more briefly.
+
+For example, the following line
+
+----
+select("title"; "workflowstate").
+----
+
+is equivalent with
+
+----
+select("title").
+select("workflowstate").
+----
 
 == External functions
 
