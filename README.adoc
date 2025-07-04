@@ -4,7 +4,7 @@ This repository holds the source code for link:https://docs.cyberismo.com[Cyberi
 
 == Copyright
 
-Copyright © Cyberismo Ltd and contributors 2024
+Copyright © Cyberismo Ltd and contributors 2025
 
 == License and trademark policy
 
