@@ -120,7 +120,7 @@ Intuitively, the rule means that _head_ is true, if _body_ is true.
 
 In the rule definition, _head_ is a constant or a function termfootnote:[ASP supports other types of _head_ constructus, but we do not typically need them in Cyberismo], and _body_ is a comma-separated list of body conditions:
 
-__head__``:-``__condition 1__``,`` __condition 2__``,`` ...``,``__condition n__``.``
+__head__``:-``__condition ~1~__``,`` __condition ~2~__``,`` ...``,``__condition ~n~__``.``
 
 In basic cases, the conditions are constants or functions, or they can be constants or functions that are preceeded by `not`. We can call these positive body conditions and negative body conditions, respectively. 
 
@@ -152,7 +152,7 @@ In general, as a Cyberismo user or Cyberismo content developer, you don't need t
 
 == Default negation using `not`
 
-The not literal denotes _default negation_: The expression `not term` is assumed to hold unless `term` is derived to be true.
+The not literal denotes _default negation_: The expression `not` _term_ is assumed to hold unless _term_ is derived to be true.
 
 Let us consider the following example:
 
@@ -225,7 +225,7 @@ There is a similar `#sum` aggregate that you can use to calculate a sum of integ
 
 Sometimes you need to express a condition that must hold for all occurrences of a certain set, or none of the occurrences of a certain set. This is an example use case for a nested rule (also known as a _conditional litteral_), where a body condition of a rule consists of a nested rule of the form 
 
-__nested head__``:``__condition 1__``,`` __condition 2__``,`` ...``,``__condition n__
+__nested head__``:``__condition ~1~__``,`` __condition ~2~__``,`` ...``,``__condition ~n~__
 
 A nested rule can be understood so that it holds, if its head holds whenever all its conditions hold. The conditions are separated by a `,` character. If the main rule has more regular conditions after a nested rule, the nested rule must be terminated with a `;` character.
 
