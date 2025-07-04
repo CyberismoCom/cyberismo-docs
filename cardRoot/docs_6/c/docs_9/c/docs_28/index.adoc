@@ -24,7 +24,7 @@ a|
 * `0`
 * `12837`
 * `-32`
-|
+|Note that ASP does not support floating point numbers.
 
 |String
 a|
@@ -33,7 +33,8 @@ a|
 * `"Untitled document"`
 * `"2025-07-02"`
 * `"2025-07-02T06:47:37.027Z"`
-| Dates and timestamps that consist of a date and a time are represented as strings in the ISO 8601 format for UTC (Coordinated Universal Time). 
+* `+"firstname.lastname@example.com"+`
+| As ASP does not have a rich system of data types, strings are used to represent many kinds of data, including dates, date times, and persons.  
 
 |Constant
 a|
@@ -42,10 +43,16 @@ a|
 * `selectAll`
 * `#sup`
 * `#inf`
+* `#true`
+* `#false`
 
 | A symbolic constant begins with a
-lowercase character. In Cyberismo, symbolic constants are used especially to represent card keys. The symbolic constant `selectAll` is used as a fact in queries.  The special constants `#sup` and `#inf` are not typically needed in Cyberismo logic programs. They represent the greatest
+lowercase character. In Cyberismo, symbolic constants are used especially to represent card keys such as `docs_ywfgc20s`. The symbolic constant `selectAll` is used as a fact in queries.
+
+The built-in constants `#sup` and `#inf` are not typically needed in Cyberismo logic programs. They represent the greatest
 and smallest element among all variable-free terms.
+
+The built-in Boolean constants `#true` and `#false` are normally not used in Cyberismo, as we use the symbolic constants `true` and `false` instead.
 
 |Variable
 a|
@@ -58,6 +65,57 @@ a|
 A variable begins with an uppercase character. The
 underscore `_` as a separate token represents an
 anonymous variable, which is used when we don't care about the value of an argument of a term.
+
+|===
+
+== Data types of Cyberismo fields
+
+The fields of cards can be of different data types, which are mapped in logic programs to strings, integers, and symbolic constants as follows. This mapping is used in `field` terms, which is discussed below. For a description of the data types of Cyberismo fields, please see xref:docs_25.adoc[Fields, field types and data types].
+
+.Representing the data types of fields in logic programs
+[cols="1,2,4"]
+|===
+|Data type |Logic program term |Notes
+
+|**`shortText`**
+| String
+| 
+
+|**`longText`**
+| String
+| 
+
+| **`number`**
+| String
+| ASP does not support floating point numbers, so we represent them as strings.
+
+|**`integer`**
+| Integer
+| ASP uses 32-bit integers, so larger interger values are floored to the maximum or minimum that can be represented with 32 bits
+
+| **`boolean`**
+| Symbolic constants `true` and `false`
+| ASP does have built-in Boolean constants `#true` and `#false`, but as they are not allowed as arguments to function terms, we use symbolic constants `true` and `false` instead.
+
+|**`enum`**
+|String
+|One of the strings in the `enumValues` array of the field type definition
+
+|**`list`**
+|String
+|One of the strings in the `enumValues` array of the field type definition. As a `list` field may have several values, Cyberismo may generate multiple `field` facts for a single `list` field.
+
+|**`date`**
+|String
+|A string in the ISO 8601 format for UTC (Coordinated Universal Time). For example `"2024-01-01"`.
+
+|**`dateTime`**
+|String
+|A string in the ISO 8601 format for UTC (Coordinated Universal Time). For example `"2024-06-09T08:43:25Z"`.
+
+|**`person`**
+|String
+|A string that is an email address of a person. For example, `+"firstname.lastname@example.com"+`
 
 |===
 
@@ -86,7 +144,7 @@ For example:
 parent(base_3fdf9fg, base_fku9enkd)
 ----
 
-The function terms may require you to calibrate your intuition a bit, if you are familiar with mainstream programming languages. A function term does not mean that there would be a definition or an implementation of a function somewhere in the logic program. It is merely a term that can be used in the facts and the rules of the program.
+The function terms may require you to calibrate your intuition a bit, if you are familiar with mainstream programming languages. A function term does not mean that there would be a definition or an implementation of a function somewhere in the logic program. It is merely a term that can be used in the facts and the rules of the program. In other programming languages, functions may return integers or strings, but in ASP, function terms can only be considered true or false.
 
 == Facts
 
@@ -205,7 +263,7 @@ You can compare integers, strings, or even constants in the body conditions of r
 * `=` (equal)
 * `!=` (not equal)
 * `<` (less than)
-* `<=` (less than or equal)
+* `\<=` (less than or equal)
 * `>` (greater than)
 * `>=` (greater than or equal). 
 
@@ -254,6 +312,8 @@ myModule_allDescendantsNotOpen(Card) :-
     not field(Descendant, "workflowStateCategory", "open") :
     ancestor(Card, Descendant).
 ----
+
+Using `#false` as the head of a nested rule may one of the rare use cases for the built-in Boolean constants in Cyberismo. You can use a nested rule with `#false` as its head to "disable" the rule, if all of the conditions of the nested rule hold.  
 
 == Abreviation for alternative terms using `;`
 

@@ -1,5 +1,11 @@
 == Introduction
 
+Cyberismo projects require some configuration to run. As an administrator of a Cyberismo project, you can either create local project-specific content configuration, or you can import a content module. Most projects import at least the Cyberismo base module, to get some basic configuration to work with.
+
+This section of the documentation discusses Cyberismo configuration concepts. All of these concepts can be used either in local project-specific configuration, or in a reusable content module.
+
+== Cyberismo content modules
+
 A Cyberismo module is a reusable collection of templates, card types, workflows, field types, link types, reports and logic program calculations. When a user imports a module as a dependency to their Cyberismo project, a read-only copy of the module is included in the project directory structure.
 
 The most common module is the base module, which defines some commonly used basic card types and their workflows and field types for custom fields. Before designing your own modules, you should familiarise yourself with the base module so that you'll be able to avoid defining new resources, when an existing resource in the base module could do the job. 
