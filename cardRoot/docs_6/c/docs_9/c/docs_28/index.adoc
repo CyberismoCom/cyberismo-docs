@@ -2,9 +2,9 @@
 
 In Cyberismo, queries, reasoning, and visualisation are based on Answer Set Programming (ASP). ASP is a form of logic programming, which is a programming, database, and knowledge representation paradigm based on formal logic. In this context, “formal” means clear, not hard.
 
-ASP is declarative programming, where programs consist of facts and rules. The order of lines in the logic program is not significant. 
+ASP is declarative programming, where programs consist of facts and rules. The order of lines in a logic program is not significant. 
 
-Using ASP gives you, as a Cyberismo user, an easy-to-use superpower that goes above and beyond what you could easily achieve if we were to use a more mainstream programming language or query language. The underlying idea in the Cyberismo solution is managing the information model for cybersecurity or compliance, and mapping this information model to a logic program. A query is also a set of logic program facts and rules, and its results are the basis for producing reports, creating visualisations, making automated checks, and  enforcing policies.
+Using ASP gives you, as a Cyberismo user, an easy-to-use superpower that goes above and beyond what you could easily achieve, if we were to use a more mainstream programming language or query language. The underlying idea in the Cyberismo solution is that we manage the information model for cybersecurity or compliance, and the solution maps this information model to a logic program. A query is also a set of logic program facts and rules, and its results are the basis for producing reports, creating visualisations, making automated checks, and enforcing policies.
 
 image::lp-intro.png[]
 
@@ -118,13 +118,13 @@ __head__``:-``__body__``.``
 
 Intuitively, the rule means that _head_ is true, if _body_ is true. 
 
-In the rule definition, _head_ is a constant or a function termfootnote:[ASP supports other types of _head_ constructus, but we do not typically need them in Cyberismo], and _body_ is a comma-separated list of conditions:
+In the rule definition, _head_ is a constant or a function termfootnote:[ASP supports other types of _head_ constructus, but we do not typically need them in Cyberismo], and _body_ is a comma-separated list of body conditions:
 
 __head__``:-``__condition 1__``,`` __condition 2__``,`` ...``,``__condition n__``.``
 
 In basic cases, the conditions are constants or functions, or they can be constants or functions that are preceeded by `not`. We can call these positive body conditions and negative body conditions, respectively. 
 
-More specifically, the head constant or function of a rule holds, if all of the positive body conditions can be inferred by some other rules or facts in the logic program, while none of the negative body conditions can.
+More specifically, the _head_ constant or function holds, if all of the positive body conditions can be inferred by some other rules or facts in the logic program, while none of the negative body conditions can.
 
 You can write simple rules based on constants. For example, the following logic program states that `a` is a fact, and that if `a` holds, then also `b` holds. This program will have an _answer set_ that consists of `a` and `b`.
 
@@ -152,7 +152,7 @@ In general, as a Cyberismo user or Cyberismo content developer, you don't need t
 
 == Default negation using `not`
 
-The not literal denotes ”default negation”: The expression `not term` is assumed to hold unless `term` is derived to be true.
+The not literal denotes _default negation_: The expression `not term` is assumed to hold unless `term` is derived to be true.
 
 Let us consider the following example:
 
@@ -188,7 +188,7 @@ Logic programs can use the following arithmetic functions on integers:
 * `ˆ` (bitwise exclusive OR)
 * `˜` (bitwise complement)
 
-For example, the following rule shows how an arithmetic expression can be used as a function argument to calculate a risk level from the integer fields likelihood and impact using multiplication.
+For example, the following rule shows how an arithmetic expression can be used as a function argument, when we calculate a risk level field from the integer fields likelihood and impact using multiplication.
 
 ----
 field(Card, "myModule/fieldTypes/riskLevel", Likelihood * Impact) :-
@@ -223,11 +223,11 @@ There is a similar `#sum` aggregate that you can use to calculate a sum of integ
 
 == Nested rules
 
-Sometimes you need to express a condition that must hold for all occurrences of a certain set, or none of the occurrences of a certain set. This can be done with a nested rule (also known as a _conditional litteral_), where a body condition of a rule consists of a nested rule of the form 
+Sometimes you need to express a condition that must hold for all occurrences of a certain set, or none of the occurrences of a certain set. This is an example use case for a nested rule (also known as a _conditional litteral_), where a body condition of a rule consists of a nested rule of the form 
 
 __nested head__``:``__condition 1__``,`` __condition 2__``,`` ...``,``__condition n__
 
-Such nested rule can be understood so that it holds, if its head holds whenever all its conditions hold. If the main rule has more conditions after a nested rule, the nested rule must be terminated with a `;` character.
+A nested rule can be understood so that it holds, if its head holds whenever all its conditions hold. The conditions are separated by a `,` character. If the main rule has more regular conditions after a nested rule, the nested rule must be terminated with a `;` character.
 
 Let us consider the following rule:
 
@@ -235,7 +235,7 @@ Let us consider the following rule:
 a :- b, c : d ; e.
 ----
 
-In this rule, `b` and `e` are normal positive body conditions and `c : d` is a nested rule. If `b` and `e` are true, then this rule will yield `a` if also the nested rule `c : d` holds. The nested rule holds, if `c` holds whenever `d` holds, in other words when either both `c` and `d` are true, or whenever `d` is false. 
+In this rule, `b` and `e` are simple positive body conditions and `c : d` is a nested rule. If `b` and `e` are true, then this rule will yield `a` if also the nested rule `c : d` holds. The nested rule holds, if `c` holds whenever `d` holds, in other words when either both `c` and `d` are true, or whenever `d` is false. 
 
 In the following example, `myModule_allDescendantsClosed(Card)` is true for all such cards, whose all descendants are in a closed workflow state. The `workflowStateCategory` field is a built-in calculated field that is either `"open"`, `"active"`, or `"closed"`.
 
