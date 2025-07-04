@@ -43,9 +43,8 @@ a|
 * `#sup`
 * `#inf`
 
-| Constants are used especially to
-represent card keys. The constant `selectAll` is used as a fact in queries. A normal constant begins with a
-lowercase character. The special constants `#sup` and `#inf` are not typically needed in Cyberismo logic programs. They represent the greatest
+| A symbolic constant begins with a
+lowercase character. In Cyberismo, symbolic constants are used especially to represent card keys. The symbolic constant `selectAll` is used as a fact in queries.  The special constants `#sup` and `#inf` are not typically needed in Cyberismo logic programs. They represent the greatest
 and smallest element among all variable-free terms.
 
 |Variable
@@ -70,7 +69,7 @@ Multi line comments start with `+++%*+++` and end with `+++*%+++`. Any text betw
 
 == Tuples
 
-A tuple is an ordered sequence of terms in parentheses. For example:
+A tuple term is an ordered sequence of terms in parentheses. For example:
 
 ----
 (1, 2)
@@ -89,13 +88,11 @@ parent(base_3fdf9fg, base_fku9enkd)
 
 The function terms may require you to calibrate your intuition a bit, if you are familiar with mainstream programming languages. A function term does not mean that there would be a definition or an implementation of a function somewhere in the logic program. It is merely a term that can be used in the facts and the rules of the program.
 
-Together, constants and functions can be referred as _atoms_.
-
 == Facts
 
-A fact is a true declarative statement. Facts are written as atoms. They end with a period. 
+A fact is a true declarative statement. Facts are written as symbolic constants or variable-free function terms. They end with a period. 
 
-For example, a query may define this constant fact to indicate that all fields of the resulting objects should be included in the results:
+For example, a query may define the following constant fact to indicate that all fields of the resulting objects should be included in the results:
 
 ----
 selectAll.
@@ -117,11 +114,17 @@ field(docs_ffq169k4, "workflowState", "Ready").
 
 A rule is an expression that uses logical implication (`:-`) to describe a relationship among facts. A rule has the following format:
 
-_head_ `:-` _body_ `.`
+__head__``:-``__body__``.``
 
 Intuitively, the rule means that _head_ is true, if _body_ is true. 
 
-In the rule definition, _head_ is an atom, and _body_ is a comma-separated list of conditions, which are in basic cases either atoms, or atoms that are preceeded by `not`. We can call these positive body conditions and negative body conditions, respectively. More specifically, the rule means that the head atom holds, if all of the positive body conditions can be inferred by some other rules or facts in the logic program, while none of the negative body conditions can.
+In the rule definition, _head_ is a constant or a function termfootnote:[ASP supports other types of _head_ constructus, but we do not typically need them in Cyberismo], and _body_ is a comma-separated list of conditions:
+
+__head__``:-``__condition 1__``,`` __condition 2__``,`` ...``,``__condition n__``.``
+
+In basic cases, the conditions are constants or functions, or they can be constants or functions that are preceeded by `not`. We can call these positive body conditions and negative body conditions, respectively. 
+
+More specifically, the head constant or function of a rule holds, if all of the positive body conditions can be inferred by some other rules or facts in the logic program, while none of the negative body conditions can.
 
 You can write simple rules based on constants. For example, the following logic program states that `a` is a fact, and that if `a` holds, then also `b` holds. This program will have an _answer set_ that consists of `a` and `b`.
 
@@ -141,9 +144,9 @@ The previous example also illustrates that you can express the logical AND opera
 
 == Grounding, solving answer sets and showing results
 
-When ASP programs are run, the ASP implementation will first _ground_ the program by substituing all variables in all possible ways with variable-free (or _ground_) terms from the logic program. After grounding, an _answer set_ is computed. Intuitively, an answer set of a program contains all ground atoms that are true. 
+When ASP programs are run, the ASP implementation will first _ground_ the program by substituing all variables in all possible ways with variable-free (or _ground_) terms from the logic program. After grounding, an _answer set_ is computed. Intuitively, an answer set of a program contains all constants and ground functions that are true. 
 
-If you are using ASP outside the context of Cyberismo, you can use `#show` directives so select a subset of the answer set that you are interested in seeing. In Cyberismo, we use the built-in xref:docs_33.adoc[query language] to define the results that we'd like to examine, or use in a report.
+If you are using ASP outside the context of Cyberismo, you can use `#show` directives so select a subset of the answer set that you are interested in seeing. In Cyberismo, we use the built-in xref:docs_33.adoc[query language] to define which the results we're interested in.
 
 In general, as a Cyberismo user or Cyberismo content developer, you don't need to worry about the technicalities of grounding, solving or displaying results with `#show` directives.
 
@@ -185,7 +188,7 @@ Logic programs can use the following arithmetic functions on integers:
 * `ˆ` (bitwise exclusive OR)
 * `˜` (bitwise complement)
 
-For example, the following rule calculates a risk level from the integer fields likelihood and impact using multiplication.
+For example, the following rule shows how an arithmetic expression can be used as a function argument to calculate a risk level from the integer fields likelihood and impact using multiplication.
 
 ----
 field(Card, "myModule/fieldTypes/riskLevel", Likelihood * Impact) :-
@@ -206,7 +209,7 @@ You can compare integers, strings, or even constants in the body conditions of r
 * `>` (greater than)
 * `>=` (greater than or equal). 
 
-== Aggregates `#count` and `#sum`
+== Aggregates `#count`, `#sum`, `#min` and `#max`
 
 The `#count` aggregate counts the number of elements. For example, the following rule adds a calculated field that contains the number of child cards.
 
@@ -216,13 +219,13 @@ field(Card, “myModule/fieldTypes/childrenCount”, Count) :-
     Count = #count { card(Card): parent(_, Card) }.
 ----
 
-There is a similar `#sum` aggregate that you can use to calculate a sum of integers.
+There is a similar `#sum` aggregate that you can use to calculate a sum of integers, a `#min` aggregate to find a minimum of a set, and a `#max` aggregate to find the maximum of a set.
 
-== Conditional literals or nested rules
+== Nested rules
 
-Sometimes you need to express a condition that must hold for all occurrences of a certain set, or none of the occurrences of a certain set. This can be done with a so called conditional litteral, where a body condition of a rule consists of a nested rule of the form 
+Sometimes you need to express a condition that must hold for all occurrences of a certain set, or none of the occurrences of a certain set. This can be done with a nested rule (also known as a _conditional litteral_), where a body condition of a rule consists of a nested rule of the form 
 
-_nested head_ `:` __condition 1__``,`` __condition 2__``,`` ...``,`` _condition n_
+__nested head__``:``__condition 1__``,`` __condition 2__``,`` ...``,``__condition n__
 
 Such nested rule can be understood so that it holds, if its head holds whenever all its conditions hold. If the main rule has more conditions after a nested rule, the nested rule must be terminated with a `;` character.
 
@@ -232,7 +235,7 @@ Let us consider the following rule:
 a :- b, c : d ; e.
 ----
 
-In this rule, `b` and `e` are normal positive body conditions and `c : d` is a nested rule, or a conditional literal. If `b` and `e` are true, then this rule will yield `a` if also the nested rule `c : d` holds. The nested rule holds, if `c` holds whenever `d` holds, in other words when either both `c` and `d` are true, or whenever `d` is false. 
+In this rule, `b` and `e` are normal positive body conditions and `c : d` is a nested rule. If `b` and `e` are true, then this rule will yield `a` if also the nested rule `c : d` holds. The nested rule holds, if `c` holds whenever `d` holds, in other words when either both `c` and `d` are true, or whenever `d` is false. 
 
 In the following example, `myModule_allDescendantsClosed(Card)` is true for all such cards, whose all descendants are in a closed workflow state. The `workflowStateCategory` field is a built-in calculated field that is either `"open"`, `"active"`, or `"closed"`.
 
