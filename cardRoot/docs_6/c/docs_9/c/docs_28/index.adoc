@@ -14,6 +14,7 @@ This page provides a short introduction to the essentials of Answer Set Programm
 
 Simple terms are the basic building blocks of ASP programs: integers, strings, constants, and variables.
 
+.Simple terms
 [cols="3,6,9"]
 |===
 |Term |Examples |Notes
@@ -191,7 +192,7 @@ a.
 b :- a.
 ----
 
-The real power of rules lies in the usage of variables. As we already noted above, a variable represents any variable-free terms in the logic program. For example, the first of the following rules reads that if variable `C` is a parent of variable `A`, then variable `C` is an ancestor of variable `A`. The second rule reads that if `B` is the parent of `A` and if `C` is also an ancestor of `B`, then `C` is an ancestor of `A`. Notice that the names of the variables are interpreted in the context of a single rule only; it is not significant that the same variable `A` or `C` occurs in both of these rules.
+The real power of rules lies in the usage of variables. As we already noted above, a variable represents any variable-free terms in the logic program. For example, the former of the two following rules reads that if variable `C` is a parent of variable `A`, then variable `C` is an ancestor of variable `A`. The latter rule reads that if `B` is the parent of `A` and if `C` is also an ancestor of `B`, then `C` is an ancestor of `A`. Notice that the names of the variables are interpreted in the context of a single rule only; it is not significant that the same variable `A` or `C` occurs in both of these rules.
 
 ----
 ancestor(A, C) :- parent(A, C).
