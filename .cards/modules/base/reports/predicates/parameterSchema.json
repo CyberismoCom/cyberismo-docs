@@ -15,6 +15,10 @@
     "category": {
       "description": "Include only predicates that have a specific category",
       "type": "string"
+    },
+    "orderBy": {
+      "description": "Order the results by this field. If not given, results are ordered by title",
+      "type": "string"
     }
   },
   "additionalProperties": false,

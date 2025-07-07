@@ -8,4 +8,8 @@ result(Card) :-
     not template(Parent) :
     parent(Card, Parent).
 
+{{#if orderBy}}
+orderBy("{{orderBy}}", "ASC").
+{{else}}
 orderBy("title", "ASC").
+{{/if}}
