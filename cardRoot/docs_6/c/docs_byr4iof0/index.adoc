@@ -39,7 +39,7 @@ To finalise the report definition, you need to use a text editor to
 
 == Report JSON file format
 
-Basic metadata for reports is defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/reportSchema.json[report schema], as described in the following tables.
+Basic metadata for a report is defined in a JSON file that follows the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/reportSchema.json[report schema], as described in the following table.
 
 .The properties of a report JSON file
 |===

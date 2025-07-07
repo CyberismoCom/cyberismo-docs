@@ -1,0 +1,70 @@
+== Introduction
+
+Graphs visualise data. They consists of a graph model and a graph view, allowing several different graph views to be created based on a single graph model. Usually, the graph model is where all the action happens, and graph views are often just a single line or a couple of lines long. 
+
+Cyberismo's graph support is based on the concepts from https://github.com/potassco/clingraph[Clingraph], even through Cyberismo comes with its own implementation.
+
+== Managing graph models using the Cyberismo command line tool
+
+To see a list of the available graph models, use the following command:
+
+  $ cyberismo show graphModels
+
+To see the help for how to create a graph model, use the following command:
+
+  $ cyberismo create graphModel --help
+
+To create a new graph model, for example `myGraphModel`, use the following command:
+
+  $ cyberismo create graphModel myGraphModel
+
+Cyberismo will create the following files:
+
+* Graph model metadata file `.cards/local/graphModels/myGraphModel.json`
+* Directory `.cards/local/graphModels/myGraphModel/`
+* Model file `.cards/local/graphModels/myGraphModel/model.lp`
+
+If the card prefix of your Cyberismo project is `example`, then the full name of the new graph model will be `example/graphModels/myGraphModel`.
+
+When choosing a name for your graph models, see xref:docs_8.adoc[Naming conventions].
+
+To finalise the graph model definition, you need to use a text editor to 
+
+* Edit the basic graph model metadata in the `.cards/local/graphModels/myGraphModel.json` file 
+* Edit the model implementation in `.cards/local/graphModels/myGraphModel/model.lp`
+
+== Graph model JSON file format
+
+Basic metadata for a graph model is defined in a JSON file that follows the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/graphModelSchema.json[graph model schema], as described in the following table.
+
+.The properties of a graph model JSON file
+|===
+|Properties|Type|Description|Required
+
+|**name**
+|`string`
+|The technical name of the graph model
+| &#10003; Yes
+
+|**displayName**
+|`string`
+|The name of the graph model as it should be displayed in the user interface. For example, 'Workflow'.
+| &#10003; Yes
+
+|**description**
+|`string`
+|A description of the graph model. For example, "A model for a diagram of the state machine of a workflow".
+| No
+
+|**category**
+|`string`
+| The category of the graph model. For example, 'General'.
+| &#10003; Yes
+
+|===
+
+Additional properties are not allowed.
+
+== Graph model implementation
+
+The graph model implementation is a logic program that uses the Clingraph conventions to describe a graph. When the graph model is executed, it is combined with the global Cyberismo logic program, so you can write rules that convert your data into nodes and edges of a graph.

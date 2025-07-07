@@ -1,12 +1,12 @@
 {
-    "title": "Managing reports",
+    "title": "Graph macro",
     "cardType": "base/cardTypes/page",
     "workflowState": "Ready",
     "base/fieldTypes/owner": null,
     "base/fieldTypes/informationClassification": "internal",
-    "rank": "0|adaaad",
-    "lastUpdated": "2025-07-07T14:24:07.802Z",
+    "rank": "0|e",
+    "lastUpdated": "2025-07-07T14:50:42.051Z",
     "links": [],
     "templateCardKey": "base_2",
-    "lastTransitioned": "2025-07-07T13:17:51.364Z"
+    "lastTransitioned": "2025-07-07T14:50:42.051Z"
 }
