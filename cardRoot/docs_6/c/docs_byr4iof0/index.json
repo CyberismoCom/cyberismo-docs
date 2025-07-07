@@ -3,9 +3,9 @@
     "cardType": "base/cardTypes/page",
     "workflowState": "Ready",
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": "internal",
+    "base/fieldTypes/informationClassification": "public",
     "rank": "0|adaaad",
-    "lastUpdated": "2025-07-07T14:24:07.802Z",
+    "lastUpdated": "2025-07-07T19:06:45.327Z",
     "links": [],
     "templateCardKey": "base_2",
     "lastTransitioned": "2025-07-07T13:17:51.364Z"

@@ -165,3 +165,13 @@ For example, the default query will result in an object that has a property `res
 
 ```
 
+== Mapping to a logic program
+
+Reports are mapped to logic program facts using the following function terms:
+
+{{#report}}
+    "name": "base/reports/predicates",
+    "category": "Reports",
+    "orderBy": "rank"
+{{/report}}
+

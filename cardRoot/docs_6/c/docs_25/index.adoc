@@ -84,7 +84,7 @@ The data type of a custom field must be one of the following values:
 
 == Field type file format
 
-Field types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/schema/fieldTypeSchema.json[field type schema], as described in the following table.
+Field types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/fieldTypeSchema.json[field type schema], as described in the following table.
 
 .Properties of a field type
 |===
@@ -100,7 +100,7 @@ Field types are defined in JSON files that follow the https://github.com/Cyberis
 |A name by which the field is referred to in the user interface.
 |No
 
-|**fieldDescription**
+|**description**
 |`string`
 |A longer description of the field type.
 |No
@@ -142,3 +142,15 @@ The `enumValues` property of a field type is an array of available values in sel
 | No
 
 |===
+
+
+== Mapping to a logic program
+
+Field types are mapped to logic program facts using the following function terms:
+
+{{#report}}
+    "name": "base/reports/predicates",
+    "category": "Field types",
+    "orderBy": "rank"
+{{/report}}
+

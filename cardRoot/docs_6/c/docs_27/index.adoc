@@ -30,7 +30,7 @@ To finalise the card type definition, you need to edit the `myCardType.json` fil
 
 == Card type file format
 
-Card types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/schema/cardTypeSchema.json[card type schema], as described in the following tables.
+Card types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/cardTypeSchema.json[card type schema], as described in the following tables.
 
 .The properties of a card type
 |===
@@ -83,9 +83,20 @@ The `customFields` property of a card type is an array of objects that have the 
 |A display name for user interfaces. Optional. If given, overrides the display name that may have been defined in the field type.
 | No
 
-|**isEditable**
+|**isCalculated**
 |`boolean`
-|Defines whether the field value can be modified. Optional. Defaults to true: the field is considered editable if this property is omitted.
+|Defines whether the field value is a calculated field that the user cannot modify. Optional. Defaults to false: the field is considered editable and not a calculated field, if this property is omitted.
 | No
 
 |===
+
+
+== Mapping to a logic program
+
+Card types are mapped to logic program facts using the following function terms:
+
+{{#report}}
+    "name": "base/reports/predicates",
+    "category": "Card types",
+    "orderBy": "rank"
+{{/report}}

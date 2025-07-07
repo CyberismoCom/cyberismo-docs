@@ -89,3 +89,14 @@ The rank of cards determines the order in which the cards at the same level of h
 To change the rank of a card in a template, use the `cyberismo rank` command. You can see the help for this command by typing:
 
   $ cyberismo rank --help
+
+
+== Mapping to a logic program
+
+Templates are mapped to logic program facts using the following function terms:
+
+{{#report}}
+    "name": "base/reports/predicates",
+    "category": "Templates",
+    "orderBy": "rank"
+{{/report}}

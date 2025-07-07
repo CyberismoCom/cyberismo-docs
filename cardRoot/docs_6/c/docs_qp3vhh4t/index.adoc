@@ -65,3 +65,14 @@ Link types are defined in JSON files that follow the https://github.com/Cyberism
 |&#10003; Yes
 
 |===
+
+
+== Mapping to a logic program
+
+Link types are mapped to logic program facts using the following function terms:
+
+{{#report}}
+    "name": "base/reports/predicates",
+    "category": "Link types",
+    "orderBy": "rank"
+{{/report}}

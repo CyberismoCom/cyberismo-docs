@@ -104,3 +104,11 @@ The `transitions` property of a workflow is an array of objects that have the fo
 
 |===
 
+== Mapping to a logic program
+
+Workflows are mapped to logic program facts using the following function terms:
+{{#report}}
+    "name": "base/reports/predicates",
+    "category": "Workflow",
+    "orderBy": "rank"
+{{/report}}

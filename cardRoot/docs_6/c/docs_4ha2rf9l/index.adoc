@@ -134,3 +134,9 @@ The graph view implementation is a Handlebars template for a logic program. When
 After running Handlebars on the view, Cyberismo will combine the graph model and the graph view with the global Cyberismo logic program to produce a Clingraph-like description of a graph based on your data.
 
 There is no strict rule for what a graph view implementation should include, but this depends on how the model has been implemented.
+
+
+== Mapping to a logic program
+
+Cyberismo does not currently generate logic program facts for graph views.
+
