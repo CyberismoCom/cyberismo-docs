@@ -4,6 +4,10 @@ In Cyberismo, each card is of a specific card type, which defines the workflow b
 
 Custom fields may be defined, for example, for various dates such as deadlines or time stamps, enumerations such as the likelihood or the impact of a risk, or a person, such as an assignee of a task.
 
+== Prerequisites
+
+Before you can define a card type, you must define or choose an existing workflow, and define the required field types.
+
 == Managing card types using the Cyberismo command line tool
 
 To see a list of the available card types, use the following command:

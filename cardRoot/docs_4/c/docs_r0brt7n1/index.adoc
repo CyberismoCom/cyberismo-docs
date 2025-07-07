@@ -17,3 +17,5 @@ For example, the report `base/reports/childrenList` shows a list of child cards.
 {{/raw}}
 
 ```
+
+To learn how to define new reports, please see xref:docs_byr4iof0.adoc[Managing reports].
