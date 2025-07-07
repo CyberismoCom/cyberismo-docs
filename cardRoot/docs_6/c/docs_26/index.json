@@ -1,9 +1,9 @@
 {
-    "title": "Workflows",
+    "title": "Managing workflows",
     "cardType": "base/cardTypes/page",
     "workflowState": "Ready",
     "rank": "0|a",
-    "lastUpdated": "2025-01-17T14:33:47.226Z",
+    "lastUpdated": "2025-07-07T11:10:10.997Z",
     "links": [],
     "base/fieldTypes/owner": null,
     "base/fieldTypes/informationClassification": "public",

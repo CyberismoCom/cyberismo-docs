@@ -1,14 +1,14 @@
-The Cyberismo solution is based on maintaining a plain text representation of an information model. To make the information model useful, we need visualising, querying, and reasoning based on it. In the Cyberismo content format, queries and reasoning can be included as part of the content modules, so that the users of Cyberismo modules should not typically need to be concerned about the details of how queries and reasoning has been implemented.
+The Cyberismo solution is based on maintaining a plain text representation of an information model. To make the information model useful, we need visualising, querying, and reasoning based on it. In the Cyberismo content format, queries and reasoning is included either in the local project configuration or as part of the content modules, so that the users of Cyberismo modules do not need to be concerned about the details of how queries and reasoning has been implemented.
 
-The query and reasoning capabilities of the Cyberismo solution are based on logic programming. The Cyberismo tool has a capability to generate a logic program based on a Cyberismo project, conforming to the Answer Set Programming (ASP) paradigm for knowledge representation. The logic program is modular: a separate logic program file is generated for each card. Thanks to the modular structure, the Cyberismo tool does not need to regenerate the entire program, when just some of the cards change, but it can continuously maintain an up-to-date logic program as the user manages the information model.
-
-For an introduction to the Cyberismo query language, see xref:docs_33.adoc[Query language].
+The query and reasoning capabilities of the Cyberismo solution are based on logic programming. The Cyberismo tool has a capability to generate a logic program based on a Cyberismo project, conforming to the Answer Set Programming (ASP) paradigm for knowledge representation.
 
 To learn the basics of Answer Set Programming, see xref:docs_28.adoc[Introduction to Answer Set Programming].
 
+For an introduction to the Cyberismo query language, see xref:docs_33.adoc[Query language].
+
 To understand the logic program that Cyberismo generates from cards, see xref:docs_29.adoc[Mapping the Cyberismo content to a logic program].
 
-Cyberismo content modules and projects may define their own logic programs by simply including a file with the extension `.lp` in the `calculations` folder. The use cases for user-defined logic programs include the following:
+Cyberismo content modules and projects may define their own logic programs by simply including a file with the extension `.lp` in the `calculations` folder. 
 
 {{#report}}
   "name": "base/reports/childrenList"

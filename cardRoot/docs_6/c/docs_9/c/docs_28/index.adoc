@@ -120,6 +120,8 @@ The fields of cards can be of different data types, which are mapped in logic pr
 
 |===
 
+What about representing objects that have properties in logic programs, such as cards and their fields? ASP does not natively support such data structures, but we can express objects with function terms, which are explained below. In Cyberismo, the `field` function `field`(`Key`, `Field`, `Value`) means that the field `Field` of the object `Key` has the value `Value`.
+
 == Comments
 
 Single line comments start with `%`. Any text between `%` and the end of the line will be ignored.
@@ -137,7 +139,7 @@ A tuple term is an ordered sequence of terms in parentheses. For example:
 
 == Functions
 
-A function term consists of a name and one or more terms as arguments. The argument terms can be simple terms, function terms, or tuples. 
+A function term consists of a name and one or more terms as arguments. The argument terms can be simple terms, expressions that yield simple terms, function terms, or tuples. 
 
 For example:
 
@@ -145,7 +147,9 @@ For example:
 parent(base_3fdf9fg, base_fku9enkd)
 ----
 
-The function terms may require you to calibrate your intuition a bit, if you are familiar with mainstream programming languages. A function term does not mean that there would be a definition or an implementation of a function somewhere in the logic program. It is merely a term that can be used in the facts and the rules of the program. In other programming languages, functions may return integers or strings, but in ASP, function terms can only be considered true or false.
+The function terms may require you to calibrate your intuition a bit, if you are familiar with mainstream programming languages. A function term does not mean that there would be a definition or an implementation of a function somewhere in the logic program. It is merely a term that can be used in the facts and the rules of the program. The closest thing to an implementation of a function in ASP are rules, where the function term occurs in the head of the rule, see below.
+
+In other programming languages, functions may return integers or strings, but in ASP, function terms can only be considered true or false. As you can see in the case of the `parent` function above, instead of having a function that would compute and return the parent of a card, the "return value" of an ASP function is simply one of the arguments, typically the last argument of a function term.
 
 == Facts
 
@@ -335,7 +339,7 @@ select("workflowstate").
 
 == External functions
 
-Cyberismo logic programs can use the built-in xref:docs_fk6fimx4.adoc[external functions] for working with dates and strings.
+Cyberismo logic programs can use the built-in xref:docs_fk6fimx4.adoc[external functions] for working with dates and strings. External functions are similar to functions in mainstream programming languages, as they process their arguments and return a string or an integer.
 
 == Naming conventions
 
