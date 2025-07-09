@@ -3,9 +3,10 @@
     "cardType": "base/cardTypes/page",
     "workflowState": "Ready",
     "rank": "0|d",
-    "lastUpdated": "2025-07-07T13:58:13.619Z",
+    "lastUpdated": "2025-07-07T20:29:34.888Z",
     "links": [],
     "base/fieldTypes/owner": null,
     "base/fieldTypes/informationClassification": null,
-    "lastTransitioned": "2025-07-07T13:58:13.619Z"
+    "lastTransitioned": "2025-07-07T13:58:13.619Z",
+    "(docs_r0brt7n1,base/fieldTypes/informationClassification)": "Internal"
 }
