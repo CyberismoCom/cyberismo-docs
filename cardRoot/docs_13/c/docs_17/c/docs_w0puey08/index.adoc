@@ -1,7 +1,5 @@
 == Docker image from Docker Hub
 
-For macOS and Linux, this is probably the easiest way to try out Cyberismo. For Windows, building the application locally from source is the recommended way, and it is not half as frightening as it sounds.
-
 === Prerequisites
 
 Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules. Git installation guide: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git

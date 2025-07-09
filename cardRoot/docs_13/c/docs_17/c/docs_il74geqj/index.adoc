@@ -1,7 +1,5 @@
 == Podman image from Docker Hub
 
-For macOS and Linux, this is probably the easiest way to try out Cyberismo. For Windows, building the application locally from source is the recommended way, and it is not half as frightening as it sounds.
-
 === Disclaimer
 
 The Podman environment has been verified to work with Cyberismo Docker Hub images; however, it is not actively tested or maintained. Therefore, we cannot guarantee full compatibility or functionality.
