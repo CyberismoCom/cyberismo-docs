@@ -18,11 +18,13 @@ To develop a new Cyberismo module, follow these steps:
 
 . Create a new Cyberismo project. See xref:docs_7.adoc[Creating a new project] tutorial for more information
 . Import the base module. Avoid defining redudant configurations to the base module in your new module, unless necessary. The steps to import the base module are explained in the xref:docs_7.adoc[Creating a new project] tutorial.
-. If you need new workflows, then create them first. See xref:docs_26.adoc[Workflows] for more information. Notice that you can use the workflows from the base module, if they apply to your use case.
-. If you need new types of custom fields, then create and design field types. See xref:docs_25.adoc[Fields and field types] for more information. Notice that you can use the custom fields from the base module, if they apply to your use case.
-. If you need new card types, then create and design card types. A card type selects one of the available workflows and a set of custom fields. See xref:docs_27.adoc[Card types] for more information.
-. If you need new link types, then create and design link types. See xref:docs_qp3vhh4t.adoc[Link types] for more information.
-. Design any new templates. See xref:docs_7n7gqu93.adoc[Templates] for more information.
-. Develop any new module-specific logic programs. See xref:docs_9.adoc[Queries and reasoning] for more information.
+. If you need new workflows, then create them first. See xref:docs_26.adoc[Managing workflows] for more information. Notice that you can use the workflows from the base module, if they apply to your use case.
+. If you need new types of custom fields, then create and design field types. See xref:docs_25.adoc[Managing field types] for more information. Notice that you can use the custom fields from the base module, if they apply to your use case.
+. If you need new card types, then create and design card types. A card type selects one of the available workflows and a set of custom fields. See xref:docs_27.adoc[Managing card types] for more information.
+. If you need new link types, then create and design link types. See xref:docs_qp3vhh4t.adoc[Managing link types] for more information.
+. Design any new templates. See xref:docs_7n7gqu93.adoc[Managing templates] for more information.
+. Design any new reports, see xref:docs_byr4iof0.adoc[Managing reports] for more information.
+. Design any new graph models and graph views, see xref:docs_wp769ee4.adoc[Managing graph models] and xref:docs_4ha2rf9l.adoc[Managing graph views].
+. Develop any new module-specific logic programs. See xref:docs_9.adoc[Queries, reasoning, and visualisations] for more information.
 . Design any new reports
 

@@ -1,0 +1,7 @@
+The configuration of Cyberismo projects and content modules consists of resources. Cyberismo generates logic program facts about the available resources, so reports and graphs can be aware of the available configuration.
+
+The following pages explain how to manage each resource type, and how the resource configuration for each resource type is mapped into logic program facts.
+
+{{#report}}
+  "name": "base/reports/childrenList"
+{{/report}}

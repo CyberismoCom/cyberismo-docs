@@ -1,11 +1,11 @@
 {
-    "title": "Administering Cyberismo configuration",
+    "title": "Managing link types",
     "cardType": "base/cardTypes/page",
     "workflowState": "Ready",
-    "rank": "0|k",
-    "lastUpdated": "2025-07-09T10:31:33.475Z",
+    "rank": "0|aaaj",
+    "lastUpdated": "2025-07-09T10:30:19.090Z",
     "links": [],
     "base/fieldTypes/owner": null,
     "base/fieldTypes/informationClassification": "public",
-    "lastTransitioned": "2025-01-17T14:30:37.775Z"
+    "lastTransitioned": "2025-01-17T14:30:56.695Z"
 }

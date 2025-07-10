@@ -1,0 +1,79 @@
+== Introduction
+
+Graphs visualise data. The configuration of Cyberismo graph consists of a xref:docs_wp769ee4.adoc[graph model] and a xref:docs_4ha2rf9l.adoc[graph view], allowing several different graph views to be created based on a single graph model. A graph is displayed as part of the contents of a card with the xref:docs_t5gkijm4.adoc[graph macro].
+
+As both the graph model and the graph view are implemented as logic programs that are combined with the global Cyberismo logic program to create the graph, in theory it does not matter much how you split the graph implementation between the model and the view. By convention, the graph model is where all the action happens, and graph views are usually just a single line of code or a couple of lines long, to parametrise the graph model to the specific context of a graph macro instance.
+
+A graph view defines a concrete view to a graph model. A graph view can even be defined in a different module from the original graph model, so you can use a graph model from a content module in your Cyberismo project with a custom view that you have defined. 
+
+Cyberismo's graph support is based on the concepts and the syntax of the https://github.com/potassco/clingraph[Clingraph] graph visualizer, even through Cyberismo comes with its own implementation. Both the original Clingraph implementation and Cyberismo graph support run on the https://graphviz.org/[Graphviz] graph visualization software.
+
+== Basic concepts
+
+A _graph_ is a structure of _nodes_ and _edges_ that connect the nodes together. In Cyberismo, graphs are directed graphs or digraphs, where the edges have a direction and they are drawn as an arrow.
+
+A subgraph is a Graphviz concept that indicates that certain nodes and edges should be drawn together. Cyberismo follows the example of Clingraph and automatically makes subgraphs so called clusters with a bounding rectangle.
+
+Graphs are described with four simple logic program function terms:
+
+* `graph` for defining graphs and subgraphs, 
+* `node` for defining nodes, 
+* `edge` for defining edges, and 
+* `attr` for defining Graphviz attributes for graphs, nodes, or edges.
+
+Cyberismo executes a query that translates the true graph-related function terms into a DOT language graph description, which Graphviz then renders into an image.
+
+== The default graph, top-level graph, and subgraphs
+
+If you define nodes and edges with just one parameter with xref:docs_8ybjvnft.adoc[`node(Node)`] and xref:docs_1i04tpi3.adoc[`edge(Edge)`], then the nodes and edges are assinged to a default graph called `default`. 
+
+Alternatively, you may give your top-level graph to have another identifier by defining the top-level graph with `graph(Graph)`, and by defining the top-level nodes and edges with two parameters, where the second parameter is the identifier of the top level graph: xref:docs_espqt3up.adoc[`node(Node, Graph)`] and xref:docs_1nqk63vb[`edge(Edge, Graph)`].
+
+The original Clingraph allows defining multiple drawings to produce multiple image files at once, by defining multiple top-level graphs. Cyberismo graph support has been designed to produce just one graph that is embedded on the page, so do not define multiple top-level graphs. Instead, you should either use the `default` graph or just a single top-level graph with some other name.
+
+To define a subgraph, use `graph(Subgraph, Graph)`. In Cyberismo, subgraphs are automatically so called clusters with a bounding rectangle, so Cyberismo adds the string `cluster_` as a prefix to the names of subgraphs to request the Graphviz DOT layout engine to draw the within a bounding rectangle.
+
+== Nodes
+
+To define a node in the default top-level graph, use xref:docs_8ybjvnft.adoc[`node(Node)`].
+
+To define a node in your custom-named top-level graph or as a part of a subgraph, use xref:docs_espqt3up.adoc[`node(Node, Graph)`].
+
+== Edges
+
+An edge is identified by a tuple of either 2 elements `(Source, Destination)` or 3 elements `(Source, Destination, Identifier)`, where `Source` and `Destination` are identifiers of nodes or subgraphs. Use a tuple of 3 elements, if you need to draw multiple edges between the same source and destination, and choose an `Identifier` that tells these edges apart.
+
+To define an edge in the default top-level graph, use xref:docs_1i04tpi3.adoc[`edge(Edge)`].
+
+Edges also belong to a graph. In practice, it is usually best to place edges to the top-level graph. If you are using the default graph, use xref:docs_1i04tpi3.adoc[`edge(Edge)`], and if you have a custom-named top-level graph, use xref:docs_1nqk63vb[`edge(Edge, Graph)`].
+
+== Attributes
+
+Graphviz supports a number of attributes for graphs, nodes, and edges, which can be set using the xref:docs_k6azkgw5.adoc[`attr`]  term. Please find the documentation for Graphviz attributes https://graphviz.org/doc/info/attrs.html[here].
+
+== Using the `rank` field
+
+The order of lines in the Graphviz DOT format is sometimes significant to the ordering of elements in the final drawing. Cyberismo uses its query language and a report to produce the DOT format file, and it orders the results based on the `rank` field.
+
+Cyberismo keeps track of the ordering of cards in the navigation tree with the built-in `rank` field. The global logic progrma includes `field` facts for the rank field. 
+
+If you generate your graph so that nodes and subgraphs are cards, then these elements will automatically have a `rank` field. Otherwise, if you want to influence the ordering of the DOT file, you can define terms of the format `field(Element, "rank", Rank)` to set a rank. The exact format of the rank does not matter, as long as the elements can be ordered by their rank.
+
+== Comparison with Clingraph
+
+Cyberismo's graph support is based on https://github.com/potassco/clingraph[Clingraph], the graph visualizer from the Potassco collection. However, Cyberismo does not use the Python implementation of Clingraph, but it includes its own implementation, which is internally just a Cyberismo report that produces Graphviz DOT format. If you are familiar with Clingraph, it is good to understand the following differences.
+
+* When generating graphs, Cyberismo automatically includes its global logic program
+* Cyberismo graphs produce just a single graph, where as Clingraph can produce multiple graphs from the same logic program. Do not define multiple top-level graphs in your graph models.
+* Cyberismo does not allow any user-defined Python functions or other external functions
+* Cyberismo does not currently implement Clingraph's `@svg` external function for interactive SVG images
+* To format strings for the labels in Cyberismo, use the xref:docs_1clzlh94.adoc[`@concatenate`] and xref:docs_hm5x5ki1.adoc[`@wrap`] external functions, instead of the Jinja templates that Clingraph supports
+* Instead of a Clingraph-like `@cluster` external function to form strings with a `cluster_` prefix , use the xref:docs_1clzlh94.adoc[`@concatenate`] function
+* Clingraph does not have a similar model and view concept as Cyberismo
+
+== Summary of logic program terms for implementing graphs
+
+{{#report}}
+    "name": "base/reports/predicates",
+    "category": "Graph implementation"
+{{/report}}

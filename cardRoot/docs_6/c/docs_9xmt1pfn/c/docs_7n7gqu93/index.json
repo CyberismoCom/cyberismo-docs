@@ -1,11 +1,11 @@
 {
-    "title": "Administering Cyberismo configuration",
+    "title": "Managing templates",
     "cardType": "base/cardTypes/page",
     "workflowState": "Ready",
-    "rank": "0|k",
-    "lastUpdated": "2025-07-09T10:31:33.475Z",
+    "rank": "0|aaal",
+    "lastUpdated": "2025-07-09T10:30:21.389Z",
     "links": [],
     "base/fieldTypes/owner": null,
     "base/fieldTypes/informationClassification": "public",
-    "lastTransitioned": "2025-01-17T14:30:37.775Z"
+    "lastTransitioned": "2025-01-17T14:31:05.589Z"
 }
