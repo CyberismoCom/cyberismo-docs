@@ -53,6 +53,95 @@ Edges also belong to a graph. In practice, it is usually best to place edges to 
 
 Graphviz supports a number of attributes for graphs, nodes, and edges, which can be set using the xref:docs_k6azkgw5.adoc[`attr`]  term. Please find the documentation for Graphviz attributes https://graphviz.org/doc/info/attrs.html[here].
 
+== Example 1: Simple graph
+
+The graph model `"docs/graphModels/example1"` has been implemented as follows:
+
+----
+node(node1).
+attr(node, node1, "label", "Node 1").
+
+node(node2).
+attr(node, node2, "label", "Node 2").
+
+edge((node1, node2)).
+
+attr(graph, default, "rankdir", "LR").
+----
+
+The model implementation declares two nodes and sets the `label` attribute for both of them. There is also an edge between the nodes. Finally, the `Graphviz` `rankdir` attribute defines that the graph should be drawn from left to right, instead of the default direction top to bottom.
+
+As this model does not require any parameterisation, we don't really need a graph view, but since the graph macro always expects a view, we have created an empty graph view `"docs/graphViews/empty"`. Together, they yield the following result.
+
+{{#graph}}
+  "model": "docs/graphModels/example1",
+  "view": "docs/graphViews/empty"
+{{/graph}}
+
+== Example 2: Card tree
+
+Let's consider `docs/graphModels/example2`, which visualises the card hierarchy. The model has been implemented as follows:
+
+----
+view(Child) :- view(Parent), parent(Child, Parent).
+
+node(Card) :- card(Card), view(Card).
+attr(node, Card, "label", Title) :- 
+    node(Card), field(Card, "title", Title).
+attr(node, Card, "shape", "Box") :- node(Card).
+
+edge((Parent, Child)) :- 
+    parent(Child, Parent), view(Child), view(Parent).
+----
+
+This model defines nodes for all such cards, for which `view(Card)` holds. The nodes have a box shape and the card title is used as the label of the node. Edges are drawn from parent cards to their children.
+
+The graph view `docs/graphViews/example2` defines a single fact as follows:
+
+----
+{{#raw}}
+view({ {cardKey}}).
+{{/raw}}
+----
+
+This view parameterises the model based on the card key. By default, the `cardKey` is the card key of the card that includes the graph macro. In the case of this card, the graph model and view can be used in a graph macro like this:
+
+----
+{{#raw}}
+{ {#graph}}
+  "model": "docs/graphModels/example2",
+  "view": "docs/graphViews/example2"
+{ {/graph}}
+{{/raw}}
+----
+
+When used on this page, the result looks like this:
+
+{{#graph}}
+  "model": "docs/graphModels/example2",
+  "view": "docs/graphViews/example2"
+{{/graph}}
+
+We can override the default card key by defining another card key in the parameters of the graph macro. For example, the following graph macro sets the card key to xref:docs_13.adoc[Installing, updating and uninstalling].
+
+----
+{{#raw}}
+{ {#graph}}
+  "model": "docs/graphModels/example2",
+  "view": "docs/graphViews/example2",
+  "cardKey": "docs_13"
+{ {/graph}}
+{{/raw}}
+----
+
+It results in the following diagram:
+
+{{#graph}}
+  "model": "docs/graphModels/example2",
+  "view": "docs/graphViews/example2",
+  "cardKey": "docs_13"
+{{/graph}}
+
 == Using the `rank` field
 
 The order of lines in the Graphviz DOT format is sometimes significant to the ordering of elements in the final drawing. Cyberismo uses its query language and a report to produce the DOT format file, and it orders the results based on the `rank` field.
