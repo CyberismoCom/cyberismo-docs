@@ -1,11 +1,11 @@
 {
-    "title": "Managing calculations",
+    "title": "Structure and execution of logic programs",
     "cardType": "base/cardTypes/page",
     "workflowState": "Draft",
     "base/fieldTypes/owner": null,
     "base/fieldTypes/informationClassification": "internal",
-    "rank": "0|o",
-    "lastUpdated": "2025-07-10T09:39:52.273Z",
+    "rank": "0|ag",
+    "lastUpdated": "2025-07-11T08:22:17.977Z",
     "links": [],
     "templateCardKey": "base_2"
 }

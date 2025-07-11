@@ -41,7 +41,7 @@ The following table shows how the main Cyberismo concepts are referred to in Cyb
 
 Naming of terms in logic programs follows the same `camelCase` convention as other naming in the Cyberismo solution. As required by the syntax rules of Answer Set Programming, the names of atoms and constants begin with a lowercase character, and variable names begin with an uppercase character.
 
-NOTE: If a Cyberismo content module needs to define a new global name, such as a new constant or a new complex term, the name should begin with the module prefix and an underscore.
+NOTE: If a Cyberismo content module needs to define a new global name, such as a new constant or a new complex term, for the main logic program, then the name should begin with the module prefix and an underscore.
 
 For example, if a module with the prefix `example` needs to use a new global logic program term, say `mySpecialTerm`, then the term should be called `example_mySpecialTerm`.
 

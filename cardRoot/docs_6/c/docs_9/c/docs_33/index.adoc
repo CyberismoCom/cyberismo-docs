@@ -1,8 +1,8 @@
-This page introduces the Cyberismo query language. A Cyberismo query uses logic programming facts and rules to "sculpt" its result as a JavaScript Object Notation (JSON) object.
+This page introduces the Cyberismo query language. A Cyberismo query uses logic programming facts and rules to "sculpt" its result as a JavaScript Object Notation (JSON) query result object.
 
 If you only need a simple list of result, the queries are short and straightforward. The query language is flexible and you can use it to describe complex results easily. On the top level, the result of a Cyberismo query is an array of objects, each declared with the `result` predicate. The result objects on any level of hierarchy can have the following kinds of properties:
 
-* Scalar properties, described with the `field` predicate. Fields can come from the global logic program, or they can be fields that are introduced in the query
+* Scalar properties, described with the `field` predicate. Fields can come from the main logic program, or they can be fields that are introduced in the query
 * Properties that are objects, described with the `childObject` predicate
 * Properties that are arrays or objects, described with the `childResult` predicate
 

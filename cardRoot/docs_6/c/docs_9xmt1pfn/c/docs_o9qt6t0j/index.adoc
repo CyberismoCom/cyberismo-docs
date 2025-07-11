@@ -1,4 +1,4 @@
-Cyberismo content modules and projects may define their own logic programs by simply including a file with the extension `.lp` in the `.cards/local/calculations` folder. The logic programs in the calculations folder are automatically included as part of the global Cyberismo logic program.
+Cyberismo content modules and projects may define their own logic programs by simply including a file with the extension `.lp` in the `.cards/local/calculations` folder. The logic programs in the calculations folder are automatically included as part of the  Cyberismo main logic program.
 
 Use a logic program in the calculations folder to implement the following use cases:
 

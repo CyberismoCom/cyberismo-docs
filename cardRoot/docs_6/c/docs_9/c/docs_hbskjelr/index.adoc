@@ -2,7 +2,9 @@
 
 Graphs visualise data. The configuration of Cyberismo graph consists of a xref:docs_wp769ee4.adoc[graph model] and a xref:docs_4ha2rf9l.adoc[graph view], allowing several different graph views to be created based on a single graph model. A graph is displayed as part of the contents of a card with the xref:docs_t5gkijm4.adoc[graph macro].
 
-As both the graph model and the graph view are implemented as logic programs that are combined with the global Cyberismo logic program to create the graph, in theory it does not matter much how you split the graph implementation between the model and the view. By convention, the graph model is where all the action happens, and graph views are usually just a single line of code or a couple of lines long, to parametrise the graph model to the specific context of a graph macro instance.
+Please refer to xref:docs_chclhxsk.adoc[Structure and execution of logic programs] for a detailed description how Cyberismo executes logic programs and Graphviz to produce a graph.
+
+As both the graph model and the graph view are implemented as logic programs that are combined with the main logic program to create the graph, in theory it does not matter much how you split the graph implementation between the model and the view. By convention, the graph model is where all the action happens, and graph views are usually just a single line of code or a couple of lines long, to parametrise the graph model to the specific context of a graph macro instance.
 
 A graph view defines a concrete view to a graph model. A graph view can even be defined in a different module from the original graph model, so you can use a graph model from a content module in your Cyberismo project with a custom view that you have defined. 
 
@@ -55,7 +57,7 @@ Graphviz supports a number of attributes for graphs, nodes, and edges, which can
 
 The order of lines in the Graphviz DOT format is sometimes significant to the ordering of elements in the final drawing. Cyberismo uses its query language and a report to produce the DOT format file, and it orders the results based on the `rank` field.
 
-Cyberismo keeps track of the ordering of cards in the navigation tree with the built-in `rank` field. The global logic progrma includes `field` facts for the rank field. 
+Cyberismo keeps track of the ordering of cards in the navigation tree with the built-in `rank` field. The Cyberismo main logic progrma includes `field` facts for the rank field. 
 
 If you generate your graph so that nodes and subgraphs are cards, then these elements will automatically have a `rank` field. Otherwise, if you want to influence the ordering of the DOT file, you can define terms of the format `field(Element, "rank", Rank)` to set a rank. The exact format of the rank does not matter, as long as the elements can be ordered by their rank.
 
@@ -63,7 +65,7 @@ If you generate your graph so that nodes and subgraphs are cards, then these ele
 
 Cyberismo's graph support is based on https://github.com/potassco/clingraph[Clingraph], the graph visualizer from the Potassco collection. However, Cyberismo does not use the Python implementation of Clingraph, but it includes its own implementation, which is internally just a Cyberismo report that produces Graphviz DOT format. If you are familiar with Clingraph, it is good to understand the following differences.
 
-* When generating graphs, Cyberismo automatically includes its global logic program
+* When generating graphs, Cyberismo automatically includes its main logic program
 * Cyberismo graphs produce just a single graph, where as Clingraph can produce multiple graphs from the same logic program. Do not define multiple top-level graphs in your graph models.
 * Cyberismo does not allow any user-defined Python functions or other external functions
 * Cyberismo does not currently implement Clingraph's `@svg` external function for interactive SVG images

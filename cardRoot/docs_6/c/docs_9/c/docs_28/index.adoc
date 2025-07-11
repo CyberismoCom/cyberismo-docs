@@ -6,6 +6,8 @@ ASP is declarative programming, where programs consist of facts and rules. The o
 
 Using ASP gives you, as a Cyberismo user, an easy-to-use superpower that goes above and beyond what you could easily achieve, if we were to use a more mainstream programming language or query language. The underlying idea in the Cyberismo solution is that we manage the information model for cybersecurity or compliance, and the solution maps this information model to a logic program. A query is also a set of logic program facts and rules, and its results are the basis for producing reports, creating visualisations, making automated checks, and enforcing policies.
 
+Cyberismo uses the clingo ASP system from the https://potassco.org/[Potassco collection] as its logic engine.
+
 image::lp-intro.png[]
 
 This page provides a short introduction to the essentials of Answer Set Programming, covering the ASP features that are needed when creating content for Cyberismo.
@@ -181,7 +183,7 @@ __head__``:-``__body__``.``
 
 Intuitively, the rule means that _head_ is true, if _body_ is true. 
 
-In the rule definition, _head_ is a constant or a function termfootnote:[ASP supports other types of _head_ constructus, but we do not typically need them in Cyberismo], and _body_ is a comma-separated list of body conditions:
+In the rule definition, _head_ is a constant or a function termfootnote:[ASP supports other types of _head_ constructs, but we do not typically need them in Cyberismo], and _body_ is a comma-separated list of body conditions:
 
 __head__``:-``__condition ~1~__``,`` __condition ~2~__``,`` ...``,``__condition ~n~__``.``
 
