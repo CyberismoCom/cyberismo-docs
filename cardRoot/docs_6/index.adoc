@@ -23,8 +23,7 @@ To develop a new Cyberismo module, follow these steps:
 . If you need new card types, then create and design card types. A card type selects one of the available workflows and a set of custom fields. See xref:docs_27.adoc[Managing card types] for more information.
 . If you need new link types, then create and design link types. See xref:docs_qp3vhh4t.adoc[Managing link types] for more information.
 . Design any new templates. See xref:docs_7n7gqu93.adoc[Managing templates] for more information.
+. Develop any new module-specific logic programs. See xref:docs_9.adoc[Queries, reasoning, and visualisations] for more information.
 . Design any new reports, see xref:docs_byr4iof0.adoc[Managing reports] for more information.
 . Design any new graph models and graph views, see xref:docs_wp769ee4.adoc[Managing graph models] and xref:docs_4ha2rf9l.adoc[Managing graph views].
-. Develop any new module-specific logic programs. See xref:docs_9.adoc[Queries, reasoning, and visualisations] for more information.
-. Design any new reports
 

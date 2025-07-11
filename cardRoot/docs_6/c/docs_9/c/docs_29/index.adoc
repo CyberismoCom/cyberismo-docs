@@ -6,7 +6,7 @@ The attributes of cards are declared as logic program facts using a field term:
 
 [source]
 ----
-field(<card key>, <field name>, <field value>).
+field(CardKey, Field, Value).
 ----
 
 Card keys work directly as constants in ASP encodings. Fields names are encoded as strings, and field values either as strings or integers.
@@ -15,22 +15,22 @@ If the card is not directly under the card root, a parent term is generated to d
 
 [source]
 ----
-parent(<child card key>, <parent card key>).
+parent(ChildCardKey, ParentCardKey).
 ----
 
 Cards may be tagged with a label in the `index.json` file of the card. This results in the following term to be generated for each label:
 
 [source]
 ----
-label(<card key>, <label>).
+label(CardKey, Label).
 ----
 
 Finally, links between cards are declared with the link term. There are two variants of this term, one for link types that use link descriptions and another for link types that do not use link descriptions
 
 [source]
 ----
-link(<source card key>, <destination card key>, <link type name>, <link description>). <1>
-link(<source card key>, <destination card key>, <link type name>). <2>
+link(Source, Destination, LinkType, LinkDescription). <1>
+link(Source, Destination, LinkType). <2>
 ----
 <1> This version is used if the link type uses link descriptions
 <2> This version is used if the link type does not use link descriptions
@@ -56,7 +56,7 @@ The term
 
 [source]
 ----
-ancestor(<descendant card key>, <ancestor card key>)
+ancestor(Descendant, Ancestor)
 ----
 
 means that the first card is a descendant of the second card, the ancestor.

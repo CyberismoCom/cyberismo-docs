@@ -12,7 +12,7 @@ Cyberismo's graph support is based on the concepts and the syntax of the https:/
 
 == Basic concepts
 
-A _graph_ is a structure of _nodes_ and _edges_ that connect the nodes together. In Cyberismo, graphs are directed graphs or digraphs, where the edges have a direction and they are drawn as an arrow.
+A _graph_ is a structure of _nodes_ and _edges_ that connect the nodes together. In Cyberismo, graphs are directed graphs or digraphs, where the edges have a direction and they are drawn as arrows.
 
 A subgraph is a Graphviz concept that indicates that certain nodes and edges should be drawn together. Cyberismo follows the example of Clingraph and automatically makes subgraphs so called clusters with a bounding rectangle.
 
@@ -29,7 +29,7 @@ Cyberismo executes a query that translates the true graph-related function terms
 
 If you define nodes and edges with just one parameter with xref:docs_8ybjvnft.adoc[`node(Node)`] and xref:docs_1i04tpi3.adoc[`edge(Edge)`], then the nodes and edges are assinged to a default graph called `default`. 
 
-Alternatively, you may give your top-level graph to have another identifier by defining the top-level graph with `graph(Graph)`, and by defining the top-level nodes and edges with two parameters, where the second parameter is the identifier of the top level graph: xref:docs_espqt3up.adoc[`node(Node, Graph)`] and xref:docs_1nqk63vb[`edge(Edge, Graph)`].
+Alternatively, you may give your top-level graph another name by defining the top-level graph with `graph(Graph)`, and by defining the top-level nodes and edges with two parameters, where the second parameter is the identifier of the top level graph: xref:docs_espqt3up.adoc[`node(Node, Graph)`] and xref:docs_1nqk63vb[`edge(Edge, Graph)`].
 
 The original Clingraph allows defining multiple drawings to produce multiple image files at once, by defining multiple top-level graphs. Cyberismo graph support has been designed to produce just one graph that is embedded on the page, so do not define multiple top-level graphs. Instead, you should either use the `default` graph or just a single top-level graph with some other name.
 
@@ -57,7 +57,7 @@ Graphviz supports a number of attributes for graphs, nodes, and edges, which can
 
 The order of lines in the Graphviz DOT format is sometimes significant to the ordering of elements in the final drawing. Cyberismo uses its query language and a report to produce the DOT format file, and it orders the results based on the `rank` field.
 
-Cyberismo keeps track of the ordering of cards in the navigation tree with the built-in `rank` field. The Cyberismo main logic progrma includes `field` facts for the rank field. 
+Cyberismo keeps track of the ordering of cards in the navigation tree with the built-in `rank` field. The Cyberismo main logic program includes `field` facts for the rank field. 
 
 If you generate your graph so that nodes and subgraphs are cards, then these elements will automatically have a `rank` field. Otherwise, if you want to influence the ordering of the DOT file, you can define terms of the format `field(Element, "rank", Rank)` to set a rank. The exact format of the rank does not matter, as long as the elements can be ordered by their rank.
 

@@ -17,4 +17,5 @@ Cyberismo cards may include images and other file attachments. To show an attach
 Cyberismo extends the AsciiDox syntax with macros:
 
 * The xref:docs_i5v1ydlh.adoc[Create cards macro] produces a button for creating new cards.
-* The xref:docs_r0brt7n1.adoc[Report macro] procudes a report from the results of a query.
+* The xref:docs_r0brt7n1.adoc[Report macro] produces a report from the results of a query.
+* The xref:docs_t5gkijm4.adoc[Graph macro] visualises data with a graph
