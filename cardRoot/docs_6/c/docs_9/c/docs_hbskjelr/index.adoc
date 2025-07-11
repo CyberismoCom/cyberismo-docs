@@ -29,11 +29,11 @@ Cyberismo executes a query that translates the true graph-related function terms
 
 If you define nodes and edges with just one parameter with xref:docs_8ybjvnft.adoc[`node(Node)`] and xref:docs_1i04tpi3.adoc[`edge(Edge)`], then the nodes and edges are assinged to a default graph called `default`. 
 
-Alternatively, you may give your top-level graph another name by defining the top-level graph with `graph(Graph)`, and by defining the top-level nodes and edges with two parameters, where the second parameter is the identifier of the top level graph: xref:docs_espqt3up.adoc[`node(Node, Graph)`] and xref:docs_1nqk63vb[`edge(Edge, Graph)`].
+Alternatively, you may give your top-level graph another name by defining the top-level graph with xref:docs_wupn6y0y.adoc[`graph(Graph)`], and by defining the top-level nodes and edges with two parameters, where the second parameter is the identifier of the top level graph: xref:docs_espqt3up.adoc[`node(Node, Graph)`] and xref:docs_1nqk63vb[`edge(Edge, Graph)`].
 
 The original Clingraph allows defining multiple drawings to produce multiple image files at once, by defining multiple top-level graphs. Cyberismo graph support has been designed to produce just one graph that is embedded on the page, so do not define multiple top-level graphs. Instead, you should either use the `default` graph or just a single top-level graph with some other name.
 
-To define a subgraph, use `graph(Subgraph, Graph)`. In Cyberismo, subgraphs are automatically so called clusters with a bounding rectangle, so Cyberismo adds the string `cluster_` as a prefix to the names of subgraphs to request the Graphviz DOT layout engine to draw the within a bounding rectangle.
+To define a subgraph, use xref:docs_8t0nnfv2.adoc[`graph(Subgraph, Graph)`]. In Cyberismo, subgraphs are automatically so called clusters with a bounding rectangle, so Cyberismo adds the string `cluster_` as a prefix to the names of subgraphs to request the Graphviz DOT layout engine to draw the within a bounding rectangle.
 
 == Nodes
 
