@@ -2,8 +2,8 @@
     "title": "Automated policy checks",
     "cardType": "base/cardTypes/page",
     "workflowState": "Ready",
-    "rank": "0|z",
-    "lastUpdated": "2025-07-01T06:29:14.394Z",
+    "rank": "0|mt",
+    "lastUpdated": "2025-07-14T13:07:28.737Z",
     "links": [
         {
             "linkType": "base/linkTypes/relatesTo",
