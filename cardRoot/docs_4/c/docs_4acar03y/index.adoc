@@ -1,0 +1,24 @@
+Cyberismo extends the AsciiDoc notation with macros.
+
+Macros are defined using the following notation:footnote:[The macro notation is based on the https://handlebarsjs.com/guide/#custom-helpers[Handlebars block helper notation]]
+
+```
+{{#raw}}
+
+{ {#macroName}}
+  "parameter1": "value",
+  "parameter2": "value"
+{ {/macroName}}
+
+{{/raw}}
+```
+
+The parameters of the macro are enclosed within a leading macro "mustache", identified by the `#` character and the name of the macro, and a closing mustache of the same name but starting with the `/` character. The macro parameters are a JSON object, only without the enclosing `{` and `}` characters, as the macro mustaches already enclose the parameters.
+
+You can use the following macros in the AsciiDoc contents of cards. It is also possible to use macros in report templates, which will yield nested macros.
+
+== Macros
+
+* The xref:docs_i5v1ydlh.adoc[Create cards macro] produces a button for creating new cards.
+* The xref:docs_r0brt7n1.adoc[Report macro] produces a report from the results of a query.
+* The xref:docs_t5gkijm4.adoc[Graph macro] visualises data with a graph

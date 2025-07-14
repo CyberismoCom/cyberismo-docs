@@ -1,12 +1,12 @@
 {
-    "title": "Implementing graphs",
+    "title": "Graph macro",
     "cardType": "base/cardTypes/page",
     "workflowState": "Ready",
     "base/fieldTypes/owner": null,
     "base/fieldTypes/informationClassification": "internal",
-    "rank": "0|znt",
-    "lastUpdated": "2025-07-14T11:23:33.346Z",
+    "rank": "0|c",
+    "lastUpdated": "2025-07-14T11:14:28.197Z",
     "links": [],
     "templateCardKey": "base_2",
-    "lastTransitioned": "2025-07-14T09:55:13.553Z"
+    "lastTransitioned": "2025-07-07T14:50:42.051Z"
 }

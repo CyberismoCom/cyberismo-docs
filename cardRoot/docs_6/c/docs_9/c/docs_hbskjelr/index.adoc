@@ -1,5 +1,14 @@
 == Introduction
 
+This page is a tutorial on implementing graphs. Before reading this tutorial, please familiarise yourself with the following topics:
+
+* xref:docs_28.adoc[Introduction to Answer Set Programming]
+* xref:docs_chclhxsk.adoc[Structure and execution of logic programs]
+* xref:docs_33.adoc[Query language]
+* xref:docs_wp769ee4.adoc[Managing graph models]
+* xref:docs_4ha2rf9l.adoc[Managing graph views]
+* xref:docs_t5gkijm4.adoc[Graph macro]
+
 Graphs visualise data. The configuration of Cyberismo graph consists of a xref:docs_wp769ee4.adoc[graph model] and a xref:docs_4ha2rf9l.adoc[graph view], allowing several different graph views to be created based on a single graph model. A graph is displayed as part of the contents of a card with the xref:docs_t5gkijm4.adoc[graph macro].
 
 Please refer to xref:docs_chclhxsk.adoc[Structure and execution of logic programs] for a detailed description how Cyberismo executes logic programs and Graphviz to produce a graph.
@@ -69,7 +78,7 @@ edge((node1, node2)).
 attr(graph, default, "rankdir", "LR").
 ----
 
-The model implementation declares two nodes and sets the `label` attribute for both of them. There is also an edge between the nodes. Finally, the `Graphviz` `rankdir` attribute defines that the graph should be drawn from left to right, instead of the default direction top to bottom.
+The model implementation declares two nodes and sets the `label` attribute for both of them. There is also an edge between the nodes. Finally, the Graphviz `rankdir` attribute defines that the graph should be drawn from left to right, instead of the default direction top to bottom.
 
 As this model does not require any parameterisation, we don't really need a graph view, but since the graph macro always expects a view, we have created an empty graph view `"docs/graphViews/empty"`. Together, they yield the following result.
 
