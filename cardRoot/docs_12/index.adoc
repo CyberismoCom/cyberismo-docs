@@ -13,8 +13,9 @@ You can learn more about these features on the welcome page, go ahead and give i
 
 == How to test the demo
 
-To try out our Cyberismo application, we offer two simple methods:
+To try out our Cyberismo application, we offer three simple methods:
 
+* https://demo.cyberismo.com[Online demo], where you can easily start a personal demo environment for a quick try. Each online demo instance will be automatically deleted after an hour, so if you want to explore the demo deeper, we recommend the following options to run the demo locally on you own computer.
 * Demo container image which you can run with either Docker or Podman, available in  https://hub.docker.com/repository/docker/cyberismo/cyberismo-demo[Docker Hub]
 * Demo Git Project available in https://github.com/CyberismoCom/cyberismo-demo[GitHub]
 
