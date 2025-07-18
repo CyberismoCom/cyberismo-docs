@@ -115,6 +115,8 @@ The results of Example 2:
 ]
 ----
 
+NOTE: The parameter of the logic program term `result` will be included as the `key` property in the result object. It is possible to override the value of the `key` property by defining a `field` term for the `"key"` field.
+
 The AsciiDoc output of the macro looks like this:
 
 ----
@@ -150,6 +152,8 @@ field(child2, "title", "Child object").
 orderBy("title", "DESC").
 
 ----
+
+CAUTION: Child objects and child results are identified by a key, which is the second parameter of the `childObject` or `childResult` term. Notice that `field` terms for `child1` and `child2` do not include any context about the parent object. That is why you must use unique identifiers (keys) for child objects and child results, as otherwise their `field` terms would be mixed up.
 
 The report template has been implemented as follows. Notice that logging is again slightly different from the previous example, as we're logging each member of the `results` array separately.
 
@@ -191,8 +195,9 @@ The results of Example 3:
   title: 'First result',
   children: [ { key: 'child1', title: 'Child result' } ]
 }
-
 ----
+
+NOTE: The second parameter of the `childResult` and `childObject` logic program terms is included as the `key` property in the result objects. The key must be unique. It is possible to override the value of the `key` property for these result objects by defining a `field` term for the `"key"` field. This is useful, for example, if you want many results to have child objects with the same name but different contents.
 
 The AsciiDoc output of the macro looks like this:
 
