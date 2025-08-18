@@ -109,7 +109,7 @@ The graph view `docs/graphViews/example2` defines a single fact as follows:
 
 ----
 {{#raw}}
-view({ {cardKey}}).
+view({{cardKey}}).
 {{/raw}}
 ----
 
@@ -117,10 +117,10 @@ This view parameterises the model based on the card key. By default, the `cardKe
 
 ----
 {{#raw}}
-{ {#graph}}
+{{#graph}}
   "model": "docs/graphModels/example2",
   "view": "docs/graphViews/example2"
-{ {/graph}}
+{{/graph}}
 {{/raw}}
 ----
 
@@ -135,11 +135,11 @@ We can override the default card key by defining another card key in the paramet
 
 ----
 {{#raw}}
-{ {#graph}}
+{{#graph}}
   "model": "docs/graphModels/example2",
   "view": "docs/graphViews/example2",
   "cardKey": "docs_13"
-{ {/graph}}
+{{/graph}}
 {{/raw}}
 ----
 

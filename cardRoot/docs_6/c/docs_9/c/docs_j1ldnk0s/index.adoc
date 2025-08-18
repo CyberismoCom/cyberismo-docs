@@ -18,8 +18,8 @@ Let us start with an empty report. The query of this report is just a single com
 ```
 {{#raw}}
 
-{ {log "This is the output of an empty query:"}}
-{ {log this}}
+{{log "This is the output of an empty query:"}}
+{{log this}}
 
 {{/raw}}
 ```
@@ -79,12 +79,12 @@ The report template has been implemented as follows. Notice that we're logging t
 ```
 {{#raw}}
 
-{ {log "The results of Example 2:}}
-{ {log results}}
+{{log "The results of Example 2:}}
+{{log results}}
 
-{ {#each results}}
-* { {this.title}}
-{ {/each}}
+{{#each results}}
+* {{this.title}}
+{{/each}}
 
 {{/raw}}
 ```
@@ -96,10 +96,10 @@ This example has been implemented as  `docs/reports/example2`, so the following 
 ```
 {{#raw}}
 
-{ {#report}}
+{{#report}}
 
   "name": "docs/reports/example2"
-{ {/report}}
+{{/report}}
 
 
 {{/raw}}
@@ -125,7 +125,8 @@ The AsciiDoc output of the macro looks like this:
 {{/report}}
 ----
 
-Finally, a rendered version of the output is this: 
+Finally, a rendered version of the output is this:
+
 {{#report}}
   "name": "docs/reports/example2"
 {{/report}}
@@ -160,21 +161,21 @@ The report template has been implemented as follows. Notice that logging is agai
 ```
 {{#raw}}
 
-{ {log "The results of Example 3:"}}
+{{log "The results of Example 3:"}}
 
-{ {#each results}}
-{ {log this}}
-* { {this.title}}
-{ {#if this.child}}
-** { {this.title}} has a child object { {this.child.title}}
-{ {/if}}
-{ {#if this.children}}
-** { {this.title}} has an array of children:
-{ {#each this.children}}
-*** { {this.title}}
-{ {/each}}
-{ {/if}}
-{ {/each}}
+{{#each results}}
+{{log this}}
+* {{this.title}}
+{{#if this.child}}
+** {{this.title}} has a child object {{this.child.title}}
+{{/if}}
+{{#if this.children}}
+** {{this.title}} has an array of children:
+{{#each this.children}}
+*** {{this.title}}
+{{/each}}
+{{/if}}
+{{/each}}
 
 {{/raw}}
 ```
@@ -296,11 +297,11 @@ The query of the `childrenTable` macro is the following. We can make the followi
 {{#raw}}
 
 selectAll.
-{ {#if cardType}}
-result(Card) :- card(Card), parent(Card, { {cardKey}}), field(Card, "cardType", "{ {cardType}}").
-{ {else}}
-result(Card) :- card(Card), parent(Card, { {cardKey}}).
-{ {/if}}
+{{#if cardType}}
+result(Card) :- card(Card), parent(Card, {{cardKey}}), field(Card, "cardType", "{{cardType}}").
+{{else}}
+result(Card) :- card(Card), parent(Card, {{cardKey}}).
+{{/if}}
 orderBy("rank", "ASC").
 
 {{/raw}}
@@ -314,22 +315,22 @@ The report has the following template. Notice the following features:
 ```
 {{#raw}}
 
-{ {#if results}}
+{{#if results}}
 
-{ {#if tableCaption}}.{ {tableCaption}}{ {/if}}
+{{#if tableCaption}}.{{tableCaption}}{ {/if}}
 [cols="5,5,2"]
 |===
 | Title | Owner | State
 
-{ {#each results}}
-|xref:{ {this.key}}.adoc[{ {this.title}}]
-|{ {this.[base/fieldTypes/owner]}}
-|{ {this.workflowState}}
-{ {/each}}
+{{#each results}}
+|xref:{ {this.key}}.adoc[{{this.title}}]
+|{{this.[base/fieldTypes/owner]}}
+|{{this.workflowState}}
+{{/each}}
 
 |===
 
-{ {/if}}
+{{/if}}
 
 {{/raw}}
 ```
@@ -339,11 +340,11 @@ For example, we can show the child cards of xref:docs_17.adoc[Installing Cyberis
 ```
 {{#raw}}
 
-{ {#report}}
+{{#report}}
   "name": "base/reports/childrenTable",
   "cardKey": "docs_17",
   "tableCaption": "Cyberismo installation methods"
-{ {/report}}
+{{/report}}
 {{/raw}}
 ```
 
@@ -397,23 +398,23 @@ The report template has been implemented as follows.
 ```
 {{#raw}}
 
-{ {log "The results of Example 5:"}}
-{ {log results}}
+{{log "The results of Example 5:"}}
+{{log results}}
 
-{ {#if results}}
+{{#if results}}
 
 [cols="3,1"]
 |===
 | Card type | Usage
 
-{ {#each results}}
-|{ {this.key}}
-|{ {this.percentage}}%
-{ {/each}}
+{{#each results}}
+|{{this.key}}
+|{{this.percentage}}%
+{{/each}}
 
 |===
 
-{ {/if}}
+{{/if}}
 
 
 {{/raw}}
