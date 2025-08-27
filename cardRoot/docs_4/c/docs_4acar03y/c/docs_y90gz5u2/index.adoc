@@ -27,7 +27,7 @@ For example, consider the following macro:
 The macro will be rendered as the following score card.
 
 {{#scoreCard}}
-    "title": "SDL control adoption",
+    "title": "Security control adoption",
     "value": 30,
     "unit": "%",
     "legend": "In progress"
