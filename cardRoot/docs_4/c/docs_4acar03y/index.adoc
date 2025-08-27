@@ -15,9 +15,9 @@ Macros are defined using the following notation:footnote:[The macro notation is 
 
 The parameters of the macro are enclosed within a leading macro "mustache", identified by the `#` character and the name of the macro, and a closing mustache of the same name but starting with the `/` character. The macro parameters are a JSON object, only without the enclosing `{` and `}` characters, as the macro mustaches already enclose the parameters.
 
-You can use the following macros in the AsciiDoc contents of cards. It is also possible to use macros in report templates, which will yield nested macros.
+== Available macros
 
-== Macros
+You can use the following macros in the AsciiDoc contents of cards. It is also possible to use macros in report templates, which will yield nested macros.
 
 {{#report}}
   "name": "base/reports/childrenList"
