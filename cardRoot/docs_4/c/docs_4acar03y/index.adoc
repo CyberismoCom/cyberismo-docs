@@ -19,6 +19,6 @@ You can use the following macros in the AsciiDoc contents of cards. It is also p
 
 == Macros
 
-* The xref:docs_i5v1ydlh.adoc[Create cards macro] produces a button for creating new cards.
-* The xref:docs_r0brt7n1.adoc[Report macro] produces a report from the results of a query.
-* The xref:docs_t5gkijm4.adoc[Graph macro] visualises data with a graph
+{{#report}}
+  "name": "base/reports/childrenList"
+{{/report}}
