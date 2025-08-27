@@ -5,10 +5,10 @@ Macros are defined using the following notation:footnote:[The macro notation is 
 ```
 {{#raw}}
 
-{ {#macroName}}
+{{#macroName}}
   "parameter1": "value",
   "parameter2": "value"
-{ {/macroName}}
+{{/macroName}}
 
 {{/raw}}
 ```

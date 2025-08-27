@@ -6,12 +6,6 @@ AsciiDoc is a lightweight markup language primarily designed for writing technic
 
 For a reference guide to the AsciiDoc syntax, see https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[AsciiDoc Quick Reference].
 
-== Attachments
-
-Cyberismo cards may include images and other file attachments. To show an attachment image, for example ``filename.png``, inline with the content, use the following syntax:
-
-  image::filename.png[]
-
 == Macros
 
 Cyberismo extends the AsciiDox syntax with macros, see xref:docs_4acar03y.adoc[Macros].

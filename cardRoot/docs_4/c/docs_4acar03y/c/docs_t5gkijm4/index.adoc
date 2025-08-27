@@ -19,7 +19,6 @@ To use a graph model and a graph view with the `graph macro`, use the following 
 {{#raw}}
 
 {{#graph}}
-
     "model": "base/graphModels/workflow",
     "view": "base/graphViews/workflow",
     "workflow": "base/workflows/page"

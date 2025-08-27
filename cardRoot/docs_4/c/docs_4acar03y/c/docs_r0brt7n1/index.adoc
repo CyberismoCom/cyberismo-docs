@@ -4,13 +4,24 @@ To see a list of the available reports, use the following command:
 
   $ cyberismo show reports
 
+== Parameters
+
+The report macro for all reports requires at least the `name` parameter. The `cardKey` parameter can be included to define the card as context for the report. If this parameter is not given, it is automatically added and set to the card key of the card in which the report macro was included.
+
+Reports may define report-specific additional parameters.
+
+== Defining new reports
+
+To learn how to define new reports, please see xref:docs_byr4iof0.adoc[Managing reports].
+
+== Example
+
 For example, the report `base/reports/childrenList` shows a list of child cards. To use this report, use the following syntax:
 
 ```
 {{#raw}}
 
 {{#report}}
-
     "name": "base/reports/childrenList"
 {{/report}}
 
@@ -18,8 +29,3 @@ For example, the report `base/reports/childrenList` shows a list of child cards.
 
 ```
 
-The report macro for all reports requires at least the `name` parameter. The `cardKey` parameter can be included to define the card as context for the report. If this parameter is not given, it is automatically added and set to the card key of the card in which the report macro was included.
-
-Reports may define report-specific additional parameters.
-
-To learn how to define new reports, please see xref:docs_byr4iof0.adoc[Managing reports].

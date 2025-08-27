@@ -1,4 +1,4 @@
-image::cyberismo-architecture-website.svg[Cyberismo solution architecture]
+{{#image}}"fileName": "cyberismo-architecture-website.svg" {{/image}}
 
 The Cyberismo solution architecture is based on the following principles:
 

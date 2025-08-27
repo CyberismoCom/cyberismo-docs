@@ -21,7 +21,6 @@ For example, to produce a button that creates a new card from the template `base
 {{#raw}}
 
 {{#createCards}}
-
     "template": "base/templates/page",
     "buttonLabel": "Create a new page"
 {{/createCards}}

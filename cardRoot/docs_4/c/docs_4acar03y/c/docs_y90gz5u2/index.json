@@ -1,0 +1,11 @@
+{
+    "title": "Score card macro",
+    "cardType": "base/cardTypes/page",
+    "workflowState": "Draft",
+    "base/fieldTypes/owner": null,
+    "base/fieldTypes/informationClassification": "internal",
+    "rank": "0|d",
+    "lastUpdated": "2025-08-27T10:16:39.112Z",
+    "links": [],
+    "templateCardKey": "base_2"
+}
