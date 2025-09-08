@@ -1,0 +1,11 @@
+{
+    "title": "exportedDocument",
+    "cardType": "base/cardTypes/predicate",
+    "workflowState": "Draft",
+    "rank": "0|d",
+    "lastUpdated": "2025-09-08T13:14:32.826Z",
+    "base/fieldTypes/briefDescription": "This fact is defined when the logic program is run when exporting the content as a document.",
+    "base/fieldTypes/category": "Execution context",
+    "links": [],
+    "templateCardKey": "base_weu9g7lz"
+}
