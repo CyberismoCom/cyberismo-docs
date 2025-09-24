@@ -23,18 +23,20 @@ Create a new project called, for example, "ISMS tutorial" that has the card key 
 $ cyberismo create project "ISMS tutorial" myisms isms-tutorial
 ----
 
-== Import the modules to your new project
+== Select modules for your project
 
-Import the Cyberismo base module and the Cyberismo ISMS essentials module to your new project with the following commands:
+Select "Base module" and "ISMS Essentials" from the provided list and press enter. 
 
-[source,console]
-----
-$ cyberismo import module https://github.com/CyberismoCom/module-base.git -p isms-tutorial
-----
+After pressing enter, wait awhile for your modules to be imported.
 
 [source,console]
 ----
-$ cyberismo import module https://github.com/CyberismoCom/module-isms-essentials.git -p isms-tutorial
+$ cyberismo create project "ISMS tutorial" myisms isms-tutorial
+? Select modules to import (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+ ◉ Base module
+ ◯ Cyberismo EU Cyber Resilience Act
+❯◉ ISMS Essentials
+ ◯ Secure development essentials
 ----
 
 == Create a home page for your project
