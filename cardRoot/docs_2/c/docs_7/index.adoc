@@ -34,12 +34,11 @@ $ cyberismo create project "Cyberismo tutorial" tutorial cyberismo-tutorial
 
 == Import the base module to your new project
 
-Import the base module to your new project with the following command:
+When you create a new project, Cyberismo will prompt you whether you want to import some of the available content modules from the Cyberismo module hub.
 
-[source,console]
-----
-$ cyberismo import module https://github.com/CyberismoCom/module-base.git -p cyberismo-tutorial
-----
+Select the *Base module*.
+
+Cyberismo will then fetch the base module from GitHub and import it to your new project.
 
 == Create a page
 

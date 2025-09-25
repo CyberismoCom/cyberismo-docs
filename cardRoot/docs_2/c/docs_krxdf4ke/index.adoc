@@ -20,26 +20,13 @@ Create a new project called, for example, "Secure development tutorial" that has
 $ cyberismo create project "Secure development tutorial" mysecdev secdev-tutorial
 ----
 
-== Import the modules to your new project
+== Import modules to your new project
 
-The Cyberismo secure development essentials module builds on the base module and the ISMS essentials module as its prerequisites.
+When you create a new project, Cyberismo will prompt you whether you want to import some of the available content modules from the Cyberismo module hub.
 
-Import the required modules to your new project with the following commands:
+Select the *Base module*, the *ISMS essentials module*, and the *Secure development essentials module*.
 
-[source,console]
-----
-$ cyberismo import module https://github.com/CyberismoCom/module-base.git -p secdev-tutorial
-----
-
-[source,console]
-----
-$ cyberismo import module https://github.com/CyberismoCom/module-isms-essentials.git -p secdev-tutorial
-----
-
-[source,console]
-----
-$ cyberismo import module https://github.com/CyberismoCom/module-secure-development-essentials.git -p secdev-tutorial
-----
+Cyberismo will then fetch these modules from GitHub and import them to your new project.
 
 == Start the Cyberismo app
 
