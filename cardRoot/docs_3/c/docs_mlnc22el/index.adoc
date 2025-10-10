@@ -3,7 +3,7 @@
 Cyberismo modules can be imported either from a defined hubs (recommended), from https git URL, or from the local file system. 
 
 === Hub
-Cyberismo uses a centralized module information for importing Cyberimo team or user created modules. Modules implemented by the Cyberismo team are automatically usable through a hub. 
+Cyberismo uses information from a centralized hub to help users import content modules to their projects. There is a set of default modules that the Cyberismo company has implemented available automatically from the Cyberismo default hub. 
 
 See Cyberismo default hub: https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/hub/moduleList.json
 
@@ -105,11 +105,13 @@ To remove all imported modules, you need to go over the modules that `cyberismo 
 
 == Updating modules
 
-Cyberismo can update the modules to their latest versions. When you execute the `update-modules` command, Cyberismo will fetch the latest versions of all modules from the origin that you specified when you imported the module. 
+Cyberismo can update the modules to their latest versions. When you execute the `update-modules` command, Cyberismo will download the latest versions of all modules from the origin that you specified when you imported the module. 
 
 NOTE: That the modules that were imported from the local file system must reside in the same directory where they were imported from.
 
 NOTE: To update modules that were imported from the local file system, you must run the update command in the same working directory as you used when you imported the module.
+
+NOTE: Before importing modules from hubs, you must first fetch the data from the hubs with the `cyberismo fetch` command.
 
 To update all modules, including their dependencies where applicable, execute the following command:
 

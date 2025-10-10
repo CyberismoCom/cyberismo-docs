@@ -20,9 +20,9 @@ Create a new project called, for example, "Secure development tutorial" that has
 $ cyberismo create project "Secure development tutorial" mysecdev secdev-tutorial
 ----
 
-== Select the modules to your new project
+== Select modules to your new project
 
-The Cyberismo secure development essentials module builds on the base module and the ISMS essentials module as its prerequisites. Select the needed modules from the provided list and press enter.
+When you create a new project, Cyberismo will prompt you whether you want to import some of the available content modules from the Cyberismo module hub. Select at least the secure development essentials module.
 
 After pressing enter, wait awhile for your modules to be imported.
 

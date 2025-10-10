@@ -46,7 +46,7 @@ $ cyberismo create project "Cyberismo tutorial" tutorial cyberismo-tutorial
 
 After pressing enter, wait awhile for your modules to be imported.
 
-=== Import the base module later to your project
+=== Import the base module later
 
 If you didn't import 'base' module while creating the project, you can still do it with command:
 

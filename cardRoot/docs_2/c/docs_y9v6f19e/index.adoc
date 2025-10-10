@@ -25,7 +25,7 @@ $ cyberismo create project "ISMS tutorial" myisms isms-tutorial
 
 == Select modules for your project
 
-Select "Base module" and "ISMS Essentials" from the provided list and press enter.
+Select the "ISMS Essentials" from the provided list and press enter.
 
 After pressing enter, wait awhile for your modules to be imported.
 
