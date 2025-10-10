@@ -32,13 +32,28 @@ Create a new project called "Cyberismo tutorial" that has the card key prefix tu
 $ cyberismo create project "Cyberismo tutorial" tutorial cyberismo-tutorial
 ----
 
-== Import the base module to your new project
+When cyberismo creates a new project it will ask which of the default modules you want to import. Select with space 'Base module' and then press enter:
 
-When you create a new project, Cyberismo will prompt you whether you want to import some of the available content modules from the Cyberismo module hub.
+[source,console]
+----
+$ cyberismo create project "Cyberismo tutorial" tutorial cyberismo-tutorial
+? Select modules to import (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+❯◉ Base module
+ ◯ Cyberismo EU Cyber Resilience Act
+ ◯ ISMS Essentials
+ ◯ Secure development essentials
+----
 
-Select the *Base module*.
+After pressing enter, wait awhile for your modules to be imported.
 
-Cyberismo will then fetch the base module from GitHub and import it to your new project.
+=== Import the base module later
+
+If you didn't import 'base' module while creating the project, you can still do it with command:
+
+[source,console]
+----
+$ cyberismo import module base -p cyberismo-tutorial
+----
 
 == Create a page
 

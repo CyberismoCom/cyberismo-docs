@@ -1,6 +1,45 @@
 == Importing a module
 
-Cyberismo modules can be imported either from a https git URL (recommended), or from the local file system. 
+Cyberismo modules can be imported either from a defined hubs (recommended), from https git URL, or from the local file system. 
+
+=== Hub
+Cyberismo uses information from a centralized hub to help users import content modules to their projects. There is a set of default modules that the Cyberismo company has implemented available automatically from the Cyberismo default hub. 
+
+See Cyberismo default hub: https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/hub/moduleList.json
+
+
+==== Adding user specific hubs
+As handling modules is easier through hubs, you can add your own hub with a cyberismo command:
+
+[source,console]
+----
+$ cyberismo add hub <https URL to hub content>
+----
+
+NOTE: Hub endpoint must provide a JSON content that fulfills schema https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/hubSchema.json
+
+
+==== Removing hubs
+
+You can remove the hub with command:
+
+[source,console]
+----
+$ cyberismo remove hub <https URL to hub content>
+----
+
+=== Importing a module using hub
+
+To import a module using a hub, use the following command:
+
+[source,console]
+----
+$ cyberismo import module <unique module prefix>
+----
+
+NOTE: The hub defines how the module can be imported. Whether it is private or not, or if the module should be a copied from file location, or downloaded using URL.
+
+NOTE: When creating a new project, it will automatically prompt for importing Cyberismo team defined modules.
 
 === Importing a public module from git
 
@@ -21,6 +60,8 @@ $ cyberismo import module <https git URL> [branch name]
 === Importing a private module from git
 
 If the git service requires authentication, you must provide access token credentials in environment variables `CYBERISMO_GIT_USER` and `CYBERISMO_GIT_TOKEN` or using a `.env` file that defines these variables.
+
+Alternatively, if you have git with SSH configured, you can use git-protocol for module locations. In these cases, the `private` information from module is not used. 
 
 In this case, the module is imported using the following command:
 
@@ -64,15 +105,26 @@ To remove all imported modules, you need to go over the modules that `cyberismo 
 
 == Updating modules
 
-Cyberismo can update the modules to their latest versions. When you execute the `update-modules` command, Cyberismo will fetch the latest versions of all modules from the origin that you specified when you imported the module. Notice that the modules that were imported from the local file system must reside in the same directory where they were imported from.
+Cyberismo can update the modules to their latest versions. When you execute the `update-modules` command, Cyberismo will download the latest versions of all modules from the origin that you specified when you imported the module. 
+
+NOTE: That the modules that were imported from the local file system must reside in the same directory where they were imported from.
 
 NOTE: To update modules that were imported from the local file system, you must run the update command in the same working directory as you used when you imported the module.
+
+NOTE: Before importing modules from hubs, you must first fetch the data from the hubs with the `cyberismo fetch` command.
 
 To update all modules, including their dependencies where applicable, execute the following command:
 
 [source,console]
 ----
 $ cyberismo update-modules
+----
+
+You can also update a specific module with the following command:
+
+[source,console]
+----
+$ cyberismo update-module <module prefix>
 ----
 
 == Handling dependencies of modules
