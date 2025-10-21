@@ -21,7 +21,7 @@ The latest image can be downloaded with the following command:
 
 To simplify running the image, you can use the following alias:
 
-  $ alias cyberismo='podman run --init --rm -it --userns=keep-id -e HOME=/tmp -v $(pwd):/project:Z -p 3000:3000 docker.io/cyberismo/cyberismo:latest cyberismo'
+  $ alias cyberismo='podman run --init --rm -it --userns=keep-id -e HOME=/tmp -v $(pwd):/project:Z -p 127.0.0.1:3000:3000 docker.io/cyberismo/cyberismo:latest cyberismo'
 
 .Explanation of alias
 [%collapsible]
@@ -48,7 +48,7 @@ Afterward, you can run the application using the following command:
 
 The Windows environment does not support aliases like Linux and macOS do, so the command to use Podman is:
 
-  $ podman run --rm -it --userns=keep-id -v .:/project -p 3000:3000 docker.io/cyberismo/cyberismo cyberismo --help
+  $ podman run --rm -it --userns=keep-id -v .:/project -p 127.0.0.1:3000:3000 docker.io/cyberismo/cyberismo cyberismo --help
 
 
 
