@@ -17,7 +17,7 @@ The latest image can be downloaded with the following command:
 
 To simplify running the image, you can use the following alias:
 
-  $ alias cyberismo='docker run --init --rm -it --user $(id -u):$(id -g) -e HOME=/tmp -v $(pwd):/project:Z -p 3000:3000 cyberismo/cyberismo:latest cyberismo'
+  $ alias cyberismo='docker run --init --rm -it --user $(id -u):$(id -g) -e HOME=/tmp -v $(pwd):/project:Z -p 127.0.0.1:3000:3000 cyberismo/cyberismo:latest cyberismo'
 
 .Explanation of alias
 [%collapsible]
@@ -44,7 +44,7 @@ Afterward, you can run the application using the following command:
 
 The Windows environment does not support aliases like Linux and macOS do, so the command to use Docker is:
 
-  $ docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 3000:3000 cyberismo/cyberismo cyberismo --help
+  $ docker run --rm -it --user $(id -u):$(id -g) -v .:/project -p 127.0.0.1:3000:3000 cyberismo/cyberismo cyberismo --help
 
 
 
