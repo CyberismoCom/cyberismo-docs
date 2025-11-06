@@ -19,7 +19,7 @@ $ cyberismo add hub <https URL to hub content>
 NOTE: Hub endpoint must provide a JSON content that fulfills schema https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/hubSchema.json
 
 ==== Adding default hub
-If user has removed the default hub, or project was created before hub support was added to cyberismo tool, the default hub can be added to the project with command:
+If user has removed the default hub, or the project was created before hub support was added to the Cyberismo tool, the default hub can be added to the project with command:
 
 [source,console]
 ----
