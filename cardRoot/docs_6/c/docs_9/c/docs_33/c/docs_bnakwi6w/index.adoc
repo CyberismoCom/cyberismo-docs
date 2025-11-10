@@ -7,7 +7,7 @@
 
 == Description
 
-The `field` predicate with 4 parameters is a helper that enables a single rule in a query to define a field and its data type.
+The `field` predicate with 4 parameters is a helper that enables a single rule in a query to define a field and its data type. This is useful, for example, in queries that define new fields of query results, for which there is no field type configuration.
 
 This predicate has been implemented with the following rules.
 
