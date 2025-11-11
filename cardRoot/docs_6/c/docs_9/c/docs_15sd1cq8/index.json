@@ -1,0 +1,11 @@
+{
+    "title": "Connectors",
+    "cardType": "base/cardTypes/page",
+    "workflowState": "Draft",
+    "base/fieldTypes/owner": null,
+    "base/fieldTypes/informationClassification": "internal",
+    "rank": "0|ua",
+    "lastUpdated": "2025-11-11T19:33:59.665Z",
+    "links": [],
+    "templateCardKey": "base_2"
+}

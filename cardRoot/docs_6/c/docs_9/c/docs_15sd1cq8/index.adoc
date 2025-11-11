@@ -1,0 +1,45 @@
+== Representing data from an external system
+
+A connector is a tool that fetches data from an external system and generates logic program facts from the data. 
+
+== Connector
+
+Each connector shall generate a `{{#xref}}"cardKey":"docs_4w2qcyj3"{{/xref}}` fact to declare itself.
+
+The connector tool should generate  `{{#xref}}"cardKey":"docs_8mg8p068"{{/xref}}` facts about the connector object for the following fields:
+
+* `displayName`: the name of the connector (`shortText`)
+* `lastSynchronised`: a time stamp of when the connector generated the facts (`dateTime`)
+
+== External items
+
+External data should be described using `{{#xref}}"cardKey":"docs_hexqs5z7"{{/xref}}` facts. An `externalItem` can represent, for example, a ticket, an issue, a risk, a vulnerability etc. Notice that the unique key of an external item is a tuple `(Connector, ItemKey)`.
+
+For each external item, the connector should generate `{{#xref}}"cardKey":"docs_8mg8p068"{{/xref}}` facts for at least the following fields:
+
+* `url`: an URL of the external item (`shortText`)
+* `title`: the title of the external item (`shortText`)
+
+The connector should generate additional `field` facts to describe other properties of its external items, as needed. 
+
+== Links between external items
+
+If the external system of a connector supports linking or associating external items with each other, the connector should generate `{{#xref}}"cardKey":"docs_5ts51i9i"{{/xref}}` facts about these links.
+
+== Labels of external items
+
+If the external system supports labelling or tagging its items, then the connector should generate `{{#xref}}"cardKey":"docs_i4uvdvlf"{{/xref}}` facts. Since external items are identified by a tuple `(Connector, ItemKey)`, the format of a label fact is:
+
+```
+label((<Connector>, <ItemKey>), <Label>).
+```
+
+== Predicates
+
+To sum up, the following terms have been defined for describing external data.
+
+{{#report}}
+    "name": "base/reports/predicates",
+    "category": "Connectors"
+{{/report}}
+

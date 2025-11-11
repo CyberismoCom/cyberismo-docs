@@ -1,0 +1,11 @@
+{
+    "title": "connector(Connector)",
+    "cardType": "base/cardTypes/predicate",
+    "workflowState": "Draft",
+    "rank": "0|b",
+    "lastUpdated": "2025-11-11T09:54:53.977Z",
+    "base/fieldTypes/briefDescription": "Parameter is a connector",
+    "base/fieldTypes/category": "Connectors",
+    "links": [],
+    "templateCardKey": "base_weu9g7lz"
+}
