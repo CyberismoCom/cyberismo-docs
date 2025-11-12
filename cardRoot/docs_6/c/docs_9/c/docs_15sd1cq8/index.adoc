@@ -22,13 +22,23 @@ For each external item, the connector should generate `{{#xref}}"cardKey":"docs_
 
 The connector should generate additional `field` facts to describe other properties of its external items, as needed. 
 
+== Composition
+
+If an external item contains other external items, the connector can generate `{{#xref}}"cardKey":"docs_ti38h9et"{{/xref}}` facts. Since external items are identified by a tuple `(Connector, ItemKey)`, the format of a `parent` fact is:
+
+```
+parent((<Connector>, <ChildItemKey>), (<Connector>, <ParentItemKey>)).
+```
+
+NOTE: Note that an item must not have more than one parent. To express relationships to multiple items, the connector should generate `externalLink` facts instead, see below.
+
 == Links between external items
 
-If the external system of a connector supports linking or associating external items with each other, the connector should generate `{{#xref}}"cardKey":"docs_5ts51i9i"{{/xref}}` facts about these links.
+If the external system of a connector supports linking or associating external items with each other, or if there are other relationships between external items, then the connector should generate `{{#xref}}"cardKey":"docs_5ts51i9i"{{/xref}}` facts about these links.
 
 == Labels of external items
 
-If the external system supports labelling or tagging its items, then the connector should generate `{{#xref}}"cardKey":"docs_i4uvdvlf"{{/xref}}` facts. Since external items are identified by a tuple `(Connector, ItemKey)`, the format of a label fact is:
+If the external system supports labelling or tagging its items, then the connector should generate `{{#xref}}"cardKey":"docs_i4uvdvlf"{{/xref}}` facts. Since external items are identified by a tuple `(Connector, ItemKey)`, the format of a `label` fact is:
 
 ```
 label((<Connector>, <ItemKey>), <Label>).
