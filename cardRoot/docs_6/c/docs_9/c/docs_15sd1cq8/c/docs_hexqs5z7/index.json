@@ -1,0 +1,11 @@
+{
+    "title": "externalItem( (Connector, ItemKey) )",
+    "cardType": "base/cardTypes/predicate",
+    "workflowState": "Draft",
+    "rank": "0|c",
+    "lastUpdated": "2025-11-11T19:26:23.528Z",
+    "base/fieldTypes/briefDescription": "The parameter tuple identifies an external item",
+    "base/fieldTypes/category": "Connectors",
+    "links": [],
+    "templateCardKey": "base_weu9g7lz"
+}
