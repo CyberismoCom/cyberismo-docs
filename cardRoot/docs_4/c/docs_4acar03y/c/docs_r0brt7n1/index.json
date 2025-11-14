@@ -8,5 +8,5 @@
     "base/fieldTypes/owner": null,
     "base/fieldTypes/informationClassification": null,
     "lastTransitioned": "2025-07-07T13:58:13.619Z",
-    "(docs_r0brt7n1,base/fieldTypes/informationClassification)": "Internal"
+    "base/fieldTypes/informationClassification": "internal"
 }
