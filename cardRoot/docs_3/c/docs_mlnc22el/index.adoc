@@ -52,7 +52,7 @@ $ cyberismo import module <unique module prefix>
 
 NOTE: The hub defines how the module can be imported. Whether it is private or not, or if the module should be a copied from file location, or downloaded using URL.
 
-NOTE: When creating a new project, it will automatically prompt for importing Cyberismo team defined modules.
+NOTE: When creating a new project, it will automatically prompt for importing Cyberismo company defined modules.
 
 === Importing a public module from git
 
@@ -120,7 +120,7 @@ To remove all imported modules, you need to go over the modules that `cyberismo 
 
 Cyberismo can update the modules to their latest versions. When you execute the `update-modules` command, Cyberismo will download the latest versions of all modules from the origin that you specified when you imported the module. 
 
-NOTE: That the modules that were imported from the local file system must reside in the same directory where they were imported from.
+NOTE: The modules that were imported from the local file system must reside in the same directory where they were imported from.
 
 NOTE: To update modules that were imported from the local file system, you must run the update command in the same working directory as you used when you imported the module.
 
