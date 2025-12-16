@@ -1,11 +1,12 @@
 {
     "title": "Configuring resources",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "base/fieldTypes/owner": null,
     "base/fieldTypes/informationClassification": "internal",
     "rank": "0|a",
-    "lastUpdated": "2025-07-09T10:33:13.098Z",
+    "lastUpdated": "2025-12-16T10:14:01.549Z",
     "links": [],
-    "templateCardKey": "base_2"
+    "templateCardKey": "base_2",
+    "lastTransitioned": "2025-12-16T10:14:01.548Z"
 }
