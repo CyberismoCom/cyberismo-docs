@@ -1,0 +1,11 @@
+{
+    "title": "selectCollectionField(Collection, Field)",
+    "cardType": "base/cardTypes/predicate",
+    "workflowState": "Draft",
+    "rank": "0|cd",
+    "lastUpdated": "2026-02-04T11:32:07.125Z",
+    "base/fieldTypes/briefDescription": "Selects a field for a specific collection on all hierarchy levels",
+    "base/fieldTypes/category": "Query language",
+    "links": [],
+    "templateCardKey": "base_weu9g7lz"
+}

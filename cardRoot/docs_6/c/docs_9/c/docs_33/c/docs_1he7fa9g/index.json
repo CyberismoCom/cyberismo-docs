@@ -1,9 +1,9 @@
 {
-    "title": "order(HierarchyLevel, Index, Field, Direction)",
+    "title": "order(HierarchyLevel, Collection, Index, Field, Direction)",
     "cardType": "base/cardTypes/predicate",
     "workflowState": "Ready",
     "rank": "0|cn",
-    "lastUpdated": "2025-07-01T09:08:37.228Z",
+    "lastUpdated": "2026-02-04T11:35:57.863Z",
     "base/fieldTypes/briefDescription": "Fine-grained control over the ordering of query results",
     "base/fieldTypes/category": "Query language",
     "links": [],
