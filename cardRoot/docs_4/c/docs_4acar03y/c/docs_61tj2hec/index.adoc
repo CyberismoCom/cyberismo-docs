@@ -10,6 +10,7 @@ The `include` macro supports the following parameters:
 * `"levelOffset"`: An optional offset to adjust the heading levels of the included content. Should be a number as string, such as `"+1"`, `"+2"` or `"-1"`.
 * `"title"`: Optional parameter. Whether to include the title of the card in the included content. The value must be `"include"` to include the title, `"exclude"` to exclude the title, or `"only"` to include the title only and exclude all other content. If the parameter is omitted, then the title will be included 
 * `"pageTitles"`: Optional, either `"normal"` or `"discrete"` to control whether page titles will be included as discrete headings or normal headings. If this parameter is omitted, then normal headings will be included. See https://docs.asciidoctor.org/asciidoc/latest/blocks/discrete-headings/[AsciiDoc documentation] for more information
+* `"whitespace"`: Optional parameter to control whitespace handling in the included content. The value can be `"keep"` (default) to preserve all initial and final whitespace and newlines, or `"trim"` to remove them. The `"trim"` option is particularly useful when including content that should be used as non-AsciiDoc data, such as JSON or other structured formats
 
 == Example
 
