@@ -1,22 +1,22 @@
 == Introduction
 
-https://vega.github.io/vega-lite/[Vega-Lite] is a high-level grammar for producing graphics. It provides a declarative JSON syntax to create an expressive range of visualisations for data analysis and presentation. Vega-Lite builds on https://vega.github.io/vega/[Vega], which is a more verbose lower-level JSON syntax that gives the user more control over the visualisation.   
+https://vega.github.io/vega-lite/[Vega-Lite] is a high-level grammar for producing graphics. It provides a declarative JSON notation to create an expressive range of visualisations for data analysis and presentation. Vega-Lite builds on https://vega.github.io/vega/[Vega], which is a more verbose lower-level JSON notation that gives the user more control over the visualisation.   
 
-In Cyberismo, you can use the `vegaLite` and `vega` macros insert a Vega-Lite or a Vega visualisation, respectively, within the contents of a card. 
+In Cyberismo, you can use the `vegaLite` and `vega` macros to insert a Vega-Lite or a Vega visualisation, respectively, within the contents of a card. 
 
 == Parameters
 
-Both macros work similarly: you just need to include a `spec` macro parameter that contains the JSON object in Vega-Lite or Vega format. 
+Both macros work similarly: you need to include a `spec` macro parameter that contains the JSON object in Vega-Lite or Vega format. 
 
 == Implementing visualisations
 
 TIP: In general, we recommend starting with Vega-Lite, and resorting to Vega only if the capabilities of Vega-Lite are not sufficient for your use case.
 
-Please refer to https://vega.github.io/vega-lite/docs/[Vega-Lite documentation] and https://vega.github.io/vega/docs/[Vega documentation] for more information about the syntax of these two visualisation languages. 
+See https://vega.github.io/vega-lite/docs/[Vega-Lite documentation] and https://vega.github.io/vega/docs/[Vega documentation] for more information about the notation of these two visualisation languages. 
 
 == Example
 
-Let us consider the https://vega.github.io/editor/#/examples/vega-lite/arc_pie[Arc pie chart example] from Vega-Lite. To include this chart in a Cyberismo card with the `vegaLite` macro, simply include the Vega-Lite definition within the `spec` property of a `vegaLite` macro:
+Consider the https://vega.github.io/editor/#/examples/vega-lite/arc_pie[Arc pie chart example] from Vega-Lite. To include this chart in a Cyberismo card with the `vegaLite` macro, include the Vega-Lite definition within the `spec` property of a `vegaLite` macro:
 
 ```
 {{#raw}}
@@ -47,7 +47,7 @@ Let us consider the https://vega.github.io/editor/#/examples/vega-lite/arc_pie[A
 {{/raw}}
 ```
 
-This macro will produce the following output:
+This macro produces the following output:
 
 
 {{#vegaLite}}

@@ -1,10 +1,10 @@
 == Introduction
 
-A template contains a card or a set of cards in a directory hierarchy that is used as a template for new user content. When the user creates a new card or a set of cards from a template, a new copy of the template card(s) is made with new unique card key(s). Notice that cards in a template may form a deep hierarchy, enabling the definition of complex templates with multiple cards, such as a template for a software project.
+A template contains a card or a set of cards in a directory hierarchy that is used as a template for new user content. When the user creates a new card or a set of cards from a template, a new copy of the template card(s) is made with new unique card key(s). Note that cards in a template may form a deep hierarchy, enabling the definition of complex templates with multiple cards, such as a template for a software project.
 
 == Prerequisites
 
-Because a template consists of cards, you must define the required card types before you can define a template. 
+Because a template consists of cards, you must define the required card types before you can define a template.
 
 == Showing available templates
 
@@ -24,11 +24,11 @@ To create a new template, for example `myTemplate`, use the following command:
 
   $ cyberismo create template myTemplate
 
-Cyberismo will create a new directory called `.cards/local/templates/myTemplate/`. The directory will contain a file called `template.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new template will be `example/templates/myTemplate`. 
+Cyberismo will create a new directory called `.cards/local/templates/myTemplate/`. The directory will contain a file called `template.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new template will be `example/templates/myTemplate`.
 
 When choosing a name for your template, see xref:docs_8.adoc[Naming conventions].
 
-To finalise the template definition, you need to edit the `template.json` file with a text editor, and add new cards to the template.
+To finalise the template definition, you need to edit the `template.json` file with a text editor and add new cards to the template.
 
 == Editing the `template.json` file
 
@@ -36,7 +36,7 @@ The `template.json` file contains basic information about the template, which wi
 
 .The properties of a `template.json` file
 |===
-|Properties|Type|Description|Required
+|Property|Type|Description|Required
 
 |**name**
 |`string`
@@ -74,11 +74,11 @@ To add a new card of the card type `example/cardTypes/myCardType` on the top lev
 
 If the template `example/templates/myTemplate` contains a card with the card key `example_d9rj4nab`, then you can add a new card of the type `base/cardTypes/decision` as a child of `example_d9rj4nab` with the following command:
 
-  $ cyberismo add example/templates/myTemplate base/cardTypes/decision example_d9rj4nab 
+  $ cyberismo add example/templates/myTemplate base/cardTypes/decision example_d9rj4nab
 
 == Editing template cards
 
-As the Cyberismo app does not currently support editing the cards of a template, you need to edit the template cards with a text editor. To find out the path to a template, such as `example/templates/myTemplate`,you can use the following command:
+As the Cyberismo app does not currently support editing the cards of a template, you need to edit the template cards with a text editor. To find out the path to a template, such as `example/templates/myTemplate`, you can use the following command:
 
   $ cyberismo show template example/templates/myTemplate
 

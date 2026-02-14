@@ -1,22 +1,21 @@
 == Introduction
 
-To test our application, we provide a simple demo environment for you to explore. The demo environment includes a welcome page that helps you navigate the project contents, as well as an example secure development project for an imaginary IoT device.
+Cyberismo provides a demo environment for you to explore. The demo environment includes a welcome page that helps you navigate the project contents, as well as an example secure development project for an imaginary IoT device.
 
-This demo project showcases the capabilities of our application, including:
+This demo project showcases the capabilities of Cyberismo, including:
 
 - automatic process metrics
 - interconnected tasks
-- an exceptional threat modeling tool
-- and much more
+- a threat modelling tool
 
-You can learn more about these features on the welcome page, go ahead and give it a try!
+You can learn more about these features on the welcome page.
 
-== How to test the demo
+== How to run the demo
 
-To try out our Cyberismo application, we offer three simple methods:
+There are three methods to run the demo:
 
-* https://demo.cyberismo.com[Online demo], where you can easily start a personal demo environment for a quick try. Each online demo instance will be automatically deleted after an hour, so if you want to explore the demo deeper, we recommend the following options to run the demo locally on you own computer.
-* Demo container image which you can run with either Docker or Podman, available in  https://hub.docker.com/repository/docker/cyberismo/cyberismo-demo[Docker Hub]
+* https://demo.cyberismo.com[Online demo], where you can start a personal demo environment for a quick try. Each online demo instance is automatically deleted after an hour, so if you want to explore the demo further, use one of the following options to run the demo locally on your own computer.
+* Demo container image which you can run with either Docker or Podman, available in https://hub.docker.com/repository/docker/cyberismo/cyberismo-demo[Docker Hub]
 * Demo Git Project available in https://github.com/CyberismoCom/cyberismo-demo[GitHub]
 
 Further instructions are provided below.
@@ -29,9 +28,9 @@ Follow these steps to run the demo container with Docker.
 
   $ docker --version
 
-If you don’t see a version number, you may need to https://www.docker.com[install Docker] or use another demo option.
+If you do not see a version number, you may need to https://www.docker.com[install Docker] or use another demo option.
 
-* Use the following command to start the environment. The image will download on the first run:
+* Use the following command to start the environment. The image downloads on the first run:
 
   $ docker run --init --rm -it -p 3000:3000 cyberismo/cyberismo-demo
 
@@ -50,9 +49,9 @@ Follow these steps to run the demo container with Podman.
 
   $ podman --version
 
-If you don’t see a version number, you may need to https://podman.io/docs/installation[install Podman] or use another demo option.
+If you do not see a version number, you may need to https://podman.io/docs/installation[install Podman] or use another demo option.
 
-* Use the following command to start the environment. The image will download on the first run:
+* Use the following command to start the environment. The image downloads on the first run:
 
   $ podman run --init --rm -it -p 3000:3000 docker.io/cyberismo/cyberismo-demo
 
@@ -65,8 +64,8 @@ http://localhost:3000
 
 === Demo project in a local Cyberismo application
 
-* If you haven’t already installed Cyberismo, follow the installation instructions in link:/cards/docs_17[Installing Cyberismo] under **Building and Running Cyberismo from Source**.
-   
+* If you have not already installed Cyberismo, follow the installation instructions in link:/cards/docs_17[Installing Cyberismo] under **Building and running Cyberismo from source**.
+
 * Download the demo project using the following command:
 
   $ git clone https://github.com/CyberismoCom/cyberismo-demo.git
@@ -77,25 +76,3 @@ http://localhost:3000
 
 Once running, the demo environment is accessible in your browser at:
 http://localhost:3000
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

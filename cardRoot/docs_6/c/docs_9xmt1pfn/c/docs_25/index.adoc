@@ -2,13 +2,13 @@
 
 In Cyberismo, a card consists of an AsciiDoc document, stored technically in a text file `index.adoc`, and metadata stored in a JSON file `index.json`.
 
-The metadata consists of standard metadata, such as built-in fields, links and labels, and optional custom fields.
+The metadata consists of standard metadata, such as built-in fields, links, and labels, and optional custom fields.
 
 A _field type_ defines a name, a display name, and a data type for a custom field of a card.
 
 == Standard card metadata fields
 
-The following table documents the standard built-in metadata that can be included in the `index.json` file of any card regardless of the card type. Notice that you should not edit the `index.json` files directly, but you should use the Cyberismo app, whenever applicable.
+The following table documents the standard built-in metadata that can be included in the `index.json` file of any card regardless of the card type. Note that you should not edit the `index.json` files directly but should use the Cyberismo app whenever applicable.
 
 .Common metadata fields of cards
 |===
@@ -26,7 +26,7 @@ The following table documents the standard built-in metadata that can be include
 
 |**workflowState**
 |`string`
-|the name of the card's current state in the workflow
+|The name of the card's current state in the workflow
 | &#10003; Yes
 
 |**labels**
@@ -36,16 +36,16 @@ The following table documents the standard built-in metadata that can be include
 
 |**links**
 |`object` `[]`
-|links to or from this card to other cards
+|Links to or from this card to other cards
 |No
 
 |===
 
-To enable card type specific custom fields, additional properties are allowed. The custom fields are card metadata properties, whose name is a name of a field type.
+To enable card type specific custom fields, additional properties are allowed. The custom fields are card metadata properties whose name is a name of a field type.
 
-== Managing field types using the Cyberismo command line tool
+== Managing field types using the Cyberismo command-line tool
 
-To see a list of the available workflows, use the following command:
+To see a list of the available field types, use the following command:
 
   $ cyberismo show fieldTypes
 
@@ -75,8 +75,8 @@ The data type of a custom field must be one of the following values:
 * **`longText`**: A string that contains a longer text that may have multiple lines.
 * **`number`**: A number that may be a floating point number or an integer (a standard JSON type).
 * **`integer`**: An integral number (a standard JSON type).
-* **`boolean`**: Either true or false (a standard JSON type). In user interfaces, boolean values may be presented by display names Yes and No.
-* **`enum`**: An enumeration. A string that has one of the values defined in a separate `enumValues` array. In user interfaces, an enum is represented as a selection component (drop down list).
+* **`boolean`**: Either true or false (a standard JSON type). In user interfaces, boolean values may be presented by the display names Yes and No.
+* **`enum`**: An enumeration. A string that has one of the values defined in a separate `enumValues` array. In user interfaces, an enum is represented as a selection component (drop-down list).
 * **`list`**: An array that contains zero or more strings, where the allowed values are defined in a separate `enumValues` array. In user interfaces, a list data type is represented as a multiple selection component, where the user can select zero or more of the available options.
 * **`date`**: A date. A date is stored in the `index.json` file as a string in the ISO 8601 format. For example "2024-01-01".
 * **`dateTime`**: A combination of a date and a time. A dateTime is stored in the `index.json` file as a string in UTC in the ISO 8601 format. For example "2024-06-09T08:43:25Z".
@@ -153,4 +153,3 @@ Field types are mapped to logic program facts using the following function terms
     "category": "Field types",
     "orderBy": "rank"
 {{/report}}
-

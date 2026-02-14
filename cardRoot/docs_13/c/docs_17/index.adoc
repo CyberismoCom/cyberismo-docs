@@ -1,6 +1,6 @@
-== Installation Options
+== Installation options
 
-There are several methods available for installing Cyberismo locally, depending on your operating system or preferred platform. Currently, we support the following options:
+Several installation methods are available, depending on your operating system or preferred platform:
 
 {{#report}}
   "name": "base/reports/childrenList"

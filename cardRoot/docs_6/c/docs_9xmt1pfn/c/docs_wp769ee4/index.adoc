@@ -1,10 +1,10 @@
 == Introduction
 
-The configuration of a graph consists of a graph model and a graph view, allowing several different graph views to be created based on a single graph model. 
+The configuration of a graph consists of a graph model and a graph view, allowing several different graph views to be created based on a single graph model.
 
-Please see xref:docs_hbskjelr.adoc[Implementing graphs] for a longer introduction to graphs.
+See xref:docs_hbskjelr.adoc[Implementing graphs] for a longer introduction to graphs.
 
-== Managing graph models using the Cyberismo command line tool
+== Managing graph models using the Cyberismo command-line tool
 
 To see a list of the available graph models, use the following command:
 
@@ -26,12 +26,12 @@ Cyberismo will create the following files:
 
 If the card prefix of your Cyberismo project is `example`, then the full name of the new graph model will be `example/graphModels/myGraphModel`.
 
-When choosing a name for your graph models, see xref:docs_8.adoc[Naming conventions].
+When choosing a name for your graph model, see xref:docs_8.adoc[Naming conventions].
 
-To finalise the graph model definition, you need to use a text editor to 
+To finalise the graph model definition, you need to use a text editor to:
 
-* Edit the basic graph model metadata in the `.cards/local/graphModels/myGraphModel.json` file 
-* Edit the model implementation in `.cards/local/graphModels/myGraphModel/model.lp`
+* Edit the basic graph model metadata in the `.cards/local/graphModels/myGraphModel.json` file.
+* Edit the model implementation in `.cards/local/graphModels/myGraphModel/model.lp`.
 
 == Graph model JSON file format
 
@@ -39,7 +39,7 @@ Basic metadata for a graph model is defined in a JSON file that follows the http
 
 .The properties of a graph model JSON file
 |===
-|Properties|Type|Description|Required
+|Property|Type|Description|Required
 
 |**name**
 |`string`

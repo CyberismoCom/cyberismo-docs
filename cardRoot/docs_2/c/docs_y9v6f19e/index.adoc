@@ -8,7 +8,7 @@ This tutorial shows how to get started with the Cyberismo Information Security M
 * Risk management
 * Incident management
 
-along with the needed field types, link types, templates, workflows, registers, policy checks and progress metrics.
+along with the needed field types, link types, templates, workflows, registers, policy checks, and progress metrics.
 
 == Prerequisites
 
@@ -25,9 +25,9 @@ $ cyberismo create project "ISMS tutorial" myisms isms-tutorial
 
 == Select modules for your project
 
-Select the "ISMS Essentials" from the provided list and press enter.
+Select the "ISMS Essentials" from the provided list and press Enter.
 
-After pressing enter, wait awhile for your modules to be imported.
+After pressing Enter, wait for the import to complete.
 
 [source,console]
 ----
@@ -57,7 +57,7 @@ $ cyberismo create card ismsa/templates/moduleHome
 
 == Start the Cyberismo app
 
-Let us continue using the Cyberismo ISMS essentials module wth the Cyberismo app. To start the app, execute the following command:
+Continue using the Cyberismo ISMS essentials module with the Cyberismo app. To start the app, execute the following command:
 
 [source,console]
 ----
@@ -68,11 +68,11 @@ Then open a browser and navigate to http://localhost:3000/.
 
 == Explore your new ISMS workspace
 
-Now you are ready to explore your new ISMS workspace.
+You are now ready to explore your new ISMS workspace.
 
-* Expand the navigation tree on the left to see the structure of the documentation
-* See progress key performance indicators both in the navigation tree and on the home page
-* You can find an example asset that has three example risks under *Asset register* / *Supporting assets* / *Devices* / *Employee devices*
-* Try if you are able to create a new incident under Incident register
+* Expand the navigation tree on the left to see the structure of the documentation.
+* See progress key performance indicators both in the navigation tree and on the home page.
+* You can find an example asset that has three example risks under *Asset register* / *Supporting assets* / *Devices* / *Employee devices*.
+* Try creating a new incident under Incident register.
 
 image::ISMS-home.png[]

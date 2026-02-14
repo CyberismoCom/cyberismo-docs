@@ -1,8 +1,8 @@
-Whether you are viewing a card or editing a card, you can change the status of the card using the *Status* menu on the app toolbar:
+Whether viewing or editing a card, you can change a card's status using the *Status* menu on the app toolbar:
 
 image::cyberismo-change-card-status.png[]
 
-NOTE: The workflows states for Cyberismo data types are entirely configurable. You can view a list of the available workflows using the Cyberismo command-line interface (CLI):
+NOTE: The workflow states for Cyberismo data types are entirely configurable. You can view a list of the available workflows using the Cyberismo command-line interface (CLI):
 
 [source,console]
 ----
@@ -15,7 +15,7 @@ $ cyberismo show workflows
 ]
 ----
 
-To view details for a particular workflow, again use the Cyberismo CLI:
+To view details for a particular workflow, use the Cyberismo CLI:
 
 [source,console]
 ----

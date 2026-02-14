@@ -1,11 +1,11 @@
-The content of the cards uses the AsciiDoc syntax. 
+The content of the cards uses AsciiDoc notation.
 
-== AsciiDoc syntax
+== AsciiDoc notation
 
-AsciiDoc is a lightweight markup language primarily designed for writing technical documentation. It has a rich syntax that supports, for example headings, tables, lists, admonitions, footnotes, and links. 
+AsciiDoc is a lightweight markup language primarily designed for writing technical documentation. It has a rich notation that supports, for example, headings, tables, lists, admonitions, footnotes, and links.
 
-For a reference guide to the AsciiDoc syntax, see https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[AsciiDoc Quick Reference].
+For a reference guide to AsciiDoc notation, see https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[AsciiDoc Quick Reference].
 
 == Macros
 
-Cyberismo extends the AsciiDox syntax with macros, see xref:docs_4acar03y.adoc[Macros].
+Cyberismo extends AsciiDoc notation with macros; see xref:docs_4acar03y.adoc[Macros].

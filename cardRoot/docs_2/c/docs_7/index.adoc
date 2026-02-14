@@ -5,7 +5,7 @@ Prerequisites: xref:docs_13.adoc[Install Cyberismo].
 
 == Create a project
 
-First, let's check the command line help for creating a project by executing the following command:
+First, check the command-line help for creating a project by executing the following command:
 
 [source,console]
 ----
@@ -32,7 +32,7 @@ Create a new project called "Cyberismo tutorial" that has the card key prefix tu
 $ cyberismo create project "Cyberismo tutorial" tutorial cyberismo-tutorial
 ----
 
-When cyberismo creates a new project it will ask which of the default modules you want to import. Select with space 'Base module' and then press enter:
+When Cyberismo creates a new project, it asks which of the default modules you want to import. Press Space to select 'Base module', then press Enter:
 
 [source,console]
 ----
@@ -44,11 +44,11 @@ $ cyberismo create project "Cyberismo tutorial" tutorial cyberismo-tutorial
  ◯ Secure development essentials
 ----
 
-After pressing enter, wait awhile for your modules to be imported.
+After pressing Enter, wait for the import to complete.
 
 === Import the base module later
 
-If you didn't import 'base' module while creating the project, you can still do it with command:
+If you did not import the 'base' module while creating the project, you can still do it with the following command:
 
 [source,console]
 ----

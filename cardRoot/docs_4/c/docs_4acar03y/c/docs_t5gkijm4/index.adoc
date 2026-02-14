@@ -16,15 +16,15 @@ The graph view `base/graphViews/workflow` selects a workflow for which a state m
 
 The `graph` macro supports the following parameters:
 
-* `"model"`: The model that defines the graph structure (required)
-* `"view"`: The view that defines how the graph is displayed (required)
-* `"cardKey"`: The card to use as context for the graph (optional). If not specified, the card containing this macro is used as context
+* `"model"`: The model that defines the graph structure (required).
+* `"view"`: The view that defines how the graph is displayed (required).
+* `"cardKey"`: The card to use as context for the graph (optional). If not specified, the card containing this macro is used as context.
 
-Graph views may define additional view-specific parameters. For example, the workflow graph view uses a `"workflow"` parameter to specify which workflow to visualize.
+Graph views may define additional view-specific parameters. For example, the workflow graph view uses a `"workflow"` parameter to specify which workflow to visualise.
 
 == Example
 
-To use a graph model and a graph view with the `graph` macro, use the following syntax
+To use a graph model and a graph view with the `graph` macro, use the following notation:
 
 
 ```
@@ -40,7 +40,7 @@ To use a graph model and a graph view with the `graph` macro, use the following 
 
 ```
 
-This graph macro will result in the followng graph:
+This graph macro produces the following graph:
 
 {{#graph}}
     "model": "base/graphModels/workflow",
@@ -50,4 +50,4 @@ This graph macro will result in the followng graph:
 
 NOTE: In the example above, the `"workflow"` parameter is a view-specific parameter defined by the workflow graph view.
 
-To learn how to define new graphs, please see xref:docs_wp769ee4.adoc[Managing graph models] and xref:docs_4ha2rf9l.adoc[Managing graph views].
+To learn how to define new graphs, see xref:docs_wp769ee4.adoc[Managing graph models] and xref:docs_4ha2rf9l.adoc[Managing graph views].

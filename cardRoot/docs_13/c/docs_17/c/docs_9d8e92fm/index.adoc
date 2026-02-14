@@ -4,15 +4,15 @@
 
 Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules. Git installation guide: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0. Node.js is downloadable from https://nodejs.org/.
+Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0 or later. Node.js is downloadable from https://nodejs.org/.
 
-*Ubuntu 20.04* and newer support automatic dependency installation via a post-install script. The post-install script will download a working clingo binary into the project directory and verify the presence of graphviz, which must be installed manually if it is not already present. Graphviz can be installed with the following command:
+*Ubuntu 20.04* and newer support automatic dependency installation via a post-install script. The post-install script downloads a working clingo binary into the project directory and verifies the presence of graphviz, which must be installed manually if it is not already present. Graphviz can be installed with the following command:
 
   $ sudo apt-get update && sudo apt-get install -y graphviz
 
 *Other Linux distributions*: Automatic dependency installation is currently a work in progress. In the meantime, follow these steps to manually install the required dependencies:
 
-. The currently supported Clingo version is 5.7.1. We recommend installing a Python-enabled build using Anaconda, following the instructions provided at: https://github.com/potassco/clingo/releases/.
+. The currently supported Clingo version is 5.7.1. We recommend installing a Python-enabled build using Anaconda or Miniconda, following the instructions provided at: https://github.com/potassco/clingo/releases/.
 
 . Install the latest version of https://clingraph.readthedocs.io/en/latest/clingraph/installation.html[Clingraph].
 
@@ -23,8 +23,8 @@ Take the following steps:
 . Clone the source repository:
 
   $ git clone https://github.com/CyberismoCom/cyberismo.git
-  
-. Change to the source directory. If you have already cloned the repository earlier, remember to pull the latest changes:
+
+. Change to the source directory. If you previously cloned the repository, pull the latest changes:
 
   $ cd cyberismo
   $ git pull origin main # Optional
@@ -32,7 +32,7 @@ Take the following steps:
 . Install pnpm with npm command:
 
   $ npm install -g pnpm
-  
+
 . Execute the following commands:
 
   $ pnpm setup
@@ -42,4 +42,4 @@ Take the following steps:
 
 === Running
 
-After building and installing, run `cyberismo --help` to see the command line help.
+After building and installing, run `cyberismo --help` to see the command-line help.

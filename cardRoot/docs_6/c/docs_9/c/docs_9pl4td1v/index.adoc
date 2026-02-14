@@ -1,4 +1,4 @@
-Logic programs may define side effects that shall be executed on certain operations using the following predicate: 
+Logic programs may define side effects that are executed on certain operations using the following predicate: 
 
 {{#report}}
     "name": "base/reports/predicates",

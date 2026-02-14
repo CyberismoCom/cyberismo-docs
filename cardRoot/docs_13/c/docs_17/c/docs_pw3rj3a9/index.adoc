@@ -2,11 +2,11 @@
 
 === Prerequisites
 
-Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules. Git can be downloaded from https://git-scm.com/downloads/win
+Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules. Git can be downloaded from https://git-scm.com/downloads/win.
 
-Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0. Node.js is downloadable from https://nodejs.org/.
+Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0 or later. Node.js is downloadable from https://nodejs.org/.
 
-When building Cyberismo on Windows, the system automatically installs the required dependencies (Clingo and libraries) using a prebuilt package by Cyberismo.
+When building Cyberismo on Windows, the build process automatically installs the required dependencies (Clingo and libraries) using a prebuilt package by Cyberismo.
 
 === Building
 
@@ -15,12 +15,12 @@ Take the following steps:
 . Clone the source repository:
 
   $ git clone https://github.com/CyberismoCom/cyberismo.git
-  
-. Change to the source directory. If you have already cloned the repository earlier, remember to pull the latest changes:
+
+. Change to the source directory. If you previously cloned the repository, pull the latest changes:
 
   $ cd cyberismo
   $ git pull origin main # Optional
-  
+
 . Install pnpm with npm command:
 
   $ npm install -g pnpm
@@ -35,4 +35,4 @@ Take the following steps:
 
 === Running
 
-After building and installing, run `cyberismo --help` to see the command line help.
+After building and installing, run `cyberismo --help` to see the command-line help.

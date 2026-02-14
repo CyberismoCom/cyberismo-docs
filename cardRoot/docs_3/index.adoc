@@ -1,11 +1,11 @@
-The best way to learn how to use the Cyberismo command line interface is the built-in help. To see the top-level help, execute the following command:
+The best way to learn how to use the Cyberismo command-line interface is the built-in help. To see the top-level help, execute the following command:
 
 [source,console]
 ----
 $ cyberismo help
 ----
 
-The help command will print an overview of the available commands
+The help command prints an overview of the available commands:
 
 [source,console]
 ----
