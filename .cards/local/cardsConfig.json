@@ -1,7 +1,8 @@
 {
-    "schemaVersion": 1,
+    "schemaVersion": 2,
     "cardKeyPrefix": "docs",
     "name": "Cyberismo documentation",
+    "description": "",
     "modules": [
         {
             "name": "base",
