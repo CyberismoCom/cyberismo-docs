@@ -81,13 +81,7 @@ Since Cyberismo content is stored as plain text (AsciiDoc) and JSON, Git can mer
 . Git will mark the conflicting files with standard conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
 . For `index.adoc` files, resolve conflicts as you would with any text file
 . For `index.json` metadata files, ensure the result is valid JSON — pay attention to commas and brackets
-. After resolving, stage and commit:
-
-[source,console]
-----
-$ git add .
-$ git commit -m "Resolve merge conflicts"
-----
+. After resolving, follow the instructions that Git gives to stage and commit the change.
 
 TIP: The `lastUpdated` field in `index.json` frequently causes trivial merge conflicts because it changes on every edit. When both sides updated the same card, simply pick the more recent timestamp.
 
@@ -116,7 +110,7 @@ $ cyberismo app
 == Best practices
 
 * **Commit often** — Make small, focused commits. For example, commit after completing a set of related card edits rather than after a full day of work.
-* **Write meaningful commit messages** — Describe _what_ changed and _why_, not just "updated cards".
+* **Write meaningful commit messages** — Describe _what_ changed and _why_, not just "Update cards".
 * **Use branches** — Keep the `main` branch stable. Use feature branches for larger changes.
 * **Pull before you push** — Always `git pull` before `git push` to avoid unnecessary merge conflicts.
 * **Do not edit modules manually** — Imported modules in `.cards/modules/` are managed by `cyberismo import module` and `cyberismo update-modules`. Manual edits will be overwritten on the next update.
