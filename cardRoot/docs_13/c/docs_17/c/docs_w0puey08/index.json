@@ -1,10 +1,11 @@
 {
     "title": "Docker",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": "internal",
+    "base/fieldTypes/informationClassification": "public",
     "rank": "0|ag",
-    "lastUpdated": "2026-02-14T14:41:34.428Z",
-    "links": []
+    "lastUpdated": "2026-02-14T17:07:59.517Z",
+    "links": [],
+    "lastTransitioned": "2026-02-14T17:05:04.269Z"
 }

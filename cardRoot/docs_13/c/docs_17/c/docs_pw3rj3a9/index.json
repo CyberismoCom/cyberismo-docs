@@ -1,10 +1,11 @@
 {
     "title": "Building and running on Windows",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": "internal",
+    "base/fieldTypes/informationClassification": "public",
     "rank": "0|b",
-    "lastUpdated": "2026-02-14T14:41:52.422Z",
-    "links": []
+    "lastUpdated": "2026-02-14T17:07:59.459Z",
+    "links": [],
+    "lastTransitioned": "2026-02-14T17:05:16.654Z"
 }

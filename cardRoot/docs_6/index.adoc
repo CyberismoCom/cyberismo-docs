@@ -4,6 +4,19 @@ Cyberismo projects require some configuration to run. As an administrator of a C
 
 This section of the documentation discusses Cyberismo configuration concepts. All of these concepts can be used either in local project-specific configuration or in a reusable content module.
 
+The configuration of a Cyberismo project consists of the following resource types:
+
+* *Workflows* — define the states and transitions for cards (e.g. Draft → Ready → Deprecated)
+* *Field types* — define custom metadata fields such as dates, enumerations, or person fields
+* *Card types* — associate a workflow and a set of custom fields with a category of cards
+* *Link types* — define relationship types between cards (e.g. _mitigates_, _causes_)
+* *Templates* — provide reusable card structures that users can instantiate
+* *Reports* — define data queries that produce structured output for display
+* *Graph models and views* — define how to visualise card data and data from connectors as graphs
+* *Calculations* — logic programs that compute derived values, policy checks, and metrics
+
+For details on each resource type, see xref:docs_9xmt1pfn.adoc[Configuring resources]. For information on how logic programs power queries, reports, and graphs, see xref:docs_9.adoc[Queries, reasoning, and visualisations].
+
 == Cyberismo content modules
 
 A Cyberismo module is a reusable collection of templates, card types, workflows, field types, link types, reports, and logic program calculations. When a user imports a module as a dependency to their Cyberismo project, a read-only copy of the module is included in the project directory structure.

@@ -19,13 +19,14 @@ Options:
   -h, --help                                                               Display help for command
 
 Commands:
-  add                                                                      Add items to the project
-  calc                                                                     Used for running logic programs
-  create [options] <type> [target] [parameter1] [parameter2] [parameter3]  Create cards, resources and other project items
+  add [options]                                                            Add items to the project
+  calc [options]                                                           Used for running logic programs
+  create [options]                                                         Create cards, resources and other project items
   edit [options] <cardKey>                                                 Edit a card
   export [options] <format> <output> [cardKey]                             Export a project or a card
   fetch [options]                                                          Retrieve external data to local file system.
   import [options]                                                         Import modules and data into the project
+  migrate [options] [version]                                              Migrate project schema to a newer version.
   move [options] [source] [destination]                                    Moves a card from root to under another card, from under another card to root, or from under a one card to another.
   preview [dir]                                                            Preview the exported site
   rank [options]                                                           Manage card ranking and ordering
@@ -39,4 +40,40 @@ Commands:
   validate [options]                                                       Validate project structure
   app [options]                                                            Starts the cyberismo app, accessible with a web browser at http://localhost:3000
   help [command]                                                           display help for command
+----
+
+Many commands have subcommands. For example, `create` has subcommands for each resource type:
+
+[source,console]
+----
+$ cyberismo create help
+
+Usage: cyberismo create [options] [command]
+
+Create cards, resources and other project items
+
+Commands:
+  attachment <cardKey> <filename>                   Create an attachment for a card
+  card <template> [parentCardKey]                   Create a card from a template
+  cardType <name> <workflow>                        Create a new card type
+  fieldType <name> <dataType>                       Create a new field type
+  graphModel <name>                                 Create a new graph model
+  graphView <name>                                  Create a new graph view
+  calculation <name>                                Create a new calculation
+  label <cardKey> <labelName>                       Create a label on a card
+  link <source> <destination> <linkType> [desc]     Create a link between two cards
+  linkType <name>                                   Create a new link type
+  project <name> <prefix> <path> [cat] [desc]       Create a new project
+  report <name>                                     Create a new report
+  template <name> [content]                         Create a new template
+  workflow <name> [content]                         Create a new workflow
+  resource <resourceName> [content]                 Create a new resource
+  help [command]                                    display help for command
+----
+
+To get detailed help for any command, add `help` after the command name:
+
+[source,console]
+----
+$ cyberismo show help
 ----
