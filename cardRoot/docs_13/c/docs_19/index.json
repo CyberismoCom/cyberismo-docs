@@ -1,10 +1,11 @@
 {
     "title": "Updating Cyberismo",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|m",
-    "lastUpdated": "2026-02-14T14:42:13.500Z",
+    "lastUpdated": "2026-02-14T17:04:53.954Z",
     "links": [],
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": "public"
+    "base/fieldTypes/informationClassification": "public",
+    "lastTransitioned": "2026-02-14T17:04:53.954Z"
 }

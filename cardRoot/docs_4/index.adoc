@@ -1,4 +1,13 @@
-You can view and edit the contents of a Cyberismo project with the Cyberismo app.
+The Cyberismo app is a local web application for viewing and editing the contents of a Cyberismo project. It provides:
+
+* A *navigation tree* on the left side for browsing the card hierarchy
+* A *card viewer* that renders card content, metadata fields, and links
+* An *editor* for modifying card content using AsciiDoc notation
+* *Workflow management* for transitioning cards through workflow states
+* *Card creation* from available templates
+* Support for *macros* that embed reports, graphs, and other dynamic content
+
+== Starting the app
 
 To start the app, execute the following command in the Cyberismo project directory:
 
@@ -11,7 +20,7 @@ Then open a browser and navigate to http://localhost:3000/.
 
 CAUTION:  The Cyberismo app has been designed for local use by a single user only. Do not expose this web application over the network or to multiple users.
 
-See also:
+== Learn more
 
 {{#report}}
   "name": "base/reports/childrenList"

@@ -1,10 +1,11 @@
 {
     "title": "Installing Cyberismo",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "rank": "0|a",
-    "lastUpdated": "2026-02-14T14:41:13.050Z",
+    "lastUpdated": "2026-02-14T17:05:23.169Z",
     "links": [],
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": "public"
+    "base/fieldTypes/informationClassification": "public",
+    "lastTransitioned": "2026-02-14T17:05:23.169Z"
 }

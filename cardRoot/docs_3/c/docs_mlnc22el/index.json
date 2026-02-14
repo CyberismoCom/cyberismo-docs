@@ -1,11 +1,12 @@
 {
     "title": "Importing and updating modules",
     "cardType": "base/cardTypes/page",
-    "workflowState": "Draft",
+    "workflowState": "Ready",
     "base/fieldTypes/owner": null,
-    "base/fieldTypes/informationClassification": "internal",
+    "base/fieldTypes/informationClassification": "public",
     "rank": "0|b",
-    "lastUpdated": "2026-02-14T14:54:57.564Z",
+    "lastUpdated": "2026-02-14T17:07:59.579Z",
     "links": [],
-    "templateCardKey": "base_2"
+    "templateCardKey": "base_2",
+    "lastTransitioned": "2026-02-14T17:05:53.722Z"
 }
