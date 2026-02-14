@@ -4,7 +4,7 @@
 * link:https://cyberismo.com/solution[Solution introduction]
 * xref:docs_12.adoc[Demo]
 * xref:docs_11.adoc[Solution architecture]
-* xref:docs_17.adoc[Installation]
+* xref:docs_13.adoc[Installation]
 * xref:docs_2.adoc[Getting started tutorial]
 
 == Why cybersecurity compliance is important
