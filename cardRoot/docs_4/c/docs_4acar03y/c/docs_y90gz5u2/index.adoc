@@ -1,11 +1,11 @@
-The `scoreCard` macro shows a key performance indicator or another metric value as a score card. 
+The `scoreCard` macro shows a key performance indicator or another metric value as a scorecard. 
 
 == Parameters
 
-* `"title"`: Title text on top of the score card (optional)
-* `"value"`: The main value shown in the center
-* `"unit"`: An unit shown after the value (optional)
-* `"legend"`: Description text shown below the value (optional)
+* `"title"`: Title text on top of the scorecard (optional).
+* `"value"`: The main value shown in the centre.
+* `"unit"`: A unit shown after the value (optional).
+* `"legend"`: Description text shown below the value (optional).
 
 == Example
 
@@ -24,7 +24,7 @@ For example, consider the following macro:
 {{/raw}}
 ```
 
-The macro will be rendered as the following score card.
+The macro is rendered as the following scorecard.
 
 {{#scoreCard}}
     "title": "Security control adoption",

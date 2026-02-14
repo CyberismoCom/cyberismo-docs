@@ -1,12 +1,12 @@
-This page describes the naming conventions when developing new Cyberismo solution modules. While you are free to use
+This page describes the naming conventions when developing new Cyberismo solution modules.
 
 == General principle: use camelCase
 
-In general, the user-configurable names in Cyberismo content format use the so called `camelCase` notation, except labels, which use the so-called `kebab-case`.
+In general, the user-configurable names in Cyberismo content format use the so-called `camelCase` notation, except labels, which use the so-called `kebab-case`.
 
 Cyberismo _modules_ have a separately configurable name, which is defined in the `cardsConfig.json` file by convention in `camelCase`. Similarly by convention, the source code repository of a module is named in kebab-case and it should begin with `module-`, for example `module-my-example`.
 
-Other types of Cyberismo configuration do not have separately configurable names, but their name is the file or directory name in which they are declared. Card types, workflows, field types, link types, templates and other basic concepts of the Cyberismo content format are named in `camelCase`. For example, a `securityIssue` card type would be defined in a JSON file `securityIssue.json`
+Other types of Cyberismo configuration do not have separately configurable names, but their name is the file or directory name in which they are declared. Card types, workflows, field types, link types, templates, and other basic concepts of the Cyberismo content format are named in `camelCase`. For example, a `securityIssue` card type would be defined in a JSON file `securityIssue.json`.
 
 All other types of files in the Cyberismo content format are also named in `camelCase`. This includes logic program file names that have the file extension `.lp`, such as `riskLevelCalculation.lp`.
 
@@ -14,7 +14,7 @@ CAUTION: Do not choose names that differ in their case only, such as `example.js
 
 == References to configuration
 
-When we refer to these concepts in the configuration, the references always include the module prefix and the type of the concept, for example `modulea/templates/decision`
+When referring to these concepts in the configuration, the references always include the module prefix and the type of the concept, for example `modulea/templates/decision`.
 
 Do not include the type of the item in the name. For example, if you need a workflow for decisions, it should be called `decision` rather than `decisionWorkflow`. It will be referred to as `modulea/workflows/decision`.
 
@@ -23,7 +23,7 @@ The following table shows how the main Cyberismo concepts are referred to in Cyb
 .Naming of Cyberismo concepts
 [%autowidth]
 |===
-|Concept  |Example Name
+|Concept  |Example name
 
 |Workflow
 |`modulea/workflows/example`
@@ -70,4 +70,4 @@ User-configured field types and built-in fields of cards are used in `field` ter
 
 == Labels
 
-Labels should be used sparingly. Consider using a custom field instead of a label, whenever possible. Labels should be named according to the `kebab-case` convention.
+Labels should be used sparingly. Consider using a custom field instead of a label whenever possible. Labels should be named according to the `kebab-case` convention.

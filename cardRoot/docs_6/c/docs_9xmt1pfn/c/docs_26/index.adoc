@@ -1,10 +1,10 @@
 == Introduction
 
-A workflow defines the states and state transitions that cards move through during their lifecycle. 
+A workflow defines the states and state transitions that cards move through during their lifecycle.
 
-For example, a task workflow could consists of the states and transitions *Open* → *In Progress* → *Done*, and a document workflow could be defined as *Draft* → *Approved* → *Archived*.
+For example, a task workflow could consist of the states and transitions *Open* → *In Progress* → *Done*, and a document workflow could be defined as *Draft* → *Approved* → *Archived*.
 
-== Managing workflows using the Cyberismo command line tool
+== Managing workflows using the Cyberismo command-line tool
 
 To see a list of the available workflows, use the following command:
 
@@ -48,7 +48,7 @@ Workflows are defined in JSON files that follow the https://github.com/Cyberismo
 
 |**transitions**
 |`object` `[]`
-|The state transitions of the workflow, see below
+|The state transitions of the workflow, see below.
 | &#10003; Yes
 
 |===
@@ -80,7 +80,7 @@ The `states` property of a workflow is an array of objects that have the followi
 The `transitions` property of a workflow is an array of objects that have the following properties:
 
 * `name`: A name that identifies the workflow transition. Required.
-* `fromState`: An array of state names, where this transition can start from. Each item of the array is a name of the starting state of the transition. The wildcard '*' denotes any state and and empty value denotes the transition to create a new card with this workflow. Required
+* `fromState`: An array of state names from which this transition can start. Each item of the array is a name of the starting state of the transition. The wildcard '*' denotes any state, and an empty value denotes the transition to create a new card with this workflow. Required.
 * `toState`: A string that is the name of the end state of the transition. Required.
 
 .Properties of the items in the transitions array
@@ -94,7 +94,7 @@ The `transitions` property of a workflow is an array of objects that have the fo
 
 |**fromState**
 |`string []`
-|An array of state names, where this transition can start from. Each item of the array is a name of the starting state of the transition. The wildcard '*' denotes any state and and empty string denotes the transition to create a new card with this workflow.
+|An array of state names from which this transition can start. Each item of the array is a name of the starting state of the transition. The wildcard '*' denotes any state, and an empty string denotes the transition to create a new card with this workflow.
 | &#10003; Yes
 
 |**toState**

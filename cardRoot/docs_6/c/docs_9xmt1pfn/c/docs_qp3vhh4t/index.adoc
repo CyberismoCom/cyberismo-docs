@@ -1,10 +1,10 @@
 == Introduction
 
-A link is a relationship between cards. Each link is of a specific _link type_, which defines a name such as _causes_, an outbound display name (_Causes_), an inbound display name (_Caused by_) and the allowed card types for the source and destination of a link.
+A link is a relationship between cards. Each link is of a specific _link type_, which defines a name such as _causes_, an outbound display name (_Causes_), an inbound display name (_Caused by_), and the allowed card types for the source and destination of a link.
 
 Links may be used, for example, to represent that an asset presents a risk, a control mitigates a risk, a control implements a compliance requirement, a threat is related to another threat, or that a test verifies a requirement.
 
-== Managing link types using the Cyberismo command line tool
+== Managing link types using the Cyberismo command-line tool
 
 To see a list of the available link types, use the following command:
 
@@ -32,7 +32,7 @@ Link types are defined in JSON files that follow the https://github.com/Cyberism
 
 .The properties of a link type
 |===
-|Properties|Type|Description|Required
+|Property|Type|Description|Required
 
 |**name**
 |`string`
@@ -56,7 +56,7 @@ Link types are defined in JSON files that follow the https://github.com/Cyberism
 
 |**destinationCardTypes**
 |`string` `[]`
-|The names of the card types that can be the target of this link type. If empty, all card types are allowed.
+|The names of the card types that can be the destination of this link type. If empty, all card types are allowed.
 |&#10003; Yes
 
 |**enableLinkDescription**

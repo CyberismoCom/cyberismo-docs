@@ -1,6 +1,6 @@
 == Representing a card as a logic program
 
-The bulk of the generated logic program consists of card-speficic facts that declare the fields, labels and links of the card.
+The bulk of the generated logic program consists of card-specific facts that declare the fields, labels, and links of the card.
 
 The attributes of cards are declared as logic program facts using a field term:
 
@@ -9,7 +9,7 @@ The attributes of cards are declared as logic program facts using a field term:
 field(CardKey, Field, Value).
 ----
 
-Card keys work directly as constants in ASP encodings. Fields names are encoded as strings, and field values either as strings or integers.
+Card keys work directly as constants in ASP encodings. Field names are encoded as strings, and field values either as strings or integers.
 
 If the card is not directly under the card root, a parent term is generated to declare the card key of the card in the parent directory:
 
@@ -18,24 +18,24 @@ If the card is not directly under the card root, a parent term is generated to d
 parent(ChildCardKey, ParentCardKey).
 ----
 
-Cards may be tagged with a label in the `index.json` file of the card. This results in the following term to be generated for each label:
+Cards may be tagged with a label in the `index.json` file of the card. This results in the following term being generated for each label:
 
 [source]
 ----
 label(CardKey, Label).
 ----
 
-Finally, links between cards are declared with the link term. There are two variants of this term, one for link types that use link descriptions and another for link types that do not use link descriptions
+Finally, links between cards are declared with the link term. There are two variants of this term, one for link types that use link descriptions and another for link types that do not use link descriptions:
 
 [source]
 ----
 link(Source, Destination, LinkType, LinkDescription). <1>
 link(Source, Destination, LinkType). <2>
 ----
-<1> This version is used if the link type uses link descriptions
-<2> This version is used if the link type does not use link descriptions
+<1> This version is used if the link type uses link descriptions.
+<2> This version is used if the link type does not use link descriptions.
 
-For example, the the following logic program could be generated from a card with the card key example_2. This card is a child card of example_1, and it is of the card type internal-control, it has a custom field `controlImplementer`, it has a label, and it is linked to another card:
+For example, the following logic program could be generated from a card with the card key example_2. This card is a child card of example_1, and it is of the card type internal-control. It has a custom field `controlImplementer`, a label, and a link to another card:
 
 [source]
 ----

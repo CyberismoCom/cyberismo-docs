@@ -2,10 +2,10 @@ The `percentage` macro shows a percentage value, such as a key performance indic
 
 == Parameters
 
-* `"title"`: Title text on top of the widget
-* `"value"`: Percentage value (0-100)
-* `"legend"`: Description text shown below the value
-* `"colour"`: The Colour of the progress arc (optional). One of `"blue"`, `"green"`, `"yellow"`, `"red"`, `"orange"`, or `"purple"`
+* `"title"`: Title text on top of the widget.
+* `"value"`: Percentage value (0-100).
+* `"legend"`: Description text shown below the value.
+* `"colour"`: The colour of the progress arc (optional). One of `"blue"`, `"green"`, `"yellow"`, `"red"`, `"orange"`, or `"purple"`.
 
 == Example
 
@@ -24,7 +24,7 @@ For example, consider the following macro:
 {{/raw}}
 ```
 
-The macro will be rendered as follows.
+The macro is rendered as follows.
 
 {{#percentage}}
     "title": "Risk management completed",

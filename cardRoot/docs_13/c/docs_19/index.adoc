@@ -3,7 +3,7 @@ The latest image version can be pulled with the following command:
 
   $ docker pull cyberismo/cyberismo:latest
 
-Or with podman
+Or with Podman:
 
   $ podman pull docker.io/cyberismo/cyberismo:latest
 
@@ -15,4 +15,4 @@ To update an existing installation of Cyberismo, pull the latest changes from th
   $ pnpm install
   $ pnpm build
 
-You now have the latest version of Cyberismo from the upstream repository.
+Cyberismo is now updated to the latest version.

@@ -4,7 +4,7 @@ NOTE: Cyberismo has partial support for https://docs.asciidoctor.org/pdf-convert
 
 == Example
 
-Consider this following AsciiDoc snippet:
+Consider the following AsciiDoc snippet:
 
 ```
 {{#raw}}
@@ -14,6 +14,6 @@ To give us feedback, see {{#xref}} "cardKey": "docs_i13qzif0" {{/xref}}.
 {{/raw}}
 ```
 
-This will be rendered as:
+This is rendered as:
 
 To give us feedback, see {{#xref}} "cardKey": "docs_i13qzif0" {{/xref}}.

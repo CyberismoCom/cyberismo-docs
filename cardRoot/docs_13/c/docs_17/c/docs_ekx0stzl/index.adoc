@@ -1,10 +1,10 @@
 == Prerequisites
 
-Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules. Git for Windows can be downloaded from https://git-scm.com/downloads/win. Other operating systems have their preferred mechanism for installing the Git package.
+Install Git. While Cyberismo does not directly depend on Git, you will need it to manage Cyberismo content, such as when installing Cyberismo modules. Git for Windows can be downloaded from https://git-scm.com/downloads/win. For other operating systems, see the https://git-scm.com/book/en/v2/Getting-Started-Installing-Git[Git installation guide].
 
-Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0. Node.js is downloadable from https://nodejs.org/. 
+Install Node.js. The currently supported Node.js version is the latest LTS, v20.10.0 or later. Node.js is downloadable from https://nodejs.org/.
 
-NOTE: Installing the NPM package on macOS requires that you install the Clingo answer set programming runtime before installing the NPM package. The easiest way is to use HomeBrew to install the clingo package.
+NOTE: Installing the NPM package on macOS requires that you install the Clingo answer set programming runtime before installing the NPM package. The easiest way is to use Homebrew to install the clingo package.
 
 == Installation
 

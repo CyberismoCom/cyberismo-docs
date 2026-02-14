@@ -1,4 +1,4 @@
-You can view and edit the contents of a Cyberismo project with the Cyberismo app. 
+You can view and edit the contents of a Cyberismo project with the Cyberismo app.
 
 To start the app, execute the following command in the Cyberismo project directory:
 

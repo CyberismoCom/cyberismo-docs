@@ -1,14 +1,14 @@
 == Introduction
 
-In Cyberismo, each card is of a specific card type, which defines the workflow being used and optionally a set of custom fields. Separate card types may be defined, for example, for controlled documents, risks, threats, security requirements, architecture decisions, or tasks. 
+In Cyberismo, each card is of a specific card type, which defines the workflow being used and optionally a set of custom fields. Separate card types may be defined, for example, for controlled documents, risks, threats, security requirements, architecture decisions, or tasks.
 
-Custom fields may be defined, for example, for various dates such as deadlines or time stamps, enumerations such as the likelihood or the impact of a risk, or a person, such as an assignee of a task.
+Custom fields may be defined, for example, for various dates such as deadlines or timestamps, enumerations such as the likelihood or the impact of a risk, or a person such as an assignee of a task.
 
 == Prerequisites
 
-Before you can define a card type, you must define or choose an existing workflow, and define the required field types.
+Before you can define a card type, you must define or choose an existing workflow and define the required field types.
 
-== Managing card types using the Cyberismo command line tool
+== Managing card types using the Cyberismo command-line tool
 
 To see a list of the available card types, use the following command:
 
@@ -20,7 +20,7 @@ To see the help for how to create a card type, use the following command:
 
 To create a new card type, for example `myCardType`, using the workflow `example/workflows/myWorkflow`, use the following command:
 
-  $ cyberismo create cardType myCardType example/workflows/myWorkflows
+  $ cyberismo create cardType myCardType example/workflows/myWorkflow
 
 Cyberismo will create a new file called `myCardType.json` in `.cards/local/cardTypes/myCardType.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new card type will be `example/cardTypes/myCardType`.
 
@@ -34,7 +34,7 @@ Card types are defined in JSON files that follow the https://github.com/Cyberism
 
 .The properties of a card type
 |===
-|Properties|Type|Description|Required
+|Property|Type|Description|Required
 
 |**name**
 |`string`
@@ -85,7 +85,7 @@ The `customFields` property of a card type is an array of objects that have the 
 
 |**isCalculated**
 |`boolean`
-|Defines whether the field value is a calculated field that the user cannot modify. Optional. Defaults to false: the field is considered editable and not a calculated field, if this property is omitted.
+|Defines whether the field value is a calculated field that the user cannot modify. Optional. Defaults to false: the field is considered editable and not a calculated field if this property is omitted.
 | No
 
 |===

@@ -2,11 +2,11 @@
 
 A report consists of a query and an AsciiDoc template for showing the results of the query. Users can include reports in the contents of cards with the xref:docs_r0brt7n1.adoc[`report` macro].
 
-The concept of reports is very simple yet powerful. You can use reports to show data from your Cyberismo project, for example, as a table, a list, a JSON document, or an XML document. The fact that Cyberismo internally implements the graph macro as a report illustrates the power of Cyberismo reports.
+Reports are versatile: you can use them to show data from your Cyberismo project, for example, as a table, a list, a JSON document, or an XML document. The fact that Cyberismo internally implements the graph macro as a report illustrates the power of Cyberismo reports.
 
-Please refer to xref:docs_chclhxsk.adoc[Structure and execution of logic programs] for a detailed description how Cyberismo executes logic programs to produce reports, and to xref:docs_j1ldnk0s.adoc[Implementing reports] for a longer tutorial on how to implement queries and report templates.
+See xref:docs_chclhxsk.adoc[Structure and execution of logic programs] for a detailed description of how Cyberismo executes logic programs to produce reports, and xref:docs_j1ldnk0s.adoc[Implementing reports] for a longer tutorial on how to implement queries and report templates.
 
-== Managing reports using the Cyberismo command line tool
+== Managing reports using the Cyberismo command-line tool
 
 To see a list of the available reports, use the following command:
 
@@ -32,12 +32,12 @@ If the card prefix of your Cyberismo project is `example`, then the full name of
 
 When choosing a name for your report, see xref:docs_8.adoc[Naming conventions].
 
-To finalise the report definition, you need to use a text editor to 
+To finalise the report definition, you need to use a text editor to:
 
-* Edit the basic report metadata in the `.cards/local/reports/myReport.json` file 
-* If your report requires additional parameters, define the parameters for the report macro by editing the JSON schema file `.cards/local/reports/myReport/parameterSchema.json`
-* Edit the query in `.cards/local/reports/myReport/query.lp.hbs`
-* Edit the AsciiDoc template in `.cards/local/reports/myReport/index.adoc.hbs`
+* Edit the basic report metadata in the `.cards/local/reports/myReport.json` file.
+* If your report requires additional parameters, define the parameters for the report macro by editing the JSON schema file `.cards/local/reports/myReport/parameterSchema.json`.
+* Edit the query in `.cards/local/reports/myReport/query.lp.hbs`.
+* Edit the AsciiDoc template in `.cards/local/reports/myReport/index.adoc.hbs`.
 
 == Report JSON file format
 
@@ -45,7 +45,7 @@ Basic metadata for a report is defined in a JSON file that follows the https://g
 
 .The properties of a report JSON file
 |===
-|Properties|Type|Description|Required
+|Property|Type|Description|Required
 
 |**name**
 |`string`
@@ -75,7 +75,7 @@ Additional properties are not allowed.
 
 The parameter schema file `parameterSchema.json` defines a https://json-schema.org/[JSON schema] for the report macro parameters.
 
-NOTE: If your report does not require custom parameters to the report macro, then you can leave this file as it is by default. You only need to edit this file, if your report takes additional parameters.
+NOTE: If your report does not require custom parameters to the report macro, then you can leave this file as it is by default. You only need to edit this file if your report takes additional parameters.
 
 The report macro that can be included in card contents has the following format:
 
@@ -93,11 +93,11 @@ The report macro that can be included in card contents has the following format:
 
 The parameters that are enclosed within the report macro form technically a JSON object, even though the leading `{` and trailing `}` characters have been omitted for improved readability. Cyberismo validates the parameters of the report macro using JSON schema validation.
 
-The card key of the card in which the macro was included is always included in `cardKey` property of the parameters object. The user can override this by setting a `cardKey` property to some other card key.
+The card key of the card in which the macro was included is always included in the `cardKey` property of the parameters object. The user can override this by setting a `cardKey` property to some other card key.
 
-Sometimes, it is useful to define additional parameters for a report. For example, you might want a report macro to take an array of labels as an additional report-specific parameter. In these cases, you need to edit the `parameterSchema.json` file and add a definition of your additional parameters. 
+Sometimes, it is useful to define additional parameters for a report. For example, you might want a report macro to take an array of labels as an additional report-specific parameter. In these cases, you need to edit the `parameterSchema.json` file and add a definition of your additional parameters.
 
-For example, the following `parameterSchema.json` file defines the parameters for report that requires the `labels` parameter to contain an array of strings. The `name` and `cardKey` parameters are included in the parameterSchema.json file by default:
+For example, the following `parameterSchema.json` file defines the parameters for a report that requires the `labels` parameter to contain an array of strings. The `name` and `cardKey` parameters are included in the parameterSchema.json file by default:
 
 ----
 {
@@ -145,15 +145,15 @@ result(Card) :- parent(Card, { {cardKey}}).
 
 ```
 
-As the query is parameterised with the `cardKey` property of the report macro, the query will yield the child cards of the current card.
+As the query is parameterised with the `cardKey` property of the report macro, the query yields the child cards of the current card.
 
 == AsciiDoc template
 
 The AsciiDoc template defines the output format of the report. Since Cyberismo cards are rendered from AsciiDoc, you can use all the features of AsciiDoc in the results of your reports. You can even use nested Cyberismo macros.
 
-When rendering a report, the execution of the query will yield a result object, which is given as the context for another Handlebars template, which is defined in the `index.adoc.hbs` file.
+When rendering a report, the execution of the query yields a result object, which is given as the context for another Handlebars template defined in the `index.adoc.hbs` file.
 
-For example, the default query will result in an object that has a property `results` which is an array of query result objects. Each result object will have a `title` property. When this context is rendered with the AsciiDoc template that a new report gets by default, we will get the titles of the child cards as a list of bullet points. The default AsciiDoc template is the following:
+For example, the default query results in an object that has a property `results` which is an array of query result objects. Each result object has a `title` property. When this context is rendered with the AsciiDoc template that a new report gets by default, the output is a list of bullet points showing the titles of the child cards. The default AsciiDoc template is the following:
 
 ```
 {{#raw}}
@@ -177,4 +177,3 @@ Reports are mapped to logic program facts using the following function terms:
     "category": "Reports",
     "orderBy": "rank"
 {{/report}}
-
