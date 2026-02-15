@@ -4,7 +4,7 @@ This section covers how to install, update, and uninstall the Cyberismo tool. Se
 * *Docker or Podman* — run Cyberismo as a container without installing dependencies on your host system.
 * *Build from source* — clone the repository and build locally on Windows, Linux, or macOS.
 
-Before installing, ensure you have https://git-scm.com/[Git] installed, as it is needed to manage Cyberismo content and modules.
+For more information, see:
 
 {{#report}}
   "name": "base/reports/childrenList"

@@ -1,3 +1,11 @@
+The method of uninstalling Cyberismo depends on the installation method.
+
+== NPM registry
+
+If you installed Cyberismo from the NPM registry, you can uninstall it with the following command:
+
+  $ npm uninstall -g @cyberismo/cli
+
 == Docker image from Docker Hub
 The Docker image can be removed from the system with the following command:
 
@@ -8,7 +16,7 @@ Or with Podman:
   $ podman rmi cyberismo/cyberismo:latest
 
 == Local installation
-To uninstall Cyberismo, take the following steps:
+To uninstall Cyberismo that you have built locally from source, take the following steps:
 
 * Uninstall the global Cyberismo executable:
 
