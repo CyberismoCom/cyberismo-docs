@@ -8,7 +8,54 @@ Custom fields may be defined, for example, for various dates such as deadlines o
 
 Before you can define a card type, you must define or choose an existing workflow and define the required field types.
 
-== Managing card types using the Cyberismo command-line tool
+== Managing card types using the configuration editor
+
+Use the *configuration editor* to manage card types.
+
+=== Creating a card type
+
+To create a new card type:
+
+1. Open the **configuration editor** in the Cyberismo app by setting the path part of the URL to `/configuration`.
+2. Select **Card Types** from the tree menu on the left, or use the **New Resource** menu in the toolbar.
+3. Click **Create new** on the Card Types overview page.
+4. Enter an identifier for the new card type and select a workflow.
+
+The new card type will be created and the editor will open.
+
+When choosing a name for your card type, see xref:docs_8.adoc[Naming conventions].
+
+=== Editing a card type
+
+In the card type editor, you can edit the following properties:
+
+* **Identifier**: The technical name of the card type. Renaming is supported.
+* **Display name**: The name shown in user interfaces.
+* **Description**: A longer description of the card type.
+* **Workflow**: Select which workflow cards of this type will use.
+
+Each field has individual save and cancel buttons that appear when you make changes.
+
+=== Managing custom fields
+
+The **Custom Fields** section in the card type editor allows you to manage the fields available on cards of this type:
+
+* **Add a field**: Click the add button to select a field type from the existing field types. Set the display name (optionally overriding the field type's display name) and whether the field is a calculated field.
+* **Edit a field**: Click on a field to edit its display name or calculated flag inline.
+* **Change field visibility**: Each field can be set to one of three visibility levels:
+  - _Always visible_ — the field is shown whenever card metadata is displayed.
+  - _Optionally visible_ — the field can be shown when the user expands optional fields.
+  - _Hidden_ — the field is not shown in the user interface.
+* **Reorder fields**: Use the up/down buttons to change the display order of fields within each visibility group.
+* **Remove a field**: Click the delete button on a field to remove it from the card type (with confirmation).
+
+=== Deleting a card type
+
+To delete a card type, open it in the editor and use the context menu (three-dot button) in the toolbar to select **Delete Resource**.
+
+== Managing card types using the command-line tool
+
+You can also manage card types using the Cyberismo command-line tool.
 
 To see a list of the available card types, use the following command:
 
@@ -24,13 +71,11 @@ To create a new card type, for example `myCardType`, using the workflow `example
 
 Cyberismo will create a new file called `myCardType.json` in `.cards/local/cardTypes/myCardType.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new card type will be `example/cardTypes/myCardType`.
 
-When choosing a name for your card type, see xref:docs_8.adoc[Naming conventions].
-
-To finalise the card type definition, you need to edit the `myCardType.json` file with a text editor.
-
 == Card type file format
 
 Card types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/cardTypeSchema.json[card type schema], as described in the following tables.
+
+NOTE: Do not edit the JSON files directly. The configuration editor provides a graphical interface for managing all card type properties.
 
 .The properties of a card type
 |===

@@ -4,7 +4,43 @@ A link is a relationship between cards. Each link is of a specific _link type_, 
 
 Links may be used, for example, to represent that an asset presents a risk, a control mitigates a risk, a control implements a compliance requirement, a threat is related to another threat, or that a test verifies a requirement.
 
-== Managing link types using the Cyberismo command-line tool
+== Managing link types using the configuration editor
+
+Manage link types with the *configuration editor*.
+
+=== Creating a link type
+
+To create a new link type:
+
+1. Open the **configuration editor** in the Cyberismo app by setting the path part of the URL to `/configuration`.
+2. Select **Link Types** from the tree menu on the left, or use the **New Resource** menu in the toolbar.
+3. Click **Create new** on the Link Types overview page.
+4. Enter an identifier for the new link type and confirm.
+
+The new link type will be created and the editor will open.
+
+When choosing a name for your link type, see xref:docs_8.adoc[Naming conventions].
+
+=== Editing a link type
+
+In the link type editor, you can edit the following properties:
+
+* **Identifier**: The technical name of the link type. Renaming is supported.
+* **Outbound display name**: The name shown in the user interface for the from-to direction of the link (e.g., "Causes").
+* **Inbound display name**: The name shown in the user interface for the to-from direction of the link (e.g., "Caused by").
+* **Enable link description**: A toggle that controls whether users can add a description to links of this type.
+* **Source card types**: Select which card types can be the source of links of this type. If left empty, all card types are allowed.
+* **Destination card types**: Select which card types can be the destination of links of this type. If left empty, all card types are allowed.
+
+Each field has individual save and cancel buttons that appear when you make changes.
+
+=== Deleting a link type
+
+To delete a link type, open it in the editor and use the context menu (three-dot button) in the toolbar to select **Delete Resource**.
+
+== Managing link types using the command-line tool
+
+You can also manage link types using the Cyberismo command-line tool.
 
 To see a list of the available link types, use the following command:
 
@@ -22,13 +58,11 @@ To create a new link type, for example `myLinkType`, use the following command:
 
 Cyberismo will create a new file called `myLinkType.json` in `.cards/local/linkTypes/myLinkType.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new link type will be `example/linkTypes/myLinkType`.
 
-When choosing a name for your link type, see xref:docs_8.adoc[Naming conventions].
-
-To finalise the link type definition, you need to edit the `myLinkType.json` file with a text editor.
-
 == Link type file format
 
-Link types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/schema/linkTypeSchema.json[link type schema], as described in the table below.
+Link types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/linkTypeSchema.json[link type schema], as described in the table below.
+
+NOTE: Do not edit the JSON files directly. The configuration editor provides a graphical interface for managing all link type properties.
 
 .The properties of a link type
 |===
