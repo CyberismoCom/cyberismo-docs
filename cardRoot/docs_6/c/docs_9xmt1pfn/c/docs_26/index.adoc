@@ -4,7 +4,47 @@ A workflow defines the states and state transitions that cards move through duri
 
 For example, a task workflow could consist of the states and transitions *Open* → *In Progress* → *Done*, and a document workflow could be defined as *Draft* → *Approved* → *Archived*.
 
-== Managing workflows using the Cyberismo command-line tool
+== Managing workflows using the configuration editor
+
+Use configuration editor to manage workflows.
+
+=== Creating a workflow
+
+To create a new workflow:
+
+1. Open the **configuration editor** in the Cyberismo app by setting the path part of the URL to `/configuration`.
+2. Select **Workflows** from the tree menu on the left, or use the **New Resource** menu in the toolbar.
+3. Click **Create new** on the Workflows overview page.
+4. Enter an identifier for the new workflow and confirm.
+
+The new workflow will be created and the editor will open.
+
+When choosing a name for your workflow, see xref:docs_8.adoc[Naming conventions].
+
+=== Editing workflow states
+
+In the workflow editor, the **States** section allows you to manage the states of the workflow:
+
+* **Add a state**: Click the add button to create a new state. Enter a name and select a category (_initial_, _active_, or _closed_).
+* **Edit a state**: Click on a state to edit its name or category inline.
+* **Reorder states**: Use the up/down buttons to change the order of states.
+* **Delete a state**: Click the delete button on a state. You will be prompted to select a replacement state for any cards that are currently in the deleted state.
+
+=== Editing workflow transitions
+
+In the **Transitions** section:
+
+* **Add a transition**: Click the add button to create a new transition. Enter a name, select one or more source states (including the special options "any state" for wildcard), and select the target state. The source state "new card" is used for the initial creation transition, and a workflow must have exactly one such transition.
+* **Edit a transition**: Click on a transition to edit its properties inline.
+* **Delete a transition**: Click the delete button to remove a transition.
+
+=== Deleting a workflow
+
+To delete a workflow, open the workflow in the editor and use the context menu (three-dot button) in the toolbar to select **Delete Resource**.
+
+== Managing workflows using the command-line tool
+
+You can also manage workflows using the Cyberismo command-line tool.
 
 To see a list of the available workflows, use the following command:
 
@@ -22,13 +62,11 @@ To create a new workflow, for example `myWorkflow`, use the following command:
 
 Cyberismo will create a new file called `myWorkflow.json` in `.cards/local/workflows/myWorkflow.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new workflow will be `example/workflows/myWorkflow`.
 
-When choosing a name for your workflow, see xref:docs_8.adoc[Naming conventions].
-
-To finalise the workflow definition, you need to edit the `myWorkflow.json` file with a text editor.
-
 == Workflow file format
 
-Workflows are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/schema/workflowSchema.json[workflow schema], as described in the following tables.
+Workflows are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/workflowSchema.json[workflow schema], as described in the following tables.
+
+NOTE: You do not need to edit the JSON files directly. The configuration editor provides a graphical interface for managing all workflow properties.
 
 === Basic structure of a workflow definition
 

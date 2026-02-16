@@ -8,7 +8,7 @@ A _field type_ defines a name, a display name, and a data type for a custom fiel
 
 == Standard card metadata fields
 
-The following table documents the standard built-in metadata that can be included in the `index.json` file of any card regardless of the card type. Note that you should not edit the `index.json` files directly but should use the Cyberismo app whenever applicable.
+The following table documents the standard built-in metadata that can be included in the `index.json` file of any card regardless of the card type. Note that you should not edit the `index.json` files directly but should use the Cyberismo app or CLI whenever applicable.
 
 .Common metadata fields of cards
 |===
@@ -43,7 +43,50 @@ The following table documents the standard built-in metadata that can be include
 
 To enable card type specific custom fields, additional properties are allowed. The custom fields are card metadata properties whose name is a name of a field type.
 
-== Managing field types using the Cyberismo command-line tool
+== Managing field types using the configuration editor
+
+Use the configuration editor to manage field types.
+
+=== Creating a field type
+
+To create a new field type:
+
+1. Open the **configuration editor** in the Cyberismo app by setting the path part of the URL to `/configuration`.
+2. Select **Field Types** from the tree menu on the left, or use the **New Resource** menu in the toolbar.
+3. Click **Create new** on the Field Types overview page.
+4. Enter an identifier for the new field type and select a data type.
+
+The new field type will be created and the editor will open.
+
+When choosing a name for your field type, see xref:docs_8.adoc[Naming conventions].
+
+=== Editing a field type
+
+In the field type editor, you can edit the following properties:
+
+* **Identifier**: The technical name of the field type. Renaming is supported.
+* **Display name**: The name shown in user interfaces.
+* **Description**: A longer description of the field type.
+* **Data type**: The data type of the field (see <<Data types of custom fields>> below).
+
+Each field has individual save and cancel buttons that appear when you make changes.
+
+=== Managing enum values
+
+For field types with the `enum` or `list` data type, the editor shows an **Enum Values** section where you can:
+
+* **Add** new enum values with a value, display value, and description.
+* **Edit** existing enum values inline.
+* **Delete** enum values (with confirmation).
+* **Reorder** enum values using up/down buttons.
+
+=== Deleting a field type
+
+To delete a field type, open it in the editor and use the context menu (three-dot button) in the toolbar to select **Delete Resource**.
+
+== Managing field types using the command-line tool
+
+You can also manage field types using the Cyberismo command-line tool.
 
 To see a list of the available field types, use the following command:
 
@@ -63,10 +106,6 @@ In this case, the data type of the new field is `shortText`.
 
 Cyberismo will create a new file called `myField.json` in `.cards/local/fieldTypes/myField.json`. If the card prefix of your Cyberismo project is `example`, then the full name of the new field type will be `example/fieldTypes/myField`.
 
-When choosing a name for your field type, see xref:docs_8.adoc[Naming conventions].
-
-To finalise the field type definition, you need to edit the `myField.json` file with a text editor.
-
 == Data types of custom fields
 
 The data type of a custom field must be one of the following values:
@@ -85,6 +124,8 @@ The data type of a custom field must be one of the following values:
 == Field type file format
 
 Field types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/fieldTypeSchema.json[field type schema], as described in the following table.
+
+NOTE: Do not edit the JSON files directly. The configuration editor provides a graphical interface for managing all field type properties.
 
 .Properties of a field type
 |===
