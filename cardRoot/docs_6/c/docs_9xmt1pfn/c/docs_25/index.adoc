@@ -45,7 +45,7 @@ To enable card type specific custom fields, additional properties are allowed. T
 
 == Managing field types using the configuration editor
 
-The configuration editor is the recommended way to manage field types.
+Use the configuration editor to manage field types.
 
 === Creating a field type
 
@@ -125,7 +125,7 @@ The data type of a custom field must be one of the following values:
 
 Field types are defined in JSON files that follow the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/fieldTypeSchema.json[field type schema], as described in the following table.
 
-NOTE: You do not need to edit the JSON files directly. The configuration editor provides a graphical interface for managing all field type properties.
+NOTE: Do not edit the JSON files directly. The configuration editor provides a graphical interface for managing all field type properties.
 
 .Properties of a field type
 |===

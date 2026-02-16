@@ -1,6 +1,6 @@
 == Introduction
 
-Cyberismo content modules and projects may define their own logic programs by defining calculation resources in the `.cards/local/calculations` folder. The logic programs in the calculation resources are automatically included as part of the Cyberismo main logic program.
+Cyberismo content modules and projects may define their own logic programs by defining calculation resources. The logic programs in the calculation resources are automatically included as part of the Cyberismo main logic program.
 
 == Managing calculations using the configuration editor
 
