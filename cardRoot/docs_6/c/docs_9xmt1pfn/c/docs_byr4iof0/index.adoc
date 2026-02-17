@@ -167,6 +167,16 @@ For example, the default query results in an object that has a property `results
 {{/raw}}
 
 ```
+
+=== Handlebars helpers available in content templates
+
+In addition to the built-in Handlebars helpers (such as `each`, `if`, and `log`), the following helpers are available in report content templates:
+
+* `formatValue` -- formats a value from a logic program for use in templates.
+* `isCustomField` -- checks whether a field name is a custom field.
+* `jsonEscape` -- escapes a string for safe inclusion inside a JSON string value. Escapes double quotes, backslashes, newlines, and other control characters. For example, `{{jsonEscape this.description}}` produces a string that can be safely placed inside JSON double quotes.
+* `csvEscape` -- escapes a string for safe inclusion as a CSV field. Doubles any double quote characters in the string. The caller is responsible for wrapping the result in quotes if needed. For example, `{{csvEscape this.title}}` produces a string suitable for use in a CSV field.
+
 == Report JSON file format
 
 Basic metadata for a report is defined in a JSON file that follows the https://github.com/CyberismoCom/cyberismo/blob/main/tools/assets/src/schema/resources/reportSchema.json[report schema], as described in the following table.
