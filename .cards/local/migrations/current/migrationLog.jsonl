@@ -1,0 +1,2 @@
+{"timestamp":"2026-03-20T11:46:00.843Z","operation":"resource_delete","target":"docs/calculations/exampleCalculatedLink","parameters":{"type":"calculations"}}
+{"timestamp":"2026-03-20T11:47:11.990Z","operation":"resource_delete","target":"docs/cardTypes/test","parameters":{"type":"cardTypes"}}
