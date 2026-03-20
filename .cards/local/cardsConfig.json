@@ -3,6 +3,7 @@
     "cardKeyPrefix": "docs",
     "name": "Cyberismo documentation",
     "description": "",
+    "version": "1.0.0",
     "modules": [
         {
             "name": "base",
