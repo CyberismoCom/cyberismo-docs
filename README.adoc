@@ -1,6 +1,11 @@
 == Cyberismo documentation
 
-This repository holds the source code for link:https://docs.cyberismo.com[Cyberismo documentation].
+[IMPORTANT]
+====
+This repository has been archived. The Cyberismo documentation source has moved to the `docs/` directory of the main link:https://github.com/CyberismoCom/cyberismo[CyberismoCom/cyberismo] repository. Please open issues and pull requests there.
+====
+
+This repository previously held the source code for link:https://docs.cyberismo.com[Cyberismo documentation].
 
 == Copyright
 
